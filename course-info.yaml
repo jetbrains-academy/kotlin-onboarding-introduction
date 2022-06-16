@@ -1,0 +1,9 @@
+type: marketplace
+title: CSC Kotlin Course
+language: English
+summary: |-
+  This is an introductory Kotlin course.
+  TODO
+programming_language: Kotlin
+content:
+- Part I
