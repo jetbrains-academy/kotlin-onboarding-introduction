@@ -29,20 +29,12 @@ fun printOutput(output: Any): Task {
     }
 }
 
-subprojects.filter { it.name != "util" }.forEach { _ ->
-    dependencies {
-        implementation(project(":util"))
-    }
-}
-
 allprojects {
     apply {
         plugin("application")
         plugin("java")
         plugin("kotlin")
     }
-
-//    sourceCompatibility = JavaVersion.VERSION_1_8
 
     repositories {
         mavenCentral()
@@ -87,7 +79,6 @@ allprojects {
 
                 override fun afterSuite(suite: TestDescriptor, result: TestResult) {}
             })
-            addTestOutputListener { testDescriptor, outputEvent -> }
         }
     }
 
@@ -95,25 +86,10 @@ allprojects {
         getByName("main").java.srcDirs("src")
         getByName("test").java.srcDirs("src")
     }
-
-//    val mainClassName = project.property("mainClass") ?: ""
-
-//    if (project.hasProperty("educationalRun") && "true".equals(project.property("educationalRun").toString(), ignoreCase = true)) {
-//        val runOutput = ByteArrayOutputStream()
-//        tasks.run.setStandardOutput(runOutput)
-//        tasks.run.doLast { printOutput(runOutput) }
-//    }
 }
 
-//project(":util") {
-//    dependencies {
-//        implementation("junit:junit:4.12")
-//    }
-//}
-
-//configure(subprojects.findAll { it.name != "util" }) {
-//    dependencies {
-//        implementation(project(":util").sourceSets.main.output)
-//        testImplementation(project(":util").sourceSets.test.output)
-//    }
-//}
+configure(subprojects.filter { it.name != "utils" }) {
+    dependencies {
+        implementation(project(":utils"))
+    }
+}
