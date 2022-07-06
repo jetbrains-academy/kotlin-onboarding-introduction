@@ -15,9 +15,13 @@ to receive it in the program, and for example, write this value into a variable.
 `String` values can contain the values of _other_ variables.
 For example, to print some text to console with a value [the string templates](https://kotlinlang.org/docs/basic-types.html#string-templates) can be used:
 ```kotlin
+val firstAnswer = "my text"
 println("The value: $firstAnswer")
 ```
-In this example the `firstAnswer` variable must be declared **before** this command.
+The printed text will be: `The value: my text`.
+By other words, the value from the `firstAnswer` variable will be inserted into the string.
+
+In this example the `firstAnswer` variable must be declared **before** using by `$`.
 ___
 
 ### Task

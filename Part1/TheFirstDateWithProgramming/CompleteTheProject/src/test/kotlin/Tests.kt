@@ -15,9 +15,9 @@ class Test {
                     "How did you spend your graduation?\n" +
                     "Why does a spider need eight legs?\n" +
                     "Now let's have fun!\n" +
-                    "$FIRST_QUESTION\n$firstInput\n" +
-                    "$SECOND_QUESTION\n$secondInput\n" +
-                    "$THIRD_QUESTION\n$thirdInput\n",
+                    "$firstQuestion\n$firstInput\n" +
+                    "$secondQuestion\n$secondInput\n" +
+                    "$thirdQuestion\n$thirdInput\n",
             runMainFunction(::main, "$firstInput\n$secondInput\n$thirdInput\n")
         )
     }

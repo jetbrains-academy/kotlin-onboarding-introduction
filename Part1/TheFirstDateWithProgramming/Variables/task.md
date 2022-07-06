@@ -16,7 +16,12 @@ val firstAnswer: String = ""
 ```
 
 It is **important** to note that the `val` variable _cannot be changed_. 
-This means that if you put a value in it, then no other value can be there.
+This means that if you put a value in it, then no other value can be there:
+
+```kotlin
+val firstAnswer: String = ""
+firstAnswer = "new no empty string" // ERROR!!
+```
 
 Often in Kotlin the variable type can be _missed_ if it can be inferred from the context:
 ```kotlin
