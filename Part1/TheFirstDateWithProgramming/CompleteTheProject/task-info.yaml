@@ -1,7 +1,9 @@
 type: edu
-custom_name: Built-in Functions
+custom_name: Complete the project
 files:
 - name: src/test/kotlin/Tests.kt
   visible: false
 - name: src/main/kotlin/Main.kt
   visible: true
+- name: src/main/kotlin/RealQuestions.kt
+  visible: false

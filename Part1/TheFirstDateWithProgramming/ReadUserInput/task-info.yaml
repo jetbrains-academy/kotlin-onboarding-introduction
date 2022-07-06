@@ -1,7 +1,9 @@
 type: edu
-custom_name: Built-in Functions
+custom_name: Read user input
 files:
 - name: src/test/kotlin/Tests.kt
   visible: false
 - name: src/main/kotlin/Main.kt
   visible: true
+- name: src/main/resources/images/poetry_generator_mid.gif
+  visible: false

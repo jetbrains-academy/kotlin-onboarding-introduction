@@ -1,5 +1,4 @@
 type: edu
-custom_name: Built-in Functions
 files:
 - name: src/test/kotlin/Tests.kt
   visible: false
