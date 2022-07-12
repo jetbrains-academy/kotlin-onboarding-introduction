@@ -1,5 +1,6 @@
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
+import util.Util.DEFAULT_USER_INPUT
 import util.runMainFunction
 
 class Test {
@@ -11,7 +12,7 @@ class Test {
                     "What is TROTEN?\n" +
                     "How did you spend your graduation?\n" +
                     "Why does a spider need eight legs?\n",
-            runMainFunction(::main, "1\n2\n3\n")
+            runMainFunction(::main, "$DEFAULT_USER_INPUT\n$DEFAULT_USER_INPUT\n$DEFAULT_USER_INPUT\n")
         )
     }
 }

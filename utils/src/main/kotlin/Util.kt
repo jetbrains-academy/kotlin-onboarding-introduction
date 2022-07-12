@@ -4,6 +4,10 @@ import java.io.ByteArrayOutputStream
 import java.io.PrintStream
 import java.nio.charset.StandardCharsets
 
+object Util {
+    const val DEFAULT_USER_INPUT = "<some user's answer>"
+}
+
 fun runMainFunction(mainFunction: () -> Unit, input: String? = null): String {
     input?.let { System.setIn(it.byteInputStream()) }
     val baos = ByteArrayOutputStream()
