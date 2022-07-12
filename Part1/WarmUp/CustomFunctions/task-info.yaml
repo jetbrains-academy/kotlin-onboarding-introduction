@@ -1,7 +1,6 @@
 type: edu
-custom_name: Create the app
 files:
-- name: src/kotlin/Main.kt
+- name: src/main/kotlin/Main.kt
   visible: true
 - name: src/test/kotlin/Tests.kt
   visible: false
