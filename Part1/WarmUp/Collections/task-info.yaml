@@ -1,5 +1,4 @@
 type: edu
-custom_name: Custom functions
 files:
 - name: src/main/kotlin/Main.kt
   visible: true

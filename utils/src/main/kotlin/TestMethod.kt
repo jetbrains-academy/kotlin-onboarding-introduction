@@ -34,7 +34,9 @@ fun Array<Method>.findMethod(method: TestMethod): Method {
     val filteredByName =
         this.toList().filterByCondition("The method ${method.prettyString()} is missed") { it.name == method.name }
     val filteredByType =
-        filteredByName.filterByCondition("The method ${method.name} should have the return type ${method.returnType}") { it.returnType.name.shortName().lowercase() == method.returnType.lowercase() }
+        filteredByName.filterByCondition("The method ${method.name} should have the return type ${method.returnType}") {
+            it.returnType.name.shortName().lowercase() == method.returnType.lowercase()
+        }
     val filteredByArgumentsCount =
         filteredByType.filterByCondition("The method ${method.name} should have ${method.arguments.size} arguments") { it.parameterCount == method.arguments.size }
     require(filteredByArgumentsCount.size == 1) { "The method ${method.prettyString()} is missed" }
@@ -53,7 +55,9 @@ fun TestMethod.getMethodFromClass(className: String = "MainKt"): Method {
 
 fun findClassSafe(className: String) = Class.forName(className) ?: error("Internal course error!")
 
-fun Method.invokeWithoutArgs(className: String = "MainKt"): Any {
+fun Method.invokeWithoutArgs(className: String = "MainKt"): Any = invokeWithArgs(className = className)
+
+fun Method.invokeWithArgs(vararg args: Any, className: String = "MainKt"): Any {
     val clazz = findClassSafe(className)
-    return invoke(clazz)
+    return invoke(clazz, *args)
 }
