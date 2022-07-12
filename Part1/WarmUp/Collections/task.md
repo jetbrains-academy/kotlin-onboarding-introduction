@@ -1,3 +1,5 @@
+**TODO: add a task before this task with explanation of loop concept**
+
 ### Theory
 
 What does a string usually consist of?
@@ -29,6 +31,8 @@ for example, to search for a value, filtering, and so on.
 "ABCDDD".first()
 ```
 
+**TODO: is it ok to use lambda expressions here, add function example**
+
 Often these built-in functions accept [lambda expressions](https://kotlinlang.org/docs/lambdas.html#lambda-expressions-and-anonymous-functions).
 They are functions that are not declared but are passed immediately as an expression.
 Consider the following example:
@@ -39,6 +43,12 @@ Consider the following example:
 In this case, we are using a function that is not declared separately,
 does not have a name, but which will be applied to **each** element of the collection.
 It takes one parameter `Char` (character) and compares it to character `A` (for character we need to use single quotes).
+
+This is the same if we made a function
+```kotlin
+fun isSymbolA(symbol: Char) = symbol == 'A'
+```
+and call it on each symbol from the word `ABCDDD`.
 
 If the type of the arguments is clear from the context, then they can be omitted:
 ```kotlin

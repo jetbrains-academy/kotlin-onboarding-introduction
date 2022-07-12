@@ -4,6 +4,8 @@ You are already familiar with the concept of variable from the last lesson.
 However, all this time you were only working with `string` variables.
 However, in programming, it is common to use variables of _different_ types.
 
+**TODO: describe basic types: string, int and bool**
+
 Variable types differ in their functionality, for example, 
 if we add two numbers `2` and `3`, we get a new number `5`. 
 However, if we represent them as strings, we get `"2" + "3" = "23"`.
