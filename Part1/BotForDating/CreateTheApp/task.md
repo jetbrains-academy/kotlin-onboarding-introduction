@@ -19,3 +19,7 @@ that will communicate with the user in an interactive dialogue format:
 - <some user's answer> is great! I hope you successfully complete this course! Anyone can learn programming at any age!
 ```
 
+An example of the final application:
+
+![Bot for dating example](./src/main/resources/images/bot_for_dating.gif "Bot for dating example")
+
