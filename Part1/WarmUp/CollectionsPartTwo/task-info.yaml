@@ -1,0 +1,9 @@
+type: edu
+custom_name: Collections - part two
+files:
+- name: src/main/kotlin/Main.kt
+  visible: true
+- name: src/main/kotlin/Util.kt
+  visible: false
+- name: src/test/kotlin/Tests.kt
+  visible: false
