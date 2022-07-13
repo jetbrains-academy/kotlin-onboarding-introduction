@@ -3,3 +3,7 @@ custom_name: Create the app
 files:
 - name: src/main/kotlin/Main.kt
   visible: true
+- name: src/main/resources/images/bot_for_dating.gif
+  visible: false
+- name: src/test/kotlin/Tests.kt
+  visible: false
