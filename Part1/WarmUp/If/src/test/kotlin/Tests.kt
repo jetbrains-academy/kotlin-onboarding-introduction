@@ -4,6 +4,7 @@ import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.Arguments
 import org.junit.jupiter.params.provider.MethodSource
 import util.*
+import util.Util.DEFAULT_USER_INPUT
 
 class Test {
     companion object {
@@ -20,49 +21,7 @@ class Test {
                 Variable("guess", "String"),
             )
         )
-        @JvmStatic
-        fun sequences() = listOf(
-            // guess, secret, positions, letters
-            Arguments.of("ACEB", "BCDF", 1, 1),
-            Arguments.of("ABCD", "ABCD", 4, 0),
-            Arguments.of("ABCD", "DCBA", 0, 4),
-            Arguments.of("ABCD", "DBCA", 2, 2),
-            Arguments.of("ABCD", "EBCF", 2, 0),
-
-            Arguments.of("AAAA", "AAAA", 4, 0),
-            Arguments.of("AAAA", "BBBB", 0, 0),
-            Arguments.of("AABB", "BBAA", 0, 4),
-            Arguments.of("ABCD", "ABBA", 2, 0),
-            Arguments.of("ABBA", "ABCD", 2, 2),
-            Arguments.of("AAAA", "ABBB", 1, 3)
-        )
-
-        private val countPositionalMatchingsMethod = TestMethod(
-            "countPositionalMatchings", "Int",
-            listOf(
-                Variable("secret", "String"),
-                Variable("guess", "String"),
-            )
-        )
     }
-
-    @Test
-    fun testIsCompleteFunction() {
-        isCompleteMethod.getMethodFromClass()
-    }
-
-    @ParameterizedTest
-    @MethodSource("inputsToCheck")
-    fun testIsCompleteImplementation(
-        guess: String,
-        secret: String,
-        expectedResult: Boolean
-    ){
-        val userMethod = isCompleteMethod.getMethodFromClass()
-        Assertions.assertEquals(expectedResult, userMethod.invokeWithArgs(secret, guess),
-            "For secret: $secret and guess: $guess the function ${isCompleteMethod.name} should return $expectedResult")
-    }
-
     @Test
     fun testGetGameRulesFunction() {
         TestMethod(
@@ -86,20 +45,12 @@ class Test {
 
     @Test
     fun testCountPositionalMatchingsFunction() {
-        countPositionalMatchingsMethod.getMethodFromClass()
-    }
-
-    @ParameterizedTest
-    @MethodSource("sequences")
-    fun testCountPositionalMatchingsImplementation(
-        guess: String,
-        secret: String,
-        expectedPosMatchings: Int,
-        expectedLettersMatchings: Int
-    ) {
-        val userMethod = countPositionalMatchingsMethod.getMethodFromClass()
-        Assertions.assertEquals(expectedPosMatchings, userMethod.invokeWithArgs(secret, guess),
-            "For secret: $secret and guess: $guess the number of positional matchings is $expectedPosMatchings")
+        TestMethod(
+            "countPositionalMatchings", "Int", listOf(
+                Variable("secret", "String"),
+                Variable("guess", "String"),
+            )
+        ).getMethodFromClass()
     }
 
     @Test
@@ -112,6 +63,35 @@ class Test {
             expectedResult,
             methodRes
         ) { "The method ${m.name} should always return $expectedResult" }
+    }
+
+    @Test
+    fun testIsCompleteFunction() {
+        isCompleteMethod.getMethodFromClass()
+    }
+
+    @ParameterizedTest
+    @MethodSource("inputsToCheck")
+    fun testIsCompleteImplementation(
+        guess: String,
+        secret: String,
+        expectedResult: Boolean
+    ){
+        val userMethod = isCompleteMethod.getMethodFromClass()
+        Assertions.assertEquals(expectedResult, userMethod.invokeWithArgs(secret, guess),
+            "For secret: $secret and guess: $guess the function ${isCompleteMethod.name} should return $expectedResult")
+    }
+
+    @Test
+    fun testPlayGameFunction() {
+        TestMethod(
+            "playGame", "Unit", listOf(
+                Variable("secret", "String"),
+                Variable("wordLength", "Int"),
+                Variable("maxAttemptsCount", "Int"),
+            ),
+            "Void"
+        )
     }
 
     @Test

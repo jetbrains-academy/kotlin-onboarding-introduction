@@ -5,7 +5,8 @@ import java.lang.reflect.Method
 data class TestMethod(
     val name: String,
     val returnType: String,
-    val arguments: List<Variable>
+    val arguments: List<Variable>,
+    val returnTypeJava: String? = null,
 ) {
     fun prettyString(withToDo: Boolean = true): String {
         val args = arguments.map { it.prettyString() }.joinToString { ", " }
@@ -33,9 +34,10 @@ private fun List<Method>.filterByCondition(errorMessage: String, condition: (Met
 fun Array<Method>.findMethod(method: TestMethod): Method {
     val filteredByName =
         this.toList().filterByCondition("The method ${method.prettyString()} is missed") { it.name == method.name }
+    val returnTypeJava = method.returnTypeJava ?: method.returnType
     val filteredByType =
         filteredByName.filterByCondition("The method ${method.name} should have the return type ${method.returnType}") {
-            it.returnType.name.shortName().lowercase() == method.returnType.lowercase()
+            it.returnType.name.shortName().lowercase() == returnTypeJava.lowercase()
         }
     val filteredByArgumentsCount =
         filteredByType.filterByCondition("The method ${method.name} should have ${method.arguments.size} arguments") { it.parameterCount == method.arguments.size }

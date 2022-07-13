@@ -17,9 +17,21 @@ fun countPositionalMatchings(secret: String, guess: String): Int =
 
 fun generateSecret() = "ABCD"
 
+fun isComplete(secret: String, guess: String) = secret == guess
+
+fun playGame(secret: String, wordLength: Int, maxAttemptsCount: Int) {
+    var complete: Boolean
+    do {
+        println("Please, input your guess. It should be $wordLength size.")
+        val guess = safeReadLine()
+        complete = isComplete(secret, guess)
+    } while (!complete)
+}
+
 fun main() {
     val wordLength = 4
     val maxAttemptsCount = 3
     val secretExample = "ACEB"
     println(getGameRules(wordLength, maxAttemptsCount, secretExample))
+    playGame(generateSecret(), wordLength, maxAttemptsCount)
 }

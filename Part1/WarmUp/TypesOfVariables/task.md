@@ -4,7 +4,11 @@ You are already familiar with the concept of variable from the last lesson.
 However, all this time you were only working with `string` variables.
 However, in programming, it is common to use variables of _different_ types.
 
-**TODO: describe basic types: string, int and bool**
+For example, `String` type stores strings like `"ABCD"`, 
+and `Int` type stores integer numbers like `55`.
+In addition, you should pay attention to 
+the special type [`Boolean`](https://kotlinlang.org/docs/basic-types.html#booleans), 
+which can only have two values - `true` (yes) or `false` (no).
 
 Variable types differ in their functionality, for example, 
 if we add two numbers `2` and `3`, we get a new number `5`. 
