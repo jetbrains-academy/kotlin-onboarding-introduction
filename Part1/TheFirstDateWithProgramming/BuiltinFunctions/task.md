@@ -41,6 +41,6 @@ ___
 
 **Description**: print the following text using `print` or `println` functions:
 ```text
-Hello! I will ask you several questions. 
+Hello! I will ask you several questions.
 Please answer all of them and be honest with me!
 ```
