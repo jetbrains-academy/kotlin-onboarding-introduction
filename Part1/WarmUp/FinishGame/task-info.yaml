@@ -1,5 +1,5 @@
 type: edu
-custom_name: Finish base game
+custom_name: Finish the game
 files:
 - name: src/main/kotlin/Main.kt
   visible: true

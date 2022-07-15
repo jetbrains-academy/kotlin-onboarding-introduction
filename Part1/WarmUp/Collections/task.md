@@ -42,20 +42,10 @@ Consider the following example:
 // Keep only A symbol
 "ABCDDD".filter { symbol: Char -> symbol == 'A' }
 ```
-In this case, we are using a lambda expression that
-does not have a name, but which will be applied to **each** element of the collection.
+In this case, we are using a lambda expression (a condition), 
+which will be applied to **each** element of the collection.
 It takes one parameter `Char` (character) and compares it to character `A` 
 (for characters we need to use single quotes).
-
-[//]: # (This is the same if we made a function)
-
-[//]: # (```kotlin)
-
-[//]: # (fun isSymbolA&#40;symbol: Char&#41; = symbol == 'A')
-
-[//]: # (```)
-
-[//]: # (and call it on each symbol from the word `ABCDDD`.)
 
 If the type of the arguments is clear from the context (usually always with collections), 
 then they can be omitted:
