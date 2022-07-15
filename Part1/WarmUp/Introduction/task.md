@@ -18,4 +18,11 @@ as well as the ability to safely communicate with the user, e.g. handle the user
 
 The lesson includes the following topics:
 
-**TODO**
+- different types of variables;
+- functions;
+- loops
+- if expressions
+- `or` and `and` boolean operations
+- basic knowledge about List collection, built-in functions to work with them, 
+basic knowledge about lambda expressions in these built-in functions;
+- generation random strings.
