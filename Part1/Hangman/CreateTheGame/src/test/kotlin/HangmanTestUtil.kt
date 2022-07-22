@@ -19,7 +19,7 @@ internal fun imitateGameRound(toCheckResult: Boolean = false): String? {
         val index = Regex(LOSS_MESSAGE).find(output)?.range?.endInclusive
         index?.let {
             require(output.length > index + wordLength) { "You should print the secret to the console in the loss message!" }
-            output.substring(index..index + wordLength)
+            output.substring(index..index + wordLength).replace(separator, "")
         }
             ?: error("The user lost, but you showed an incorrect loss message. The correct message is: \"$LOSS_MESSAGE<secret>\"")
     } else if (VICTORY_MESSAGE in output) {

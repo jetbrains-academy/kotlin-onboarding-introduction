@@ -164,7 +164,7 @@ class Test {
             val secret = imitateGameRound()
             secret?.let { secrets.add(it) }
         }
-        require(secrets.toSet().isNotEmpty()) { "Please, generate a random word from the <words> list." }
+        require(secrets.toSet().size > 1) { "Please, generate a random word from the <words> list." }
     }
 
     @Test
