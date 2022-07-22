@@ -1,0 +1,13 @@
+type: edu
+custom_name: Create the game
+files:
+- name: src/main/kotlin/Main.kt
+  visible: true
+- name: src/main/kotlin/Util.kt
+  visible: false
+- name: src/main/kotlin/Words.kt
+  visible: false
+- name: src/test/kotlin/Tests.kt
+  visible: true
+- name: src/test/kotlin/HangmanTestUtil.kt
+  visible: true

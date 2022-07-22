@@ -5,7 +5,7 @@ import java.lang.reflect.Method
 data class TestMethod(
     val name: String,
     val returnType: String,
-    val arguments: List<Variable>,
+    val arguments: List<Variable> = emptyList(),
     val returnTypeJava: String? = null,
 ) {
     fun prettyString(withToDo: Boolean = true): String {
@@ -55,7 +55,7 @@ fun TestMethod.getMethodFromClass(className: String = "MainKt"): Method {
     return methods.findMethod(this)
 }
 
-fun findClassSafe(className: String) = Class.forName(className) ?: error("Internal course error!")
+fun findClassSafe(className: String) = Class.forName(className) ?: throwInternalCourseError()
 
 fun Method.invokeWithoutArgs(className: String = "MainKt"): Any = invokeWithArgs(className = className)
 
