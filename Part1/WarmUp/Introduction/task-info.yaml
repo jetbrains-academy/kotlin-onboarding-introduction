@@ -1,4 +1,4 @@
 type: theory
 files:
-- name: src/Main.kt
-  visible: false
+- name: src/main/kotlin/Main.kt
+  visible: true
