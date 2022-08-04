@@ -21,6 +21,7 @@ The lesson includes the following topics:
 - different types of variables;
 - functions;
 - loops;
+- ranges;
 - if expressions;
 - `or` and `and` boolean operations;
 - basic knowledge about List collection, built-in functions to work with them, 
