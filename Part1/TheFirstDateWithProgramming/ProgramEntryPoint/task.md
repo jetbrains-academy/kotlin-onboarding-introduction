@@ -13,11 +13,11 @@ fun main() {
 
 Everything that happens _inside_ the function (between the curly braces) 
 will be executed while the program is running. 
-This function can be in _any_ file in your project, 
-even you can add _several_ `main` functions to one project. 
+This function can be placed in _any_ file in your project; 
+you can even add _several_ `main` functions to one project. 
 In the latter case, you can choose by yourself which entry point you want to run.
 
-To `run` the program, you should click on the **green triangle** near the `main` function, 
+To `run` a program, you should click on the **green triangle** near the `main` function, 
 and then the result of the program will be displayed in the _console_ inside the IDE:
 
 ![Program entry point and console](./src/main/resources/images/entry_point.png "Program entry point and console")
