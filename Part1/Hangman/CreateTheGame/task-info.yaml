@@ -8,6 +8,6 @@ files:
 - name: src/main/kotlin/Words.kt
   visible: false
 - name: src/test/kotlin/Tests.kt
-  visible: true
+  visible: false
 - name: src/test/kotlin/HangmanTestUtil.kt
-  visible: true
+  visible: false

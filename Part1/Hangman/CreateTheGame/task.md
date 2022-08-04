@@ -51,3 +51,47 @@ In the end of the game the user should be informed about the results:
 An example of the game: **TODO: add a gif**
 
 **TODO: hints**
+
+<div class="hint">
+
+  To implement `isCorrectInput` function, you should check two conditions. 
+  The first condition should check if the `length` of the user input is one. 
+
+  The second condition should check if the user input consists of the english letters.
+  To check it the built-in function <a href='https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/is-letter.html'>`isLetter`</a> can be used for a char.
+  If you check the length of the word entered by the user is equal to one, 
+  then you can use the character at position zero to check if the character is an english letter.
+</div>
+
+<div class="hint">
+
+   To implement `safeUserInput` function, you should ask user to input the string 
+   while it is not correct (`isCorrectInput` returns `true`). 
+   To make a string uppercase you can use the built-in function <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/uppercase.html">`uppercase`</a>.
+</div>
+
+<div class="hint">
+
+   To implement `generateNewUserWord` function, you should check each `secret`'s char.
+   To make a loop to check each `secret`'s char you can use <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/indices.html">`indices`</a> property:
+   ```
+   for (i in secret.indices) { ... }
+   ```
+   It is the same with:
+   ```
+   for (i in 0 until a.length) { ... }
+   ```
+   
+   Next, if the current `secret`'s char is the same with the `guess`'s char on the same position, 
+   add to `newUserWord` `secret`'s char; else add `currentUserWord`'s char on the `i * 2` position.
+   Also, don't forget to add a separator on the loop's step.
+
+   Note, we use `i * 2` position, since `currentUserWord` contains not only symbols, 
+   but the separators and has twice as many characters than `secret`.
+</div>
+
+<div class="hint">
+
+   To implement `isComplete` function, it is not enough to check that the `secret` and `currentGuess` match.
+   The main reason is `currentGuess` has separators, but `secret` does not.
+</div>
