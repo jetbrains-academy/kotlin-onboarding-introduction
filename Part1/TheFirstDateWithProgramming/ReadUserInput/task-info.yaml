@@ -5,5 +5,5 @@ files:
   visible: false
 - name: src/main/kotlin/Main.kt
   visible: true
-- name: src/main/resources/images/poetry_generator_mid.gif
+- name: src/main/resources/images/user_input.gif
   visible: false
