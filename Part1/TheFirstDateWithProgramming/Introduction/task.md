@@ -24,4 +24,5 @@ The lesson includes the following topics:
 - a program entry point in Kotlin;
 - built-in functions for printing to console;
 - variables;
-- built-in functions for reading user input.
+- built-in functions for reading user input;
+- string templates.

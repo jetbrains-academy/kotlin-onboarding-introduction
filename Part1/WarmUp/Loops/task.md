@@ -121,20 +121,21 @@ The best type for <code>complete</code> variable is <code>Boolean</code> since i
 </div>
 
 <div class="Hint">
+
 If you use <code>do..while</code> loop with <code>Boolean</code> variable as a condition, 
 you can omit the initialization of the variable before the loop, for example the following code
-<pre>
+```
 var myBool = false
 do {
     myBool = getNewValue()
 } while (!myBool)
-</pre>
+```
 can be replaced into:
-<pre>
+```
 var myBool: Boolean
 do {
     myBool = getNewValue()
 } while (!myBool)
-</pre>
+```
 You can do it only if the value of the variable is <b>changed</b> inside the loop.
 </div>
