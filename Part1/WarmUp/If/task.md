@@ -77,17 +77,18 @@ fun max(x: Int, y: Int): Int {
 if `secret` and `guess` are the same and `false` otherwise.
 
 <div class="hint">
+
 If you compare two variables to get <code>Boolean</code> result, you can use a short notation, 
 for example, the following code:
-<pre>
+```
 fun isNotEqual(a: Int, b: Int) = if (a != b) {
     true
 } else {
     false
 }
-</pre>
+```
 can be replaced into this one:
-<pre>
+```
 fun isNotEqual(a: Int, b: Int) = a != b
-</pre>
+```
 </div>
