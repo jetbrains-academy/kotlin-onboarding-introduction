@@ -40,6 +40,6 @@ The questions are:
 
 In the result, the user's interaction with the game will look like this:
 
-![User interaction example](./src/main/resources/images/poetry_generator_mid.gif "User interaction example")
+![User interaction example](./src/main/resources/images/user_input.gif "User interaction example")
 
 </div>

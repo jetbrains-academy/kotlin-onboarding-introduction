@@ -17,11 +17,13 @@ The project of this lesson is **Poetry generator**.
 The goal of this game is to ask the user several fun questions,
 remember the answers, and build a fun story from these answers.
 
-**TODO: add game gif??**
-
 The lesson includes the following topics:
 
 - the entry point for a Kotlin program;
 - built-in functions for printing to console;
 - variables;
 - built-in functions for reading user input.
+
+An example of this game:
+
+![The game's example](./src/main/resources/images/game.gif "The game's example")

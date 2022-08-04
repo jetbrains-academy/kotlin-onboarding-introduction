@@ -1,5 +1,7 @@
 type: theory
 custom_name: Introduction
 files:
-- name: src/Main.kt
+- name: src/main/resources/images/game.gif
   visible: false
+- name: src/main/kotlin/Main.kt
+  visible: true
