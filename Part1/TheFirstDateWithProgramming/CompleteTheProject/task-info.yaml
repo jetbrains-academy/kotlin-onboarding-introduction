@@ -7,3 +7,9 @@ files:
   visible: true
 - name: src/main/kotlin/RealQuestions.kt
   visible: false
+- name: src/main/resources/images/user_input.gif
+  visible: false
+- name: src/main/resources/images/entry_point.png
+  visible: false
+- name: src/main/resources/images/game.gif
+  visible: false
