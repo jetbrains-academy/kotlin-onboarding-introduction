@@ -84,7 +84,7 @@ allprojects {
 
     sourceSets {
         getByName("main").java.srcDirs("src")
-        getByName("test").java.srcDirs("src")
+        getByName("test").java.srcDirs("test")
     }
 }
 
