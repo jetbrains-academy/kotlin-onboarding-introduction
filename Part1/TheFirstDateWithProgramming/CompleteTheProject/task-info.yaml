@@ -1,7 +1,7 @@
 type: edu
 custom_name: Complete the project
 files:
-- name: src/test/kotlin/Tests.kt
+- name: test/Tests.kt
   visible: false
 - name: src/main/kotlin/Main.kt
   visible: true
