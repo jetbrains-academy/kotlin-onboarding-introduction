@@ -32,6 +32,6 @@ fun checkListOfVariables(sourceCodeFile: File, variables: List<Variable>) {
         }
     } else {
         // TODO: log some errors?
-        error("Internal course error!")
+        throwInternalCourseError()
     }
 }
