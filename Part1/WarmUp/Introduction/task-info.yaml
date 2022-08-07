@@ -1,5 +1,4 @@
-type: edu
-custom_name: Program entry point
+type: theory
 files:
 - name: src/main/kotlin/Main.kt
   visible: true

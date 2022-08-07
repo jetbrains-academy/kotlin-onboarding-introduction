@@ -1,0 +1,10 @@
+type: edu
+files:
+- name: src/main/kotlin/Main.kt
+  visible: true
+- name: src/main/kotlin/Util.kt
+  visible: false
+- name: test/Tests.kt
+  visible: false
+- name: test/MastermindTestUtil.kt
+  visible: false
