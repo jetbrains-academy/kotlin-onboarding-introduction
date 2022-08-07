@@ -1,0 +1,9 @@
+type: framework
+content:
+- Introduction
+- MultiRowStrings
+- When
+- StringFunctions
+- StringFunctionsPartTwo
+- NullSafety
+is_template_based: false

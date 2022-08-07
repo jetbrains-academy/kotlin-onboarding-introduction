@@ -9,7 +9,7 @@ data class TestMethod(
     val returnTypeJava: String? = null,
 ) {
     fun prettyString(withToDo: Boolean = true): String {
-        val args = arguments.map { it.prettyString() }.joinToString { ", " }
+        val args = arguments.map { it.prettyString() }.joinToString(", ")
         val body = if (withToDo) {
             "TODO(\"Not implemented yet\")"
         } else {
