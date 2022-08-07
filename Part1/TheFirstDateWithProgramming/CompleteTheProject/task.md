@@ -16,7 +16,7 @@ ___
 
 ### Task
 
-**Description**: Print the real questions and the user's answers for them. 
-The real questions are stored in `firstQuestion`, `secondQuestion`, and `thirdQuestion` variables.
+**Description**: Print the real questions and the user's answers to them. 
+The real questions are stored in the `firstQuestion`, `secondQuestion`, and `thirdQuestion` variables.
 
-Before the real questions print the text: 'Now let's have fun!'
+Before the real questions, print the text: 'Now let's have fun!'
