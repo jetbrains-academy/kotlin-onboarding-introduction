@@ -20,7 +20,7 @@ In the latter case, you can choose by yourself which entry point you want to run
 To `run` a program, you should click on the **green triangle** near the `main` function, 
 and then the result of the program will be displayed in the _console_ inside the IDE:
 
-![Program entry point and console](./src/main/resources/images/entry_point.png "Program entry point and console")
+![Program entry point and console](../../../utils/src/main/resources/images/part1/TheFirstDateWithProgramming/entry_point.png "Program entry point and console")
 
 ___
 

@@ -49,11 +49,11 @@ allprojects {
 
     tasks {
         withType<JavaCompile> {
-            sourceCompatibility = "1.8"
-            targetCompatibility = "1.8"
+            sourceCompatibility = "9"
+            targetCompatibility = "9"
         }
         withType<KotlinCompile> {
-            kotlinOptions.jvmTarget = "1.8"
+            kotlinOptions.jvmTarget = "9"
         }
 
         withType<Test> {
@@ -84,7 +84,7 @@ allprojects {
 
     sourceSets {
         getByName("main").java.srcDirs("src")
-        getByName("test").java.srcDirs("src")
+        getByName("test").java.srcDirs("test")
     }
 }
 
