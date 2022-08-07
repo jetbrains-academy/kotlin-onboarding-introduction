@@ -4,7 +4,6 @@ import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.Arguments
 import org.junit.jupiter.params.provider.MethodSource
 import util.*
-import util.Util.DEFAULT_USER_INPUT
 
 class Test {
     companion object {
