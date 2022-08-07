@@ -7,3 +7,4 @@ content:
 - Variables
 - ReadUserInput
 - CompleteTheProject
+is_template_based: false

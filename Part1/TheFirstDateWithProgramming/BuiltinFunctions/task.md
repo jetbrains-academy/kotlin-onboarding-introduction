@@ -1,14 +1,14 @@
 ### Theory
 
-In Kotlin, as in any other programming language, 
-already exist many implemented functions (**built-in** functions). 
+Kotlin, like any other programming language, 
+already has many predefined (**built-in**) functions. 
 You may have noticed one of them in the previous task - `println`. 
-It allows you to display the text into the console that is passed as an _argument_. 
-The argument, in this case, is needed so that the same function can perform 
-the _same_ action with _different_ data.
+It allows you to display the text passed as an _argument_ in the console. 
+We need an argument in this case so that the function can perform 
+the _same_ action on _different_ data.
 
-For example, if you want to display two words `One` and `Two` on different lines, 
-then in both cases you need to use the [`println`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.io/println.html#println) function, but _with different arguments_:
+For example, if you want to display two words – `One` and `Two` – on different lines, 
+then in both cases you need to use the same [`println`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.io/println.html#println) function but _with different arguments_:
 ```kotlin
 println("One")
 println("Two")
@@ -33,13 +33,13 @@ The output is:
 OneTwo
 ```
 
-It is **important** to note that the text that needs to be printed to the console 
+It is **important** to note that the text we want to print to the console 
 must be enclosed in _double-quotes_.
 ___
 
 ### Task
 
-**Description**: print the following text using `print` or `println` functions:
+**Description**: print the following text using the `print` or `println` function:
 ```text
 Hello! I will ask you several questions.
 Please answer all of them and be honest with me!

@@ -25,4 +25,4 @@ fun runMainFunction(mainFunction: () -> Unit, input: String? = null): String {
     return baos.toString()
 }
 
-fun isSystemInEmpty() = String(System.`in`.readBytes()).isEmpty()
+fun isSystemInEmpty() = String(System.`in`.readAllBytes()).isEmpty()
