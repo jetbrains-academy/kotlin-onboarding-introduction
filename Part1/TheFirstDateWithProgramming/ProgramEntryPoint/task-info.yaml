@@ -3,7 +3,3 @@ custom_name: Program entry point
 files:
 - name: src/main/kotlin/Main.kt
   visible: true
-- name: src/test/kotlin/Tests.kt
-  visible: false
-- name: src/main/resources/images/entry_point.png
-  visible: false
