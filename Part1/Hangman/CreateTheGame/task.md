@@ -50,8 +50,6 @@ In the end of the game the user should be informed about the results:
 
 An example of the game: **TODO: add a gif**
 
-**TODO: hints**
-
 <div class="hint">
 
   To implement `isCorrectInput` function, you should check two conditions. 
