@@ -6,7 +6,7 @@ such as loops, conditional statements, and more.
 
 The project of this lesson is **Bulls and cows (Mastermind)**.
 This is a popular children's game by guessing the hidden word.
-The detailed rules you can read by the [link](https://en.wikipedia.org/wiki/Bulls_and_Cows).
+The detailed rules you can be read at the [link](https://en.wikipedia.org/wiki/Bulls_and_Cows).
 
 In this lesson, the project will be divided into two parts:
 - At the beginning, you will create a game prototype that can play with the user, 
@@ -20,9 +20,10 @@ The lesson includes the following topics:
 
 - different types of variables;
 - functions;
-- loops
-- if expressions
-- `or` and `and` boolean operations
+- loops;
+- ranges;
+- if expressions;
+- `or` and `and` boolean operations;
 - basic knowledge about List collection, built-in functions to work with them, 
 basic knowledge about lambda expressions in these built-in functions;
-- generation random strings.
+- random function.
