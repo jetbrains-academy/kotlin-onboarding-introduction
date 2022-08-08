@@ -1,0 +1,11 @@
+type: edu
+custom_name: Null-safety
+files:
+- name: src/Main.kt
+  visible: true
+- name: src/Images.kt
+  visible: false
+- name: src/PreDefinedSymbols.kt
+  visible: false
+- name: test/Tests.kt
+  visible: false
