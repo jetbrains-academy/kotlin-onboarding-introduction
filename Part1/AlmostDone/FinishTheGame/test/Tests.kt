@@ -13,6 +13,15 @@ class Test {
         private const val SQUARED_BAD = "${SQUARED}1"
         private const val BORDERS_BAD = "${BORDERS}1"
 
+        private const val SIMBA = "simba"
+        private const val SIMBA_BAD = "${SIMBA}1"
+
+        private const val YES = "yes"
+        private const val NO = "no"
+        private const val BAD_ANSWER = "yess"
+
+        private const val CUSTOM_IMAGE = "^_^"
+
         private val trimPictureMethod = TestMethod(
             "trimPicture", "String", listOf(
                 Variable("picture", "String"),
@@ -53,6 +62,111 @@ class Test {
             Arguments.of("$SQUARED_BAD${newLineSymbol}$SQUARED$newLineSymbol", true, SQUARED),
             Arguments.of("$BORDERS_BAD${newLineSymbol}$BORDERS$newLineSymbol", true, BORDERS),
         )
+
+        private val choosePictureMethod = TestMethod("choosePicture", "String")
+
+        @JvmStatic
+        fun preDefinedPictures() = listOf(
+            // Input, is System.in empty, output
+            Arguments.of("$SIMBA$newLineSymbol", true, allImages[SIMBA]!!),
+            Arguments.of("$SIMBA$newLineSymbol$SIMBA$newLineSymbol", false, allImages[SIMBA]!!),
+            Arguments.of("$SIMBA_BAD$newLineSymbol$SIMBA$newLineSymbol", true, allImages[SIMBA]!!),
+        )
+
+        @JvmStatic
+        fun picturesInputs() = listOf(
+            // Input, is System.in empty, output
+            Arguments.of("$YES$newLineSymbol$SIMBA$newLineSymbol", true, allImages[SIMBA]!!),
+            Arguments.of("$YES$newLineSymbol$SIMBA$newLineSymbol$SIMBA$newLineSymbol", false, allImages[SIMBA]!!),
+            Arguments.of("$YES$newLineSymbol$SIMBA_BAD$newLineSymbol$SIMBA$newLineSymbol", true, allImages[SIMBA]!!),
+
+            Arguments.of("$BAD_ANSWER$newLineSymbol$YES$newLineSymbol$SIMBA$newLineSymbol", true, allImages[SIMBA]!!),
+            Arguments.of(
+                "$BAD_ANSWER$newLineSymbol$YES$newLineSymbol$SIMBA$newLineSymbol$SIMBA$newLineSymbol",
+                false,
+                allImages[SIMBA]!!
+            ),
+            Arguments.of(
+                "$BAD_ANSWER$newLineSymbol$YES$newLineSymbol$SIMBA_BAD$newLineSymbol$SIMBA$newLineSymbol",
+                true,
+                allImages[SIMBA]!!
+            ),
+
+            Arguments.of("$NO$newLineSymbol$CUSTOM_IMAGE$newLineSymbol", true, CUSTOM_IMAGE),
+            Arguments.of(
+                "$NO$newLineSymbol$CUSTOM_IMAGE$newLineSymbol$CUSTOM_IMAGE$newLineSymbol",
+                false,
+                CUSTOM_IMAGE
+            ),
+
+            Arguments.of("$BAD_ANSWER$newLineSymbol$NO$newLineSymbol$CUSTOM_IMAGE$newLineSymbol", true, CUSTOM_IMAGE),
+            Arguments.of(
+                "$BAD_ANSWER$newLineSymbol$NO$newLineSymbol$CUSTOM_IMAGE$newLineSymbol$CUSTOM_IMAGE$newLineSymbol",
+                false,
+                CUSTOM_IMAGE
+            ),
+        )
+
+        private val getPictureMethod = TestMethod("getPicture", "String")
+
+        @JvmStatic
+        fun photoshopInputs() = listOf(
+            // Input, output
+            Arguments.of("$YES$newLineSymbol$SIMBA$newLineSymbol$BORDERS$newLineSymbol", Image.SIMBA.borderedImage),
+            Arguments.of("$YES$newLineSymbol$SIMBA$newLineSymbol$SQUARED$newLineSymbol", Image.SIMBA.squaredImage),
+            Arguments.of(
+                "$NO$newLineSymbol${Image.CUSTOM.initialImage}$newLineSymbol$BORDERS$newLineSymbol",
+                Image.CUSTOM.borderedImage
+            ),
+            Arguments.of(
+                "$NO$newLineSymbol${Image.CUSTOM.initialImage}$newLineSymbol$SQUARED$newLineSymbol",
+                Image.CUSTOM.squaredImage
+            ),
+        )
+    }
+
+    @Test
+    fun testPhotoshopFunction() {
+        TestMethod("photoshop", "Unit", returnTypeJava = "Void").getMethodFromClass()
+    }
+
+    @ParameterizedTest
+    @MethodSource("photoshopInputs")
+    fun testPhotoshopImplementation(
+        input: String,
+        output: String
+    ) {
+        assert(output in runMainFunction(::main, input)) { "The photoshop project should print $output as the output image for the inout: $input" }
+    }
+
+    @Test
+    fun testChoosePictureFunction() {
+        choosePictureMethod.getMethodFromClass()
+    }
+
+    @Test
+    fun testGetPictureFunction() {
+        getPictureMethod.getMethodFromClass()
+    }
+
+    @ParameterizedTest
+    @MethodSource("preDefinedPictures")
+    fun testChoosePictureImplementation(
+        input: String,
+        isSystemInEmpty: Boolean,
+        output: String
+    ) {
+        checkReadLineFunctions(choosePictureMethod, input, isSystemInEmpty, output)
+    }
+
+    @ParameterizedTest
+    @MethodSource("picturesInputs")
+    fun testGetPictureImplementation(
+        input: String,
+        isSystemInEmpty: Boolean,
+        output: String
+    ) {
+        checkReadLineFunctions(getPictureMethod, input, isSystemInEmpty, output)
     }
 
     @Test
@@ -72,16 +186,28 @@ class Test {
         isSystemInEmpty: Boolean,
         output: String
     ) {
-        val userMethod = chooseFilterMethod.getMethodFromClass()
+        checkReadLineFunctions(chooseFilterMethod, input, isSystemInEmpty, output)
+    }
+
+    private fun checkReadLineFunctions(
+        testMethod: TestMethod,
+        input: String,
+        isSystemInEmpty: Boolean,
+        output: String
+    ) {
+        val userMethod = testMethod.getMethodFromClass()
         setSystemIn(input)
         val result = userMethod.invokeWithoutArgs()
         val errorPostfix = if (!isSystemInEmpty) "not" else ""
-        Assertions.assertEquals(isSystemInEmpty, isSystemInEmpty(),
-            "For the user's input: $input the function ${chooseFilterMethod.name} should read $errorPostfix " +
+        Assertions.assertEquals(
+            isSystemInEmpty, isSystemInEmpty(),
+            "For the user's input: $input the function ${testMethod.name} should read $errorPostfix " +
                     "all inputs before returning the result."
         )
-        Assertions.assertEquals(output, result, "For the user's input: $input the " +
-                "function ${chooseFilterMethod.name} should return $output")
+        Assertions.assertEquals(
+            output, result, "For the user's input: $input the " +
+                    "function ${testMethod.name} should return $output"
+        )
     }
 
     @Test
