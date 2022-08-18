@@ -6,3 +6,5 @@ files:
   visible: true
 - name: src/main/kotlin/Patterns.kt
   visible: false
+- name: test/PatternsGeneratorTestsUtils.kt
+  visible: false

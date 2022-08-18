@@ -136,7 +136,7 @@ class Test {
         input: String,
         output: String
     ) {
-        assert(output in runMainFunction(::main, input)) { "The photoshop project should print $output as the output image for the inout: $input" }
+        assert(output in runMainFunction(::main, input)) { "The photoshop project should print $output as the output image for the input: $input" }
     }
 
     @Test
@@ -187,27 +187,6 @@ class Test {
         output: String
     ) {
         checkReadLineFunctions(chooseFilterMethod, input, isSystemInEmpty, output)
-    }
-
-    private fun checkReadLineFunctions(
-        testMethod: TestMethod,
-        input: String,
-        isSystemInEmpty: Boolean,
-        output: String
-    ) {
-        val userMethod = testMethod.getMethodFromClass()
-        setSystemIn(input)
-        val result = userMethod.invokeWithoutArgs()
-        val errorPostfix = if (!isSystemInEmpty) "not" else ""
-        Assertions.assertEquals(
-            isSystemInEmpty, isSystemInEmpty(),
-            "For the user's input: $input the function ${testMethod.name} should read $errorPostfix " +
-                    "all inputs before returning the result."
-        )
-        Assertions.assertEquals(
-            output, result, "For the user's input: $input the " +
-                    "function ${testMethod.name} should return $output"
-        )
     }
 
     @Test

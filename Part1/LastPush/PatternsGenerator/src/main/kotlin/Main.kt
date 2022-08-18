@@ -43,6 +43,8 @@ fun makeEvenNumber(number: Int) = if (number % 2 == 0) {
     number - 1
 }
 
+fun isEmpty(pattern: String) = pattern == ""
+
 fun repeatHorizontallyWithGaps(pattern: String, n: Int, toAddSeparatorAfter: Boolean): String {
     val pictureRows = pattern.split(newLineSymbol)
     val patternWidth = getPatternWidth(pattern)
@@ -53,8 +55,12 @@ fun repeatHorizontallyWithGaps(pattern: String, n: Int, toAddSeparatorAfter: Boo
         val currentRwSb = StringBuilder()
         val currentWidth = makeEvenNumber(n) / 2
         val patternToRepeat = addEmptyWindow(currentRow, patternWidth, toAddSeparatorAfter).repeat(currentWidth)
-        currentRwSb.append(patternToRepeat)
-        if (n % 2 != 0) {
+        if (isEmpty(patternToRepeat)) {
+            currentRwSb.append(currentRow)
+        } else {
+            currentRwSb.append(patternToRepeat)
+        }
+        if (n % 2 != 0 && !isEmpty(patternToRepeat)) {
             currentRwSb.append(patternToRepeat.dropLast(patternToRepeat.length - currentRow.length))
         }
         sb.append(currentRwSb.toString())
@@ -76,12 +82,15 @@ fun repeatVertically(firstLine: String, secondLine: String, height: Int): String
 fun baseGenerator(firstLine: String, secondLine: String, height: Int): String {
     val sb = StringBuilder()
     sb.append(firstLine)
-    if (height <= 1) {
-        return sb.toString()
+    return when {
+        height < 1 -> ""
+        height == 1 -> sb.toString()
+        else -> {
+            sb.append(secondLine)
+            sb.append(repeatVertically(firstLine, secondLine, height))
+            sb.toString()
+        }
     }
-    sb.append(secondLine)
-    sb.append(repeatVertically(firstLine, secondLine, height))
-    return sb.toString()
 }
 
 fun canvasGenerator(pattern: String, width: Int, height: Int): String {
@@ -99,8 +108,8 @@ fun canvasWithGapsGenerator(pattern: String, width: Int, height: Int): String {
 }
 
 fun applyGenerator(pattern: String, generatorName: String, width: Int, height: Int) = when (generatorName) {
-    "canvas" -> canvasGenerator(pattern, width, height)
-    "canvasGaps" -> canvasWithGapsGenerator(pattern, width, height)
+    "canvas" -> canvasGenerator(pattern.trimIndent(), width, height)
+    "canvasGaps" -> canvasWithGapsGenerator(pattern.trimIndent(), width, height)
     else -> error("Unsupported generator: $generatorName")
 }
 
