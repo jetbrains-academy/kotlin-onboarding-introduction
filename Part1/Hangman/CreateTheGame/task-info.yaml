@@ -3,6 +3,13 @@ custom_name: Create the game
 files:
 - name: src/main/kotlin/Main.kt
   visible: true
+  placeholders:
+  - offset: 0
+    length: 3540
+    placeholder_text: |-
+      fun main() {
+          // Write your solution here
+      }
 - name: src/main/kotlin/Util.kt
   visible: false
 - name: src/main/kotlin/Words.kt

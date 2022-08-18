@@ -4,8 +4,11 @@ files:
 - name: src/main/kotlin/Main.kt
   visible: true
   placeholders:
-  - offset: 13
-    length: 400
-    placeholder_text: // Write your solution here
+  - offset: 0
+    length: 415
+    placeholder_text: |-
+      fun main() {
+          // Write your solution here
+      }
 - name: test/Tests.kt
   visible: false
