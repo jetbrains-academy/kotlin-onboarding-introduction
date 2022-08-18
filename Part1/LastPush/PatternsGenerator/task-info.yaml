@@ -1,7 +1,8 @@
 type: edu
-custom_name: Program entry point
 files:
+- name: test/Tests.kt
+  visible: false
 - name: src/main/kotlin/Main.kt
   visible: true
-- name: test/Tests.kt
+- name: src/main/kotlin/Patterns.kt
   visible: false
