@@ -15,3 +15,5 @@ files:
   visible: false
 - name: test/PatternsGeneratorTestsUtils.kt
   visible: false
+- name: src/main/kotlin/PreDefinedSymbols.kt
+  visible: false
