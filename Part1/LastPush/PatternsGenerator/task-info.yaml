@@ -1,14 +1,17 @@
 type: edu
-custom_name: Create the app
 files:
+- name: test/Tests.kt
+  visible: false
 - name: src/main/kotlin/Main.kt
   visible: true
   placeholders:
   - offset: 0
-    length: 415
+    length: 5908
     placeholder_text: |-
       fun main() {
           // Write your solution here
       }
-- name: test/Tests.kt
+- name: src/main/kotlin/Patterns.kt
+  visible: false
+- name: test/PatternsGeneratorTestsUtils.kt
   visible: false

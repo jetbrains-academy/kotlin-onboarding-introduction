@@ -1,5 +1,6 @@
 package util
 
+import org.junit.jupiter.api.Assertions
 import util.Util.newLineSeparator
 import java.io.ByteArrayOutputStream
 import java.io.PrintStream
@@ -35,3 +36,24 @@ fun runMainFunction(mainFunction: () -> Unit, input: String? = null, toAssertSys
 fun isSystemInEmpty() = String(System.`in`.readBytes()).isEmpty()
 
 fun throwInternalCourseError(): Nothing = error("Internal course error!")
+
+fun checkReadLineFunctions(
+    testMethod: TestMethod,
+    input: String,
+    isSystemInEmpty: Boolean,
+    output: String
+) {
+    val userMethod = testMethod.getMethodFromClass()
+    setSystemIn(input)
+    val result = userMethod.invokeWithoutArgs()
+    val errorPostfix = if (!isSystemInEmpty) "not" else ""
+    Assertions.assertEquals(
+        isSystemInEmpty, isSystemInEmpty(),
+        "For the user's input: $input the function ${testMethod.name} should read $errorPostfix " +
+                "all inputs before returning the result."
+    )
+    Assertions.assertEquals(
+        output, result, "For the user's input: $input the " +
+                "function ${testMethod.name} should return $output"
+    )
+}
