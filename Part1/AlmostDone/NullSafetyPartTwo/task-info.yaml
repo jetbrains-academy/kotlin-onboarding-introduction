@@ -9,3 +9,5 @@ files:
   visible: true
 - name: src/main/kotlin/PreDefinedSymbols.kt
   visible: false
+- name: test/PhotoshopTestsUtils.kt
+  visible: false

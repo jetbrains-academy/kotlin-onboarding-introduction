@@ -1,0 +1,1 @@
+fun safeReadLine() = readLine() ?: error("Your input is incorrect, sorry")
