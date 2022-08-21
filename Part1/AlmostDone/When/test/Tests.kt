@@ -17,7 +17,7 @@ class Test {
         )
 
         @JvmStatic
-        fun pictures() = allImages.map { Arguments.of(it) }
+        fun pictures() = allImages.map { Arguments.of(it.key) }
 
         private val applyBordersFilterMethod = TestMethod(
             "applyBordersFilter", "String", listOf(

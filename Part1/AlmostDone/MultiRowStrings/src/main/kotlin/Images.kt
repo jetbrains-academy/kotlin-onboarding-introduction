@@ -105,15 +105,16 @@ val apple = """
     ┊┊┊┊╲▂▂▂▂▂╱┊┊┊┊
 """
 
-val allImages = listOf(
-    spongeBob,
-    simba,
-    brianGriffin,
-    cat,
-    pig,
-    fox,
-    monkey,
-    elephant,
-    android,
-    apple,
+val allImages = mapOf(
+    "spongeBob" to spongeBob,
+    "simba" to simba,
+    "brianGriffin" to brianGriffin,
+    "cat" to cat,
+    "pig" to pig,
+    "fox" to fox,
+    "monkey" to monkey,
+    "elephant" to elephant,
+    "android" to android,
+    "apple" to apple,
 )
+
