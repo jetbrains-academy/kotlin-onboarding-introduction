@@ -35,7 +35,7 @@ val cube = """
 +------+'
 """.trimIndent()
 
-val allPatterns = mapOf(
+val allPatternsMap = mapOf(
     "ball" to ball,
     "rhombus" to rhombus,
     "vase" to vase,

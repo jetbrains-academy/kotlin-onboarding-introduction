@@ -143,7 +143,7 @@ class Test {
     ) {
         val userMethod = isCorrectInputMethod.getMethodFromClass()
         val isCorrect = userMethod.invokeWithArgs(input, WORD_LENGTH, ALPHABET)
-        Assertions.assertEquals(correctness.isCorrect, isCorrect, "The function ${isCorrectInputMethod.name} with arguments: input=$input, wordLength=$WORD_LENGTH, alphabet=$ALPHABET should return ${correctness.isCorrect}")
+        Assertions.assertEquals(correctness.isCorrect, isCorrect, "The function ${isCorrectInputMethod.name} with arguments: input=$input, wordLength=$WORD_LENGTH, alphabet=$ALPHABET should return ${correctness.message}")
     }
 
     @Test
@@ -271,7 +271,7 @@ class Test {
         val userMethod = countLettersMatchingsMethod.getMethodFromClass()
         Assertions.assertEquals(
             expectedLettersMatchings, userMethod.invokeWithArgs(secret, guess),
-            "For secret: $secret and guess: $guess the number of positional matchings is $expectedPosMatchings"
+            "For secret: $secret and guess: $guess the number of letters matchings is $expectedLettersMatchings"
         )
     }
 

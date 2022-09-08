@@ -59,27 +59,27 @@ class Test {
         )
 
         private val dashWithSeparator = "$dash$separator"
-        private val emptyWordSecret = "$dashWithSeparator$dashWithSeparator$dashWithSeparator$dashWithSeparator"
+        private val emptyWordSecret = "$dashWithSeparator$dashWithSeparator$dashWithSeparator$dash"
 
         @JvmStatic
         fun userGuesses() = listOf(
             // secret, guess, currentUserWord, expected guess
             Arguments.of("BOOK", 'A', emptyWordSecret, null),
-            Arguments.of("BOOK", 'A', "${dashWithSeparator}O${separator}O$separator${dashWithSeparator}", null),
-            Arguments.of("BOOK", 'A', "$dashWithSeparator$dashWithSeparator${dashWithSeparator}K$separator", null),
+            Arguments.of("BOOK", 'A', "${dashWithSeparator}O${separator}O$separator$dash", null),
+            Arguments.of("BOOK", 'A', "$dashWithSeparator$dashWithSeparator${dashWithSeparator}K", null),
             Arguments.of(
                 "BOOK",
                 'B',
                 emptyWordSecret,
-                "B$separator$dashWithSeparator$dashWithSeparator$dashWithSeparator"
+                "B$separator$dashWithSeparator$dashWithSeparator$dash"
             ),
             Arguments.of(
                 "BOOK",
                 'B',
                 "${dashWithSeparator}O${separator}O$separator${dashWithSeparator}",
-                "B${separator}O${separator}O$separator${dashWithSeparator}"
+                "B${separator}O${separator}O$separator$dash"
             ),
-            Arguments.of("BOOK", 'K', "$dashWithSeparator$dashWithSeparator${dashWithSeparator}K$separator", null),
+            Arguments.of("BOOK", 'K', "$dashWithSeparator$dashWithSeparator${dashWithSeparator}K", null),
         )
 
         @JvmStatic

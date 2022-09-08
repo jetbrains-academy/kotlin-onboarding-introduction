@@ -5,7 +5,7 @@ files:
   visible: true
   placeholders:
   - offset: 0
-    length: 3540
+    length: 3564
     placeholder_text: |-
       fun main() {
           // Write your solution here

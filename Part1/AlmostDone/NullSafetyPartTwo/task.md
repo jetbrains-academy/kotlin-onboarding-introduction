@@ -24,7 +24,7 @@ This code is the same with:
 ```kotlin
 fun foo(x: String?): String {
     if (x != null) {
-      return it
+      return x
     }
     return ""
 }
@@ -37,7 +37,7 @@ ___
 **Description**: implement two functions: `choosePicture` and `getPicture`:
 
 - `choosePicture` chooses one pre-defined picture by its name. 
-Ypu should ask the user to choose a picture by its name.
+You should ask the user to choose a picture by its name.
 The list of the pre-defined pictures ypu can get by the pre-defined function `allPictures`.
 To get the picture by its name you can use the pre-defined function `getPictureByName`, 
 that returns `String?` - image or `null`, if the name is incorrect.

@@ -62,7 +62,7 @@ if the `null` value was received.
 
 Also implement the `chooseFilter` function, that ask user to choose a filter (`borders` or `squared`) and returns it.
 This function has to use `safeReadLine` function. 
-If the user input an incorrect filer's name, the function should ask to input the right name.
+If the user input an incorrect filter's name, the function should ask to input the right name.
 
 **TODO: add a gif with example**
 

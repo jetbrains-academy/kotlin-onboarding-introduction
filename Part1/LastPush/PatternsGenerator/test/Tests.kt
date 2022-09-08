@@ -123,20 +123,20 @@ class Test {
         @JvmStatic
         fun generatorsInputs() = listOf(
             // Input, is System.in empty, output
-            Arguments.of("$YES$newLineSymbol$CUBE$newLineSymbol", true, allPatterns[CUBE]!!),
-            Arguments.of("$YES$newLineSymbol$CUBE$newLineSymbol$CUBE$newLineSymbol", false, allPatterns[CUBE]!!),
-            Arguments.of("$YES$newLineSymbol$CUBE_BAD$newLineSymbol$CUBE$newLineSymbol", true, allPatterns[CUBE]!!),
+            Arguments.of("$YES$newLineSymbol$CUBE$newLineSymbol", true, allPatternsMap[CUBE]!!),
+            Arguments.of("$YES$newLineSymbol$CUBE$newLineSymbol$CUBE$newLineSymbol", false, allPatternsMap[CUBE]!!),
+            Arguments.of("$YES$newLineSymbol$CUBE_BAD$newLineSymbol$CUBE$newLineSymbol", true, allPatternsMap[CUBE]!!),
 
-            Arguments.of("$BAD_ANSWER$newLineSymbol$YES$newLineSymbol$CUBE$newLineSymbol", true, allPatterns[CUBE]!!),
+            Arguments.of("$BAD_ANSWER$newLineSymbol$YES$newLineSymbol$CUBE$newLineSymbol", true, allPatternsMap[CUBE]!!),
             Arguments.of(
                 "$BAD_ANSWER$newLineSymbol$YES$newLineSymbol$CUBE$newLineSymbol$CUBE$newLineSymbol",
                 false,
-                allPatterns[CUBE]!!
+                allPatternsMap[CUBE]!!
             ),
             Arguments.of(
                 "$BAD_ANSWER$newLineSymbol$YES$newLineSymbol$CUBE_BAD$newLineSymbol$CUBE$newLineSymbol",
                 true,
-                allPatterns[CUBE]!!
+                allPatternsMap[CUBE]!!
             ),
 
             Arguments.of("$NO$newLineSymbol$CUSTOM_IMAGE$newLineSymbol", true, CUSTOM_IMAGE),
