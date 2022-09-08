@@ -3,6 +3,6 @@ val newLineSymbol = System.lineSeparator()
 
 fun getPatternWidth(pattern: String) = pattern.split(newLineSymbol).maxOfOrNull { it.length } ?: 0
 
-fun getPatternByName(name: String) = allPatterns[name]
+fun getPatternByName(name: String) = allPatternsMap[name]
 
-fun allPatterns() = allPatterns.keys
+fun allPatterns() = allPatternsMap.keys

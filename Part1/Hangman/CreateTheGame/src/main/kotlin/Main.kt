@@ -39,7 +39,7 @@ fun generateNewUserWord(secret: String, guess: Char, currentUserWord: String): S
             "${currentUserWord[i * 2]}$separator"
         }
     }
-    return newUserWord
+    return newUserWord.removeSuffix(separator)
 }
 
 fun getHiddenSecret(wordLength: Int) = List(wordLength) { dash }.joinToString(separator)

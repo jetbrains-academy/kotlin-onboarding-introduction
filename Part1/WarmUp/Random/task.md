@@ -50,6 +50,8 @@ ___
 - add information about the alphabet into `getGameRules` function viw the following sentence:
 `The possible symbols in the word: <alphabet>`.
 
+Also ypu need to define a new variable `alphabet` in the `main` functions and initialize it with the `ABCDEFGH` value.
+
 <div class="hint">
   Don't forget use the right separator. In our case the answer should be like "ABCD".
 </div>

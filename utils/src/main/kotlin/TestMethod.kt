@@ -45,7 +45,7 @@ fun Array<Method>.findMethod(method: TestMethod): Method {
     val m = filteredByArgumentsCount.first()
     val params = m.parameterTypes.map { it.name.shortName().lowercase() }
     val args = method.arguments.map { it.type.lowercase() }
-    assert(params == args) { "The method ${method.name} should have ${method.arguments.size} arguments: $params" }
+    assert(params == args) { "The method ${method.name} should have ${method.arguments.size} arguments: $params. The full signature is: ${method.prettyString()}." }
     return m
 }
 

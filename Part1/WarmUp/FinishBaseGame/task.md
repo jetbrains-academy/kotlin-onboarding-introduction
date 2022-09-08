@@ -57,4 +57,4 @@ Your guess has <positionalMatchings> full match, and <lettersMatchings> partial 
 and returns `true` only if the user guessed the word and spent _not more_ than `maxAttemptsCount` attempts
 - Add a function `isLost` that accepts three arguments: `complete`, `attempts`, and `maxAttemptsCount`
 and returns `true` only if the user did not guess the word and spent _more_ than `maxAttemptsCount` attempts
-- Add a condition to check of the user win or lost
+- Add a condition to check of the user win or lost: `Sorry, you lost! :( My word is <secret>` and `Congratulations! You guessed!`.
