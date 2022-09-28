@@ -1,10 +1,10 @@
 It is the final theoretical lesson in this module. 
-It will help you learn more about working with long strings, 
-as well as some concepts that you have not yet had time to learn.
+It will help you learn more about working with long strings 
+as well as refresh some concepts that you have not had time to learn yet.
 
 ----
 
-Project of this lesson is **Console photoshop**.
+The project of this lesson is **Console photoshop**.
 The goal of this project is to create a simple Photoshop console app 
 that can apply different filters to character images.
 
@@ -12,8 +12,8 @@ that can apply different filters to character images.
 
 The lesson includes the following topics:
 
-- multi row strings;
+- multi-row strings;
 - when expressions;
-- base handling of errors;
+- basic handling of errors;
 - string builder;
 - null-safety (`!!` and `?:`).
