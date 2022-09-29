@@ -20,7 +20,7 @@ fun foo(x: String?): String {
 }
 ```
 
-This code is the same with:
+This code is the same as:
 ```kotlin
 fun foo(x: String?): String {
     if (x != null) {
@@ -38,16 +38,16 @@ ___
 
 - `choosePicture` chooses one pre-defined picture by its name. 
 You should ask the user to choose a picture by its name.
-The list of the pre-defined pictures ypu can get by the pre-defined function `allPictures`.
-To get the picture by its name you can use the pre-defined function `getPictureByName`, 
-that returns `String?` - image or `null`, if the name is incorrect.
-- `getPicture` asks user to choose a pre-defined picture or to input a custom picture.
-If the user wants to choose a pre-defined picture, run `choosePicture` function. 
+The list of pre-defined pictures you can get by the pre-defined function `allPictures`.
+To get the picture by its name, you can use the pre-defined function `getPictureByName`, 
+which returns `String?` - an image or `null` if the name is incorrect.
+- `getPicture` asks the user to choose a pre-defined picture or to input a custom picture.
+If the user wants to choose a pre-defined picture, run the `choosePicture` function. 
 If the user wants to upload a custom picture, ask them about it.
 
 **TODO: add a gif with example**
 
 <div class="hint">
-  To check the user's answer in the <code>getPicture</code> function 
-  it is more convince to use <code>when</code> expression.
+  To check the user's answer in the <code>getPicture</code> function, 
+  it is more convenient to use the <code>when</code> expression.
 </div>
