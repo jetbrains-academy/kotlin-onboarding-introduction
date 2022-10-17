@@ -44,6 +44,6 @@ For example, for the BCDF guess (with <secretExample> as the hidden word), there
 <div class="hint">
 
   Different operating systems use different line break characters. 
-  Use a predefined variable `newLineSymbol` with a newline character instead of `\n` to 
+  Use the predefined variable `newLineSymbol` with a newline character instead of `\n` to 
   separate lines correctly.
 </div>
