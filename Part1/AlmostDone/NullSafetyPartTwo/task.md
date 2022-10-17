@@ -43,7 +43,7 @@ To get the picture by its name, you can use the pre-defined function `getPicture
 which returns `String?` - an image or `null` if the name is incorrect.
 - `getPicture` asks the user to choose a pre-defined picture or to input a custom picture.
 If the user wants to choose a pre-defined picture, run the `choosePicture` function. 
-If the user wants to upload a custom picture, ask them about it.
+If the user wants to upload a custom picture, ask them about it, only single-line images need to be supported.
 
 **TODO: add a gif with example**
 
