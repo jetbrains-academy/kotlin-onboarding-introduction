@@ -33,8 +33,10 @@ class Test {
             Arguments.of("AAAA", "BBBB", 0, 0),
             Arguments.of("AABB", "BBAA", 0, 4),
             Arguments.of("ABCD", "ABBA", 2, 0),
-            Arguments.of("ABBA", "ABCD", 2, 2),
-            Arguments.of("AAAA", "ABBB", 1, 3)
+            Arguments.of("ABBA", "ABCD", 2, 0),
+            Arguments.of("AAAA", "ABBB", 1, 0),
+            Arguments.of("BBBB", "BBDH", 2, 0),
+            Arguments.of("AAAA", "ABCD", 1, 0),
         )
 
         private val countPositionalMatchingsMethod = TestMethod(
@@ -53,39 +55,6 @@ class Test {
         )
     }
 
-    @Test
-    fun testIsCompleteFunction() {
-        isCompleteMethod.getMethodFromClass()
-    }
-
-    @ParameterizedTest
-    @MethodSource("inputsToCheck")
-    fun testIsCompleteImplementation(
-        guess: String,
-        secret: String,
-        expectedResult: Boolean
-    ){
-        val userMethod = isCompleteMethod.getMethodFromClass()
-        Assertions.assertEquals(expectedResult, userMethod.invokeWithArgs(secret, guess),
-            "For secret: $secret and guess: $guess the function ${isCompleteMethod.name} should return $expectedResult")
-    }
-
-    @Test
-    fun testGetGameRulesFunction() {
-        TestMethod(
-            "getGameRules", "String", listOf(
-                Variable("wordLength", "Int"),
-                Variable("maxAttemptsCount", "Int"),
-                Variable("secretExample", "String"),
-            )
-        ).getMethodFromClass()
-    }
-
-    @Test
-    fun testCountLettersMatchingsFunction() {
-        countLettersMatchingsMethod.getMethodFromClass()
-    }
-
     @ParameterizedTest
     @MethodSource("sequences")
     fun testCountLettersMatchingsImplementation(
@@ -96,12 +65,7 @@ class Test {
     ) {
         val userMethod = countLettersMatchingsMethod.getMethodFromClass()
         Assertions.assertEquals(expectedLettersMatchings, userMethod.invokeWithArgs(secret, guess),
-            "For secret: $secret and guess: $guess the number of positional matchings is $expectedPosMatchings")
-    }
-
-    @Test
-    fun testCountPositionalMatchingsFunction() {
-        countPositionalMatchingsMethod.getMethodFromClass()
+            "For secret: $secret and guess: $guess the number of letters matchings is $expectedLettersMatchings")
     }
 
     @ParameterizedTest
@@ -117,6 +81,34 @@ class Test {
             "For secret: $secret and guess: $guess the number of positional matchings is $expectedPosMatchings")
     }
 
+    @ParameterizedTest
+    @MethodSource("inputsToCheck")
+    fun testIsCompleteImplementation(
+        guess: String,
+        secret: String,
+        expectedResult: Boolean
+    ){
+        val userMethod = isCompleteMethod.getMethodFromClass()
+        Assertions.assertEquals(expectedResult, userMethod.invokeWithArgs(secret, guess),
+            "For secret: $secret and guess: $guess the function ${isCompleteMethod.name} should return $expectedResult")
+    }
+
+    @Test
+    fun testIsCompleteFunction() {
+        isCompleteMethod.getMethodFromClass()
+    }
+
+    @Test
+    fun testGetGameRulesFunction() {
+        TestMethod(
+            "getGameRules", "String", listOf(
+                Variable("wordLength", "Int"),
+                Variable("maxAttemptsCount", "Int"),
+                Variable("secretExample", "String"),
+            )
+        ).getMethodFromClass()
+    }
+
     @Test
     fun testCountGenerateSecretFunction() {
         val m = TestMethod("generateSecret", "String", emptyList())
@@ -130,14 +122,24 @@ class Test {
     }
 
     @Test
+    fun testCountLettersMatchingsFunction() {
+        countLettersMatchingsMethod.getMethodFromClass()
+    }
+
+    @Test
+    fun testCountPositionalMatchingsFunction() {
+        countPositionalMatchingsMethod.getMethodFromClass()
+    }
+
+    @Test
     fun testSolution() {
         Assertions.assertEquals(
-            "Welcome to the game! \n" +
-                    "\n" +
-                    "Two people play this game, one guesses a word (a sequence of letters), the other guesses it. In this case, the computer guesses the word. A sequence of 4 letters is guessed (for example, ACEB). Several attempts are given to guess it (max number is 3). For each attempt, the number of complete matches (letter and position) and partial (letter only) is reported. \n" +
-                    "\n" +
-                    "For example, for a BCDF guess (with ACEB guessed) there will be 1 full match (C), 1 partial match (B).\n" +
-                    "Please, input your guess. It should be 4 size.\n",
+            "Welcome to the game! ${Util.newLineSeparator}" +
+                    Util.newLineSeparator +
+                    "Two people play this game, one guesses a word (a sequence of letters), the other guesses it. In this case, the computer guesses the word. A sequence of 4 letters is guessed (for example, ACEB). Several attempts are given to guess it (max number is 3). For each attempt, the number of complete matches (letter and position) and partial (letter only) is reported. ${Util.newLineSeparator}" +
+                    Util.newLineSeparator +
+                    "For example, for a BCDF guess (with ACEB guessed) there will be 1 full match (C), 1 partial match (B).${Util.newLineSeparator}" +
+                    "Please, input your guess. It should be 4 size.${Util.newLineSeparator}",
             runMainFunction(::main, "ABCD")
         )
     }

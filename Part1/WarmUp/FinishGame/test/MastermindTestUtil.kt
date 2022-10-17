@@ -1,3 +1,5 @@
+import util.Util
+
 internal const val SECRET = "ABCD"
 internal const val WORD_LENGTH = 4
 internal const val ALPHABET = "ABCDEFG"
@@ -11,7 +13,7 @@ data class GameStep(
         private const val welcomeMessage = "Please, input your guess. It should be $WORD_LENGTH size."
     }
 
-    fun imitateGameProcess() = "$welcomeMessage\nYour guess has $positions full match, and $letters partial match."
+    fun imitateGameProcess() = "$welcomeMessage${Util.newLineSeparator}Your guess has $positions full match, and $letters partial match."
 }
 
 enum class UserInputCorrectness(val message: String, val isCorrect: Boolean) {

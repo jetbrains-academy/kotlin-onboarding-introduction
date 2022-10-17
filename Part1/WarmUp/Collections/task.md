@@ -29,8 +29,6 @@ for example, searching for a value, filtering, and so on.
 "ABCDDD".first()
 ```
 
-**TODO: is it ok to use lambda expressions here, add function example**
-
 Often these built-in functions accept [lambda expressions](https://kotlinlang.org/docs/lambdas.html#lambda-expressions-and-anonymous-functions).
 We will talk about them in detail later, but currently it is enough to know that:
 - they offer a special way to tell built-in functions what they should do with _each_ 
@@ -46,6 +44,16 @@ In this case, we are using a lambda expression (a condition),
 which will be applied to **each** element of the collection.
 It takes one parameter `Char` (character) and compares it to character `A` 
 (for characters we need to use single quotes).
+
+We can rewrite this example by the following way with the `for` loop:
+```kotlin
+var result = ""
+for (symbol in "ABCDDD") {
+   if (symbol == 'A') {
+      result += symbol
+   }
+}
+```
 
 If the type of the arguments is clear from the context (as it usually is with collections), 
 then the type can be omitted:
@@ -70,11 +78,31 @@ val secondWord = "AACAAA"
 // The result will be: "AC"
 "ABCDDD".filterIndexed { index, symbol -> secondWord[index] == symbol }
 ```
+
+The last example can be rewritten by the following way:
+```kotlin
+val secondWord = "AACAAA"
+var result = ""
+for ((index, symbol) in "ABCDDD".withIndex()) {
+   if (secondWord[index] == symbol) {
+      result += symbol
+   }
+}
+```
 ___
 
 ### Task
 
 **Description**: implement the _countPositionalMatchings_ function by using Kotlin built-in functions.
+
+<div class="Hint">
+There are several examples of working _countPositionalMatchings_ function:
+
+- guess = "ACEB", secret = "BCDF", result = 1;
+- guess = "ABCD", secret = "DCBA", result = 0;
+- guess = "AAAA", secret = "ABBB", result = 1;
+- guess = "BBBB", secret = "BBDH", result = 2.
+</div>
 
 <div class="Hint">
 The main idea of the algorithm is to keep only those letters that are equal and have the same index. 
