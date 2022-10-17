@@ -1,6 +1,6 @@
 ### Theory
 
-The conditional operator ([`if`](https://kotlinlang.org/docs/control-flow.html#if-expression) expression) 
+The conditional operator (the [`if`](https://kotlinlang.org/docs/control-flow.html#if-expression) expression) 
 is used when the program has some choice. 
 For example, if the variable contains a positive number, display it on the screen, 
 otherwise do nothing. 
@@ -12,7 +12,7 @@ if (y > 0) {
     println(y)
 }
 ```
-or 
+Another example: 
 ```kotlin
 if (x > y) {
     println(x)
@@ -22,11 +22,11 @@ if (x > y) {
 }
 ```
 
-For the `else` branch, the reverse of the original condition is used, for example,
-for `x > y` the opposite condition is `x <= y`.
+For the `else` branch, the reverse of the original condition is used: for example,
+for `x > y`, the opposite condition is `x <= y`.
 
-In Kotlin `if` expression can be also assigned into a variable 
-or be a returned value in a function, in this case the **last** operator in each branch will be returned:
+In Kotlin, the `if` expression can be also assigned to a variable 
+or be a returned value in a function; in such a case, the **last** operator in each branch will be returned:
 ```kotlin
 val max = if (x > y) {
     println(x)
@@ -39,10 +39,10 @@ val max = if (x > y) {
     y
 }
 ```
-For input `x = 5` and `y = 15` the result will be `max = 15`, and otherwise, 
-if `x = 20` and `y = 15` the result will be `max = 20`.
+For input `x = 5` and `y = 15`, the result will be `max = 15`; and otherwise, 
+if `x = 20` and `y = 15`, the result will be `max = 20`.
 
-For the function it might be the same:
+It is the same with functions:
 ```kotlin
 fun max(x: Int, y: Int) = if (x > y) {
     println(x)
@@ -55,7 +55,7 @@ fun max(x: Int, y: Int) = if (x > y) {
     y
   }
 ```
-or in the full notation:
+Or, in the full notation:
 ```kotlin
 fun max(x: Int, y: Int): Int {
     return if (x > y) {
@@ -73,12 +73,12 @@ fun max(x: Int, y: Int): Int {
 
 ### Task
 
-**Description**: implement `isComplete` function. It should return `true` 
+**Description**: implement the `isComplete` function. It should return `true` 
 if `secret` and `guess` are the same and `false` otherwise.
 
 <div class="hint">
 
-If you compare two variables to get <code>Boolean</code> result, you can use a short notation, 
+If you compare two variables to get a <code>Boolean</code> result, you can use the short notation, 
 for example, the following code:
 ```
 fun isNotEqual(a: Int, b: Int) = if (a != b) {
@@ -87,7 +87,7 @@ fun isNotEqual(a: Int, b: Int) = if (a != b) {
     false
 }
 ```
-can be replaced into this one:
+can be replaced with this one:
 ```
 fun isNotEqual(a: Int, b: Int) = a != b
 ```
