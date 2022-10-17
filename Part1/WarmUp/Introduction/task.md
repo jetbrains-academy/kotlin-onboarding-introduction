@@ -14,8 +14,6 @@ but the hidden word will always be the same.
 - The second step will be adding a randomly generated hidden word 
 as well as the ability to safely communicate with the user: e.g., handle the user input.
 
-**TODO: add game gif??**
-
 The lesson includes the following topics:
 
 - different types of variables;
@@ -27,3 +25,10 @@ The lesson includes the following topics:
 - basic facts about the List collection, built-in functions to work with it, 
 basic facts about lambda expressions in these built-in functions;
 - random function.
+
+An example of this game:
+
+![The game's example](../../../utils/src/main/resources/images/part1/WarmUp/game.gif "The game's example")
+
+In order for the picture to fit, additional line breaks were added.
+You don't need to add them when solving the task.
