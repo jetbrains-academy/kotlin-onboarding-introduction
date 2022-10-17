@@ -58,35 +58,35 @@ class Test {
             Arguments.of(listOf("b", "c"), 'B'),
         )
 
-        private val dashWithSeparator = "$dash$separator"
-        private val emptyWordSecret = "$dashWithSeparator$dashWithSeparator$dashWithSeparator$dash"
+        private val underscoreWithSeparator = "$underscore$separator"
+        private val emptyWordSecret = "$underscoreWithSeparator$underscoreWithSeparator$underscoreWithSeparator$underscore"
 
         @JvmStatic
         fun userGuesses() = listOf(
             // secret, guess, currentUserWord, expected guess
             Arguments.of("BOOK", 'A', emptyWordSecret, null),
-            Arguments.of("BOOK", 'A', "${dashWithSeparator}O${separator}O$separator$dash", null),
-            Arguments.of("BOOK", 'A', "$dashWithSeparator$dashWithSeparator${dashWithSeparator}K", null),
+            Arguments.of("BOOK", 'A', "${underscoreWithSeparator}O${separator}O$separator$underscore", null),
+            Arguments.of("BOOK", 'A', "$underscoreWithSeparator$underscoreWithSeparator${underscoreWithSeparator}K", null),
             Arguments.of(
                 "BOOK",
                 'B',
                 emptyWordSecret,
-                "B$separator$dashWithSeparator$dashWithSeparator$dash"
+                "B$separator$underscoreWithSeparator$underscoreWithSeparator$underscore"
             ),
             Arguments.of(
                 "BOOK",
                 'B',
-                "${dashWithSeparator}O${separator}O$separator${dashWithSeparator}",
-                "B${separator}O${separator}O$separator$dash"
+                "${underscoreWithSeparator}O${separator}O$separator${underscoreWithSeparator}",
+                "B${separator}O${separator}O$separator$underscore"
             ),
-            Arguments.of("BOOK", 'K', "$dashWithSeparator$dashWithSeparator${dashWithSeparator}K", null),
+            Arguments.of("BOOK", 'K', "$underscoreWithSeparator$underscoreWithSeparator${underscoreWithSeparator}K", null),
         )
 
         @JvmStatic
         fun gameStates() = listOf(
             // secret, currentGuess, isComplete
             Arguments.of("BOOK", emptyWordSecret, false),
-            Arguments.of("BOOK", "${dashWithSeparator}O${separator}O$separator${dashWithSeparator}", false),
+            Arguments.of("BOOK", "${underscoreWithSeparator}O${separator}O$separator${underscoreWithSeparator}", false),
             Arguments.of("BOOK", "B${separator}O${separator}O${separator}K", true),
         )
     }

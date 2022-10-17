@@ -29,7 +29,7 @@ Good luck with the game!
 ```
 
 The word must be hidden exactly in the `_ ` format per each letter. 
-The necessary symbols already exist in the project and are stored in the variables `separator` and `dash`. 
+The necessary symbols already exist in the project and are stored in the variables `separator` and `underscore`. 
 You just need to call them.
 
 In addition, the variables `wordLength` and `maxAttemptsCount` are also already defined in the project.
@@ -48,7 +48,19 @@ At the end of the game, the user should be informed about the results:
 - if the user lost: `Sorry, you lost! My word is <secret>`
 - if the user guessed the word: `Congratulations! You guessed it!`
 
-An example of the game: **TODO: add a gif**
+An example of this game:
+
+![The game's example](../../../utils/src/main/resources/images/part1/Hangman/game.gif "The game's example")
+
+In order for the picture to fit, additional line breaks were added.
+You don't need to add them when solving the task.
+
+<div class="hint">
+
+Different operating systems use different line break characters.
+Use a predefined variable `newLineSymbol` with a newline character instead of `\n` to
+separate lines correctly.
+</div>
 
 <div class="hint">
 
