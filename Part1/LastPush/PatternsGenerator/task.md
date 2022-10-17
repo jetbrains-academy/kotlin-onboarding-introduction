@@ -32,6 +32,13 @@ The generator works according to the following algorithm:
 but only if the pattern has more than one line;
 3) When repeated **vertically**, the pattern remains **unchanged**.
 
+An example of this application:
+
+![The patterns generator example](../../../utils/src/main/resources/images/part1/LastPush/app.gif "The patterns generator example")
+
+In order for the picture to fit, additional line breaks were added.
+You don't need to add them when solving the task.
+
 <div class="hint">
   For example, consider the following pattern:
 
@@ -171,8 +178,6 @@ n = 5
 ○○    ---->    ○○  ○○  ○○
 ```
 
-
-An example of the game: **TODO: add a gif**
 
 <div class="hint">
 
