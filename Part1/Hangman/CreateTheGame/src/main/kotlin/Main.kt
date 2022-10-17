@@ -8,7 +8,7 @@ fun getGameRules(wordLength: Int, maxAttemptsCount: Int) = "Welcome to the game!
         "" +
         "For example, if the word \"CAT\" was guessed, \"_ _ _\" will be displayed first, " +
         "since the word has 3 letters.$newLineSymbol" +
-        "If you enter the letter A, you will see \"_ A _\" and so on.$newLineSymbol\newLineSymbol" +
+        "If you enter the letter A, you will see \"_ A _\" and so on.$newLineSymbol$newLineSymbol" +
         "" +
         "Good luck in the game!"
 
