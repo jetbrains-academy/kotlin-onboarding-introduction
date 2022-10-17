@@ -21,7 +21,7 @@ that will communicate with the user in an interactive dialogue format:
 
 An example of the final application:
 
-![Bot for dating example](../../../utils/src/main/resources/images/part1/BotForDating/light/game.gif "Bot for dating example")
+![Bot for dating example](../../../utils/src/main/resources/images/part1/BotForDating/game.gif "Bot for dating example")
 
 In order for the picture to fit, additional line breaks were added. 
 You don't need to add them when solving the task.

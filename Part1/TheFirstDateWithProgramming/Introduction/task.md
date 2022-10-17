@@ -26,4 +26,4 @@ The lesson includes the following topics:
 
 An example of this game:
 
-![The game's example](../../../utils/src/main/resources/images/part1/TheFirstDateWithProgramming/light/game.gif "The game's example")
+![The game's example](../../../utils/src/main/resources/images/part1/TheFirstDateWithProgramming/game.gif "The game's example")

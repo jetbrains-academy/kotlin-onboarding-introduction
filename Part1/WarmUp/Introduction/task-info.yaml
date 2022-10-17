@@ -3,4 +3,4 @@ files:
 - name: src/main/kotlin/Main.kt
   visible: true
 - name: src/main/kotlin/Util.kt
-  visible: true
+  visible: false
