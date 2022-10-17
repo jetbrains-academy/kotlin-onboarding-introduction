@@ -45,7 +45,7 @@ which will be applied to **each** element of the collection.
 It takes one parameter `Char` (character) and compares it to character `A` 
 (for characters we need to use single quotes).
 
-We can rewrite this example by the following way with the `for` loop:
+We can rewrite this example with the `for` loop in the following way:
 ```kotlin
 var result = ""
 for (symbol in "ABCDDD") {
@@ -79,7 +79,7 @@ val secondWord = "AACAAA"
 "ABCDDD".filterIndexed { index, symbol -> secondWord[index] == symbol }
 ```
 
-The last example can be rewritten by the following way:
+The last example can be rewritten in the following way:
 ```kotlin
 val secondWord = "AACAAA"
 var result = ""
@@ -96,7 +96,7 @@ ___
 **Description**: implement the _countPositionalMatchings_ function by using Kotlin built-in functions.
 
 <div class="Hint">
-There are several examples of working _countPositionalMatchings_ function:
+Here are several examples of the _countPositionalMatchings_ function's work:
 
 - guess = "ACEB", secret = "BCDF", result = 1;
 - guess = "ABCD", secret = "DCBA", result = 0;
