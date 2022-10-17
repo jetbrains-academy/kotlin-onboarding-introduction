@@ -40,3 +40,10 @@ Two people play this game, one chooses a word (a sequence of letters), the other
 
 For example, for the BCDF guess (with <secretExample> as the hidden word), there will be 1 full match (C), 1 partial match (B).
 ```
+
+<div class="hint">
+
+  Different operating systems use different line break characters. 
+  Use a predefined variable `newLineSymbol` with a newline character instead of `\n` to 
+  separate lines correctly.
+</div>

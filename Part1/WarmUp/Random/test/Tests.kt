@@ -34,8 +34,10 @@ class Test {
             Arguments.of("AAAA", "BBBB", 0, 0),
             Arguments.of("AABB", "BBAA", 0, 4),
             Arguments.of("ABCD", "ABBA", 2, 0),
-            Arguments.of("ABBA", "ABCD", 2, 2),
-            Arguments.of("AAAA", "ABBB", 1, 3)
+            Arguments.of("ABBA", "ABCD", 2, 0),
+            Arguments.of("AAAA", "ABBB", 1, 0),
+            Arguments.of("BBBB", "BBDH", 2, 0),
+            Arguments.of("AAAA", "ABCD", 1, 0),
         )
 
         private val countPositionalMatchingsMethod = TestMethod(
@@ -97,6 +99,31 @@ class Test {
         )
     }
 
+    @ParameterizedTest
+    @MethodSource("secretProperties")
+    fun testGenerateSecretImplementation(
+        wordLength: Int,
+        alphabet: String,
+    ) {
+        val userMethod = generateSecretMethod.getMethodFromClass()
+        val secret = userMethod.invokeWithArgs(wordLength, alphabet)
+        require(secret is String) { "The method ${generateSecretMethod.name} should return String" }
+        val nonAlphabetSymbols = secret.filter { it !in alphabet }
+        require(nonAlphabetSymbols.isEmpty()) { "The method ${generateSecretMethod.name} for alphabet: $alphabet returns incorrect symbols $nonAlphabetSymbols"  }
+        require(secret.length == wordLength) { "The method ${generateSecretMethod.name} for wordLength: $wordLength should return String with length $wordLength" }
+    }
+
+    @Test
+    fun testPrintRoundResultsFunction() {
+        TestMethod(
+            "printRoundResults", "Unit", listOf(
+                Variable("secret", "String"),
+                Variable("guess", "String"),
+            ),
+            "Void"
+        ).getMethodFromClass()
+    }
+
     @Test
     fun testIsWinFunction() {
         isWinMethod.getMethodFromClass()
@@ -139,20 +166,34 @@ class Test {
         )
     }
 
-    @Test
-    fun testPrintRoundResultsFunction() {
-        TestMethod(
-            "printRoundResults", "Unit", listOf(
-                Variable("secret", "String"),
-                Variable("guess", "String"),
-            ),
-            "Void"
-        ).getMethodFromClass()
+    @ParameterizedTest
+    @MethodSource("sequences")
+    fun testCountLettersMatchingsImplementation(
+        guess: String,
+        secret: String,
+        expectedPosMatchings: Int,
+        expectedLettersMatchings: Int
+    ) {
+        val userMethod = countLettersMatchingsMethod.getMethodFromClass()
+        Assertions.assertEquals(
+            expectedLettersMatchings, userMethod.invokeWithArgs(secret, guess),
+            "For secret: $secret and guess: $guess the number of positional matchings is $expectedPosMatchings"
+        )
     }
 
-    @Test
-    fun testIsCompleteFunction() {
-        isCompleteMethod.getMethodFromClass()
+    @ParameterizedTest
+    @MethodSource("sequences")
+    fun testCountPositionalMatchingsImplementation(
+        guess: String,
+        secret: String,
+        expectedPosMatchings: Int,
+        expectedLettersMatchings: Int
+    ) {
+        val userMethod = countPositionalMatchingsMethod.getMethodFromClass()
+        Assertions.assertEquals(
+            expectedPosMatchings, userMethod.invokeWithArgs(secret, guess),
+            "For secret: $secret and guess: $guess the number of positional matchings is $expectedPosMatchings"
+        )
     }
 
     @ParameterizedTest
@@ -167,6 +208,11 @@ class Test {
             expectedResult, userMethod.invokeWithArgs(secret, guess),
             "For secret: $secret and guess: $guess the function ${isCompleteMethod.name} should return $expectedResult"
         )
+    }
+
+    @Test
+    fun testIsCompleteFunction() {
+        isCompleteMethod.getMethodFromClass()
     }
 
     @Test
@@ -187,61 +233,17 @@ class Test {
     }
 
     @Test
-    fun testCountLettersMatchingsFunction() {
-        countLettersMatchingsMethod.getMethodFromClass()
+    fun testGenerateSecretFunction() {
+        generateSecretMethod.getMethodFromClass()
     }
 
-    @ParameterizedTest
-    @MethodSource("sequences")
-    fun testCountLettersMatchingsImplementation(
-        guess: String,
-        secret: String,
-        expectedPosMatchings: Int,
-        expectedLettersMatchings: Int
-    ) {
-        val userMethod = countLettersMatchingsMethod.getMethodFromClass()
-        Assertions.assertEquals(
-            expectedLettersMatchings, userMethod.invokeWithArgs(secret, guess),
-            "For secret: $secret and guess: $guess the number of positional matchings is $expectedPosMatchings"
-        )
+    @Test
+    fun testCountLettersMatchingsFunction() {
+        countLettersMatchingsMethod.getMethodFromClass()
     }
 
     @Test
     fun testCountPositionalMatchingsFunction() {
         countPositionalMatchingsMethod.getMethodFromClass()
-    }
-
-    @ParameterizedTest
-    @MethodSource("sequences")
-    fun testCountPositionalMatchingsImplementation(
-        guess: String,
-        secret: String,
-        expectedPosMatchings: Int,
-        expectedLettersMatchings: Int
-    ) {
-        val userMethod = countPositionalMatchingsMethod.getMethodFromClass()
-        Assertions.assertEquals(
-            expectedPosMatchings, userMethod.invokeWithArgs(secret, guess),
-            "For secret: $secret and guess: $guess the number of positional matchings is $expectedPosMatchings"
-        )
-    }
-
-    @Test
-    fun testGenerateSecretFunction() {
-        generateSecretMethod.getMethodFromClass()
-    }
-
-    @ParameterizedTest
-    @MethodSource("secretProperties")
-    fun testGenerateSecretImplementation(
-        wordLength: Int,
-        alphabet: String,
-    ) {
-        val userMethod = generateSecretMethod.getMethodFromClass()
-        val secret = userMethod.invokeWithArgs(wordLength, alphabet)
-        require(secret is String) { "The method ${generateSecretMethod.name} should return String" }
-        val nonAlphabetSymbols = secret.filter { it !in alphabet }
-        require(nonAlphabetSymbols.isEmpty()) { "The method ${generateSecretMethod.name} for alphabet: $alphabet returns incorrect symbols $nonAlphabetSymbols"  }
-        require(secret.length == wordLength) { "The method ${generateSecretMethod.name} for wordLength: $wordLength should return String with length $wordLength" }
     }
 }
