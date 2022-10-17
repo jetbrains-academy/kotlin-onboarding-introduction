@@ -1,11 +1,11 @@
 ### Theory
 
-We are already familiar with the `if` expression, however, 
-it is not always convenient to use it. 
-For example, if we need to check a large number of values.
+We are already familiar with the `if` expression; however, 
+it may not be convenient in all cases: 
+for example, when we need to check a large number of values.
 In such cases, you can use the [`when`](https://kotlinlang.org/docs/control-flow.html#when-expression) expression.
 
-For example, the following code:
+For example, take a look at the following code:
 ```kotlin
 fun checkNumber(x: Int) {
     if (x > 0) {
@@ -17,7 +17,7 @@ fun checkNumber(x: Int) {
     }
 }
 ```
-can be replaced into this one:
+The above code can be replaced with the following:
 ```kotlin
 fun checkNumber(x: Int) {
     when {
@@ -27,10 +27,10 @@ fun checkNumber(x: Int) {
     }
 }
 ```
-This view is shorter and easier to read.
+Now it is shorter and easier to read.
 
 In addition, you can specify a variable that you want to compare 
-with some value and just specify these values below. For example:
+with some values and just list these values below. For example:
 
 ```kotlin
 fun checkNumber(x: Int): Int {
@@ -43,7 +43,7 @@ fun checkNumber(x: Int): Int {
     }
 }
 ```
-can be replaced into:
+It can be replaced with:
 ```kotlin
 fun checkNumber(x: Int): Int {
     return when (x) {
@@ -54,9 +54,9 @@ fun checkNumber(x: Int): Int {
 }
 ```
 
-When using `when`, it is useful to handle edge cases, 
-for example, you can simply end the execution of the program, 
-informing the user about errors. 
+The `when` expression is useful in handling edge cases: 
+for example, you can simply end the execution of the program 
+and inform the user about errors. 
 You can use the `error` function:
 ```kotlin
 fun checkNumber(x: Int): Int {
@@ -72,10 +72,10 @@ ___
 
 ### Task
 
-**Description**: Implement the `applyFilter` function that accepts a picture and a filter name, 
+**Description**: Implement the `applyFilter` function, which accepts a picture and a filter name, 
 applies the given filter, and returns the updated picture.
 
-In this project we will implement two obligatory filters (but you can add any others if you want):
+In this project, we will implement two obligatory filters (but you can add any others if you want):
 
 - `borders` - adds a border to the image:
 <div class="hint">
@@ -139,8 +139,8 @@ An example of this filter:
 ```
 </div>
 
-The function should inform user about an unexpected filter name.
+The function should inform the user about an unexpected filter name.
 
-In this task you should also add two functions with `TODO` (we will implement them in the next tasks):
-- `applyBordersFilter`, that accepts a picture and applies the `borders` filter;
-- `applySquaredFilter`, that accepts a picture and applies the `squared` filter.
+In this task, you should also add two functions with `TODO` (we will implement them in the following tasks):
+- `applyBordersFilter`, which accepts a picture and applies the `borders` filter;
+- `applySquaredFilter`, which accepts a picture and applies the `squared` filter.
