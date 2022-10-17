@@ -30,7 +30,7 @@ fun runMainFunction(mainFunction: () -> Unit, input: String? = null, toAssertSys
     if (toAssertSystemIn) {
         assert(isSystemInEmpty()) { "You are asking the user to enter data fewer times than required in the task!" }
     }
-    return baos.toString()
+    return baos.toString("UTF-8")
 }
 
 fun isSystemInEmpty() = String(System.`in`.readBytes()).isEmpty()

@@ -124,6 +124,24 @@ class Test {
         checkReadLineFunctions(getPictureMethod, input, isSystemInEmpty, output)
     }
 
+    private fun checkReadLineFunctions(
+        testMethod: TestMethod,
+        input: String,
+        isSystemInEmpty: Boolean,
+        output: String
+    ) {
+        val userMethod = testMethod.getMethodFromClass()
+        setSystemIn(input)
+        val result = userMethod.invokeWithoutArgs()
+        val errorPostfix = if (!isSystemInEmpty) "not" else ""
+        Assertions.assertEquals(isSystemInEmpty, isSystemInEmpty(),
+            "For the user's input: $input the function ${testMethod.name} should read $errorPostfix " +
+                    "all inputs before returning the result."
+        )
+        Assertions.assertEquals(output, result, "For the user's input: $input the " +
+                "function ${testMethod.name} should return $output")
+    }
+
     @Test
     fun testSafeReadLineFunction() {
         TestMethod("safeReadLine", "String").getMethodFromClass()
@@ -144,63 +162,17 @@ class Test {
         checkReadLineFunctions(chooseFilterMethod, input, isSystemInEmpty, output)
     }
 
-    private fun checkReadLineFunctions(
-        testMethod: TestMethod,
-        input: String,
-        isSystemInEmpty: Boolean,
-        output: String
-    ) {
-        val userMethod = testMethod.getMethodFromClass()
-        setSystemIn(input)
-        val result = userMethod.invokeWithoutArgs()
-        val errorPostfix = if (!isSystemInEmpty) "not" else ""
-        Assertions.assertEquals(isSystemInEmpty, isSystemInEmpty(),
-            "For the user's input: $input the function ${testMethod.name} should read $errorPostfix " +
-                    "all inputs before returning the result."
-        )
-        Assertions.assertEquals(output, result, "For the user's input: $input the " +
-                "function ${testMethod.name} should return $output")
-    }
-
-    @Test
-    fun testApplyBordersFilterFunction() {
-        applyBordersFilterMethod.getMethodFromClass()
-    }
-
     @ParameterizedTest
     @MethodSource("pictures")
-    fun testApplyBordersFilterImplementation(
+    fun testApplyFilterImplementationBorders(
         picture: Image,
     ) {
         val expectedPicture = "${picture.borderedImage.trimIndent()}$newLineSymbol"
-        val userMethod = applyBordersFilterMethod.getMethodFromClass()
+        val userMethod = applyFilterMethod.getMethodFromClass()
         Assertions.assertEquals(
-            expectedPicture, userMethod.invokeWithArgs(picture.initialImage.trimIndent()),
-            "For picture:\n${picture.initialImage}\n the function ${applyBordersFilterMethod.name} should return\n$expectedPicture\n"
+            expectedPicture, userMethod.invokeWithArgs(picture.initialImage.trimIndent(), "borders"),
+            "For picture:${Util.newLineSeparator}${picture.initialImage}${Util.newLineSeparator} and filter <borders> the function ${applyBordersFilterMethod.name} should return${Util.newLineSeparator}$expectedPicture${Util.newLineSeparator}"
         )
-    }
-
-    @Test
-    fun testApplySquaredFilterFunction() {
-        applySquaredFilterMethod.getMethodFromClass()
-    }
-
-    @ParameterizedTest
-    @MethodSource("pictures")
-    fun testApplySquaredFilterImplementation(
-        picture: Image,
-    ) {
-        val expectedPicture = "${picture.squaredImage.trimIndent()}$newLineSymbol"
-        val userMethod = applySquaredFilterMethod.getMethodFromClass()
-        Assertions.assertEquals(
-            expectedPicture, userMethod.invokeWithArgs(picture.initialImage.trimIndent()),
-            "For picture:\n${picture.initialImage}\n the function ${applySquaredFilterMethod.name} should return\n$expectedPicture\n"
-        )
-    }
-
-    @Test
-    fun testApplyFilterFunction() {
-        applyFilterMethod.getMethodFromClass()
     }
 
     @ParameterizedTest
@@ -212,21 +184,49 @@ class Test {
         val userMethod = applyFilterMethod.getMethodFromClass()
         Assertions.assertEquals(
             expectedPicture, userMethod.invokeWithArgs(picture.initialImage.trimIndent(), "squared"),
-            "For picture:\n${picture.initialImage}\n and filter <borders> the function ${applyBordersFilterMethod.name} should return\n$expectedPicture\n"
+            "For picture:${Util.newLineSeparator}${picture.initialImage}${Util.newLineSeparator} and filter <borders> the function ${applyBordersFilterMethod.name} should return${Util.newLineSeparator}$expectedPicture${Util.newLineSeparator}"
         )
     }
 
     @ParameterizedTest
     @MethodSource("pictures")
-    fun testApplyFilterImplementationBorders(
+    fun testApplyBordersFilterImplementation(
         picture: Image,
     ) {
         val expectedPicture = "${picture.borderedImage.trimIndent()}$newLineSymbol"
-        val userMethod = applyFilterMethod.getMethodFromClass()
+        val userMethod = applyBordersFilterMethod.getMethodFromClass()
         Assertions.assertEquals(
-            expectedPicture, userMethod.invokeWithArgs(picture.initialImage.trimIndent(), "borders"),
-            "For picture:\n${picture.initialImage}\n and filter <borders> the function ${applyBordersFilterMethod.name} should return\n$expectedPicture\n"
+            expectedPicture, userMethod.invokeWithArgs(picture.initialImage.trimIndent()),
+            "For picture:${Util.newLineSeparator}${picture.initialImage}${Util.newLineSeparator} the function ${applyBordersFilterMethod.name} should return${Util.newLineSeparator}$expectedPicture${Util.newLineSeparator}"
         )
+    }
+
+    @ParameterizedTest
+    @MethodSource("pictures")
+    fun testApplySquaredFilterImplementation(
+        picture: Image,
+    ) {
+        val expectedPicture = "${picture.squaredImage.trimIndent()}$newLineSymbol"
+        val userMethod = applySquaredFilterMethod.getMethodFromClass()
+        Assertions.assertEquals(
+            expectedPicture, userMethod.invokeWithArgs(picture.initialImage.trimIndent()),
+            "For picture:${Util.newLineSeparator}${picture.initialImage}${Util.newLineSeparator} the function ${applySquaredFilterMethod.name} should return${Util.newLineSeparator}$expectedPicture${Util.newLineSeparator}"
+        )
+    }
+
+    @Test
+    fun testApplyFilterFunction() {
+        applyFilterMethod.getMethodFromClass()
+    }
+
+    @Test
+    fun testApplyBordersFilterFunction() {
+        applyBordersFilterMethod.getMethodFromClass()
+    }
+
+    @Test
+    fun testApplySquaredFilterFunction() {
+        applySquaredFilterMethod.getMethodFromClass()
     }
 
     @Test
@@ -243,7 +243,7 @@ class Test {
         val userMethod = trimPictureMethod.getMethodFromClass()
         Assertions.assertEquals(
             expectedPicture, userMethod.invokeWithArgs(picture.initialImage),
-            "For picture:\n${picture.initialImage}\n the function ${trimPictureMethod.name} should return\n$expectedPicture\n"
+            "For picture:${Util.newLineSeparator}${picture.initialImage}${Util.newLineSeparator} the function ${trimPictureMethod.name} should return${Util.newLineSeparator}$expectedPicture${Util.newLineSeparator}"
         )
     }
 }

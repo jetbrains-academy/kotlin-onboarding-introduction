@@ -3,10 +3,7 @@ import org.junit.jupiter.api.Test
 import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.Arguments
 import org.junit.jupiter.params.provider.MethodSource
-import util.TestMethod
-import util.Variable
-import util.getMethodFromClass
-import util.invokeWithArgs
+import util.*
 
 class Test {
     companion object {
@@ -61,12 +58,10 @@ class Test {
     @MethodSource("pictures")
     fun testTrimPictureImplementation(
         picture: String,
-    ) {
+    ){
         val expectedPicture = picture.trimIndent()
         val userMethod = trimPictureMethod.getMethodFromClass()
-        Assertions.assertEquals(
-            expectedPicture, userMethod.invokeWithArgs(picture),
-            "For picture:\n$picture\n the function ${trimPictureMethod.name} should return\n$expectedPicture\n"
-        )
+        Assertions.assertEquals(expectedPicture, userMethod.invokeWithArgs(picture),
+            "For picture:${Util.newLineSeparator}$picture${Util.newLineSeparator} the function ${trimPictureMethod.name} should return${Util.newLineSeparator}$expectedPicture${Util.newLineSeparator}")
     }
 }

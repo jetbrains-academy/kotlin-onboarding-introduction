@@ -1,4 +1,11 @@
-enum class Image(val initialImage: String, val borderedImage: String, val squaredImage: String) {
+import util.Util
+
+fun setSystemLineSeparator(image: String): String {
+    val slicedPicture = image.lines()
+    return slicedPicture.joinToString(Util.newLineSeparator)
+}
+
+enum class Image(initialImage: String, borderedImage: String, squaredImage: String) {
     SPONGE_BOB(
         spongeBob, """
         ####################
@@ -31,7 +38,7 @@ enum class Image(val initialImage: String, val borderedImage: String, val square
         # ▕┈╭▏╭╮┃┗┛┗┛┃┈╰▏  ## ▕┈╭▏╭╮┃┗┛┗┛┃┈╰▏  #
         # ▕┈╰▏╰╯╰━━━━╯┈┈▏  ## ▕┈╰▏╰╯╰━━━━╯┈┈▏  #
         ########################################
-    """.trimIndent()
+    """
     ),
     SIMBA(
         simba, """
@@ -44,7 +51,7 @@ enum class Image(val initialImage: String, val borderedImage: String, val square
         # ┈┈▕╲▂┊╰━━┻━╱┈┈┈ #
         # ┈┈╱┈┈▔▔╲▂▂╱╲┈┈┈ #
         ###################
-    """.trimIndent(), """
+    """, """
         ######################################
         # ┈╱▔╲▂╱╱╱╱▂╱▔╲┈┈ ## ┈╱▔╲▂╱╱╱╱▂╱▔╲┈┈ #
         # ▕▔╲┈╱▔╲┈┈╱╲╱▔▏┈ ## ▕▔╲┈╱▔╲┈┈╱╲╱▔▏┈ #
@@ -62,7 +69,7 @@ enum class Image(val initialImage: String, val borderedImage: String, val square
         # ┈┈▕╲▂┊╰━━┻━╱┈┈┈ ## ┈┈▕╲▂┊╰━━┻━╱┈┈┈ #
         # ┈┈╱┈┈▔▔╲▂▂╱╲┈┈┈ ## ┈┈╱┈┈▔▔╲▂▂╱╲┈┈┈ #
         ######################################
-    """.trimIndent()
+    """
     ),
     BRIAN_GRIFFIN(
         brianGriffin, """
@@ -76,7 +83,7 @@ enum class Image(val initialImage: String, val borderedImage: String, val square
         # ╲┃┈┈┈┈╭━┳━━━━╯  #
         # ╲┣━━━━━━┫       #
         ###################
-    """.trimIndent(), """
+    """, """
         ######################################
         # ╭━┳━╭━╭━╮╮      ## ╭━┳━╭━╭━╮╮      #
         # ┃┈┈┈┣▅╋▅┫┃      ## ┃┈┈┈┣▅╋▅┫┃      #
@@ -96,7 +103,7 @@ enum class Image(val initialImage: String, val borderedImage: String, val square
         # ╲┃┈┈┈┈╭━┳━━━━╯  ## ╲┃┈┈┈┈╭━┳━━━━╯  #
         # ╲┣━━━━━━┫       ## ╲┣━━━━━━┫       #
         ######################################
-    """.trimIndent()
+    """
     ),
     CAT(
         cat, """
@@ -110,7 +117,7 @@ enum class Image(val initialImage: String, val borderedImage: String, val square
         # ┈┈┈┈┃┏┓┣━━┳┳┓┃┈ #
         # ┈┈┈┈┗┛┗┛┈┈┗┛┗┛┈ #
         ###################
-    """.trimIndent(), """
+    """, """
         ######################################
         # ┈┈╱╲┈┈┈╱╲┈┈╭━╮┈ ## ┈┈╱╲┈┈┈╱╲┈┈╭━╮┈ #
         # ┈╱╱╲╲__╱╱╲╲╰╮┃┈ ## ┈╱╱╲╲__╱╱╲╲╰╮┃┈ #
@@ -130,7 +137,7 @@ enum class Image(val initialImage: String, val borderedImage: String, val square
         # ┈┈┈┈┃┏┓┣━━┳┳┓┃┈ ## ┈┈┈┈┃┏┓┣━━┳┳┓┃┈ #
         # ┈┈┈┈┗┛┗┛┈┈┗┛┗┛┈ ## ┈┈┈┈┗┛┗┛┈┈┗┛┗┛┈ #
         ######################################
-    """.trimIndent()
+    """
     ),
     PIG(
         pig, """
@@ -144,7 +151,7 @@ enum class Image(val initialImage: String, val borderedImage: String, val square
         # ┈┈╰━┳┓┏┳┓┏╯┈┈┈ #
         # ┈┈┈┈┗┻┛┗┻┛┈┈┈┈ #
         ##################
-    """.trimIndent(), """
+    """, """
         ####################################
         # ┈┏━╮╭━┓┈╭━━━━╮ ## ┈┏━╮╭━┓┈╭━━━━╮ #
         # ┈┃┏┗┛┓┃╭┫    ┃ ## ┈┃┏┗┛┓┃╭┫    ┃ #
@@ -164,7 +171,7 @@ enum class Image(val initialImage: String, val borderedImage: String, val square
         # ┈┈╰━┳┓┏┳┓┏╯┈┈┈ ## ┈┈╰━┳┓┏┳┓┏╯┈┈┈ #
         # ┈┈┈┈┗┻┛┗┻┛┈┈┈┈ ## ┈┈┈┈┗┻┛┗┻┛┈┈┈┈ #
         ####################################
-    """.trimIndent()
+    """
     ),
     FOX(
         fox, """
@@ -178,7 +185,7 @@ enum class Image(val initialImage: String, val borderedImage: String, val square
         # ┈┃┃┃┃┈┈┈┃┃┃┃┈┈┈ #
         # ┈┗┛┗┛┈┈┈┗┛┗┛┈┈┈ #
         ###################
-    """.trimIndent(), """
+    """, """
         ######################################
         # ╱▏┈┈┈┈┈┈▕╲▕╲┈┈┈ ## ╱▏┈┈┈┈┈┈▕╲▕╲┈┈┈ #
         # ▏▏┈┈┈┈┈┈▕▏▔▔╲┈┈ ## ▏▏┈┈┈┈┈┈▕▏▔▔╲┈┈ #
@@ -198,7 +205,7 @@ enum class Image(val initialImage: String, val borderedImage: String, val square
         # ┈┃┃┃┃┈┈┈┃┃┃┃┈┈┈ ## ┈┃┃┃┃┈┈┈┃┃┃┃┈┈┈ #
         # ┈┗┛┗┛┈┈┈┗┛┗┛┈┈┈ ## ┈┗┛┗┛┈┈┈┗┛┗┛┈┈┈ #
         ######################################
-    """.trimIndent()
+    """
     ),
     MONKEY(
         monkey, """
@@ -211,7 +218,7 @@ enum class Image(val initialImage: String, val borderedImage: String, val square
         # ┊╲┈┈╲▏╭━━━━╯▕┊┊ #
         # ┊┊╲┈┈╲▂▂▂▂▂▂╱▔╲ #
         ###################
-    """.trimIndent(), """
+    """, """
         ######################################
         # ┊┊┊╱▔▔▔▔▔╲┊┊┊┊┊ ## ┊┊┊╱▔▔▔▔▔╲┊┊┊┊┊ #
         # ┊┊╱┈┈╱▔╲╲╲▏┊┊┊┊ ## ┊┊╱┈┈╱▔╲╲╲▏┊┊┊┊ #
@@ -229,7 +236,7 @@ enum class Image(val initialImage: String, val borderedImage: String, val square
         # ┊╲┈┈╲▏╭━━━━╯▕┊┊ ## ┊╲┈┈╲▏╭━━━━╯▕┊┊ #
         # ┊┊╲┈┈╲▂▂▂▂▂▂╱▔╲ ## ┊┊╲┈┈╲▂▂▂▂▂▂╱▔╲ #
         ######################################
-    """.trimIndent()
+    """
     ),
     ELEPHANT(
         elephant, """
@@ -243,7 +250,7 @@ enum class Image(val initialImage: String, val borderedImage: String, val square
         # ╯▏┈╲╱▔╲▅▅▏┈┈┈┈┈ #
         # ┈╲▅▅▏▕▔▔▔▔▏┈┈┈┈ #
         ###################
-    """.trimIndent(), """
+    """, """
         ######################################
         # ┈┈┈┈╱▔▔▔▔▔╲┈╱▔╲ ## ┈┈┈┈╱▔▔▔▔▔╲┈╱▔╲ #
         # ┈┈┈┈▏┈┈▏╭╮▕┈▏╳▕ ## ┈┈┈┈▏┈┈▏╭╮▕┈▏╳▕ #
@@ -277,7 +284,7 @@ enum class Image(val initialImage: String, val borderedImage: String, val square
         # ┈┈╰┓┏━━┓┏╯   #
         # ┈┈┈╰╯┈┈╰╯    #
         ################
-    """.trimIndent(), """
+    """, """
         ################################
         # ┈┈┈╲┈┈┈┈╱    ## ┈┈┈╲┈┈┈┈╱    #
         # ┈┈┈╱▔▔▔▔╲    ## ┈┈┈╱▔▔▔▔╲    #
@@ -297,7 +304,7 @@ enum class Image(val initialImage: String, val borderedImage: String, val square
         # ┈┈╰┓┏━━┓┏╯   ## ┈┈╰┓┏━━┓┏╯   #
         # ┈┈┈╰╯┈┈╰╯    ## ┈┈┈╰╯┈┈╰╯    #
         ################################
-    """.trimIndent()
+    """
     ),
     APPLE(
         apple, """
@@ -310,7 +317,7 @@ enum class Image(val initialImage: String, val borderedImage: String, val square
         # ┊┊┊╲┈┈┈┈┈┈┈╱┊┊┊ #
         # ┊┊┊┊╲▂▂▂▂▂╱┊┊┊┊ #
         ###################
-    """.trimIndent(), """
+    """, """
         ######################################
         # ┊┊┊┊┊┊┊╱▏┊┊┊┊┊┊ ## ┊┊┊┊┊┊┊╱▏┊┊┊┊┊┊ #
         # ┊┊┊┊┊┊▕╱┊┊┊┊┊┊┊ ## ┊┊┊┊┊┊▕╱┊┊┊┊┊┊┊ #
@@ -328,7 +335,7 @@ enum class Image(val initialImage: String, val borderedImage: String, val square
         # ┊┊┊╲┈┈┈┈┈┈┈╱┊┊┊ ## ┊┊┊╲┈┈┈┈┈┈┈╱┊┊┊ #
         # ┊┊┊┊╲▂▂▂▂▂╱┊┊┊┊ ## ┊┊┊┊╲▂▂▂▂▂╱┊┊┊┊ #
         ######################################
-    """.trimIndent()
+    """
     ),
     CUSTOM("^_^", """
         #######
@@ -340,5 +347,15 @@ enum class Image(val initialImage: String, val borderedImage: String, val square
         ##############
         # ^_^ ## ^_^ #
         ##############
-    """.trimIndent())
+    """);
+
+    val initialImage: String
+    val borderedImage: String
+    val squaredImage: String
+
+    init {
+        this.initialImage = setSystemLineSeparator(initialImage)
+        this.borderedImage = setSystemLineSeparator(borderedImage)
+        this.squaredImage = setSystemLineSeparator(squaredImage)
+    }
 }

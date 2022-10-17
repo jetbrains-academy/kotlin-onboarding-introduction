@@ -8,8 +8,6 @@ The project of this lesson is **Console photoshop**.
 The goal of this project is to create a simple Photoshop console app 
 that can apply different filters to character images.
 
-**TODO: add game gif**
-
 The lesson includes the following topics:
 
 - multi-row strings;
@@ -17,3 +15,10 @@ The lesson includes the following topics:
 - basic handling of errors;
 - string builder;
 - null-safety (`!!` and `?:`).
+
+An example of the final application:
+
+![Console photoshop example](../../../utils/src/main/resources/images/part1/AlmostDone/game.gif "Console photoshop example")
+
+In order for the picture to fit, additional line breaks were added.
+You don't need to add them when solving the task.
