@@ -87,7 +87,7 @@ This function should have the following behaviour:
     ```
 - use these functions in the game process.
 
-An example of the working of the `safeUserInput` function:
+Here's an example of the `safeUserInput` function's work:
 
 ![The game's example](../../../utils/src/main/resources/images/part1/WarmUp/safe_user_input.gif "The safeUserInput example")
 
