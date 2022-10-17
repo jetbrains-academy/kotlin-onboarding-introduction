@@ -2,8 +2,34 @@ type: marketplace
 title: CSC Kotlin Course
 language: English
 summary: |-
-  This is an introductory Kotlin course.
-  TODO
+  Hi everyone! This course is designed to introduce you to the Kotlin language. 
+  It contains several modules on different areas of language learning. 
+  To take this course, you should be familiar with the basic concepts of programming in any language, 
+  such as variables, loops, conditional statements, etc. 
+  Despite the fact that the first module contains an explanation of the basic concepts, 
+  it rather introduces the Kotlin syntax for such constructs. 
+  If you need more theoretical knowledge on any topic, you can get it here TODO:LINK by yourself.
+  
+  There are N modules in total. 
+  Each module begins with a description of the concepts that will be explored in this module. 
+  Each module consists of several projects - you can study the theory and implement the project 
+  step by step, and then in the next project try to consolidate the knowledge gained and implement 
+  a similar project by yourself. 
+  Each project contains a gif animation illustrating the result that will be obtained at the end of 
+  this tutorial. 
+  You can start with any module, or even any project in each module, 
+  as long as you are familiar with the concepts that precede that module or project.
+
+  The first module of the course focuses on learning the basic concepts and implementing 
+  six small console projects. 
+  The second module will explore the concepts of object-oriented programming 
+  and implement four web applications of popular board games. 
+  It is worth noting that in the first module you implement projects completely independently 
+  without pre-prepared code, however, starting from the second module, 
+  part of the code was implemented by the course author so as not to dive into 
+  the peculiarities of web development within this module. TODO: other modules
+  
+  If during the course you find errors or incorrect behaviour, you can report TODO
 programming_language: Kotlin
 content:
 - Part1
