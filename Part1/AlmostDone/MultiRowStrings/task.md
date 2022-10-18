@@ -64,9 +64,9 @@ ___
 
 ### Task
 
-**Description**: implement `trimPicture` function that accepts a picture and trims all indents from it. 
+**Description**: implement the `trimPicture` function, which accepts a picture and removes all indents from it. 
 
-An example of the `trimPicture` function work:
+Here's an example of the `trimPicture` function's work:
 
 ![`trimPicture` function work](../../../utils/src/main/resources/images/part1/AlmostDone/trimmed_picture.gif "`trimPicture` function work")
 
