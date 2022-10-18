@@ -62,7 +62,7 @@ if the `null` value was received.
 
 Also, implement the `chooseFilter` function, which asks the user to choose a filter (`borders` or `squared`) and returns it.
 This function has to use the `safeReadLine` function. 
-If the user inputs an incorrect filter's name, the function should ask to input the right name:
+If the user inputs an incorrect filter name, the function should ask to input the right one:
 
 ![`chooseFilter` function work](../../../utils/src/main/resources/images/part1/AlmostDone/choose_filter.gif "`chooseFilter` function work")
 
