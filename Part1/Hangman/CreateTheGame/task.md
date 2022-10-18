@@ -58,7 +58,7 @@ You don't need to add them when solving the task.
 <div class="hint">
 
 Different operating systems use different line break characters.
-Use a predefined variable `newLineSymbol` with a newline character instead of `\n` to
+Use the predefined variable `newLineSymbol` with a newline character instead of `\n` to
 separate lines correctly.
 </div>
 
