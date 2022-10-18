@@ -16,7 +16,7 @@ The lesson includes the following topics:
 - string builder;
 - null-safety (`!!` and `?:`).
 
-An example of the final application:
+Here's an example of the application's work:
 
 ![Console photoshop example](../../../utils/src/main/resources/images/part1/AlmostDone/game.gif "Console photoshop example")
 
