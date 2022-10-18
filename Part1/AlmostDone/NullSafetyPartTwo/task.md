@@ -40,7 +40,7 @@ ___
 You should ask the user to choose a picture by its name.
 The list of pre-defined pictures you can get by the pre-defined function `allPictures`.
 To get the picture by its name, you can use the pre-defined function `getPictureByName`, 
-which returns `String?` - an image or `null` if the name is incorrect:
+which returns `String?` - an image – or `null` if the name is incorrect:
 
 ![`choosePicture` function work](../../../utils/src/main/resources/images/part1/AlmostDone/choose_picture.gif "`choosePicture` function work")
 
