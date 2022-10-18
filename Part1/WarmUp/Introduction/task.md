@@ -26,7 +26,7 @@ The lesson includes the following topics:
 basic facts about lambda expressions in these built-in functions;
 - random function.
 
-An example of this game:
+Here's an example of the game:
 
 ![The game's example](../../../utils/src/main/resources/images/part1/WarmUp/game.gif "The game's example")
 
