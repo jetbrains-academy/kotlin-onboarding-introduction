@@ -1,10 +1,4 @@
-import util.Util
 import util.replaceLineSeparator
-
-fun setSystemLineSeparator(image: String): String {
-    val slicedPicture = image.lines()
-    return slicedPicture.joinToString(Util.newLineSeparator)
-}
 
 enum class Image(initialImage: String, borderedImage: String, squaredImage: String) {
     SPONGE_BOB(
