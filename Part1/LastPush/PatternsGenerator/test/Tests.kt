@@ -231,7 +231,7 @@ class Test {
     ) {
         val userMethod = canvasGeneratorMethod.getMethodFromClass()
         Assertions.assertEquals(
-            canvasFilter.result.toAddNewLineSymbol(),
+            canvasFilter.result.toAddNewLineSymbol().replaceLineSeparator(),
             userMethod.invokeWithArgs(pattern, canvasFilter.width, canvasFilter.height),
             "For pattern:$newLineSymbol$pattern$newLineSymbol, width=${canvasFilter.width}, and height=${canvasFilter.height} the function ${canvasGeneratorMethod.name} should return $newLineSymbol${canvasFilter.result}$newLineSymbol"
         )
@@ -245,7 +245,7 @@ class Test {
     ) {
         val userMethod = canvasWithGapsGeneratorMethod.getMethodFromClass()
         Assertions.assertEquals(
-            canvasFilter.result.toAddNewLineSymbol(),
+            canvasFilter.result.toAddNewLineSymbol().replaceLineSeparator(),
             userMethod.invokeWithArgs(pattern, canvasFilter.width, canvasFilter.height),
             "For pattern:$newLineSymbol$pattern$newLineSymbol, width=${canvasFilter.width}, and height=${canvasFilter.height} the function ${canvasWithGapsGeneratorMethod.name} should return $newLineSymbol${canvasFilter.result}$newLineSymbol"
         )
@@ -260,7 +260,7 @@ class Test {
     ) {
         val userMethod = applyGeneratorMethod.getMethodFromClass()
         Assertions.assertEquals(
-            canvasFilter.result.toAddNewLineSymbol(),
+            canvasFilter.result.toAddNewLineSymbol().replaceLineSeparator(),
             userMethod.invokeWithArgs(pattern, generatorName, canvasFilter.width, canvasFilter.height),
             "For pattern:$newLineSymbol$pattern$newLineSymbol, generatorName=$generatorName, width=${canvasFilter.width}, and height=${canvasFilter.height} the function ${applyGeneratorMethod.name} should return $newLineSymbol${canvasFilter.result}$newLineSymbol"
         )
@@ -282,6 +282,6 @@ class Test {
         input: String,
         output: String
     ) {
-        assert(output.trimIndent() in runMainFunction(::main, input)) { "The patterns generator project should print $output as the output image for the pattern: $input" }
+        assert(output.trimIndent().replaceLineSeparator() in runMainFunction(::main, input)) { "The patterns generator project should print $output as the output image for the pattern: $input" }
     }
 }
