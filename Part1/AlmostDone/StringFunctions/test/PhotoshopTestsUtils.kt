@@ -1,4 +1,5 @@
 import util.Util
+import util.replaceLineSeparator
 
 fun setSystemLineSeparator(image: String): String {
     val slicedPicture = image.lines()
@@ -349,13 +350,7 @@ enum class Image(initialImage: String, borderedImage: String, squaredImage: Stri
         ##############
     """);
 
-    val initialImage: String
-    val borderedImage: String
-    val squaredImage: String
-
-    init {
-        this.initialImage = setSystemLineSeparator(initialImage)
-        this.borderedImage = setSystemLineSeparator(borderedImage)
-        this.squaredImage = setSystemLineSeparator(squaredImage)
-    }
+    val initialImage: String = initialImage.replaceLineSeparator()
+    val borderedImage: String = borderedImage.replaceLineSeparator()
+    val squaredImage: String = squaredImage.replaceLineSeparator()
 }

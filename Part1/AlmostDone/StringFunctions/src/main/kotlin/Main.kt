@@ -1,7 +1,7 @@
 fun trimPicture(picture: String) = picture.trimIndent()
 
 fun applyBordersFilter(picture: String): String {
-    val pictureRows = picture.split(newLineSymbol)
+    val pictureRows = picture.lines()
     val pictureWidth = getPictureWidth(picture)
     val horizontalBorder = "$borderSymbol".repeat(pictureWidth + 4)
 

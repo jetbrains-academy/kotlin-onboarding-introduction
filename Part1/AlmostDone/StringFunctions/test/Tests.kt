@@ -41,7 +41,7 @@ class Test {
     fun testApplyBordersFilterImplementation(
         picture: Image,
     ) {
-        val expectedPicture = "${picture.borderedImage.trimIndent()}$newLineSymbol"
+        val expectedPicture = "${picture.borderedImage.trimIndent().replaceLineSeparator()}$newLineSymbol"
         val userMethod = applyBordersFilterMethod.getMethodFromClass()
         Assertions.assertEquals(
             expectedPicture, userMethod.invokeWithArgs(picture.initialImage.trimIndent()),
@@ -54,7 +54,7 @@ class Test {
     fun testApplyFilterImplementation(
         picture: Image,
     ) {
-        val expectedPicture = "${picture.borderedImage.trimIndent()}$newLineSymbol"
+        val expectedPicture = "${picture.borderedImage.trimIndent().replaceLineSeparator()}$newLineSymbol"
         val userMethod = applyFilterMethod.getMethodFromClass()
         Assertions.assertEquals(
             expectedPicture, userMethod.invokeWithArgs(picture.initialImage.trimIndent(), "borders"),
