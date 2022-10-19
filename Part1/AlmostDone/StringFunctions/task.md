@@ -1,12 +1,11 @@
 ### Theory
 
 When working with multiline strings, you can break them into lines and handle each one separately. 
-This can be done using the [`split`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/split.html) function, 
-passing as an argument the character at which you want to split the string (in this case, the newline character):
+This can be done using the [`lines`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/lines.html) function:
 ```kotlin
 """First line
 Second line
-""".split("\n")
+""".lines()
 ```
 The string will be converted into a list with two strings: `First line` and `Second line`.
 

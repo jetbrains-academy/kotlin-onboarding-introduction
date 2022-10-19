@@ -142,7 +142,7 @@ class Test {
         input: String,
         output: String
     ) {
-        assert(output in runMainFunction(::main, input)) { "The photoshop project should print $output as the output image for the input: $input" }
+        assert(output.replaceLineSeparator() in runMainFunction(::main, input.replaceLineSeparator())) { "The photoshop project should print $output as the output image for the input: $input" }
     }
 
     @Test
@@ -200,7 +200,7 @@ class Test {
     fun testApplyFilterImplementationBorders(
         picture: Image,
     ) {
-        val expectedPicture = "${picture.borderedImage.trimIndent()}$newLineSymbol"
+        val expectedPicture = "${picture.borderedImage.trimIndent().replaceLineSeparator()}$newLineSymbol"
         val userMethod = applyFilterMethod.getMethodFromClass()
         Assertions.assertEquals(
             expectedPicture, userMethod.invokeWithArgs(picture.initialImage.trimIndent(), "borders"),
@@ -213,7 +213,7 @@ class Test {
     fun testApplyFilterImplementationSquare(
         picture: Image,
     ) {
-        val expectedPicture = "${picture.squaredImage.trimIndent()}$newLineSymbol"
+        val expectedPicture = "${picture.squaredImage.trimIndent().replaceLineSeparator()}$newLineSymbol"
         val userMethod = applyFilterMethod.getMethodFromClass()
         Assertions.assertEquals(
             expectedPicture, userMethod.invokeWithArgs(picture.initialImage.trimIndent(), "squared"),
@@ -226,7 +226,7 @@ class Test {
     fun testApplyBordersFilterImplementation(
         picture: Image,
     ) {
-        val expectedPicture = "${picture.borderedImage.trimIndent()}$newLineSymbol"
+        val expectedPicture = "${picture.borderedImage.trimIndent().replaceLineSeparator()}$newLineSymbol"
         val userMethod = applyBordersFilterMethod.getMethodFromClass()
         Assertions.assertEquals(
             expectedPicture, userMethod.invokeWithArgs(picture.initialImage.trimIndent()),
@@ -239,7 +239,7 @@ class Test {
     fun testApplySquaredFilterImplementation(
         picture: Image,
     ) {
-        val expectedPicture = "${picture.squaredImage.trimIndent()}$newLineSymbol"
+        val expectedPicture = "${picture.squaredImage.trimIndent().replaceLineSeparator()}$newLineSymbol"
         val userMethod = applySquaredFilterMethod.getMethodFromClass()
         Assertions.assertEquals(
             expectedPicture, userMethod.invokeWithArgs(picture.initialImage.trimIndent()),
@@ -270,13 +270,14 @@ class Test {
     @ParameterizedTest
     @MethodSource("pictures")
     fun testTrimPictureImplementation(
-        picture: Image,
+            picture: Image,
     ) {
-        val expectedPicture = picture.initialImage.trimIndent()
+        val expectedPicture = picture.initialImage.trimIndent().replaceLineSeparator()
         val userMethod = trimPictureMethod.getMethodFromClass()
+        val actualResult = (userMethod.invokeWithArgs(picture.initialImage) as String).replaceLineSeparator()
         Assertions.assertEquals(
-            expectedPicture, userMethod.invokeWithArgs(picture.initialImage),
-            "For picture:${Util.newLineSeparator}${picture.initialImage}${Util.newLineSeparator} the function ${trimPictureMethod.name} should return${Util.newLineSeparator}$expectedPicture${Util.newLineSeparator}"
+                expectedPicture, actualResult,
+                "For picture:${Util.newLineSeparator}${picture.initialImage}${Util.newLineSeparator} the function ${trimPictureMethod.name} should return${Util.newLineSeparator}$expectedPicture${Util.newLineSeparator}"
         )
     }
 }

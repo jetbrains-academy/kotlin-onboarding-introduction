@@ -24,10 +24,10 @@ fun addEmptyWindow(patternRow: String, patternWidth: Int, toAddAfter: Boolean = 
     }
 }
 
-fun getPatternHeight(pattern: String) = pattern.split(newLineSymbol).size
+fun getPatternHeight(pattern: String) = pattern.lines().size
 
 fun repeatHorizontally(pattern: String, n: Int, patternWidth: Int): String {
-    val pictureRows = pattern.split(newLineSymbol)
+    val pictureRows = pattern.lines()
     val sb = StringBuilder()
     for (row in pictureRows) {
         val currentRow = fillPatternRow(row, patternWidth)
@@ -46,7 +46,7 @@ fun makeEvenNumber(number: Int) = if (number % 2 == 0) {
 fun isEmpty(pattern: String) = pattern == ""
 
 fun repeatHorizontallyWithGaps(pattern: String, n: Int, toAddSeparatorAfter: Boolean): String {
-    val pictureRows = pattern.split(newLineSymbol)
+    val pictureRows = pattern.lines()
     val patternWidth = getPatternWidth(pattern)
     val sb = StringBuilder()
     for (row in pictureRows) {
