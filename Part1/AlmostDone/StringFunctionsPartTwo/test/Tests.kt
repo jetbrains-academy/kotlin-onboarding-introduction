@@ -115,8 +115,9 @@ class Test {
     ) {
         val expectedPicture = picture.initialImage.trimIndent().replaceLineSeparator()
         val userMethod = trimPictureMethod.getMethodFromClass()
+        val actualResult = (userMethod.invokeWithArgs(picture.initialImage) as String).replaceLineSeparator()
         Assertions.assertEquals(
-            expectedPicture, userMethod.invokeWithArgs(picture.initialImage),
+            expectedPicture, actualResult,
             "For picture:${Util.newLineSeparator}${picture.initialImage}${Util.newLineSeparator} the function ${trimPictureMethod.name} should return${Util.newLineSeparator}$expectedPicture${Util.newLineSeparator}"
         )
     }
