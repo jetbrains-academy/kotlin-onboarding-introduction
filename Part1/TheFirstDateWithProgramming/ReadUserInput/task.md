@@ -3,7 +3,12 @@
 We have previously talked about the _built-in_ functions in Kotlin. 
 In addition to the already familiar functions for output to the console, 
 Kotlin has the [`readLine`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.io/read-line.html#readline) function,  
-which reads the values entered by the user and stores them in a variable.
+which reads the values entered by the user and stores them in a variable:
+
+```kotlin
+val myValue = readLine()
+// The myValue variable stores the user's input
+```
 
 For example, in our **Poetry generator** project, 
 we need to ask the user a question and then remember their answer. 
