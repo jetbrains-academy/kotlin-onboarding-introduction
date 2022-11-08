@@ -4,6 +4,10 @@ such as loops, conditional statements, and more.
 
 ----
 
+<p align="center">
+    <img src="../../../utils/src/main/resources/images/part1/WarmUp/game.png" alt="Bulls and cows" width="400"/>
+</p>
+
 The project of this lesson is **Bulls and cows (Mastermind)**.
 This is a popular children's game of guessing the hidden word.
 The detailed rules you can be found [here](https://en.wikipedia.org/wiki/Bulls_and_Cows).

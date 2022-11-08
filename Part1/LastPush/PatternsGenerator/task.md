@@ -5,6 +5,10 @@ We have no doubt that you will succeed!
 
 ----
 
+<p align="center">
+    <img src="../../../utils/src/main/resources/images/part1/LastPush/game.png" alt="Patterns generator" width="400"/>
+</p>
+
 The project of this lesson is **Patterns generator**.
 The purpose of this project is to create an application 
 for automatically generating character images of a given size and pattern.

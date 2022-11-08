@@ -5,6 +5,10 @@ We have no doubt that you will succeed!
 
 ----
 
+<p align="center">
+    <img src="../../../utils/src/main/resources/images/part1/BotForDating/game.png" alt="Bot for dating" width="400"/>
+</p>
+
 The project of this lesson is **Bot for dating**.
 The purpose of this game is to ask questions to the user to get to know them better.
 

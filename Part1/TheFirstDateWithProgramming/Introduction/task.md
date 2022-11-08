@@ -13,7 +13,11 @@ which you can read later.
 
 ----
 
-The project of this lesson is **Poetry generator**.
+<p align="center">
+    <img src="../../../utils/src/main/resources/images/part1/TheFirstDateWithProgramming/game.png" alt="Story twister" width="400"/>
+</p>
+
+The project of this lesson is **Story twister**.
 The goal of this game is to ask the user several fun questions,
 remember the answers, and build a fun story from these answers.
 
