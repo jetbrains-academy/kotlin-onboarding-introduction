@@ -56,6 +56,12 @@ If the user wants to upload a custom picture, ask them about it, only single-lin
 In order for the picture to fit, additional line breaks were added.
 You don't need to add them when solving the task.
 
+If you have any difficulties, **hints will help you solve this task**.
+
+----
+
+### Hints
+
 <div class="hint">
   To check the user's answer in the <code>getPicture</code> function, 
   it is more convenient to use the <code>when</code> expression.

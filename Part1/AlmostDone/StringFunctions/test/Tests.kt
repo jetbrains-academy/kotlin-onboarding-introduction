@@ -41,10 +41,11 @@ class Test {
     fun testApplyBordersFilterImplementation(
         picture: Image,
     ) {
-        val expectedPicture = "${picture.borderedImage.trimIndent().replaceLineSeparator()}$newLineSymbol"
+        val expectedPicture = picture.borderedImage.trimIndent().replaceLineSeparator()
         val userMethod = applyBordersFilterMethod.getMethodFromClass()
+        val userPicture = (userMethod.invokeWithArgs(picture.initialImage.trimIndent()) as String).trim()
         Assertions.assertEquals(
-            expectedPicture, userMethod.invokeWithArgs(picture.initialImage.trimIndent()),
+            expectedPicture, userPicture,
             "For picture:${Util.newLineSeparator}${picture.initialImage}${Util.newLineSeparator} the function ${applyBordersFilterMethod.name} should return${Util.newLineSeparator}$expectedPicture${Util.newLineSeparator}"
         )
     }
@@ -54,10 +55,11 @@ class Test {
     fun testApplyFilterImplementation(
         picture: Image,
     ) {
-        val expectedPicture = "${picture.borderedImage.trimIndent().replaceLineSeparator()}$newLineSymbol"
+        val expectedPicture = picture.borderedImage.trimIndent().replaceLineSeparator()
         val userMethod = applyFilterMethod.getMethodFromClass()
+        val userPicture = (userMethod.invokeWithArgs(picture.initialImage.trimIndent(), "borders") as String).trim()
         Assertions.assertEquals(
-            expectedPicture, userMethod.invokeWithArgs(picture.initialImage.trimIndent(), "borders"),
+            expectedPicture, userPicture,
             "For picture:${Util.newLineSeparator}${picture.initialImage}${Util.newLineSeparator} and filter <borders> the function ${applyBordersFilterMethod.name} should return${Util.newLineSeparator}$expectedPicture${Util.newLineSeparator}"
         )
     }

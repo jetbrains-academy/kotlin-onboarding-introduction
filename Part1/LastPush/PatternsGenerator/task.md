@@ -9,6 +9,8 @@ We have no doubt that you will succeed!
     <img src="../../../utils/src/main/resources/images/part1/LastPush/game.png" alt="Patterns generator" width="400"/>
 </p>
 
+### The project's description
+
 The project of this lesson is **Patterns generator**.
 The purpose of this project is to create an application 
 for automatically generating character images of a given size and pattern.
@@ -36,12 +38,18 @@ The generator works according to the following algorithm:
 but only if the pattern has more than one line;
 3) When repeated **vertically**, the pattern remains **unchanged**.
 
-An example of this application:
+### The project's example
 
 ![The patterns generator example](../../../utils/src/main/resources/images/part1/LastPush/app.gif "The patterns generator example")
 
 In order for the picture to fit, additional line breaks were added.
 You don't need to add them when solving the task.
+
+If you have any difficulties, **hints will help you solve this task**.
+
+----
+
+### Hints
 
 <div class="hint">
   For example, consider the following pattern:
