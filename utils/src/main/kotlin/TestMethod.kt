@@ -1,5 +1,6 @@
 package util
 
+import java.lang.IllegalArgumentException
 import java.lang.reflect.Method
 
 data class TestMethod(
@@ -60,6 +61,11 @@ fun findClassSafe(className: String) = Class.forName(className) ?: throwInternal
 fun Method.invokeWithoutArgs(className: String = "MainKt"): Any = invokeWithArgs(className = className)
 
 fun Method.invokeWithArgs(vararg args: Any, className: String = "MainKt"): Any {
-    val clazz = findClassSafe(className)
-    return invoke(clazz, *args)
+    try {
+        val clazz = findClassSafe(className)
+        return invoke(clazz, *args)
+    } catch (e: IllegalArgumentException) {
+        assert(false) { "The function ${this.name} has wrong number or order of arguments" }
+        throw e
+    }
 }

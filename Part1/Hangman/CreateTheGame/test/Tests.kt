@@ -133,7 +133,7 @@ class Test {
         expectedGuess: String?
     ) {
         val userMethod = generateNewUserWordMethod.getMethodFromClass()
-        val actualGuess = userMethod.invokeWithArgs(secret, guess, currentUserWord)
+        val actualGuess = (userMethod.invokeWithArgs(secret, guess, currentUserWord) as String).dropLastWhile { it.toString() == separator }
         val expected = expectedGuess ?: currentUserWord
         Assertions.assertEquals(
             expected,
