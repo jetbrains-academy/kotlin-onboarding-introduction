@@ -1,24 +1,25 @@
-fun getGameRules(wordLength: Int, maxAttemptsCount: Int, secretExample: String) = "Welcome to the game! $newLineSymbol" +
-        newLineSymbol +
-        "Two people play this game, one guesses a word (a sequence of letters), " +
-        "the other guesses it. In this case, the computer guesses the word. " +
-        "A sequence of $wordLength letters is guessed (for example, $secretExample). " +
-        "Several attempts are given to guess it (max number is $maxAttemptsCount). " +
-        "For each attempt, the number of complete matches (letter and position) " +
-        "and partial (letter only) is reported. $newLineSymbol" +
-        newLineSymbol +
-        "For example, for a BCDF guess (with $secretExample guessed) there will " +
-        "be 1 full match (C), 1 partial match (B)."
+fun getGameRules(wordLength: Int, maxAttemptsCount: Int, secretExample: String) =
+    "Welcome to the game! $newLineSymbol" +
+            newLineSymbol +
+            "Two people play this game, one chooses a word (a sequence of letters), " +
+            "the other guesses it. In this case, the computer chooses the word: " +
+            "a sequence of $wordLength letters (for example, $secretExample). " +
+            "Several attempts are given to guess it (the max number is $maxAttemptsCount). " +
+            "For each attempt, the number of complete matches (letter and position) " +
+            "and partial matches (letter only) is reported. $newLineSymbol" +
+            newLineSymbol +
+            "For example, for the BCDF guess (with $secretExample as the hidden word), " +
+            "there will be 1 full match (C), 1 partial match (B)."
 
-fun countLettersMatchings(secret: String, guess: String): Int {
-    val matchings = minOf(
+fun countPartialMatches(secret: String, guess: String): Int {
+    val matches = minOf(
         secret.filter { it in guess }.length,
         guess.filter { it in secret }.length,
     )
-    return matchings - countPositionalMatchings(guess, secret)
+    return matches - countExactMatches(guess, secret)
 }
 
-fun countPositionalMatchings(secret: String, guess: String): Int =
+fun countExactMatches(secret: String, guess: String): Int =
     guess.filterIndexed { index, letter -> letter == secret[index] }.length
 
 fun generateSecret() = "ABCD"
@@ -26,9 +27,9 @@ fun generateSecret() = "ABCD"
 fun isComplete(secret: String, guess: String) = secret == guess
 
 fun printRoundResults(secret: String, guess: String) {
-    val positionalMatchings = countPositionalMatchings(secret, guess)
-    val lettersMatchings = countLettersMatchings(secret, guess)
-    println("Your guess has $positionalMatchings full match, and $lettersMatchings partial match.")
+    val positionalMatches = countExactMatches(secret, guess)
+    val lettersMatches = countPartialMatches(secret, guess)
+    println("Your guess has $positionalMatches full matches, and $lettersMatches partial matches.")
 }
 
 fun isWin(complete: Boolean, attempts: Int, maxAttemptsCount: Int) = complete && attempts <= maxAttemptsCount
@@ -39,7 +40,7 @@ fun playGame(secret: String, wordLength: Int, maxAttemptsCount: Int) {
     var complete: Boolean
     var attempts = 0
     do {
-        println("Please, input your guess. It should be $wordLength size.")
+        println("Please, input your guess. It should be of length $wordLength.")
         val guess = safeReadLine()
         printRoundResults(secret, guess)
         complete = isComplete(secret, guess)

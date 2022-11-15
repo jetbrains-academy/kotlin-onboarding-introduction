@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Assertions
 import util.Util.newLineSeparator
 import java.io.ByteArrayOutputStream
 import java.io.PrintStream
+import java.lang.IllegalStateException
 import java.nio.charset.StandardCharsets
 
 object Util {
@@ -28,13 +29,23 @@ fun setSystemOut(): ByteArrayOutputStream {
 }
 
 fun runMainFunction(mainFunction: () -> Unit, input: String? = null, toAssertSystemIn: Boolean = true): String {
-    setSystemIn(input)
-    val baos = setSystemOut()
-    mainFunction()
-    if (toAssertSystemIn) {
-        assert(isSystemInEmpty()) { "You are asking the user to enter data fewer times than required in the task!" }
+    return try {
+        setSystemIn(input)
+        val baos = setSystemOut()
+        mainFunction()
+        if (toAssertSystemIn) {
+            assert(isSystemInEmpty()) { "You are asking the user to enter data fewer times than required in the task!" }
+        }
+        baos.toString("UTF-8").replaceLineSeparator()
+    } catch (e: IllegalStateException) {
+        val userInput = input?.let { "the user input: $it" } ?: "the empty user input"
+        val errorPrefix = "Try to run the main function with $userInput, the function must process the input and exit, but the current version of the function"
+        if ("Your input is incorrect" in (e.message ?: "")) {
+            assert(false) { "$errorPrefix waits more user inputs, it must be fixed." }
+        }
+        assert(false) { "$errorPrefix throws an unexpected error, please, check the function's implementation." }
+        ""
     }
-    return baos.toString("UTF-8").replaceLineSeparator()
 }
 
 fun isSystemInEmpty() = String(System.`in`.readBytes()).isEmpty()

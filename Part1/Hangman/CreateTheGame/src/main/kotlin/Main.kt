@@ -39,6 +39,7 @@ fun generateNewUserWord(secret: String, guess: Char, currentUserWord: String): S
             "${currentUserWord[i * 2]}$separator"
         }
     }
+    // Just newUserWord will be ok for the tests
     return newUserWord.removeSuffix(separator)
 }
 

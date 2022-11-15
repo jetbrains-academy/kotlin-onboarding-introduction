@@ -1,5 +1,13 @@
 ### Theory
 
+1. The `null` value
+2. The null-safety
+3. The `!!` operator
+4. The `elvis` operator and the smart-casts mechanism
+5. How the `safeReadLine` function works?
+
+#### 1. The `null` value
+
 When defining a type, you can specify that it can also have the special `null` value. 
 It's a `null` reference, which doesn't refer to anything.
 What this means in more detail, we will learn in following parts of the course, 
@@ -21,9 +29,13 @@ var a: String = "text"
 a.length // CORRECT
 ```
 
+#### 2. The null-safety
+
 To work correctly with such _nullable_ values, Kotlin provides the [null-safety](https://kotlinlang.org/docs/null-safety.html) mechanism.
 In simple words, in Kotlin it is necessary to handle `null` values separately for the program to work correctly.
 The simplest processing mechanisms are [`!!`](https://kotlinlang.org/docs/null-safety.html#the-operator) and [`?:`](https://kotlinlang.org/docs/null-safety.html#elvis-operator) (elvis operator) operators.
+
+#### 3. The `!!` operator
 
 The `!!` operator simply discards the `null` value and works with the type as if there 
 could be no `null` value. However, if the program encounters the `null` value, 
@@ -31,7 +43,12 @@ it will exit with the error ([`Null pointer exception`](https://kotlinlang.org/d
 ```kotlin
 var a: String? = null
 a!!.length // CORRECT, but will throw NPE
+```
 
+#### 4. The `elvis` operator and the smart-casts mechanism
+
+The `elvis` operator check is the values is `null` and handle the `null` value separately.
+```kotlin
 var a: String? = null
 a?.length ?: error("Find null value") // CORRECT, the case with null will be handled separately
 ```
@@ -48,6 +65,8 @@ if (a != null) {
 
 In this example, we noted the [smart-casts mechanism](https://kotlinlang.org/docs/typecasts.html#smart-casts).
 It is a special mechanism in Kotlin that can define some cases when a nullable value is always non-null.
+
+#### 5. How the `safeReadLine` function works?
 
 In previous assignments, we sometimes used the pre-defined `safeReadLine` function instead of built-in `readLine`. 
 The main reason is that `readLine` returns a _nullable_ value (`String?`). 
@@ -66,6 +85,11 @@ If the user inputs an incorrect filter name, the function should ask to input th
 
 ![`chooseFilter` function work](../../../utils/src/main/resources/images/part1/AlmostDone/choose_filter.gif "`chooseFilter` function work")
 
+If you have any difficulties, **hints will help you solve this task**.
+
+----
+
+### Hints
 
 <div class="hint">
 

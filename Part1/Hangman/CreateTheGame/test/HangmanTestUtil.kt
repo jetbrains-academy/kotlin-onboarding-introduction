@@ -13,12 +13,12 @@ internal fun imitateGameRound(toCheckResult: Boolean = false): String? {
     val gameInput = generateGameInput()
     val output = runMainFunction(::main, gameInput, false)
     if (toCheckResult) {
-        require(VICTORY_MESSAGE in output || LOSS_MESSAGE in output) { "Please, inform the user about the results of the game. If the user lost: \"$LOSS_MESSAGE<secret>\". If the user guessed: \"$VICTORY_MESSAGE\"" }
+        assert(VICTORY_MESSAGE in output || LOSS_MESSAGE in output) { "Please, inform the user about the results of the game. If the user lost: \"$LOSS_MESSAGE<secret>\". If the user guessed: \"$VICTORY_MESSAGE\"" }
     }
     return if (LOSS_MESSAGE in output) {
         val index = Regex(LOSS_MESSAGE).find(output)?.range?.endInclusive
         index?.let {
-            require(output.length > index + wordLength) { "You should print the secret to the console in the loss message!" }
+            assert(output.length > index + wordLength) { "You should print the secret to the console in the loss message!" }
             output.substring(index..index + wordLength).replace(separator, "")
         }
             ?: error("The user lost, but you showed an incorrect loss message. The correct message is: \"$LOSS_MESSAGE<secret>\"")

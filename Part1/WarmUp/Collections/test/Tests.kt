@@ -39,8 +39,8 @@ class Test {
             Arguments.of("AAAA", "ABCD", 1, 0),
         )
 
-        private val countPositionalMatchingsMethod = TestMethod(
-            "countPositionalMatchings", "Int",
+        private val countExactMatchesMethod = TestMethod(
+            "countExactMatches", "Int",
             listOf(
                 Variable("secret", "String"),
                 Variable("guess", "String"),
@@ -50,15 +50,15 @@ class Test {
 
     @ParameterizedTest
     @MethodSource("sequences")
-    fun testCountPositionalMatchingsImplementation(
+    fun testCountExactMatchesImplementation(
         guess: String,
         secret: String,
         expectedPosMatchings: Int,
         expectedLettersMatchings: Int
     ) {
-        val userMethod = countPositionalMatchingsMethod.getMethodFromClass()
+        val userMethod = countExactMatchesMethod.getMethodFromClass()
         Assertions.assertEquals(expectedPosMatchings, userMethod.invokeWithArgs(secret, guess),
-            "For secret: $secret and guess: $guess the number of positional matchings is $expectedPosMatchings")
+            "For secret: $secret and guess: $guess the number of exact matches is $expectedPosMatchings")
     }
 
     @ParameterizedTest
@@ -102,9 +102,9 @@ class Test {
     }
 
     @Test
-    fun testCountLettersMatchingsFunction() {
+    fun testCountPartialMatchesFunction() {
         TestMethod(
-            "countLettersMatchings", "Int", listOf(
+            "countPartialMatches", "Int", listOf(
                 Variable("secret", "String"),
                 Variable("guess", "String"),
             )
@@ -112,20 +112,27 @@ class Test {
     }
 
     @Test
-    fun testCountPositionalMatchingsFunction() {
-        countPositionalMatchingsMethod.getMethodFromClass()
+    fun testCountExactMatchesFunction() {
+        countExactMatchesMethod.getMethodFromClass()
     }
 
     @Test
     fun testSolution() {
-        Assertions.assertEquals(
-            "Welcome to the game! ${Util.newLineSeparator}" +
-                    Util.newLineSeparator +
-                    "Two people play this game, one guesses a word (a sequence of letters), the other guesses it. In this case, the computer guesses the word. A sequence of 4 letters is guessed (for example, ACEB). Several attempts are given to guess it (max number is 3). For each attempt, the number of complete matches (letter and position) and partial (letter only) is reported. ${Util.newLineSeparator}" +
-                    Util.newLineSeparator +
-                    "For example, for a BCDF guess (with ACEB guessed) there will be 1 full match (C), 1 partial match (B).${Util.newLineSeparator}" +
-                    "Please, input your guess. It should be 4 size.${Util.newLineSeparator}",
-            runMainFunction(::main, "ABCD")
-        )
+        val wordLength = 4
+        val secretExample = "ACEB"
+        val maxAttemptsCount = 3
+        val expectedOutput = "Welcome to the game! $newLineSymbol" +
+                newLineSymbol +
+                "Two people play this game, one chooses a word (a sequence of letters), " +
+                "the other guesses it. In this case, the computer chooses the word: " +
+                "a sequence of $wordLength letters (for example, $secretExample). " +
+                "Several attempts are given to guess it (the max number is $maxAttemptsCount). " +
+                "For each attempt, the number of complete matches (letter and position) " +
+                "and partial matches (letter only) is reported. $newLineSymbol" +
+                newLineSymbol +
+                "For example, for the BCDF guess (with $secretExample as the hidden word), " +
+                "there will be 1 full match (C), 1 partial match (B).$newLineSymbol" +
+                "Please, input your guess. It should be of length 4.$newLineSymbol"
+        Assertions.assertEquals(expectedOutput, runMainFunction(::main, "ABCD"))
     }
 }

@@ -1,5 +1,10 @@
 ### Theory
 
+1. What are the multiline strings?
+2. The `trimIndent` function
+
+#### 1. What are the multiline strings?
+
 When working with long strings, it is most convenient to use the so-called [multiline strings](https://kotlinlang.org/docs/coding-conventions.html#strings).
 Unlike regular strings, they are enclosed in triple quotes:
 ```kotlin
@@ -12,6 +17,9 @@ val multiRowString = """
     Second line of the string
 """
 ```
+
+
+#### 2. The `trimIndent` function
 
 For convenient work with such strings, there are two functions: [`trimIndent`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/trim-indent.html) and [`trimMargin`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/trim-margin.html).
 `trimIndent` detects the common minimal indent of all the input lines, 

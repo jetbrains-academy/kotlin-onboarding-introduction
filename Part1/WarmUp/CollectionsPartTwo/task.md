@@ -1,19 +1,24 @@
 ### Theory
 
-Great, you've done a good job implementing the `countPositionalMatchings` function, 
-probably using the `filterIndexed` function and the `length` property on the remaining word.
-Now it is great time to pay attention to another built-int function for working with collections.
-
-
+Great, you've done a good job implementing the `countExactMatches` function, 
+probably using the `filterIndexed` function and the `length` property on the remaining word (but of course you could implement it in any different way).
+Now it is great time to pay more attention to built-in functions for working with collections and implement the _countLettersMatchings_ function.
 
 ___
 
 ### Task
 
-**Description**: implement the _countLettersMatchings_ function by using Kotlin built-in functions.
+**Description**: implement the _countPartialMatches_ function by using Kotlin built-in functions. The function gives the _secret_ and the _guess_,
+and returns the number of matched letters between them that are not in the same positions.
+
+If you have any difficulties, **hints will help you solve this task**.
+
+----
+
+### Hints
 
 <div class="Hint">
-Here are several examples of the _countLettersMatchings_ function's work:
+Here are several examples of the _countPartialMatches_ function's work:
 
 - guess = "ACEB", secret = "BCDF", result = 1;
 - guess = "ABCD", secret = "DCBA", result = 4;
@@ -25,7 +30,7 @@ Here are several examples of the _countLettersMatchings_ function's work:
 
 The main idea of the algorithm is to count the letters in `secret` that are in `guess` and vice versa and calculate the minimum of them.
 Next, we can just return the number of these letters minus the number of the letters 
-that we can calculate via the <code>countPositionalMatchings</code> function.
+that we can calculate via the <code>countExactMatches</code> function.
 </div>
 
 <div class="Hint">

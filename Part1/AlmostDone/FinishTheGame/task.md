@@ -14,6 +14,12 @@ Finally, call this function into the `main` function.
 
 Enjoy the project!
 
+If you have any difficulties, **hints will help you solve this task**.
+
+----
+
+### Hints
+
 <div class="hint">
   You can expand this project yourself: for example, add new pre-defined pictures or filters.
 </div>

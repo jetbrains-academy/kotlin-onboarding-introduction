@@ -1,7 +1,7 @@
 ### Theory
 
 You are already familiar with the concept of variable from the previous lesson. 
-However, you've been only working with `string` variables yet.
+However, you've been only working with `String` variables yet.
 Meanwhile, in programming, it is common to use variables of _different_ types.
 
 For example, the `String` type stores strings, like `"ABCD"`, 
@@ -40,6 +40,12 @@ Two people play this game, one chooses a word (a sequence of letters), the other
 
 For example, for the BCDF guess (with <secretExample> as the hidden word), there will be 1 full match (C), 1 partial match (B).
 ```
+
+If you have any difficulties, **hints will help you solve this task**.
+
+----
+
+### Hints
 
 <div class="hint">
 

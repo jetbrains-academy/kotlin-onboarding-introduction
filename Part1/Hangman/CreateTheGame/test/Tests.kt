@@ -120,7 +120,7 @@ class Test {
         Assertions.assertEquals(
             finalInput,
             actualInput,
-            "The function ${safeUserInputMethod.name} for the sequence of the user inputs: ${safeUserInputs.joinToString { ", " }} should return $actualInput"
+            "The function ${safeUserInputMethod.name} for the sequence of the user inputs: ${safeUserInputs.joinToString(", ")} should return $actualInput"
         )
     }
 
@@ -133,7 +133,7 @@ class Test {
         expectedGuess: String?
     ) {
         val userMethod = generateNewUserWordMethod.getMethodFromClass()
-        val actualGuess = userMethod.invokeWithArgs(secret, guess, currentUserWord)
+        val actualGuess = (userMethod.invokeWithArgs(secret, guess, currentUserWord) as String).dropLastWhile { it.toString() == separator }
         val expected = expectedGuess ?: currentUserWord
         Assertions.assertEquals(
             expected,
@@ -164,7 +164,7 @@ class Test {
             val secret = imitateGameRound()
             secret?.let { secrets.add(it) }
         }
-        require(secrets.toSet().size > 1) { "Please, generate a random word from the <words> list." }
+        assert(secrets.toSet().size > 1) { "Please, generate a random word from the <words> list." }
     }
 
     @Test

@@ -1,5 +1,14 @@
 ### Theory
 
+1. What is the function?
+2.  How to create a new function?
+3.  Function's arguments
+4.  The returned value
+5.  Function as an expression
+6.  `TODO` function
+
+#### 1. What is the function?
+
 When writing code, it is convenient to divide it into independent units - 
 [**functions**](https://kotlinlang.org/docs/functions.html), where each function performs a _specific_ action. 
 For example, it prints something on the screen or evaluates the value of some expression.
@@ -9,12 +18,16 @@ which we extended by new code, or _built-in_ functions such as `println` and `re
 Their peculiarity is that they perform a certain sequence of actions (_always the same_).
 Each function, like `println`, can be called by its name.
 
+#### 2. How to create a new function? 
+
 To create a function, you need to write the `fun` keyword and give it some name:
 ```kotlin
 fun myName() {
     // Some code
 }
 ```
+
+#### 3. Function's arguments
 
 In addition, a function may have arguments. 
 These arguments are available in the function's body. 
@@ -28,6 +41,8 @@ fun myName(intVariable: Int = 10, strVariable: String) {
 }
 ```
 
+#### 4. The returned value
+
 The function can also return a value.
 For that, you should specify the type of the return value 
 and return it using the `return` keyword:
@@ -40,6 +55,8 @@ fun myName(intVariable: Int, strVariable: String): Int {
 }
 ```
 
+#### 5. Function as an expression
+
 If a function can be expressed in [one statement](https://kotlinlang.org/docs/idioms.html#single-expression-functions) (one action in the code), 
 the `return` keyword, the type of the return value, and curly braces can be omitted. For example, consider the following code: 
 ```kotlin
@@ -51,6 +68,8 @@ It is equivalent to:
 ```kotlin
 fun myName(intVariable: Int) = intVariable + 5
 ```
+
+#### 6. `TODO` function
 
 Kotlin has a special [`TODO()`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-t-o-d-o.html) function,  
 which can be used as a temporary solution instead of implementing the function body:
@@ -67,9 +86,9 @@ ___
 - _getGameRules_, which has three arguments: _wordLength_, _maxAttemptsCount_, and _secretExample_ and returns 
 the text from the previous task about the game's rules
 - _generateSecret_, which should return the hidden word. For the time being, let this function always return "ABCD"
-- _countLettersMatchings_, which has two arguments (_secret_ and _guess_) 
-and returns the number of matched letters between them
-- _countPositionalMatchings_, which has two arguments (_secret_ and _guess_)
-and returns the number of matched positions between them
+- _countPartialMatches_, which has two arguments (_secret_ and _guess_)
+and returns the number of matched letters between them that are not in the same positions
+- _countExactMatches_, which has two arguments (_secret_ and _guess_)
+and returns the number of exact matched positions between them
 
 Please use the `TODO` function where needed.
