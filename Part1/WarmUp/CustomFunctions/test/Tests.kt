@@ -39,13 +39,20 @@ class Test {
 
     @Test
     fun testSolution() {
-        Assertions.assertEquals(
-            "Welcome to the game! ${Util.newLineSeparator}" +
-                    Util.newLineSeparator +
-                    "Two people play this game, one guesses a word (a sequence of letters), the other guesses it. In this case, the computer guesses the word. A sequence of 4 letters is guessed (for example, ACEB). Several attempts are given to guess it (max number is 3). For each attempt, the number of complete matches (letter and position) and partial (letter only) is reported. ${Util.newLineSeparator}" +
-                    Util.newLineSeparator +
-                    "For example, for a BCDF guess (with ACEB guessed) there will be 1 full match (C), 1 partial match (B).${Util.newLineSeparator}",
-            runMainFunction(::main)
-        )
+        val wordLength = 4
+        val secretExample = "ACEB"
+        val maxAttemptsCount = 3
+        val expectedOutput = "Welcome to the game! $newLineSymbol" +
+                newLineSymbol +
+                "Two people play this game, one chooses a word (a sequence of letters), " +
+                "the other guesses it. In this case, the computer chooses the word: " +
+                "a sequence of $wordLength letters (for example, $secretExample). " +
+                "Several attempts are given to guess it (the max number is $maxAttemptsCount). " +
+                "For each attempt, the number of complete matches (letter and position) " +
+                "and partial matches (letter only) is reported. $newLineSymbol" +
+                newLineSymbol +
+                "For example, for the BCDF guess (with $secretExample as the hidden word), " +
+                "there will be 1 full match (C), 1 partial match (B).$newLineSymbol"
+        Assertions.assertEquals(expectedOutput, runMainFunction(::main))
     }
 }

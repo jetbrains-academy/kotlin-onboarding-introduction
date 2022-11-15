@@ -1,7 +1,7 @@
 ### Theory
 
 You are already familiar with the concept of variable from the previous lesson. 
-However, you've been only working with `string` variables yet.
+However, you've been only working with `String` variables yet.
 Meanwhile, in programming, it is common to use variables of _different_ types.
 
 For example, the `String` type stores strings, like `"ABCD"`, 

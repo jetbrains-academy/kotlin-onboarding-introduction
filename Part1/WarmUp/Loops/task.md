@@ -98,7 +98,7 @@ and imitates the game process:
 and make a loop that works while the game is running. 
 - In the loop, you should ask the user to input a guess and write their answer into the `guess` variable: 
 ```text
-Please input your guess. It should be <wordLength> characters long.
+Please input your guess. It should be of length <wordLength>.
 ```
 
 - Please, instead of the `readLine` function, use the `safeReadLine` function. 

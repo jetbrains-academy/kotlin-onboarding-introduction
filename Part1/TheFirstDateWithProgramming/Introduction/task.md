@@ -17,17 +17,20 @@ which you can read later.
     <img src="../../../utils/src/main/resources/images/part1/TheFirstDateWithProgramming/game.png" alt="Story twister" width="400"/>
 </p>
 
+### The project's description
+
 The project of this lesson is **Story twister**.
 The goal of this game is to ask the user several fun questions,
-remember the answers, and build a fun story from these answers.
+remember the answers, and build a fun story from these answers. 
+We will replace the real questions with new ones to make the final story ridiculous.
 
-The lesson includes the following topics:
+### The lesson's topics
 
 - the entry point for a Kotlin program;
 - built-in functions for printing to console;
 - variables;
 - built-in functions for reading user input.
 
-An example of this game:
+### The project's example
 
 ![The game's example](../../../utils/src/main/resources/images/part1/TheFirstDateWithProgramming/game.gif "The game's example")

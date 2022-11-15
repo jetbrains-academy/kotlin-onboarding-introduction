@@ -9,7 +9,7 @@ data class GameStep(
     val letters: Int
 ) {
     companion object {
-        private const val welcomeMessage = "Please, input your guess. It should be $WORD_LENGTH size."
+        private const val welcomeMessage = "Please, input your guess. It should be of length $WORD_LENGTH."
     }
 
     fun imitateGameProcess() = "$welcomeMessage${Util.newLineSeparator}Your guess has $positions full match, and $letters partial match."

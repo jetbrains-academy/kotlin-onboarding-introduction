@@ -1,14 +1,15 @@
-fun getGameRules(wordLength: Int, maxAttemptsCount: Int, secretExample: String, alphabet: String) = "Welcome to the game! $newLineSymbol" +
-        newLineSymbol +
-        "Two people play this game, one guesses a word (a sequence of letters), " +
-        "the other guesses it. In this case, the computer guesses the word. " +
-        "A sequence of $wordLength letters is guessed (for example, $secretExample). " +
-        "Several attempts are given to guess it (max number is $maxAttemptsCount). " +
-        "For each attempt, the number of complete matches (letter and position) " +
-        "and partial (letter only) is reported. The possible symbols in the word: $alphabet$newLineSymbol" +
-        newLineSymbol +
-        "For example, for a BCDF guess (with $secretExample guessed) there will " +
-        "be 1 full match (C), 1 partial match (B)."
+fun getGameRules(wordLength: Int, maxAttemptsCount: Int, secretExample: String, alphabet: String) =
+    "Welcome to the game! $newLineSymbol" +
+            newLineSymbol +
+            "Two people play this game, one chooses a word (a sequence of letters), " +
+            "the other guesses it. In this case, the computer chooses the word: " +
+            "a sequence of $wordLength letters (for example, $secretExample). " +
+            "Several attempts are given to guess it (the max number is $maxAttemptsCount). " +
+            "For each attempt, the number of complete matches (letter and position) " +
+            "and partial matches (letter only) is reported. The possible symbols in the word: $alphabet$newLineSymbol$newLineSymbol" +
+            newLineSymbol +
+            "For example, for the BCDF guess (with $secretExample as the hidden word), " +
+            "there will be 1 full match (C), 1 partial match (B)."
 
 fun countLettersMatchings(secret: String, guess: String): Int {
     val matchings = minOf(
@@ -40,7 +41,7 @@ fun safeUserInput(wordLength: Int, alphabet: String): String {
     var guess: String
     var isCorrect: Boolean
     do {
-        println("Please, input your guess. It should be $wordLength size and each symbol should be from the alphabet: $alphabet.")
+        println("Please, input your guess. It should be of length $wordLength and each symbol should be from the alphabet: $alphabet.")
         guess = safeReadLine()
         isCorrect = isCorrectInput(guess, wordLength, alphabet)
     } while(!isCorrect)
