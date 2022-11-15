@@ -22,16 +22,16 @@ class Test {
     }
 
     @Test
-    fun testCountLettersMatchingsFunction() {
-        TestMethod("countLettersMatchings", "Int", listOf(
+    fun testCountPartialMatchesFunction() {
+        TestMethod("countPartialMatches", "Int", listOf(
             Variable("secret", "String"),
             Variable("guess", "String"),
         )).getMethodFromClass()
     }
 
     @Test
-    fun testCountPositionalMatchingsFunction() {
-        TestMethod("countPositionalMatchings", "Int", listOf(
+    fun testCountExactMatchesFunction() {
+        TestMethod("countExactMatches", "Int", listOf(
             Variable("secret", "String"),
             Variable("guess", "String"),
         )).getMethodFromClass()

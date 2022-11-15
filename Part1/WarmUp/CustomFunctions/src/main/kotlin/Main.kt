@@ -11,9 +11,9 @@ fun getGameRules(wordLength: Int, maxAttemptsCount: Int, secretExample: String) 
             "For example, for the BCDF guess (with $secretExample as the hidden word), " +
             "there will be 1 full match (C), 1 partial match (B)."
 
-fun countLettersMatchings(secret: String, guess: String): Int = TODO("Not implemented yet")
+fun countPartialMatches(secret: String, guess: String): Int = TODO("Not implemented yet")
 
-fun countPositionalMatchings(secret: String, guess: String): Int = TODO("Not implemented yet")
+fun countExactMatches(secret: String, guess: String): Int = TODO("Not implemented yet")
 
 fun generateSecret() = "ABCD"
 

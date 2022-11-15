@@ -39,8 +39,8 @@ class Test {
             Arguments.of("AAAA", "ABCD", 1, 0),
         )
 
-        private val countPositionalMatchingsMethod = TestMethod(
-            "countPositionalMatchings", "Int",
+        private val countExactMatchesMethod = TestMethod(
+            "countExactMatches", "Int",
             listOf(
                 Variable("secret", "String"),
                 Variable("guess", "String"),
@@ -50,15 +50,15 @@ class Test {
 
     @ParameterizedTest
     @MethodSource("sequences")
-    fun testCountPositionalMatchingsImplementation(
+    fun testCountExactMatchesImplementation(
         guess: String,
         secret: String,
         expectedPosMatchings: Int,
         expectedLettersMatchings: Int
     ) {
-        val userMethod = countPositionalMatchingsMethod.getMethodFromClass()
+        val userMethod = countExactMatchesMethod.getMethodFromClass()
         Assertions.assertEquals(expectedPosMatchings, userMethod.invokeWithArgs(secret, guess),
-            "For secret: $secret and guess: $guess the number of positional matchings is $expectedPosMatchings")
+            "For secret: $secret and guess: $guess the number of exact matches is $expectedPosMatchings")
     }
 
     @ParameterizedTest
@@ -102,9 +102,9 @@ class Test {
     }
 
     @Test
-    fun testCountLettersMatchingsFunction() {
+    fun testCountPartialMatchesFunction() {
         TestMethod(
-            "countLettersMatchings", "Int", listOf(
+            "countPartialMatches", "Int", listOf(
                 Variable("secret", "String"),
                 Variable("guess", "String"),
             )
@@ -112,8 +112,8 @@ class Test {
     }
 
     @Test
-    fun testCountPositionalMatchingsFunction() {
-        countPositionalMatchingsMethod.getMethodFromClass()
+    fun testCountExactMatchesFunction() {
+        countExactMatchesMethod.getMethodFromClass()
     }
 
     @Test

@@ -1,7 +1,9 @@
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
+import org.junit.jupiter.api.assertThrows
 import util.*
 import util.Util.DEFAULT_USER_INPUT
+import java.lang.IllegalStateException
 
 class Test {
     @Test
@@ -57,9 +59,9 @@ class Test {
     }
 
     @Test
-    fun testCountLettersMatchingsFunction() {
+    fun testCountPartialMatchesFunction() {
         TestMethod(
-            "countLettersMatchings", "Int", listOf(
+            "countPartialMatches", "Int", listOf(
                 Variable("secret", "String"),
                 Variable("guess", "String"),
             )
@@ -67,9 +69,9 @@ class Test {
     }
 
     @Test
-    fun testCountPositionalMatchingsFunction() {
+    fun testCountExactMatchesFunction() {
         TestMethod(
-            "countPositionalMatchings", "Int", listOf(
+            "countExactMatches", "Int", listOf(
                 Variable("secret", "String"),
                 Variable("guess", "String"),
             )

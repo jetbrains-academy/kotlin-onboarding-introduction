@@ -39,16 +39,16 @@ class Test {
             Arguments.of("AAAA", "ABCD", 1, 0),
         )
 
-        private val countPositionalMatchingsMethod = TestMethod(
-            "countPositionalMatchings", "Int",
+        private val countExactMatchesMethod = TestMethod(
+            "countExactMatches", "Int",
             listOf(
                 Variable("secret", "String"),
                 Variable("guess", "String"),
             )
         )
 
-        private val countLettersMatchingsMethod = TestMethod(
-            "countLettersMatchings", "Int", listOf(
+        private val countPartialMatchesMethod = TestMethod(
+            "countPartialMatches", "Int", listOf(
                 Variable("secret", "String"),
                 Variable("guess", "String"),
             )
@@ -57,26 +57,26 @@ class Test {
 
     @ParameterizedTest
     @MethodSource("sequences")
-    fun testCountLettersMatchingsImplementation(
+    fun testCountPartialMatchesImplementation(
         guess: String,
         secret: String,
         expectedPosMatchings: Int,
         expectedLettersMatchings: Int
     ) {
-        val userMethod = countLettersMatchingsMethod.getMethodFromClass()
+        val userMethod = countPartialMatchesMethod.getMethodFromClass()
         Assertions.assertEquals(expectedLettersMatchings, userMethod.invokeWithArgs(secret, guess),
             "For secret: $secret and guess: $guess the number of letters matchings is $expectedLettersMatchings")
     }
 
     @ParameterizedTest
     @MethodSource("sequences")
-    fun testCountPositionalMatchingsImplementation(
+    fun testCountExactMatchesImplementation(
         guess: String,
         secret: String,
         expectedPosMatchings: Int,
         expectedLettersMatchings: Int
     ) {
-        val userMethod = countPositionalMatchingsMethod.getMethodFromClass()
+        val userMethod = countExactMatchesMethod.getMethodFromClass()
         Assertions.assertEquals(expectedPosMatchings, userMethod.invokeWithArgs(secret, guess),
             "For secret: $secret and guess: $guess the number of positional matchings is $expectedPosMatchings")
     }
@@ -122,13 +122,13 @@ class Test {
     }
 
     @Test
-    fun testCountLettersMatchingsFunction() {
-        countLettersMatchingsMethod.getMethodFromClass()
+    fun testCountPartialMatchesFunction() {
+        countPartialMatchesMethod.getMethodFromClass()
     }
 
     @Test
-    fun testCountPositionalMatchingsFunction() {
-        countPositionalMatchingsMethod.getMethodFromClass()
+    fun testCountExactMatchesFunction() {
+        countExactMatchesMethod.getMethodFromClass()
     }
 
     @Test

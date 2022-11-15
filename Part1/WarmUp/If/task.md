@@ -1,5 +1,11 @@
 ### Theory
 
+1. What is the conditional operator?
+2. The conditional operator as an expression: variables
+3. The conditional operator as an expression: functions
+
+#### 1. What is the conditional operator?
+
 The conditional operator (the [`if`](https://kotlinlang.org/docs/control-flow.html#if-expression) expression) 
 is used when the program has some choice. 
 For example, if the variable contains a positive number, display it on the screen, 
@@ -25,6 +31,8 @@ if (x > y) {
 For the `else` branch, the reverse of the original condition is used: for example,
 for `x > y`, the opposite condition is `x <= y`.
 
+#### 2. The conditional operator as an expression: variables
+
 In Kotlin, the `if` expression can be also assigned to a variable 
 or be a returned value in a function; in such a case, the **last** operator in each branch will be returned:
 ```kotlin
@@ -41,6 +49,8 @@ val max = if (x > y) {
 ```
 For input `x = 5` and `y = 15`, the result will be `max = 15`; and otherwise, 
 if `x = 20` and `y = 15`, the result will be `max = 20`.
+
+#### 3. The conditional operator as an expression: functions
 
 It is the same with functions:
 ```kotlin
@@ -75,6 +85,12 @@ fun max(x: Int, y: Int): Int {
 
 **Description**: implement the `isComplete` function. It should return `true` 
 if `secret` and `guess` are the same and `false` otherwise.
+
+If you have any difficulties, **hints will help you solve this task**.
+
+----
+
+### Hints
 
 <div class="hint">
 

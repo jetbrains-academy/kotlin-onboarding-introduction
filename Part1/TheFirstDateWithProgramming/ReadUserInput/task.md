@@ -35,6 +35,12 @@ The questions are:
 
 (3) Why does a spider need eight legs?
 
+If you have any difficulties, **hints will help you solve this task**.
+
+----
+
+### Hints
+
 <div class="hint">
 
 In the result, the user's interaction with the game will look like this:

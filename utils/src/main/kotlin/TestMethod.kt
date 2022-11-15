@@ -41,7 +41,7 @@ fun Array<Method>.findMethod(method: TestMethod): Method {
         }
     val filteredByArgumentsCount =
         filteredByType.filterByCondition("The method ${method.name} should have ${method.arguments.size} arguments") { it.parameterCount == method.arguments.size }
-    require(filteredByArgumentsCount.size == 1) { "The method ${method.prettyString()} is missed" }
+    assert(filteredByArgumentsCount.size == 1) { "The method ${method.prettyString()} is missed" }
     val m = filteredByArgumentsCount.first()
     val params = m.parameterTypes.map { it.name.shortName().lowercase() }
     val args = method.arguments.map { it.type.lowercase() }

@@ -40,16 +40,16 @@ class Test {
             Arguments.of("AAAA", "ABCD", 1, 0),
         )
 
-        private val countPositionalMatchingsMethod = TestMethod(
-            "countPositionalMatchings", "Int",
+        private val countExactMatchesMethod = TestMethod(
+            "countExactMatches", "Int",
             listOf(
                 Variable("secret", "String"),
                 Variable("guess", "String"),
             )
         )
 
-        private val countLettersMatchingsMethod = TestMethod(
-            "countLettersMatchings", "Int", listOf(
+        private val countPartialMatchesMethod = TestMethod(
+            "countPartialMatches", "Int", listOf(
                 Variable("secret", "String"),
                 Variable("guess", "String"),
             )
@@ -107,10 +107,12 @@ class Test {
     ) {
         val userMethod = generateSecretMethod.getMethodFromClass()
         val secret = userMethod.invokeWithArgs(wordLength, alphabet)
-        require(secret is String) { "The method ${generateSecretMethod.name} should return String" }
+        assert(secret is String) { "The method ${generateSecretMethod.name} should return String" }
+        require(secret is String)
+        assert(secret.split(", ").size == 1) { "The current generated secret is: $secret, you forgot to change the separator" }
         val nonAlphabetSymbols = secret.filter { it !in alphabet }
-        require(nonAlphabetSymbols.isEmpty()) { "The method ${generateSecretMethod.name} for alphabet: $alphabet returns incorrect symbols $nonAlphabetSymbols"  }
-        require(secret.length == wordLength) { "The method ${generateSecretMethod.name} for wordLength: $wordLength should return String with length $wordLength" }
+        assert(nonAlphabetSymbols.isEmpty()) { "The method ${generateSecretMethod.name} for alphabet: $alphabet returns incorrect symbols $nonAlphabetSymbols"  }
+        assert(secret.length == wordLength) { "The method ${generateSecretMethod.name} for wordLength: $wordLength should return String with length $wordLength" }
     }
 
     @Test
@@ -168,31 +170,31 @@ class Test {
 
     @ParameterizedTest
     @MethodSource("sequences")
-    fun testCountLettersMatchingsImplementation(
+    fun testCountPartialMatchesImplementation(
         guess: String,
         secret: String,
         expectedPosMatchings: Int,
         expectedLettersMatchings: Int
     ) {
-        val userMethod = countLettersMatchingsMethod.getMethodFromClass()
+        val userMethod = countPartialMatchesMethod.getMethodFromClass()
         Assertions.assertEquals(
             expectedLettersMatchings, userMethod.invokeWithArgs(secret, guess),
-            "For secret: $secret and guess: $guess the number of positional matchings is $expectedPosMatchings"
+            "For secret: $secret and guess: $guess the number of partial matches is $expectedPosMatchings"
         )
     }
 
     @ParameterizedTest
     @MethodSource("sequences")
-    fun testCountPositionalMatchingsImplementation(
+    fun testCountExactMatchesImplementation(
         guess: String,
         secret: String,
         expectedPosMatchings: Int,
         expectedLettersMatchings: Int
     ) {
-        val userMethod = countPositionalMatchingsMethod.getMethodFromClass()
+        val userMethod = countExactMatchesMethod.getMethodFromClass()
         Assertions.assertEquals(
             expectedPosMatchings, userMethod.invokeWithArgs(secret, guess),
-            "For secret: $secret and guess: $guess the number of positional matchings is $expectedPosMatchings"
+            "For secret: $secret and guess: $guess the number of exact matches is $expectedPosMatchings"
         )
     }
 
@@ -229,7 +231,7 @@ class Test {
         val alphabet = "ABCDEHG"
         val methodRes = userMethod.invokeWithArgs(3, 4, "ABCD", alphabet)
         val basePhrase = "The possible symbols in the word:"
-        require("$basePhrase $alphabet" in methodRes.toString()) { "The phrase: $basePhrase <alphabet> should be returned by the ${m.name} function" }
+        assert("$basePhrase $alphabet" in methodRes.toString()) { "The phrase: $basePhrase <alphabet> should be returned by the ${m.name} function" }
     }
 
     @Test
@@ -238,12 +240,12 @@ class Test {
     }
 
     @Test
-    fun testCountLettersMatchingsFunction() {
-        countLettersMatchingsMethod.getMethodFromClass()
+    fun testCountPartialMatchesFunction() {
+        countPartialMatchesMethod.getMethodFromClass()
     }
 
     @Test
-    fun testCountPositionalMatchingsFunction() {
-        countPositionalMatchingsMethod.getMethodFromClass()
+    fun testCountExactMatchesFunction() {
+        countExactMatchesMethod.getMethodFromClass()
     }
 }

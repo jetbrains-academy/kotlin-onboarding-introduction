@@ -1,5 +1,14 @@
 ### Theory
 
+1. `String` as a `List` of characters
+2. How to get an element from the list?
+3. Built-in functions to work with `List`
+4. Lambda expressions
+5. Different ways to work with arguments in the lambda expressions
+6. `filterIndexed` function
+
+#### 1. `String` as a `List` of characters
+
 What does a string usually consist of?
 Actually, a string is a sequence of characters (letters in our case).
 Therefore, when working with strings, we can think of them as a _list of letters_.
@@ -15,6 +24,8 @@ the word `ABCDDD` can be divided into six letters: `A`, `B`, `C`, `D`, `D`, `D`.
 The list in this case will consist of six elements - `A`, `B`, `C`, `D`, `D`, `D`,
 and each of them has its position: `A` - 0, `B` - 1, `C` - 2, `D` - 3, `D` - 4, `D` - 5.
 
+#### 2. How to get an element from the list?
+
 To get an element in a list by the position number,
 it is enough to refer to it in square brackets:
 ```kotlin
@@ -22,12 +33,16 @@ it is enough to refer to it in square brackets:
 "ABCDDD"[1]
 ```
 
+#### 3. Built-in functions to work with `List`
+
 Kotlin has many built-in functions for working with such collections –
 for example, searching for a value, filtering, and so on.
 ```kotlin
-// Get the first symbol in the word
+// Get the first symbol in the word, it will be A
 "ABCDDD".first()
 ```
+
+#### 3. Lambda expressions
 
 Often these built-in functions accept [lambda expressions](https://kotlinlang.org/docs/lambdas.html#lambda-expressions-and-anonymous-functions).
 We will talk about them in detail later, but currently it is enough to know that:
@@ -35,17 +50,7 @@ We will talk about them in detail later, but currently it is enough to know that
 element from the collection;
 - they have a special syntax.
 
-Consider the following example:
-```kotlin
-// Keep only A symbol
-"ABCDDD".filter { symbol: Char -> symbol == 'A' }
-```
-In this case, we are using a lambda expression (a condition), 
-which will be applied to **each** element of the collection.
-It takes one parameter `Char` (character) and compares it to character `A` 
-(for characters we need to use single quotes).
-
-We can rewrite this example with the `for` loop in the following way:
+Consider the following example that traverse a word and keep only `A` symbols:
 ```kotlin
 var result = ""
 for (symbol in "ABCDDD") {
@@ -54,6 +59,24 @@ for (symbol in "ABCDDD") {
    }
 }
 ```
+
+We used the already familiar constructions like `for` and `if`, but it can be rewritten via built-in functions and lambda expressions:
+
+```kotlin
+// Keep only A symbol
+"ABCDDD".filter { symbol: Char -> symbol == 'A' }
+```
+In this case, we are using a lambda expression (a condition), 
+which will be applied to **each** element of the collection via the built-in function `filter`.
+The lambda expression takes one parameter `Char` (character) and compares it to character `A` 
+(for characters we need to use single quotes).
+
+The `->` indicates that the left part of the lambda expression with the arguments is over.
+The right part of the lambda expression (after `->`) says what **exactly** we should do, e.g. compare the `symbol` with 'A'.
+
+#### 4. Different ways to work with arguments in the lambda expressions
+
+In the previous example we used the full form for the lambda expression arguments: name and type for the arguments.
 
 If the type of the arguments is clear from the context (as it usually is with collections), 
 then the type can be omitted:
@@ -67,19 +90,11 @@ then this argument already has a built-in name `it`, in which case it can also b
 "ABCDDD".filter { it == 'A' }
 ```
 
-For example, 
-```kotlin
-// The result will be: "A"
-"ABCDDD".filter { it == 'A' }
-```
-But: 
-```kotlin
-val secondWord = "AACAAA"
-// The result will be: "AC"
-"ABCDDD".filterIndexed { index, symbol -> secondWord[index] == symbol }
-```
+#### 5. `filterIndexed` function
 
-The last example can be rewritten in the following way:
+Kotlin has many built-in functions, e.g. we can filter something and manipulate not only with elements from the list but with its indices.
+For example, we need to build a new word, which consists of characters that occur simultaneously in both words at the same positions.
+The classic way is:
 ```kotlin
 val secondWord = "AACAAA"
 var result = ""
@@ -88,15 +103,32 @@ for ((index, symbol) in "ABCDDD".withIndex()) {
       result += symbol
    }
 }
+// The result will be: "AC"
 ```
+
+But we can use the [`filterIndexed`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/filter-indexed.html) function to make code shorter:
+```kotlin
+val secondWord = "AACAAA"
+// The result will be: "AC"
+"ABCDDD".filterIndexed { index, symbol -> secondWord[index] == symbol }
+```
+
+By the way, in this case, the lambda expression takes two arguments, so we use custom names for the arguments (`index` and `symbol`), not only `it`.
+
 ___
 
 ### Task
 
-**Description**: implement the _countPositionalMatchings_ function by using Kotlin built-in functions.
+**Description**: implement the _countExactMatches_ function by using Kotlin built-in functions. Given the `guess` and the `secret`, the function should output the number of letters that match exactly down to position.
+
+If you have any difficulties, **hints will help you solve this task**.
+
+----
+
+### Hints
 
 <div class="Hint">
-Here are several examples of the _countPositionalMatchings_ function's work:
+Here are several examples of the _countExactMatches_ function's work:
 
 - guess = "ACEB", secret = "BCDF", result = 1;
 - guess = "ABCD", secret = "DCBA", result = 0;
@@ -110,7 +142,7 @@ Next, we can just return the number of these letters.
 </div>
 
 <div class="Hint">
-To find the number of positional matchings, you can consider the <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/filter-indexed.html"><code>filterIndexed</code></a> function.
+To find the number of exact matches, you can consider the <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/filter-indexed.html"><code>filterIndexed</code></a> function.
 </div>
 
 <div class="Hint">

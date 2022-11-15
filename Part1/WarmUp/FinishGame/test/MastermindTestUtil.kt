@@ -13,7 +13,7 @@ data class GameStep(
         private const val welcomeMessage = "Please, input your guess. It should be of length $WORD_LENGTH."
     }
 
-    fun imitateGameProcess() = "$welcomeMessage${Util.newLineSeparator}Your guess has $positions full match, and $letters partial match."
+    fun imitateGameProcess() = "$welcomeMessage${Util.newLineSeparator}Your guess has $positions full matches, and $letters partial matches."
 }
 
 enum class UserInputCorrectness(val message: String, val isCorrect: Boolean) {

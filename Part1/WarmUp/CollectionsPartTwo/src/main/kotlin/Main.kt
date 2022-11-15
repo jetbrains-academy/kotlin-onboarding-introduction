@@ -11,15 +11,15 @@ fun getGameRules(wordLength: Int, maxAttemptsCount: Int, secretExample: String) 
             "For example, for the BCDF guess (with $secretExample as the hidden word), " +
             "there will be 1 full match (C), 1 partial match (B)."
 
-fun countLettersMatchings(secret: String, guess: String): Int {
-    val matchings = minOf(
+fun countPartialMatches(secret: String, guess: String): Int {
+    val matches = minOf(
         secret.filter { it in guess }.length,
         guess.filter { it in secret }.length,
     )
-    return matchings - countPositionalMatchings(guess, secret)
+    return matches - countExactMatches(guess, secret)
 }
 
-fun countPositionalMatchings(secret: String, guess: String): Int =
+fun countExactMatches(secret: String, guess: String): Int =
     guess.filterIndexed { index, letter -> letter == secret[index] }.length
 
 fun generateSecret() = "ABCD"

@@ -1,12 +1,22 @@
 ### Theory
 
+1. What are the loops?
+2. The `while` and `do..while` loops
+3. The `for` loop
+4. The mutable variables
+5. `Boolean` variables in the loop conditions
+
+#### 1. What are the loops?
+
 Sometimes, the same actions need to be repeated several times: 
 for example, to play several rounds of a game or print the same text on the screen.
 To solve this problem, you can use loops.
 Loops can be executed while some condition is true (the [`while`](https://kotlinlang.org/docs/basic-syntax.html#while-loop) loop) 
 or repeated a certain number of times (the [`for`](https://kotlinlang.org/docs/control-flow.html#for-loops) loop).
 
-`While` loops often use `Boolean` values, for example:
+#### 2. The `while` and `do..while` loops
+
+`while` loops often use `Boolean` values, for example:
 ```kotlin
 while(y < 10) {
     // To do something
@@ -23,6 +33,8 @@ do {
 } while(y < 10)
 ```
 
+#### 3. The `for` loop
+
 `For` loops often use [`Ranges`](https://kotlinlang.org/docs/basic-syntax.html#ranges) to define 
 how many times the body of the loop will be executed:
 ```kotlin
@@ -38,6 +50,8 @@ for (i in 1 until 3) {
   // To do something
 }
 ```
+
+#### 4. The mutable variables
 
 Loops often require changing the value of a variable. 
 To do that, you can use the [`var`](https://kotlinlang.org/docs/basic-syntax.html#variables) variable:
@@ -56,37 +70,21 @@ The loop will be executed in 3 steps:
 4) because y > 10, stop the loop.
 In the end, the following numbers: 5, 7, and 9 will be printed in the console.
 
+#### 5. `Boolean` variables in the loop conditions
+
 If you need to work with `Boolean` variables, you should omit the comparing part in the condition:
 ```kotlin
-var b = true
-while(b == true) {
-    // To do something
-}
+while (b == true) {           while (b) {
+    // ...             VS         // ...
+}                             }
 ```
-It is equal to:
 
-```kotlin
-var b = true
-while (b) {
-    // To do something
-}
-```
 An opposite example:
 ```kotlin
-var b = false
-while(b == false) {
-    // To do something
-}
+while (b == false) {          while (!b) {
+    // ...             VS         // ...
+}                             }
 ```
-It is equal to:
-
-```kotlin
-var b = false
-while (!b) {
-    // To do something
-}
-```
-
 
 ___
 
@@ -101,16 +99,20 @@ and make a loop that works while the game is running.
 Please input your guess. It should be of length <wordLength>.
 ```
 
-- Please, instead of the `readLine` function, use the `safeReadLine` function. 
-It is a custom function from the course authors: 
-it uses the [`elvis operator`](https://kotlinlang.org/docs/null-safety.html#elvis-operator), which will be covered in the future topics. 
-If you want, you can try to use it with the familiar `readLine` function. 
+- Please, instead of the `readLine` function, use the `safeReadLine` function here. 
+It is a custom function from the course authors that makes easier the interaction with the user input. 
 
 - Define a function `isComplete`, which accepts `secret` and `guess` and checks if the game is over. 
 For now, let it always return `true`. Call it after reading the user input and rewrite the `complete` variable.
 
 - Call the `playGame` function in the `main` function. 
 Don't forget to use the `generateSecret` function to get a secret.
+
+If you have any difficulties, **hints will help you solve this task**.
+
+----
+
+### Hints
 
 <div class="Hint">
 Use <code>do..while</code> for imitating the game process.
