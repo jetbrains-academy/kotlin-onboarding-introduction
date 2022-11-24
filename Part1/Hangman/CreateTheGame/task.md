@@ -9,14 +9,14 @@ We have no doubt that you will succeed!
     <img src="../../../utils/src/main/resources/images/part1/Hangman/game.png" alt="Hangman" width="400"/>
 </p>
 
-### The project's description
+### Project description
 
 The project of this lesson is **Hangman**.
 The purpose of this game is to guess the word chosen by the computer.
 You can try to implement the whole game yourself; however, if you need help, 
 refer to the hints.
 
-The game should interact with the user through the console. The initial message will make the game's rules clearer:
+The game should interact with the user through the console. The initial message will make the game's rules clear:
 ```text
 Welcome to the game!
 
@@ -37,7 +37,7 @@ Good luck with the game!
 The word must be hidden exactly in the `_ ` format per each letter.
 The necessary symbols already exist in the project and are stored in the variables `separator` and `underscore`. 
 You just need to call them.
-For example, the letter `BANK` will be `_ _ _ _`, where `_` is stored in the `underscore` variable and the space in the `separator` variable.
+For example, the word `BANK` will be `_ _ _ _`, where `_` is stored in the `underscore` variable and the space in the `separator` variable.
 
 In addition, the variables `wordLength` and `maxAttemptsCount` are also already defined in the project.
 The word that the computer chooses must be randomly selected from a list of words `words`. 
@@ -45,32 +45,32 @@ This list is also already defined in the project.
 
 The tests for the tasks will be aimed at checking the following functions:
 
-- `isCorrectInput`, which checks if the user input is one English letter.;
+- `isCorrectInput`, which checks if the user input is one English letter;
 - `safeUserInput`, which uses `isCorrectInput` and also converts the input to uppercase;
 - `generateNewUserWord`, which generates a new sequence of underscores and already guessed letters 
-by means of `secret`, `guess`, and `currentUserWord`. The `currentUserWord` must be stores with `separator`, e.g. `B _ N _`;
+by means of `secret`, `guess`, and `currentUserWord`. The `currentUserWord` must be stored with `separator`s, e.g., `B _ N _`;
 - `isComplete`, which checks if the game is complete.
 
 At the end of the game, the user should be informed about the results:
 - if the user lost: `Sorry, you lost! My word is <secret>`
 - if the user guessed the word: `Congratulations! You guessed it!`
 
-### The project's example
+### Project example
 
 ![The game's example](../../../utils/src/main/resources/images/part1/Hangman/game.gif "The game's example")
 
 In order for the picture to fit, additional line breaks were added.
 You don't need to add them when solving the task.
 
-**Note**: the tests check only the functions and string constants are described above, 
-but the game's example has several additional messages, e.g. about incorrect input. 
-If you would like to make the game better, you can add them, the full list of the messages:
+**Note**: the tests check only the functions and string constants described above, 
+but the game's example has several additional messages, e.g., about incorrect input. 
+If you would like to make the game better, you can add them, the full list of the messages is below:
 
-- `Please, input your guess.`
+- `Please input your guess.`
 - `The length of your guess should be 1! Try again!`
 - `You should input only English letters! Try again!`
-- `Sorry, the secret does not contain the symbol: <guess>. The current word: <currentUserWord>`
-- `Great! This letter is in the word! The current word: <newUserWord>`
+- `Sorry, the secret does not contain the symbol: <guess>. The current word is: <currentUserWord>`
+- `Great! This letter is in the word! The current word is: <newUserWord>`
 
 If you have any difficulties, **hints will help you solve this task**.
 
@@ -87,7 +87,7 @@ separate lines correctly.
 
 <div class="hint">
 
-  To implement the `isCorrectInput` function, you should check two conditions. 
+  To implement the `isCorrectInput` function, you should check for two conditions. 
   The first condition should check if the `length` of the user input is one character. 
 
   The second condition should check if the English alphabet is used in the input.
@@ -106,7 +106,7 @@ separate lines correctly.
 <div class="hint">
 
    To implement the `generateNewUserWord` function, you should check each `secret`'s char.
-   To make a loop check each `secret`'s char, you can use the <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/indices.html">`indices`</a> property:
+   To make a loop check over each `secret`'s char, you can use the <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/indices.html">`indices`</a> property:
    ```
    for (i in secret.indices) { ... }
    ```
