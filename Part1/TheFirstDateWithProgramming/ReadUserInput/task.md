@@ -15,18 +15,18 @@ That is exactly what the `readLine` function is for.
 The function tells the program to stop and wait for 
 the user to enter some value into the console; then it allows the program to receive the value and, for example, write it into a variable.
 
-It is important, that in this case you **can not** write:
+It is important that in this case you **cannot** write:
 ```kotlin
 val myValue: String = readLine()
 // The myValue variable stores the user's input
 ```
-It is connected to the null-safety in Kotlin, we will consider it later, but if you are interested in this topic, you can read more in the [documentation](https://kotlinlang.org/docs/null-safety.html).
+It is connected to the null safety in Kotlin, we will consider it later, but if you are interested in this topic, you can read more in the [documentation](https://kotlinlang.org/docs/null-safety.html).
 ___
 
 ### Task
 
 **Description**: ask the user three questions and add the answers 
-to _firstUserAnswer_, _secondUserAnswer_, and _thirdUserAnswer_ variables respectively.
+to the _firstUserAnswer_, _secondUserAnswer_, and _thirdUserAnswer_ variables respectively.
 The questions are:
 
 (1) What is TROTEN?
@@ -43,7 +43,7 @@ If you have any difficulties, **hints will help you solve this task**.
 
 <div class="hint">
 
-In the result, the user's interaction with the game will look like this:
+As a result, the user's interaction with the game will look like this:
 
 ![User interaction example](../../../utils/src/main/resources/images/part1/TheFirstDateWithProgramming/user_input.gif "User interaction example")
 
