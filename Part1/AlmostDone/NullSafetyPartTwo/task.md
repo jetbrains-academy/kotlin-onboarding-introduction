@@ -39,8 +39,8 @@ ___
 - `choosePicture` chooses one pre-defined picture by its name. 
 You should ask the user to choose a picture by its name.
 The list of pre-defined pictures you can get by the pre-defined function `allPictures`.
-To get the picture by its name, you can use the pre-defined function `getPictureByName`, 
-which returns `String?` - an image – or `null` if the name is incorrect:
+To get a picture by its name, you can use the pre-defined function `getPictureByName`, 
+which returns `String?` – an image – or `null` if the name is incorrect:
 
 ![`choosePicture` function work](../../../utils/src/main/resources/images/part1/AlmostDone/choose_picture.gif "`choosePicture` function work")
 
@@ -49,7 +49,7 @@ You don't need to add them when solving the task.
 
 - `getPicture` asks the user to choose a pre-defined picture or to input a custom picture.
 If the user wants to choose a pre-defined picture, run the `choosePicture` function. 
-If the user wants to upload a custom picture, ask them about it, only single-line images need to be supported:
+If the user wants to upload a custom picture, ask them about it (only single-line images need to be supported):
 
 ![`getPicture` function work](../../../utils/src/main/resources/images/part1/AlmostDone/get_picture.gif "`getPicture` function work")
 
@@ -64,5 +64,5 @@ If you have any difficulties, **hints will help you solve this task**.
 
 <div class="hint">
   To check the user's answer in the <code>getPicture</code> function, 
-  it is more convenient to use the <code>when</code> expression.
+  it is most convenient to use the <code>when</code> expression.
 </div>
