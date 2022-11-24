@@ -8,21 +8,21 @@ as well as refresh some concepts that you have not had time to learn yet.
     <img src="../../../utils/src/main/resources/images/part1/AlmostDone/game.png" alt="Console photoshop" width="400"/>
 </p>
 
-### The project's description
+### Project description
 
 The project of this lesson is **Console photoshop**.
 The goal of this project is to create a simple Photoshop console app 
 that can apply different filters to character images.
 
-### The lesson's topics
+### Lesson topics
 
 - multi-row strings;
 - when expressions;
 - basic handling of errors;
 - string builder;
-- null-safety (`!!` and `?:`).
+- null safety (`!!` and `?:`).
 
-### The project's example
+### Project example
 
 ![Console photoshop example](../../../utils/src/main/resources/images/part1/AlmostDone/game.gif "Console photoshop example")
 
