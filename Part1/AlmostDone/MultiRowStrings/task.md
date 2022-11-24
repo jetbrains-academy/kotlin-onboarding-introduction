@@ -1,11 +1,11 @@
 ### Theory
 
-1. What are the multiline strings?
+1. What are multiline strings?
 2. The `trimIndent` function
 
-#### 1. What are the multiline strings?
+#### 1. What are multiline strings?
 
-When working with long strings, it is most convenient to use the so-called [multiline strings](https://kotlinlang.org/docs/coding-conventions.html#strings).
+When working with long strings, it is most convenient to use so-called [multiline strings](https://kotlinlang.org/docs/coding-conventions.html#strings).
 Unlike regular strings, they are enclosed in triple quotes:
 ```kotlin
 // A regular string:
@@ -66,7 +66,7 @@ Also, each line in the string has the `*` symbol.
 In the second case, the string looks better, but it still has an extra symbol in each line.
 The last case looks as the best option.
 
-Therefore, working with multiline strings, it is great to use such functions.
+Therefore, when working with multiline strings, such functions are a great help.
 
 ___
 
