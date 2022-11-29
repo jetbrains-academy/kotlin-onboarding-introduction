@@ -1,4 +1,7 @@
-![Gradle build](https://github.com/jetbrains-academy/csc-kotlin-course/actions/workflows/gradle-build.yml/badge.svg?branch=main)
+[![official project](https://jb.gg/badges/official.svg)](https://confluence.jetbrains.com/display/ALL/JetBrains+on+GitHub)
+[![Gradle Build](https://github.com/jetbrains-academy/csc-kotlin-course/actions/workflows/gradle-build.yml/badge.svg)](https://github.com/jetbrains-academy/csc-kotlin-course/actions/workflows/gradle-build.yml)
+[![Gradle Build With Detekt](https://github.com/jetbrains-academy/csc-kotlin-course/actions/workflows/gradle-build-with-detekt.yml/badge.svg)](https://github.com/jetbrains-academy/csc-kotlin-course/actions/workflows/gradle-build-with-detekt.yml)
+[![Gradle Test](https://github.com/jetbrains-academy/csc-kotlin-course/actions/workflows/gradle-test.yml/badge.svg)](https://github.com/jetbrains-academy/csc-kotlin-course/actions/workflows/gradle-test.yml)
 
 # Introduction to Kotlin
 
