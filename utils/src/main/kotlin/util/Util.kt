@@ -4,7 +4,6 @@ import org.junit.jupiter.api.Assertions
 import util.Util.newLineSeparator
 import java.io.ByteArrayOutputStream
 import java.io.PrintStream
-import java.lang.IllegalStateException
 import java.nio.charset.StandardCharsets
 
 object Util {
@@ -39,7 +38,8 @@ fun runMainFunction(mainFunction: () -> Unit, input: String? = null, toAssertSys
         baos.toString("UTF-8").replaceLineSeparator()
     } catch (e: IllegalStateException) {
         val userInput = input?.let { "the user input: $it" } ?: "the empty user input"
-        val errorPrefix = "Try to run the main function with $userInput, the function must process the input and exit, but the current version of the function"
+        val errorPrefix =
+            "Try to run the main function with $userInput, the function must process the input and exit, but the current version of the function"
         if ("Your input is incorrect" in (e.message ?: "")) {
             assert(false) { "$errorPrefix waits more user inputs, it must be fixed." }
         }

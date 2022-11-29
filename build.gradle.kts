@@ -53,7 +53,9 @@ allprojects {
         implementation("org.junit.jupiter:junit-jupiter-params:5.8.2")
         runtimeOnly("org.junit.platform:junit-platform-console:1.8.2")
 
-        implementation("io.gitlab.arturbosch.detekt:detekt-gradle-plugin:1.21.0")
+        val detektVersion = "1.22.0"
+        implementation("io.gitlab.arturbosch.detekt:detekt-gradle-plugin:$detektVersion")
+        implementation("io.gitlab.arturbosch.detekt:detekt-formatting:$detektVersion")
     }
 
     tasks {

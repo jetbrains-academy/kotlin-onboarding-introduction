@@ -1,6 +1,5 @@
 package util
 
-import java.lang.IllegalArgumentException
 import java.lang.reflect.Method
 
 data class TestMethod(
