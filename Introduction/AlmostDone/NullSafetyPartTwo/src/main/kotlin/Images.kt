@@ -1,3 +1,5 @@
+@file:Suppress("MayBeConst")
+
 val spongeBob = """
     ┈┈╱▔▔▔▔▔▔▔▔▔▔▔▏ 
     ┈╱╭▏╮╭┻┻╮╭┻┻╮╭▏ 

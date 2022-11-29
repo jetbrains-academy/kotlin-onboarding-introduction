@@ -1,3 +1,5 @@
+@file:Suppress("MayBeConst")
+
 fun safeReadLine() = readLine() ?: error("Your input is incorrect, sorry")
 
 val separator = " "

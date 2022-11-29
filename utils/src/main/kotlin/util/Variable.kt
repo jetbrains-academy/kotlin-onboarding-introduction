@@ -31,7 +31,6 @@ fun checkListOfVariables(sourceCodeFile: File, variables: List<Variable>) {
             assert(variable.isVariableExist(content))
         }
     } else {
-        // TODO: log some errors?
         throwInternalCourseError()
     }
 }

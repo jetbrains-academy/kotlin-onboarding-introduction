@@ -1,3 +1,5 @@
+@file:Suppress("MayBeConst")
+
 val borderSymbol = '#'
 val separator = ' '
 val newLineSymbol = System.lineSeparator()
