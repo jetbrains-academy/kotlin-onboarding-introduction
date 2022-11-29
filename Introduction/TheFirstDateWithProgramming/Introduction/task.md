@@ -1,5 +1,5 @@
-Hello! Welcome to the CSC Kotlin course. 
-This block of the course is designed for beginners
+Hello! Welcome to the Kotlin course. 
+This course is designed for novices in Kotlin 
 and focuses on the basic concepts of the Kotlin language. 
 
 Each lesson of the course is built in the form of a project: 
@@ -10,6 +10,9 @@ it includes all the topics of the lesson but is not divided into small tasks.
 
 All topics will be accompanied by links to [the official Kotlin documentation](https://kotlinlang.org/docs/home.html), 
 which you can read later.
+
+Note, this course **does not provide the detailed explanation** of the basic concepts 
+like variables, if just offers to introduce you how to use it in Kotlin and can just remind the definitions.
 
 ----
 
