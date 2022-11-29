@@ -2,6 +2,7 @@
 [![Gradle Build](https://github.com/jetbrains-academy/csc-kotlin-course/actions/workflows/gradle-build.yml/badge.svg)](https://github.com/jetbrains-academy/csc-kotlin-course/actions/workflows/gradle-build.yml)
 [![Gradle Build With Detekt](https://github.com/jetbrains-academy/csc-kotlin-course/actions/workflows/gradle-build-with-detekt.yml/badge.svg)](https://github.com/jetbrains-academy/csc-kotlin-course/actions/workflows/gradle-build-with-detekt.yml)
 [![Gradle Test](https://github.com/jetbrains-academy/csc-kotlin-course/actions/workflows/gradle-test.yml/badge.svg)](https://github.com/jetbrains-academy/csc-kotlin-course/actions/workflows/gradle-test.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 # Introduction to Kotlin
 
