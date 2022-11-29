@@ -43,8 +43,7 @@ the course creator mode or create a course archive from the source code.
 
 ### Getting started: create a course preview from the source code
 
-**TODO: add link about course preview**
-You can create a course preview from the source code:
+You can create a [course preview](https://plugins.jetbrains.com/plugin/10081-edutools/docs/educator-start-guide.html#preview_course) from the source code:
 1. Clone this repository: 
 ```text
 git clone https://github.com/jetbrains-academy/csc-kotlin-course.git
@@ -57,12 +56,11 @@ git clone https://github.com/jetbrains-academy/csc-kotlin-course.git
 
 3. Install the [EduTools](https://plugins.jetbrains.com/plugin/10081-edutools/docs/educational-products.html) plugin from the marketplace
 
-4. Create a new course preview **TODO: add a link**
+4. Create a new [course preview](https://plugins.jetbrains.com/plugin/10081-edutools/docs/educator-start-guide.html#preview_course)
 
 ### Getting started: create a course archive
 
-**TODO: add link about course archive**
-You can create a course archive from the source code:
+You can create a [course archive](https://plugins.jetbrains.com/plugin/10081-edutools/docs/educator-start-guide.html#fe7010f2) from the source code:
 1. Clone this repository:
 ```text
 git clone https://github.com/jetbrains-academy/csc-kotlin-course.git
@@ -75,7 +73,7 @@ git clone https://github.com/jetbrains-academy/csc-kotlin-course.git
 
 3. Install the [EduTools](https://plugins.jetbrains.com/plugin/10081-edutools/docs/educational-products.html) plugin from the marketplace
 
-4. Create a new course archive **TODO: add a link**
+4. Create a new [course archive](https://plugins.jetbrains.com/plugin/10081-edutools/docs/educator-start-guide.html#fe7010f2)
 
 ## Run tests
 
