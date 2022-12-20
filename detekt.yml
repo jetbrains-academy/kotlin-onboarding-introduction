@@ -1,0 +1,50 @@
+# buildUponDefaultConfig is active; add only the rules that require explicit configuration here
+potential-bugs:
+  Deprecation:
+    active: true
+
+style:
+  MaxLineLength:
+    active: true
+    maxLineLength: 180
+  # wildcards are used all over the project
+  WildcardImport:
+    active: false
+  ReturnCount:
+    max: 3
+  MagicNumber:
+    active: false
+  UnusedPrivateMember:
+    active: true
+    excludes: [
+      "**/Introduction/AlmostDone/StringFunctions/src/main/kotlin/Main.kt",
+      "**/Introduction/AlmostDone/When/src/main/kotlin/Main.kt",
+      "**/Introduction/TheFirstDateWithProgramming/ReadUserInput/src/main/kotlin/Main.kt",
+      "**/Introduction/TheFirstDateWithProgramming/Variables/src/main/kotlin/Main.kt",
+      "**/Introduction/WarmUp/Collections/src/main/kotlin/Main.kt",
+      "**/Introduction/WarmUp/CollectionsPartTwo/src/main/kotlin/Main.kt",
+      "**/Introduction/WarmUp/CustomFunctions/src/main/kotlin/Main.kt",
+      "**/Introduction/WarmUp/If/src/main/kotlin/Main.kt",
+      "**/Introduction/WarmUp/Loops/src/main/kotlin/Main.kt",
+
+    ]
+  FunctionOnlyReturningConstant:
+    active: true
+    excludes: [
+      "**/Introduction/WarmUp/Collections/src/main/kotlin/Main.kt",
+      "**/Introduction/WarmUp/CollectionsPartTwo/src/main/kotlin/Main.kt",
+      "**/Introduction/WarmUp/CustomFunctions/src/main/kotlin/Main.kt",
+      "**/Introduction/WarmUp/FinishBaseGame/src/main/kotlin/Main.kt",
+      "**/Introduction/WarmUp/If/src/main/kotlin/Main.kt",
+      "**/Introduction/WarmUp/Loops/src/main/kotlin/Main.kt",
+    ]
+
+complexity:
+  TooManyFunctions:
+    active: true
+    thresholdInFiles: 20
+
+exceptions:
+  active: true
+  InstanceOfCheckForException:
+    active: false
