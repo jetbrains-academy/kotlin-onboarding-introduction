@@ -2,7 +2,7 @@
 
 Great, you've done a good job implementing the `countExactMatches` function, 
 probably using the `filterIndexed` function and the `length` property on the remaining word (but of course, you could implement it in any different way).
-Now it is great time to pay more attention to built-in functions for working with collections and implement the _countLettersMatchings_ function.
+Now it is great time to pay more attention to built-in functions for working with collections and implement the _countPartialMatches_ function.
 
 ___
 
@@ -18,6 +18,7 @@ If you have any difficulties, **hints will help you solve this task**.
 ### Hints
 
 <div class="Hint">
+
 Here are several examples of the _countPartialMatches_ function's work:
 
 - guess = "ACEB", secret = "BCDF", result = 1;

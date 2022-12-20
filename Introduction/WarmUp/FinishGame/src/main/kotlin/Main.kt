@@ -1,15 +1,15 @@
 fun getGameRules(wordLength: Int, maxAttemptsCount: Int, secretExample: String, alphabet: String) =
     "Welcome to the game! $newLineSymbol" +
             newLineSymbol +
-            "Two people play this game, one chooses a word (a sequence of letters), " +
-            "the other guesses it. In this case, the computer chooses the word: " +
+            "Two people play this game: one chooses a word (a sequence of letters), " +
+            "the other guesses it. In this version, the computer chooses the word: " +
             "a sequence of $wordLength letters (for example, $secretExample). " +
-            "Several attempts are given to guess it (the max number is $maxAttemptsCount). " +
+            "The user has several attempts to guess it (the max number is $maxAttemptsCount). " +
             "For each attempt, the number of complete matches (letter and position) " +
             "and partial matches (letter only) is reported. The possible symbols in the word: $alphabet$newLineSymbol$newLineSymbol" +
             newLineSymbol +
-            "For example, for the BCDF guess (with $secretExample as the hidden word), " +
-            "there will be 1 full match (C), 1 partial match (B)."
+            "For example, with $secretExample as the hidden word, the BCDF guess will " +
+            "give 1 full match (C) and 1 partial match (B)."
 
 fun countPartialMatches(secret: String, guess: String): Int {
     val matches = minOf(
@@ -28,9 +28,9 @@ fun generateSecret(wordLength: Int, alphabet: String) =
 fun isComplete(secret: String, guess: String) = secret == guess
 
 fun printRoundResults(secret: String, guess: String) {
-    val positionalMatches = countExactMatches(secret, guess)
-    val lettersMatches = countPartialMatches(secret, guess)
-    println("Your guess has $positionalMatches full matches, and $lettersMatches partial matches.")
+    val fullMatches = countExactMatches(secret, guess)
+    val partialMatches = countPartialMatches(secret, guess)
+    println("Your guess has $fullMatches full matches and $partialMatches partial matches.")
 }
 
 fun isWin(complete: Boolean, attempts: Int, maxAttemptsCount: Int) = complete && attempts <= maxAttemptsCount
@@ -73,7 +73,7 @@ fun playGame(secret: String, wordLength: Int, maxAttemptsCount: Int, alphabet: S
             println("Sorry, you lost! :( My word is $secret")
             break
         } else if (isWin(complete, attempts, maxAttemptsCount)) {
-            println("Congratulations! You guessed!")
+            println("Congratulations! You guessed it!")
         }
     } while (!complete)
 }

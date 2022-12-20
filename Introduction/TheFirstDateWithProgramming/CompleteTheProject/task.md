@@ -24,3 +24,11 @@ ___
 The real questions are stored in the already predefined `firstQuestion`, `secondQuestion`, and `thirdQuestion` variables.
 
 Before the real questions, print the text: 'Now let's have fun!'
+
+<div class="hint">
+
+The game should look like this:
+
+![The game's example](../../../utils/src/main/resources/images/part1/TheFirstDateWithProgramming/game.gif "The game's example")
+
+</div>

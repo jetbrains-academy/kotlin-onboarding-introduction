@@ -52,14 +52,14 @@ fun safeReadLine(): String = readLine() ?: error("Your input is incorrect, sorry
 fun chooseFilter(): String {
     var toContinue = true
     var filter = ""
-    println("Please, choose the filter: 'borders' or 'squared'.")
+    println("Please choose the filter: 'borders' or 'squared'.")
     do {
         when (val input = safeReadLine()) {
             "borders", "squared" -> {
                 toContinue = false
                 filter = input
             }
-            else -> println("Please, input 'borders' or 'squared'")
+            else -> println("Please input 'borders' or 'squared'")
         }
     } while (toContinue)
     return filter
