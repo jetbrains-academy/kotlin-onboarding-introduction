@@ -38,8 +38,8 @@ This affects the execution time of the program, as well as the amount of compute
 consume.
 
 `StringBuilder` is designed in such a way that it avoids this kind of copying. 
-First, you should create the string, then apply the `append` function to update it, 
-and finally use the `toString` function to return the resulting string:
+First, you should create a string, then apply the `append` function to update it, 
+and finally, use the `toString` function to return the resulting string:
 ```kotlin
 val sb = StringBuilder()
 sb.append("It")
@@ -52,12 +52,12 @@ ___
 ### Task
 
 **Description**: implement the `applyBordersFilter` function. 
-For the border symbol please use the pre-defined variable `borderSymbol`.
+For the border symbol, please use the pre-defined variable `borderSymbol`.
 
 To make the picture prettier, add a separator between the picture and the border.
 For the separator, please use the pre-defined variable `separator`.
-Note, that the picture can be not a square, it means the width of the different lines in the picture can be different.
-In other words, for shorter lines, you need to pad them with the `separator` to the length to make the image square.
+Note that the picture might not be a square, which means the width of different lines in the picture can be different.
+In other words, you need to pad the shorter lines with the `separator` to the length to make the image square.
 
 In addition, the project already stores the `newLineSymbol` variable, which can be used to split the picture into lines.
 

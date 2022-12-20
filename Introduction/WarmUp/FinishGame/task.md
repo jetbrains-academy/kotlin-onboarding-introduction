@@ -2,19 +2,19 @@
 
 Well, it looks like the game is ready! But what else is left to do?
 
-0. Why we need to inform the user about the problems?
+0. Why do we need to inform the user about problems?
 1. The `isEmpty` function
 2. The `isNotEmpty` function
-3. How to simplify the `if` operator?
+3. How to simplify the `if` operator
 
-#### 0. Why we need to inform the user about the problems?
+#### 0. Why do we need to inform the user about problems?
 
 When writing programs, it is essential to consider _possible_ behaviour 
 scenarios and process them. For example, in the current version of the game, 
 the user may enter a word that does not match the current game parameters 
-(alphabet, word length, and so on), and if so, it is necessary to process 
+(the alphabet, word length, and so on), and if so, it is necessary to process 
 the case and inform the user about the problem. 
-In this case the user can fix this problem and continue the game process.
+In this case, the user can fix this problem and continue with the game.
 
 #### 1. The `isEmpty` function
 
@@ -48,9 +48,9 @@ if (someString.isNotEmpty()) {
 }
 ```
 
-#### 3. How to simplify the `if` operator?
+#### 3. How to simplify the `if` operator
 
-As mentioned earlier, in Kotlin we can use complex conditions with multiple branches. 
+As mentioned earlier, in Kotlin, we can use complex conditions with multiple branches. 
 However, if the conditional is used inside a function with `return`, 
 the `else` word can be omitted:
 ```kotlin
@@ -86,7 +86,7 @@ and handles incorrect user input:
 - before reading the user input, print the requirements: 
 
 ```text
-Please, input your guess. It should be of length <wordLength> and each symbol should be from the alphabet: <alphabet>.
+Please input your guess. It should be of length <wordLength>, and each symbol should be from the alphabet: <alphabet>.
 ```
 - to read the line of user input, use the `safeReadLine` function as earlier (or your own implementation of it);
 - to check the correctness of the user's input, implement the `isCorrectInput` function, 
@@ -98,7 +98,7 @@ This function should have the following behaviour:
     ```
   - inform the user if the input contains wrong symbols:
   ```text
-    All symbols in your guess should be from the <alphabet> alphabet characters! Try again!
+    All symbols in your guess should be the <alphabet> alphabet characters! Try again!
     ```
 - use these functions in the game process.
 

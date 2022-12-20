@@ -118,7 +118,7 @@ fun safeReadLine(): String = readLine() ?: error("Your input is incorrect, sorry
 fun chooseGenerator(): String {
     var toContinue = true
     var generator = ""
-    println("Please, choose the generator: 'canvas' or 'canvasGaps'.")
+    println("Please choose the generator: 'canvas' or 'canvasGaps'.")
     do {
         when (val input = safeReadLine()) {
             "canvas", "canvasGaps" -> {
@@ -133,7 +133,7 @@ fun chooseGenerator(): String {
 
 fun choosePattern(): String {
     do {
-        println("Please, choose a pattern. The possible options: ${allPatterns().joinToString(", ")}")
+        println("Please choose a pattern. The possible options: ${allPatterns().joinToString(", ")}")
         val name = safeReadLine()
         val pattern = getPatternByName(name)
         pattern?.let {
@@ -144,8 +144,8 @@ fun choosePattern(): String {
 
 fun getPattern(): String {
     println(
-        "Do you want to use a pre-defined pattern or use a custom one? " +
-                "Please, input 'yes' for a pre-defined pattern or 'no' for a custom one"
+        "Do you want to use a pre-defined pattern or a custom one? " +
+                "Please input 'yes' for a pre-defined pattern or 'no' for a custom one"
     )
     do {
         when (safeReadLine()) {
@@ -156,7 +156,7 @@ fun getPattern(): String {
                 println("Please, input a custom picture")
                 return safeReadLine()
             }
-            else -> println("Please, input 'yes' or 'no'")
+            else -> println("Please input 'yes' or 'no'")
         }
     } while (true)
 }
@@ -164,9 +164,9 @@ fun getPattern(): String {
 fun main() {
     val pattern = getPattern()
     val generatorName = chooseGenerator()
-    println("Please, input the width of the resulting picture:")
+    println("Please input the width of the resulting picture:")
     val width = safeReadLine().toInt()
-    println("Please, input the height of the resulting picture:")
+    println("Please input the height of the resulting picture:")
     val height = safeReadLine().toInt()
 
     println("The pattern:$newLineSymbol${pattern.trimIndent()}")

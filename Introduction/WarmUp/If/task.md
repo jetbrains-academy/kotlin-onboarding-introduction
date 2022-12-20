@@ -94,8 +94,8 @@ If you have any difficulties, **hints will help you solve this task**.
 
 <div class="hint">
 
-If you compare two variables to get a <code>Boolean</code> result, you can use the short notation, 
-for example, the following code:
+If you compare two variables to get a <code>Boolean</code> result, you can use the short notation. 
+For example, the following code:
 ```
 fun isNotEqual(a: Int, b: Int) = if (a != b) {
     true

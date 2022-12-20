@@ -1,17 +1,17 @@
 ### Theory
 
 1. The `null` value
-2. The null-safety
+2. Null safety
 3. The `!!` operator
-4. The `elvis` operator and the smart-casts mechanism
-5. How the `safeReadLine` function works?
+4. The `Elvis` operator and the smart casts mechanism
+5. How the `safeReadLine` function works
 
 #### 1. The `null` value
 
-When defining a type, you can specify that it can also have the special `null` value. 
+When defining a type, you can specify that it can also have a special `null` value. 
 It's a `null` reference, which doesn't refer to anything.
-What this means in more detail, we will learn in following parts of the course, 
-for now it is enough to know some basic things.
+What this means in more detail, we will learn in the following parts of the course; 
+for now, it is enough to know some basic things.
 
 To indicate that a type might be `null`, you should add `?` to the type, for example:
 ```kotlin
@@ -29,11 +29,11 @@ var a: String = "text"
 a.length // CORRECT
 ```
 
-#### 2. The null-safety
+#### 2. Null safety
 
-To work correctly with such _nullable_ values, Kotlin provides the [null-safety](https://kotlinlang.org/docs/null-safety.html) mechanism.
-In simple words, in Kotlin it is necessary to handle `null` values separately for the program to work correctly.
-The simplest processing mechanisms are [`!!`](https://kotlinlang.org/docs/null-safety.html#the-operator) and [`?:`](https://kotlinlang.org/docs/null-safety.html#elvis-operator) (elvis operator) operators.
+To work correctly with such _nullable_ values, Kotlin provides the [null safety](https://kotlinlang.org/docs/null-safety.html) mechanism.
+In simple words, in Kotlin, it is necessary to handle `null` values separately for the program to work correctly.
+The simplest processing mechanisms are the [`!!`](https://kotlinlang.org/docs/null-safety.html#the-operator) and [`?:`](https://kotlinlang.org/docs/null-safety.html#elvis-operator) (the Elvis operator) operators.
 
 #### 3. The `!!` operator
 
@@ -45,32 +45,32 @@ var a: String? = null
 a!!.length // CORRECT, but will throw NPE
 ```
 
-#### 4. The `elvis` operator and the smart-casts mechanism
+#### 4. The `Elvis` operator and the smart casts mechanism
 
-The `elvis` operator check is the values is `null` and handle the `null` value separately.
+The `Elvis` operator checks if the value is `null` and handles the `null` value separately.
 ```kotlin
 var a: String? = null
 a?.length ?: error("Find null value") // CORRECT, the case with null will be handled separately
 ```
 
-The last example with the elvis operator is the same with the following code:
+The latter example with the Elvis operator is the same as the following code:
 ```kotlin
 var a: String? = null
 if (a != null) {
-    a.length // We can use just length here (without ?) thanks to the smart-casts mechanism
+    a.length // We can use just length here (without ?) thanks to the smart casts mechanism
 } else {
     error("Find null value")
 }
 ```
 
-In this example, we noted the [smart-casts mechanism](https://kotlinlang.org/docs/typecasts.html#smart-casts).
+In this example, we noted the [smart casts mechanism](https://kotlinlang.org/docs/typecasts.html#smart-casts).
 It is a special mechanism in Kotlin that can define some cases when a nullable value is always non-null.
 
-#### 5. How the `safeReadLine` function works?
+#### 5. How the `safeReadLine` function works
 
 In previous assignments, we sometimes used the pre-defined `safeReadLine` function instead of built-in `readLine`. 
 The main reason is that `readLine` returns a _nullable_ value (`String?`). 
-The pre-defined `safeReadLine` function processed the input received from the user with the elvis operator:
+The pre-defined `safeReadLine` function processed the input received from the user with the Elvis operator:
 it returns the string or throws an error if the `null` value was received.
 ___
 

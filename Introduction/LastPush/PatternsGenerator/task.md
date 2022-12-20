@@ -1,5 +1,5 @@
-Hello! This lesson focuses on the topics that you covered in the last lesson.
-The main difference is that the final project will not be divided into intermediate stages,
+Hello! This lesson focuses on the topics that you covered in the previous lesson.
+The main difference is that the final project will not be divided into intermediate stages
 and you can try to implement it yourself from scratch.
 We have no doubt that you will succeed!
 
@@ -9,7 +9,7 @@ We have no doubt that you will succeed!
     <img src="../../../utils/src/main/resources/images/part1/LastPush/game.png" alt="Patterns generator" width="400"/>
 </p>
 
-### The project's description
+### Project description
 
 The project of this lesson is **Patterns generator**.
 The purpose of this project is to create an application 
@@ -18,7 +18,7 @@ for automatically generating character images of a given size and pattern.
 Firstly, you need to ask the user:
 ```text
 Do you want to use a pre-defined pattern or a custom one?
-Please, input 'yes' for a pre-defined pattern or 'no' for a custom one.
+Please input 'yes' for a pre-defined pattern or 'no' for a custom one.
 ```
 
 You need to handle the user's answer and ask the question again if the answer is incorrect.
@@ -38,7 +38,7 @@ The generator works according to the following algorithm:
 but only if the pattern has more than one line;
 3) When repeated **vertically**, the pattern remains **unchanged**.
 
-### The project's example
+### Project example
 
 ![The patterns generator example](../../../utils/src/main/resources/images/part1/LastPush/app.gif "The patterns generator example")
 
@@ -99,10 +99,10 @@ we don't need to change the first level of the generated picture.
 </div>
 
 The `canvasGaps` generator should build a rectangle `width` x `height` from the pattern,
-but it will remove interleaved elements.
+while leaving gaps instead of every other element.
 The generator works according to the following algorithm:
 1) **None of the levels** of the generated image **change** the pattern;
-2) The gap is equal to a rectangle of spaces, the dimensions 
+2) The gap is a rectangle of spaces, the dimensions 
 of which are equal to the width and height of the initial pattern;
 3) In every **odd level**, the gap should be in **even** positions, 
 and in every **even level** - in **odd**;
@@ -141,25 +141,25 @@ None of the levels of the generated image change the pattern.
 </div>
 
 In this project, you can use the already implemented functions and variables:
-- `separator` variable, that stores a space;
+- the `separator` variable, which stores a space;
 
-- `newLineSymbol` variable, which stores a new line symbol;
-- `getPatternWidth` function, which accepts the pattern and calculates its width;
-- `getPatternByName` function, which accepts a pattern name and returns the pattern if it exists or `null` otherwise;
-- `allPatterns` function, which returns the names of all pre-defined patterns.
+- the `newLineSymbol` variable, which stores a new line symbol;
+- the `getPatternWidth` function, which accepts a pattern and calculates its width;
+- the `getPatternByName` function, which accepts a pattern name and returns the pattern if it exists or `null` otherwise;
+- the `allPatterns` function, which returns the names of all pre-defined patterns.
 
 The tests of the tasks will be aimed at checking the following _six_ functions:
 - `fillPatternRow`, which accepts a `patternRow` (one line from the pattern) and `patternWidth`
-and fills the row `separator` to extend it to the `patternWidth` size.
+and adds the row `separator` to extend the line to the `patternWidth` size.
 
 - `getPatternHeight`, which accepts a `pattern` and calculates its height.
-- `canvasGenerator`, which accepts a `pattern`, a `width`, and a `height` that were inputted by the user. 
+- `canvasGenerator`, which accepts the `pattern`, `width`, and `height` that were inputted by the user. 
 This function should return a new string with a generated canvas picture.
-- `canvasWithGapsGenerator`, which accepts a `pattern`, a `width`, and a `height` that were inputted by the user.
-This function should return a new string with a generated canvas with gaps picture.
-- `applyGenerator`, which accepts a `pattern`, a `generatorName`, a `width`, and a `height` that were inputted by the user.
+- `canvasWithGapsGenerator`, which accepts the `pattern`, `width`, and `height` that were inputted by the user.
+This function should return a new string with a generated canvas-with-gaps picture.
+- `applyGenerator`, which accepts the `pattern`, `generatorName`, `width`, and `height` that were inputted by the user.
 This function should call the necessary generator to return a generated picture.
-- `getPattern`, which asks the user about choosing a pre-defined pattern or ask to input a custom one.
+- `getPattern`, which asks if the user wants to choose a pre-defined pattern or input a custom one.
 
 Also, the `main` function will be checked for correctness.
 
@@ -176,14 +176,14 @@ The following functions will _not be checked_, but they can help you implement t
 +------+'                  +------+'
 ```
 
-- `repeatHorizontally`, which accepts a `pattern` and the number of times it should be repeated horizontally (n), e.g:
+- `repeatHorizontally`, which accepts a `pattern` and the number of times it should be repeated horizontally (n), e.g.:
 ```text
 n = 5
 ○○             ○○○○○○○○○○
 ○○    ---->    ○○○○○○○○○○
 ```
 
-- `repeatHorizontallyWithGaps`, which accepts a `pattern` and the number of times it should be repeated horizontally (n), e.g:
+- `repeatHorizontallyWithGaps`, which accepts a `pattern` and the number of times it should be repeated horizontally (n), e.g.:
 ```text
 n = 5
 ○○             ○○  ○○  ○○
@@ -206,7 +206,7 @@ n = 5
 
 <div class="hint">
 
-  To drop <code>n</code> last symbols from <code>String</code>, you can use the <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/drop-last.html"><code>dropLast</code></a> function, e.g.:
+  To drop <code>n</code> last symbols from a <code>String</code>, you can use the <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/drop-last.html"><code>dropLast</code></a> function, e.g.:
   ```kotlin
   val a = "MyText"
   println(a.dropLast(3)) // MyT
@@ -237,13 +237,13 @@ n = 5
   In industrial programming, duplicate code is commonly avoided and put into functions. 
   However, it is not always possible to immediately write clear and readable code. 
   Try implementing the <code>canvasGenerator</code> and <code>canvasWithGapsGenerator</code> functions 
-  so that they pass all tests, and then start improving the code. 
+  so that they pass all the tests and then start improving the code. 
   This process is called <i>refactoring</i>.
 </div>
 
 <div class="hint">
-  Don't forget to handle input errors in the <code>getPattern</code> function, 
-  as well as when the user tries to enter the name of the generator (<code>canvas</code> or <code>canvasGaps</code>). 
+  Don't forget to handle input errors in the <code>getPattern</code> function 
+  as well as in the user-entered name of the generator (<code>canvas</code> or <code>canvasGaps</code>). 
   The program should not crash on invalid input but rather inform the user of the error and ask them 
   to try again.
 </div>
