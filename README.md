@@ -15,13 +15,13 @@ you will get a finished small project in the end.
 At the end of each lesson, an additional similar project will be offered:
 it includes all the topics of the lesson but is not divided into small tasks.
 
-Note, this course **does not provide the detailed explanation** of the basic concepts
-like variables, if just offers to introduce you how to use it in Kotlin and can just remind the definitions.
+Note, this course **does not provide a detailed explanation** of the basic concepts,
+like variables: it just shows how to use them in Kotlin and can briefly remind you the definitions.
 
 All topics will be accompanied by links to [the official Kotlin documentation](https://kotlinlang.org/docs/home.html),
 which you can read later.
 
-**The covered topics:**
+**Topics covered:**
 - the entry point for a Kotlin program;
 - variables;
 - functions;
@@ -32,12 +32,12 @@ which you can read later.
 - basic facts about the null safety mechanism;
 - basic facts about collections and lambda expressions.
 
-After this course you will be ready to write basic console applications in the Kotlin-like style.
+After this course, you will be ready to write basic console applications in the Kotlin-like style.
 
 ## Getting started
 
 **TODO: add course link**
-This course is available on the marketplace and can be installed from the 
+This course is available on JetBrains Marketplace and can be installed from the 
 [IntelliJ IDEA](https://www.jetbrains.com/idea/) IDE directly, but you can also use this course in 
 the course creator mode or create a course archive from the source code.
 
@@ -54,9 +54,9 @@ git clone https://github.com/jetbrains-academy/csc-kotlin-course.git
 ./gradlew build
 ```
 
-3. Install the [EduTools](https://plugins.jetbrains.com/plugin/10081-edutools/docs/educational-products.html) plugin from the marketplace
+3. Install the [EduTools](https://plugins.jetbrains.com/plugin/10081-edutools/docs/educational-products.html) plugin from JetBrains Marketplace.
 
-4. Create a new [course preview](https://plugins.jetbrains.com/plugin/10081-edutools/docs/educator-start-guide.html#preview_course)
+4. Create a new [course preview](https://plugins.jetbrains.com/plugin/10081-edutools/docs/educator-start-guide.html#preview_course).
 
 ### Getting started: create a course archive
 
@@ -71,25 +71,25 @@ git clone https://github.com/jetbrains-academy/csc-kotlin-course.git
 ./gradlew build
 ```
 
-3. Install the [EduTools](https://plugins.jetbrains.com/plugin/10081-edutools/docs/educational-products.html) plugin from the marketplace
+3. Install the [EduTools](https://plugins.jetbrains.com/plugin/10081-edutools/docs/educational-products.html) plugin from JetBrains Marketplace.
 
-4. Create a new [course archive](https://plugins.jetbrains.com/plugin/10081-edutools/docs/educator-start-guide.html#fe7010f2)
+4. Create a new [course archive](https://plugins.jetbrains.com/plugin/10081-edutools/docs/educator-start-guide.html#fe7010f2).
 
 ## Run tests
 
-To run tests locally you just need to build the project and run the following command:
+To run tests locally, you just need to build the project and run the following command:
 
 ```text
 ./gradlew test
 ```
 
-The tests use Java Reflection API under the hood to check the user tasks.
+The tests use the Java Reflection API under the hood to check the user tasks.
 
 ## Want to know more?
 
-If you have questions about this course, tasks or find some errors,
-you may ask questions and participate in discussions on repository [issues](https://github.com/jetbrains-academy/csc-kotlin-course/issues).
+If you have questions about the course or the tasks or if you find some errors,
+you can ask questions and participate in discussions in repository [issues](https://github.com/jetbrains-academy/csc-kotlin-course/issues).
 
 ## Contribution
 
-Please be sure to review [project's contributing guidelines](./contributing.md) to learn how to help the project.
+Please be sure to review the [project's contributing guidelines](./contributing.md) to learn how to help the project.
