@@ -27,9 +27,9 @@ fun generateSecret() = "ABCD"
 fun isComplete(secret: String, guess: String) = secret == guess
 
 fun printRoundResults(secret: String, guess: String) {
-    val positionalMatches = countExactMatches(secret, guess)
-    val lettersMatches = countPartialMatches(secret, guess)
-    println("Your guess has $positionalMatches full matches, and $lettersMatches partial matches.")
+    val fullMatches = countExactMatches(secret, guess)
+    val partialMatches = countPartialMatches(secret, guess)
+    println("Your guess has $fullMatches full matches and $partialMatches partial matches.")
 }
 
 fun isWin(complete: Boolean, attempts: Int, maxAttemptsCount: Int) = complete && attempts <= maxAttemptsCount
