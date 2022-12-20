@@ -5,6 +5,7 @@ plugins {
     java
     kotlin("jvm") version "1.6.10" apply true
     application
+    id("io.gitlab.arturbosch.detekt") version "1.21.0"
 }
 
 buildscript {
@@ -29,11 +30,16 @@ fun printOutput(output: Any): Task {
     }
 }
 
+val detektReportMerge by tasks.registering(io.gitlab.arturbosch.detekt.report.ReportMergeTask::class) {
+    output.set(rootProject.buildDir.resolve("reports/detekt/merge.sarif"))
+}
+
 allprojects {
     apply {
         plugin("application")
         plugin("java")
         plugin("kotlin")
+        plugin("io.gitlab.arturbosch.detekt")
     }
 
     repositories {
@@ -46,6 +52,10 @@ allprojects {
         runtimeOnly("org.junit.jupiter:junit-jupiter-engine:5.8.2")
         implementation("org.junit.jupiter:junit-jupiter-params:5.8.2")
         runtimeOnly("org.junit.platform:junit-platform-console:1.8.2")
+
+        val detektVersion = "1.22.0"
+        implementation("io.gitlab.arturbosch.detekt:detekt-gradle-plugin:$detektVersion")
+        implementation("io.gitlab.arturbosch.detekt:detekt-formatting:$detektVersion")
     }
 
     tasks {
@@ -87,6 +97,22 @@ allprojects {
         getByName("main").java.srcDirs("src")
         getByName("test").java.srcDirs("test")
     }
+
+    apply<io.gitlab.arturbosch.detekt.DetektPlugin>()
+
+    configure<io.gitlab.arturbosch.detekt.extensions.DetektExtension> {
+        config = rootProject.files("detekt.yml")
+        buildUponDefaultConfig = true
+        debug = true
+    }
+
+    tasks.withType<io.gitlab.arturbosch.detekt.Detekt> {
+        finalizedBy(detektReportMerge)
+        reports.sarif.required.set(true)
+        detektReportMerge.get().input.from(sarifReportFile)
+    }
+
+    tasks.getByPath("detekt").onlyIf { project.hasProperty("runDetekt") }
 }
 
 configure(subprojects.filter { it.name != "utils" }) {
