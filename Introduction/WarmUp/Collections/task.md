@@ -128,6 +128,7 @@ If you have any difficulties, **hints will help you solve this task**.
 ### Hints
 
 <div class="Hint">
+
 Here are several examples of the _countExactMatches_ function's work:
 
 - guess = "ACEB", secret = "BCDF", result = 1;
