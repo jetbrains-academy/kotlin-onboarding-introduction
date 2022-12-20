@@ -1,0 +1,19 @@
+type: edu
+files:
+- name: test/Tests.kt
+  visible: false
+- name: src/main/kotlin/Main.kt
+  visible: true
+  placeholders:
+  - offset: 0
+    length: 5859
+    placeholder_text: |-
+      fun main() {
+          // Write your solution here
+      }
+- name: src/main/kotlin/Patterns.kt
+  visible: false
+- name: test/PatternsGeneratorTestsUtils.kt
+  visible: false
+- name: src/main/kotlin/PreDefinedSymbols.kt
+  visible: false
