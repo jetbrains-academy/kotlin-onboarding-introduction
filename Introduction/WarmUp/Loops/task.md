@@ -1,32 +1,32 @@
 ### Theory
 
-1. What are the loops?
-2. The `while` and `do..while` loops
+1. What the loops are
+2. The `while` and `do...while` loops
 3. The `for` loop
-4. The mutable variables
+4. Mutable variables
 5. `Boolean` variables in the loop conditions
 
-#### 1. What are the loops?
+#### 1. What the loops are
 
 Sometimes, the same actions need to be repeated several times: 
 for example, to play several rounds of a game or print the same text on the screen.
 To solve this problem, you can use loops.
-Loops can be executed while some condition is true (the [`while`](https://kotlinlang.org/docs/basic-syntax.html#while-loop) loop) 
-or repeated a certain number of times (the [`for`](https://kotlinlang.org/docs/control-flow.html#for-loops) loop).
+Loops can be executed while a certain condition is true (the [`while`](https://kotlinlang.org/docs/basic-syntax.html#while-loop) loop) 
+or can be repeated a certain number of times (the [`for`](https://kotlinlang.org/docs/control-flow.html#for-loops) loop).
 
-#### 2. The `while` and `do..while` loops
+#### 2. The `while` and `do...while` loops
 
-`while` loops often use `Boolean` values, for example:
+The `while` loops often use `Boolean` values, for example:
 ```kotlin
 while(y < 10) {
     // To do something
 }
 ```
 It will execute the actions (the loop's body) while the value in `y` is less than ten.
-Here, the condition will be checked _first_, and next, if it is correct, 
+Here, the condition will be checked _first_, and next, if it is true, 
 the loop's body will be executed.
 If you need another scenario: _first_ execute the loop's body and then check the condition,
-you should use the `do..while` loop. In such a case, the body will be executed at least one time:
+you should use the `do...while` loop. In such a case, the body will be executed at least one time:
 ```kotlin
 do {
     // To do something
@@ -35,7 +35,7 @@ do {
 
 #### 3. The `for` loop
 
-`For` loops often use [`Ranges`](https://kotlinlang.org/docs/basic-syntax.html#ranges) to define 
+The `for` loops often use [`Ranges`](https://kotlinlang.org/docs/basic-syntax.html#ranges) to define 
 how many times the body of the loop will be executed:
 ```kotlin
 for (i in 1..3) {
@@ -51,7 +51,7 @@ for (i in 1 until 3) {
 }
 ```
 
-#### 4. The mutable variables
+#### 4. Mutable variables
 
 Loops often require changing the value of a variable. 
 To do that, you can use the [`var`](https://kotlinlang.org/docs/basic-syntax.html#variables) variable:
@@ -62,7 +62,7 @@ do {
     y += 2
 } while(y < 10)
 ```
-This code initializes the variable `y` with the value `5` and next changes the variable in the loop.
+This code initializes the variable `y` with the value `5` and next, changes the variable in the loop.
 The loop will be executed in 3 steps:
 1) y = 5. println(y). y = 7.
 2) because y < 10, println(y), y = 9.
@@ -99,8 +99,8 @@ and make a loop that works while the game is running.
 Please input your guess. It should be of length <wordLength>.
 ```
 
-- Please, instead of the `readLine` function, use the `safeReadLine` function here. 
-It is a custom function from the course authors that makes easier the interaction with the user input. 
+- Instead of the `readLine` function, please use the `safeReadLine` function here. 
+It is a custom function from the course authors that makes the interaction with the user input easier. 
 
 - Define a function `isComplete`, which accepts `secret` and `guess` and checks if the game is over. 
 For now, let it always return `true`. Call it after reading the user input and rewrite the `complete` variable.
@@ -115,7 +115,7 @@ If you have any difficulties, **hints will help you solve this task**.
 ### Hints
 
 <div class="Hint">
-Use <code>do..while</code> for imitating the game process.
+Use <code>do...while</code> for imitating the game process.
 </div>
 
 <div class="Hint">
@@ -124,7 +124,7 @@ The best type for the <code>complete</code> variable is <code>Boolean</code>, si
 
 <div class="Hint">
 
-If you use the <code>do..while</code> loop with a <code>Boolean</code> variable as the condition, 
+If you use the <code>do...while</code> loop with a <code>Boolean</code> variable as the condition, 
 you can omit the initialization of the variable before the loop. For example, consider the following code:
 ```
 var myBool = false
