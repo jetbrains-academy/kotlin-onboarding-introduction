@@ -40,7 +40,7 @@ fun playGame(secret: String, wordLength: Int, maxAttemptsCount: Int) {
     var complete: Boolean
     var attempts = 0
     do {
-        println("Please, input your guess. It should be of length $wordLength.")
+        println("Please input your guess. It should be of length $wordLength.")
         val guess = safeReadLine()
         printRoundResults(secret, guess)
         complete = isComplete(secret, guess)
@@ -49,7 +49,7 @@ fun playGame(secret: String, wordLength: Int, maxAttemptsCount: Int) {
             println("Sorry, you lost! :( My word is $secret")
             break
         } else if (isWin(complete, attempts, maxAttemptsCount)) {
-            println("Congratulations! You guessed!")
+            println("Congratulations! You guessed it!")
         }
     } while (!complete)
 }

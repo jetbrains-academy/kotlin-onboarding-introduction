@@ -2,7 +2,7 @@
 
 Great, you've done a good job implementing the `countExactMatches` function, 
 probably using the `filterIndexed` function and the `length` property on the remaining word (but of course, you could implement it in any different way).
-Now it is great time to pay more attention to built-in functions for working with collections and implement the _countLettersMatchings_ function.
+Now it is great time to pay more attention to built-in functions for working with collections and implement the _countPartialMatches_ function.
 
 ___
 

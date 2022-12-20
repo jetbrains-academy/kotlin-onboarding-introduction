@@ -42,7 +42,7 @@ for example, searching for a value, filtering, and so on.
 "ABCDDD".first()
 ```
 
-#### 3. Lambda expressions
+#### 4. Lambda expressions
 
 Often these built-in functions accept [lambda expressions](https://kotlinlang.org/docs/lambdas.html#lambda-expressions-and-anonymous-functions).
 We will talk about them in detail later, but currently it is enough to know that:
@@ -74,7 +74,7 @@ The lambda expression takes one parameter `Char` (character) and compares it wit
 The `->` sign indicates the end of the left part of the lambda expression with the arguments.
 The right part of the lambda expression (after `->`) says what **exactly** we should do: e.g., compare the `symbol` with 'A'.
 
-#### 4. Different ways to work with arguments in lambda expressions
+#### 5. Different ways to work with arguments in lambda expressions
 
 In the previous example, we used the full form for the lambda expression arguments: the name and type of the argument.
 
@@ -90,7 +90,7 @@ then this argument already has a built-in name `it`, and in this case it can als
 "ABCDDD".filter { it == 'A' }
 ```
 
-#### 5. The `filterIndexed` function
+#### 6. The `filterIndexed` function
 
 Kotlin has many built-in functions: e.g., we can filter and manipulate with not only the elements from the list but also list indices.
 For example, given two words, we need to build a new word, which consists of the characters that occur in both words at the same positions.

@@ -29,7 +29,7 @@ fun isComplete(secret: String, guess: String) = secret == guess
 fun playGame(secret: String, wordLength: Int, maxAttemptsCount: Int) {
     var complete: Boolean
     do {
-        println("Please, input your guess. It should be of length $wordLength.")
+        println("Please input your guess. It should be of length $wordLength.")
         val guess = safeReadLine()
         complete = isComplete(secret, guess)
     } while (!complete)

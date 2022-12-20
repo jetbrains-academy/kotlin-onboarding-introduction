@@ -94,7 +94,7 @@ class Test {
                 newLineSymbol +
                 "For example, for the BCDF guess (with $secretExample as the hidden word), " +
                 "there will be 1 full match (C), 1 partial match (B).$newLineSymbol" +
-                "Please, input your guess. It should be of length 4.$newLineSymbol"
+                "Please input your guess. It should be of length 4.$newLineSymbol"
         Assertions.assertEquals(expectedOutput, trimOutput(runMainFunction(::main, "ABCD")))
     }
 
