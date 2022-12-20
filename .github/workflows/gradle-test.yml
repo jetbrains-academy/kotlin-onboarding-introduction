@@ -1,4 +1,4 @@
-name: Gradle Build
+name: Gradle Test
 
 on: [push, pull_request]
 
@@ -17,5 +17,5 @@ jobs:
         uses: gradle/wrapper-validation-action@v1.0.4
       - uses: gradle/gradle-build-action@v2.1.5
         with:
-          arguments: build --stacktrace -x test
+          arguments: test
           

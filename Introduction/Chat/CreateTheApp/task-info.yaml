@@ -1,0 +1,14 @@
+type: edu
+custom_name: Create the app
+files:
+- name: src/main/kotlin/Main.kt
+  visible: true
+  placeholders:
+  - offset: 0
+    length: 407
+    placeholder_text: |-
+      fun main() {
+          // Write your solution here
+      }
+- name: test/Tests.kt
+  visible: false
