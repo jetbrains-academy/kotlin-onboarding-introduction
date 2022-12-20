@@ -1,7 +1,7 @@
 ### Theory
 
 1. What is the `when` expression?
-2. Different ways of usage the `when` expression: check the variable's value
+2. Using the `when` expression: checking the variable's value
 3. The `error` function
 
 #### 1. What is the `when` expression?
@@ -15,9 +15,9 @@ For example, take a look at the following code:
 ```kotlin
 fun checkNumber(x: Int) {
     if (x > 0) {
-        println("The positive number")
+        println("A positive number")
     } else if (x < 0) {
-        println("The negative number")
+        println("A negative number")
     } else {
         println("The zero number")
     }
@@ -27,15 +27,15 @@ The above code can be replaced with the following:
 ```kotlin
 fun checkNumber(x: Int) {
     when {
-        x > 0 -> println("The positive number")
-        x < 0 -> println("The negative number")
+        x > 0 -> println("A positive number")
+        x < 0 -> println("A negative number")
         else -> println("The zero number")
     }
 }
 ```
 Now it is shorter and easier to read.
 
-#### 2. Different ways of usage the `when` expression: check the variable's value
+#### 2. Using the `when` expression: checking the variable's value
 
 In addition, you can specify a variable that you want to compare 
 with some values and just list these values below. For example:
@@ -87,7 +87,7 @@ applies the given filter, and returns the updated picture.
 
 In this project, we will implement two obligatory filters (but you can add any others if you want):
 
-- `borders` - adds a border to the image:
+- `borders` – adds a border to the image:
 <div class="hint">
 
 An example of this filter:

@@ -8,13 +8,13 @@ such as loops, conditional statements, and more.
     <img src="../../../utils/src/main/resources/images/part1/WarmUp/game.png" alt="Bulls and cows" width="400"/>
 </p>
 
-### The project's description
+### Project description
 
 The project of this lesson is **Bulls and cows (Mastermind)**.
 This is a popular children's game of guessing the hidden word.
 The main goal of the game is to guess the hidden word. 
-With each attempt, the player receives the number of exact and the number of partial matches that are in the original word. 
-For example, for a BCDF guess (with ACEB guessed) there will be 1 full match (C), 1 partial match (B).
+With each attempt, the player receives the number of exact matches (correct letters in the right position) and partial matches (correct letters in the wrong position). 
+For example, with ACEB as the hidden word, the BCDF guess will result in 1 full match (C) and 1 partial match (B).
 The detailed rules can be found [here](https://en.wikipedia.org/wiki/Bulls_and_Cows).
 
 In this lesson, the project will be divided into two parts:
@@ -23,7 +23,7 @@ but the hidden word will always be the same.
 - The second step will be adding a randomly generated hidden word 
 as well as the ability to safely communicate with the user: e.g., handle the user input.
 
-### The lesson's topics
+### Lesson topics
 
 - different types of variables;
 - functions;
@@ -35,7 +35,7 @@ as well as the ability to safely communicate with the user: e.g., handle the use
 basic facts about lambda expressions in these built-in functions;
 - `random` function.
 
-### The project's example
+### Project example
 
 ![The game's example](../../../utils/src/main/resources/images/part1/WarmUp/game.gif "The game's example")
 

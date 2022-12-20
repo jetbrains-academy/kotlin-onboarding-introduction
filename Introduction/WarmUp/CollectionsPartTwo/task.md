@@ -1,14 +1,14 @@
 ### Theory
 
 Great, you've done a good job implementing the `countExactMatches` function, 
-probably using the `filterIndexed` function and the `length` property on the remaining word (but of course you could implement it in any different way).
+probably using the `filterIndexed` function and the `length` property on the remaining word (but of course, you could implement it in any different way).
 Now it is great time to pay more attention to built-in functions for working with collections and implement the _countLettersMatchings_ function.
 
 ___
 
 ### Task
 
-**Description**: implement the _countPartialMatches_ function by using Kotlin built-in functions. The function gives the _secret_ and the _guess_,
+**Description**: implement the _countPartialMatches_ function by using Kotlin built-in functions. The function takes the _secret_ and the _guess_,
 and returns the number of matched letters between them that are not in the same positions.
 
 If you have any difficulties, **hints will help you solve this task**.

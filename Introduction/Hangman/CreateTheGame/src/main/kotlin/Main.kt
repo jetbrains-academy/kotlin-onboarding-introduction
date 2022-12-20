@@ -22,11 +22,11 @@ fun isComplete(secret: String, currentGuess: String) = secret == deleteSeparator
 
 fun getRoundResults(secret: String, guess: Char, currentUserWord: String): String {
     if (guess !in secret) {
-        println("Sorry, the secret does not contain the symbol: $guess. The current word: $currentUserWord")
+        println("Sorry, the secret does not contain the symbol: $guess. The current word is $currentUserWord")
         return currentUserWord
     }
     val newUserWord = generateNewUserWord(secret, guess, currentUserWord)
-    println("Great! This letter is in the word! The current word: $newUserWord")
+    println("Great! This letter is in the word! The current word is $newUserWord")
     return newUserWord
 }
 
@@ -49,7 +49,7 @@ fun safeUserInput(): Char {
     var guess: String
     var isCorrect: Boolean
     do {
-        println("Please, input your guess.")
+        println("Please input your guess.")
         guess = safeReadLine()
         isCorrect = isCorrectInput(guess)
     } while (!isCorrect)

@@ -8,12 +8,12 @@ ___
 ### Task
 
 **Description**: implement the `applySquaredFilter` function.
-For the border symbol please use the pre-defined variable `borderSymbol`.
+For the border symbol, please use the pre-defined variable `borderSymbol`.
 
 To make the picture prettier, add a separator between the picture and the border.
 For the separator, please use the pre-defined variable `separator`.
-Note, that the picture can be not a square, it means the width of the different lines in the picture can be different.
-In other words, for shorter lines, you need to pad them with the `separator` to the length to make the image square.
+Note that the picture might not be a square, which means the width of different lines in the picture can be different.
+In other words, you need to pad the shorter lines with the `separator` to the length to make the image square.
 
 In addition, the project already stores the `newLineSymbol` variable, which can be used to split the picture into lines.
 
@@ -56,7 +56,7 @@ If you have any difficulties, **hints will help you solve this task**.
 
 <div class="hint">
    You can use the <code>applyBordersFilter</code> function to add the borders, next 
-   create two <code>StringBuilder</code>s (for the top and for the bottom parts), 
+   create two <code>StringBuilder</code>s (one for the top and one for the bottom part), 
    and put them row by row.
 </div>
 

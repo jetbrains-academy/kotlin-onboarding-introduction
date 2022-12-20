@@ -2,7 +2,7 @@
 
 Kotlin, like any other programming language, 
 already has many predefined (**built-in**) functions. 
-You may have noticed one of them in the previous task - `println`. 
+You may have noticed one of them in the previous task – `println`. 
 It allows you to display the text passed as an _argument_ in the console. 
 We need an argument in this case so that the function can perform 
 the _same_ action on _different_ data.
@@ -34,7 +34,7 @@ OneTwo
 ```
 
 It is **important** to note that the text we want to print to the console 
-must be enclosed in _double-quotes_.
+must be enclosed in _double quotes_.
 ___
 
 ### Task

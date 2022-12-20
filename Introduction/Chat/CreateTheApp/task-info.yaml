@@ -1,20 +1,14 @@
 type: edu
-custom_name: Create the game
+custom_name: Create the app
 files:
 - name: src/main/kotlin/Main.kt
   visible: true
   placeholders:
   - offset: 0
-    length: 3778
+    length: 407
     placeholder_text: |-
       fun main() {
           // Write your solution here
       }
-- name: src/main/kotlin/Util.kt
-  visible: false
-- name: src/main/kotlin/Words.kt
-  visible: false
 - name: test/Tests.kt
-  visible: false
-- name: test/HangmanTestUtil.kt
   visible: false
