@@ -41,7 +41,7 @@ fun safeUserInput(wordLength: Int, alphabet: String): String {
     var guess: String
     var isCorrect: Boolean
     do {
-        println("Please, input your guess. It should be of length $wordLength and each symbol should be from the alphabet: $alphabet.")
+        println("Please input your guess. It should be of length $wordLength, and each symbol should be from the alphabet: $alphabet.")
         guess = safeReadLine()
         isCorrect = isCorrectInput(guess, wordLength, alphabet)
     } while(!isCorrect)
