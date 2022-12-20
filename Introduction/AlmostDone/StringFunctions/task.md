@@ -62,27 +62,10 @@ In other words, you need to pad the shorter lines with the `separator` to the le
 In addition, the project already stores the `newLineSymbol` variable, which can be used to split the picture into lines.
 
 Here's an example of the function's work:
-```text
-// The initial image:
-┈╱▔╲▂╱╱╱╱▂╱▔╲┈┈
-▕▔╲┈╱▔╲┈┈╱╲╱▔▏┈
-▕▏┈▏╱▉╲┈┈╱▉╲▕▏┈
-┈╲▃▏▔▔▔╲▂▂▂▕╱┈┈
-┈┈┈▏┊┊┳┊╲▂╱┳▏┈┈
-┈┈▕╲▂┊╰━━┻━╱┈┈┈
-┈┈╱┈┈▔▔╲▂▂╱╲┈┈┈
+<p>
+    <img src="../../../utils/src/main/resources/images/part1/AlmostDone/when_hint_1.png" alt="Example of the function's work" width="200"/>
+</p>
 
-// The final image:
-###################
-# ┈╱▔╲▂╱╱╱╱▂╱▔╲┈┈ #
-# ▕▔╲┈╱▔╲┈┈╱╲╱▔▏┈ #
-# ▕▏┈▏╱▉╲┈┈╱▉╲▕▏┈ #
-# ┈╲▃▏▔▔▔╲▂▂▂▕╱┈┈ #
-# ┈┈┈▏┊┊┳┊╲▂╱┳▏┈┈ #
-# ┈┈▕╲▂┊╰━━┻━╱┈┈┈ #
-# ┈┈╱┈┈▔▔╲▂▂╱╲┈┈┈ #
-###################
-```
 
 If you have any difficulties, **hints will help you solve this task**.
 
