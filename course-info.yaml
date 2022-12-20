@@ -1,20 +1,11 @@
 type: marketplace
 title: CSC Kotlin Course
 language: English
-summary: "This course is designed for novices in Kotlin 
-and focuses on the basic concepts of the Kotlin language. 
-
-Each lesson of the course is built in the form of a project: 
-step by step, by completing different small tasks, 
-you will get a finished small project in the end.
-At the end of each lesson, an additional similar project will be offered: 
-it includes all the topics of the lesson but is not divided into small tasks.
-
-Note, this course does not provide the detailed explanation of the basic concepts 
-like variables, if just offers to introduce you how to use it in Kotlin and can just remind the definitions.
-
-All topics will be accompanied by links to the official Kotlin documentation, 
-which you can read later."
+summary: |-
+  This course is designed for novices in Kotlin and focuses on the basic concepts of the Kotlin language.
+  Each lesson of the course is built in the form of a project: step by step, by completing different small tasks, you will get a finished small project in the end. At the end of each lesson, an additional similar project will be offered: it includes all the topics of the lesson but is not divided into small tasks.
+  Note, this course does not provide the detailed explanation of the basic concepts like variables, if just offers to introduce you how to use it in Kotlin and can just remind the definitions.
+  All topics will be accompanied by links to the official Kotlin documentation, which you can read later.
 programming_language: Kotlin
 content:
 - Introduction
