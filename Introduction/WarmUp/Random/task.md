@@ -1,7 +1,7 @@
 ### Theory
 
 1. The `random` function
-2. How to create a new list with random elements?
+2. How to create a new list with random elements
 3. The `joinToString` function
 
 Congratulations! The basic version of the game is ready! 
@@ -11,7 +11,7 @@ But it's not interesting to play it if the hidden word is always the same, is it
 
 How can you generate a word? 
 For example, you can specify a possible alphabet 
-(a list of characters that can be used in a word) 
+(a list of characters that can be used in the word) 
 and **randomly** select the characters the desired number of times.
 
 To do that, you can use a special function [`random`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/random.html), 
@@ -19,14 +19,14 @@ which works with a _list_ (or with a _string_, which, as we have already found o
 can be represented as a list):
 
 ```kotlin
-// Return any one symbol from the string "ABCD"
+// Return any single symbol from the string "ABCD"
 "ABCD".random()
 ```
 
-#### 2. How to create a new list with random elements?
+#### 2. How to create a new list with random elements
 
 To get a _list of random elements_, you need to create a list of the desired number 
-of elements, specifying in a _lambda expression_ (condition) 
+of elements, specifying in a _lambda expression_ (the condition) 
 how each element will be generated:
 ```kotlin
 // Create a list with 5 elements, each of them is 6
@@ -41,7 +41,7 @@ List(5) { "ABCD".random() }
 
 To join a list of elements into a string, 
 you can use the [`joinToString`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.sequences/join-to-string.html) 
-function, passing as an argument a _separator_ - a character (or rather a _string_) 
+function, passing as an argument the _separator_ - a character (or rather a _string_) 
 that will be used to separate the elements:
 ```kotlin
 // Separator is ", ", the resulting string is: "6; 6; 6; 6; 6"
@@ -62,9 +62,9 @@ ___
 ```text
 Welcome to the game! 
 
-Two people play this game, one chooses a word (a sequence of letters), the other guesses it. In this case, the computer chooses the word: a sequence of <wordLength> letters (for example, <secretExample>). Several attempts are given to guess it (the max number is <maxAttemptsCount>). For each attempt, the number of complete matches (letter and position) and partial matches (letter only) is reported. The possible symbols in the word: <alphabet>. 
+Two people play this game: one chooses a word (a sequence of letters), the other guesses it. In this version, the computer chooses the word: a sequence of <wordLength> letters (for example, <secretExample>). The user has several attempts to guess it (the max number is <maxAttemptsCount>). For each attempt, the number of complete matches (letter and position) and partial matches (letter only) is reported. The possible symbols in the word: <alphabet>. 
 
-For example, for the BCDF guess (with <secretExample> as the hidden word), there will be 1 full match (C), 1 partial match (B).
+For example, with <secretExample> as the hidden word, the BCDF guess will give 1 full match (C) and 1 partial match (B).
 
 ```
 
