@@ -88,7 +88,7 @@ applies the given filter, and returns the updated picture.
 In this project, we will implement two obligatory filters (but you can add any others if you want):
 
 - `borders` – adds a border to the image:
-<div class="hint">
+<div class="hint" title="An example of the borders filter">
 
 An example of this filter:
 <p>
@@ -98,7 +98,7 @@ An example of this filter:
 </div>
 
 - `squared` - replicates the image 4 times:
-<div class="hint">
+<div class="hint" title="An example of the squared filter">
 
 An example of this filter:
 <p>

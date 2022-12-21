@@ -2,7 +2,7 @@
 
 Congratulations, you've almost finished your first project! 
 
-<div class="hint">
+<div class="hint" title="Extra theory">
 
 I'll tell you a little trick on how you can write [comments](https://kotlinlang.org/docs/basic-syntax.html#comments)
 for other developers (or for yourself) in your code.
@@ -25,7 +25,7 @@ The real questions are stored in the already predefined `firstQuestion`, `second
 
 Before the real questions, print the text: 'Now let's have fun!'
 
-<div class="hint">
+<div class="hint" title="Game's example">
 
 The game should look like this:
 

@@ -91,7 +91,7 @@ If you have any difficulties, **hints will help you solve this task**.
 
 ### Hints
 
-<div class="hint">
+<div class="hint" title="An efficient way to use `when`">
 
 The <code>when</code> expression allows you to use several values in one branch and define a variable in place:
 

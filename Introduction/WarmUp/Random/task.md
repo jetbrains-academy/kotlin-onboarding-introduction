@@ -76,6 +76,6 @@ If you have any difficulties, **hints will help you solve this task**.
 
 ### Hints
 
-<div class="hint">
+<div class="hint" title="The separator in the secret">
   Don't forget to use the right separator. In our case, the answer should be like "ABCD".
 </div>

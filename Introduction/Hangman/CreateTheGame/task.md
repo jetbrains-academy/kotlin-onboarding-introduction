@@ -78,14 +78,14 @@ If you have any difficulties, **hints will help you solve this task**.
 
 ### Hints
 
-<div class="hint">
+<div class="hint" title="Line breaks in different OS">
 
 Different operating systems use different line break characters.
 Use the predefined variable `newLineSymbol` with a newline character instead of `\n` to
 separate lines correctly.
 </div>
 
-<div class="hint">
+<div class="hint" title="Help with the `isCorrectInput` function">
 
   To implement the `isCorrectInput` function, you should check for two conditions. 
   The first condition should check if the `length` of the user input is one character. 
@@ -96,14 +96,14 @@ separate lines correctly.
   then you can use the character at position zero and check if the character is an English letter.
 </div>
 
-<div class="hint">
+<div class="hint" title="Help with the `safeUserInput` function">
 
    To implement the `safeUserInput` function, you should ask the user to input the string 
    again in case it is not correct (if `isCorrectInput` does not return `true`). 
    To make the string uppercase, you can use the built-in function <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/uppercase.html">`uppercase`</a>.
 </div>
 
-<div class="hint">
+<div class="hint" title="Help with the `generateNewUserWord` function">
 
    To implement the `generateNewUserWord` function, you should check each `secret`'s char.
    To make a loop check over each `secret`'s char, you can use the <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/indices.html">`indices`</a> property:
@@ -123,7 +123,7 @@ separate lines correctly.
    but also separators and thus has twice as many characters as `secret`.
 </div>
 
-<div class="hint">
+<div class="hint" title="Help with the `isComplete` function">
 
    To implement the `isComplete` function, it is not enough to check that `secret` and `currentGuess` match.
    The main reason is that `currentGuess` has separators, while `secret` does not.

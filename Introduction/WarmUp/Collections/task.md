@@ -127,7 +127,7 @@ If you have any difficulties, **hints will help you solve this task**.
 
 ### Hints
 
-<div class="Hint">
+<div class="Hint" title="Examples of the `countExactMatches` function's work">
 
 Here are several examples of the _countExactMatches_ function's work:
 
@@ -137,16 +137,16 @@ Here are several examples of the _countExactMatches_ function's work:
 - guess = "BBBB", secret = "BBDH", result = 2.
 </div>
 
-<div class="Hint">
+<div class="Hint" title="The main idea of the algorithm">
 The main idea of the algorithm is to keep only those letters that are equal and have the same index. 
 Next, we can just return the number of these letters.
 </div>
 
-<div class="Hint">
+<div class="Hint" title="The `filterIndexed` built-in function">
 To find the number of exact matches, you can consider the <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/filter-indexed.html"><code>filterIndexed</code></a> function.
 </div>
 
-<div class="Hint">
+<div class="Hint" title="The `length` built-in function">
 To get the number of characters in the word, you can use <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/length.html#length"><code>length</code></a>:
 <code>"ABCDDD".length</code>.  
 </div>

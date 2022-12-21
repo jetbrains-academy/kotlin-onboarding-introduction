@@ -47,7 +47,7 @@ If you have any difficulties, **hints will help you solve this task**.
 
 ### Hints
 
-<div class="hint">
+<div class="hint" title="Line breaks in different OS">
 
   Different operating systems use different line break characters. 
   Use the predefined variable `newLineSymbol` with a newline character instead of `\n` to 
