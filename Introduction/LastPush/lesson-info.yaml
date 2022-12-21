@@ -1,3 +1,9 @@
+type: framework
 custom_name: Last push
 content:
 - PatternsGenerator
+- Helpers
+- CanvasGenerator
+- CanvasGapsGenerator
+- FinishTheApp
+is_template_based: false
