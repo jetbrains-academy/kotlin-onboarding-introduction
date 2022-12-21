@@ -28,12 +28,12 @@ If you have any difficulties, **hints will help you solve this task**.
 
 ### Hints
 
-<div class="hint">
+<div class="hint" title="The main idea of the algorithm">
    You can use the <code>applyBordersFilter</code> function to add the borders, next 
    create two <code>StringBuilder</code>s (one for the top and one for the bottom part), 
    and put them row by row.
 </div>
 
-<div class="hint">
+<div class="hint" title="Pre-defined variable to check your code">
    To check how your function works, you can run it in <code>main</code> by passing the pre-defined variable <code>simba</code>.
 </div>

@@ -20,6 +20,6 @@ If you have any difficulties, **hints will help you solve this task**.
 
 ### Hints
 
-<div class="hint">
+<div class="hint" title="Possible ways to expand the project">
   You can expand this project yourself: for example, add new pre-defined pictures or filters.
 </div>

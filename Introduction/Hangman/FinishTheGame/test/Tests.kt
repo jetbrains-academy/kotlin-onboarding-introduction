@@ -15,21 +15,6 @@ class Test {
 
         private val safeUserInputMethod = TestMethod("safeUserInput", "Char")
 
-        private val generateNewUserWordMethod = TestMethod(
-            "generateNewUserWord", "String", listOf(
-                Variable("secret", "String"),
-                Variable("guess", "Char"),
-                Variable("currentUserWord", "String"),
-            )
-        )
-
-        private val isCompleteMethod = TestMethod(
-            "isComplete", "Boolean", listOf(
-                Variable("secret", "String"),
-                Variable("currentGuess", "String"),
-            )
-        )
-
         @JvmStatic
         fun functions() = listOf(
             Arguments.of(isCorrectInputMethod),
@@ -58,29 +43,8 @@ class Test {
             Arguments.of(listOf("b", "c"), 'B'),
         )
 
-        private val underscoreWithSeparator = "$underscore$separator"
-        private val emptyWordSecret = "$underscoreWithSeparator$underscoreWithSeparator$underscoreWithSeparator$underscore"
-
         @JvmStatic
-        fun userGuesses() = listOf(
-            // secret, guess, currentUserWord, expected guess
-            Arguments.of("BOOK", 'A', emptyWordSecret, null),
-            Arguments.of("BOOK", 'A', "${underscoreWithSeparator}O${separator}O$separator$underscore", null),
-            Arguments.of("BOOK", 'A', "$underscoreWithSeparator$underscoreWithSeparator${underscoreWithSeparator}K", null),
-            Arguments.of(
-                "BOOK",
-                'B',
-                emptyWordSecret,
-                "B$separator$underscoreWithSeparator$underscoreWithSeparator$underscore"
-            ),
-            Arguments.of(
-                "BOOK",
-                'B',
-                "${underscoreWithSeparator}O${separator}O$separator${underscoreWithSeparator}",
-                "B${separator}O${separator}O$separator$underscore"
-            ),
-            Arguments.of("BOOK", 'K', "$underscoreWithSeparator$underscoreWithSeparator${underscoreWithSeparator}K", null),
-        )
+        fun userGuesses() = userGuessesData()
 
         @JvmStatic
         fun gameStates() = listOf(

@@ -62,7 +62,7 @@ If you have any difficulties, **hints will help you solve this task**.
 
 ### Hints
 
-<div class="hint">
+<div class="hint" title="Code style hint">
   To check the user's answer in the <code>getPicture</code> function, 
   it is most convenient to use the <code>when</code> expression.
 </div>

@@ -114,15 +114,15 @@ If you have any difficulties, **hints will help you solve this task**.
 
 ### Hints
 
-<div class="Hint">
+<div class="Hint" title="Help with `playGame` function">
 Use <code>do...while</code> for imitating the game process.
 </div>
 
-<div class="Hint">
+<div class="Hint" title="Type for `complete` variable">
 The best type for the <code>complete</code> variable is <code>Boolean</code>, since it indicates only two game states.
 </div>
 
-<div class="Hint">
+<div class="Hint" title="Code style hint">
 
 If you use the <code>do...while</code> loop with a <code>Boolean</code> variable as the condition, 
 you can omit the initialization of the variable before the loop. For example, consider the following code:

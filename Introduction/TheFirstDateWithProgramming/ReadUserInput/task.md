@@ -41,7 +41,7 @@ If you have any difficulties, **hints will help you solve this task**.
 
 ### Hints
 
-<div class="hint">
+<div class="hint" title="Clarification">
 
 As a result, the user's interaction with the game will look like this:
 
