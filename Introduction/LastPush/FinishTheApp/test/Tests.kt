@@ -40,35 +40,6 @@ class Test {
 
         private val size_5x7 = "5${newLineSymbol}7$newLineSymbol"
 
-        private val fillPatternRowMethod = TestMethod(
-            "fillPatternRow", "String", listOf(
-                Variable("patternRow", "String"),
-                Variable("patternWidth", "Int"),
-            )
-        )
-
-        private val getPatternHeightMethod = TestMethod(
-            "getPatternHeight", "Int", listOf(
-                Variable("pattern", "String"),
-            )
-        )
-
-        private val canvasGeneratorMethod = TestMethod(
-            "canvasGenerator", "String", listOf(
-                Variable("pattern", "String"),
-                Variable("width", "Int"),
-                Variable("height", "Int"),
-            )
-        )
-
-        private val canvasWithGapsGeneratorMethod = TestMethod(
-            "canvasWithGapsGenerator", "String", listOf(
-                Variable("pattern", "String"),
-                Variable("width", "Int"),
-                Variable("height", "Int"),
-            )
-        )
-
         private val applyGeneratorMethod = TestMethod(
             "applyGenerator", "String", listOf(
                 Variable("pattern", "String"),
@@ -81,16 +52,7 @@ class Test {
         private val getPatternMethod = TestMethod("getPattern", "String")
 
         @JvmStatic
-        fun patternRows() = listOf(
-            // pattern row, pattern width, resulting row
-            Arguments.of("", 5, "$separator".repeat(5)),
-            Arguments.of(ball, 5, "$ball$separator$separator$separator$separator"),
-            Arguments.of(ball.repeat(2), 5, "$ball$ball$separator$separator$separator"),
-            Arguments.of(ball.repeat(3), 5, "$ball$ball$ball$separator$separator"),
-            Arguments.of(ball.repeat(4), 5, "$ball$ball$ball$ball$separator"),
-            Arguments.of(ball.repeat(5), 5, ball.repeat(5)),
-            Arguments.of(ball.repeat(6), 5, ball.repeat(6))
-        )
+        fun patternRows() = patternRowsData()
 
         @JvmStatic
         fun patternHeights() = Pattern.values().map { Arguments.of(it.pattern, it.height) }
@@ -109,16 +71,6 @@ class Test {
                 it.second
             )
         } + canvasWithGaps().map { Arguments.of(CANVAS_GAPS, it.first, it.second) }
-
-        private fun canvas() = Pattern.values()
-            .flatMap { f -> f.canvasFilters.map { f.pattern to it } }
-
-        private fun canvasWithGaps() = Pattern.values()
-            .flatMap { f -> f.canvasWithGapsFilters.map { f.pattern to it } }
-
-        private fun List<Pair<String, Filter>>.toArguments() = this.map { Arguments.of(it.first, it.second) }
-
-        private fun String.toAddNewLineSymbol() = "$this$newLineSymbol"
 
         @JvmStatic
         fun generatorsInputs() = listOf(

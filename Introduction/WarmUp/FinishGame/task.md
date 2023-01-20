@@ -115,7 +115,7 @@ If you have any difficulties, **hints will help you solve this task**.
 
 ### Hints
 
-<div class="hint">
+<div class="hint" title="Several built-in functions">
   To check if all symbols in the user's input are correct, you 
   can use the <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/filter.html"><code>filter</code></a> 
 function and check the resulting string with the 

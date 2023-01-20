@@ -1,0 +1,14 @@
+type: edu
+files:
+- name: src/main/kotlin/Main.kt
+  visible: true
+- name: src/main/kotlin/Util.kt
+  visible: false
+- name: src/main/kotlin/Words.kt
+  visible: false
+- name: test/Tests.kt
+  visible: false
+- name: test/Core.kt
+  visible: false
+- name: test/HangmanTestUtil.kt
+  visible: false

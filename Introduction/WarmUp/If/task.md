@@ -92,7 +92,7 @@ If you have any difficulties, **hints will help you solve this task**.
 
 ### Hints
 
-<div class="hint">
+<div class="hint" title="Code style hint">
 
 If you compare two variables to get a <code>Boolean</code> result, you can use the short notation. 
 For example, the following code:

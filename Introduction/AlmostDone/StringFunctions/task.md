@@ -73,18 +73,18 @@ If you have any difficulties, **hints will help you solve this task**.
 
 ### Hints
 
-<div class="hint">
+<div class="hint" title="Help with determining the width of a picture">
   To define the picture width, you can use the pre-defined function <code>getPictureWidth</code>, which accepts a picture.
   
   If you want, you can try to implement it by yourself: split the picture by <code>newLineSymbol</code> 
   and next use the <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/max-of-or-null.html"><code>maxOfOrNull</code></a> function.   
 </div>
 
-<div class="hint">
+<div class="hint" title="The length of the top and bottom edges">
     The length of the top and bottom edges of the border will be 4 characters longer than the width of the initial picture, 
     since we add the <code>borderSymbol</code> and the <code>separator</code> on both sides of the image.
 </div>
 
-<div class="hint">
+<div class="hint" title="Pre-defined variable to check your code">
    To check how your function works, you can run it in <code>main</code> by passing the pre-defined variable <code>simba</code>.
 </div>
