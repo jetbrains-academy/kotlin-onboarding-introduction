@@ -1,6 +1,6 @@
 type: framework
 content:
-- CreateTheGame
-- Core
-- FinishTheGame
+  - CreateTheGame
+  - Core
+  - FinishTheGame
 is_template_based: false
