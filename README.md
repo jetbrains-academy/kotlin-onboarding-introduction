@@ -13,7 +13,7 @@ Each lesson of the course is built in the form of a project:
 step by step, by completing different small tasks,
 you will get a finished small project in the end.
 At the end of each lesson, an additional similar project will be offered:
-it includes all the topics of the lesson but is not divided into small tasks.
+it includes all the topics of the lesson but is not contain the theory part.
 
 Note, this course **does not provide a detailed explanation** of the basic concepts,
 like variables: it just shows how to use them in Kotlin and can briefly remind you the definitions.
@@ -33,6 +33,19 @@ which you can read later.
 - basic facts about collections and lambda expressions.
 
 After this course, you will be ready to write basic console applications in the Kotlin-like style.
+
+## Technical requirements
+
+Before starting this course, check the following requirements.
+
+1. Your computer needs to have a stable internet connection.
+2. Git version control system needs to be installed on your computer (link to the git site: https://git-scm.com/).
+3. Make sure that the path to the root folder of the course does not contain spaces, special characters, or non-latin characters.
+
+The course is integrated into the [Intellij Idea IDE](https://www.jetbrains.com/idea/), which has a community free license. 
+You may use this license to complete the course. 
+If you have some troubles with the course installation, fell free to contact us by email education@jetbrains.com.
+
 
 ## Getting started
 

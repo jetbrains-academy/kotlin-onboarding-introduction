@@ -25,7 +25,7 @@ To make a loop check over each `secret`'s char, you can use the <a href="https:/
    ```
 It is the same as:
    ```
-   for (i in 0 until a.length) { ... }
+   for (i in 0 until secret.length) { ... }
    ```
 
 Next, if the current `secret`'s char matches the `guess`'s char in the same position,
