@@ -15,3 +15,5 @@ files:
   visible: false
 - name: test/PatternsGeneratorTestsUtils.kt
   visible: false
+- name: test/Tests.kt
+  visible: false
