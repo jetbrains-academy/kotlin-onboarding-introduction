@@ -1,6 +1,6 @@
 @file:Suppress("MayBeConst")
 
-fun safeReadLine() = readLine() ?: error("Your input is incorrect, sorry")
+fun safeReadLine() = readlnOrNull() ?: error("Your input is incorrect, sorry")
 
 val separator = " "
 val underscore = "_"
