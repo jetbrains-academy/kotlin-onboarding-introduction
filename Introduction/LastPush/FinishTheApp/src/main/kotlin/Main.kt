@@ -159,7 +159,7 @@ fun chooseGenerator(): String {
     return generator
 }
 
-fun safeReadLine(): String = readLine() ?: error("Your input is incorrect, sorry")
+fun safeReadLine(): String = readlnOrNull() ?: error("Your input is incorrect, sorry")
 
 fun main() {
     val pattern = getPattern()

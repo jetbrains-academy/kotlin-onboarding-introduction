@@ -99,7 +99,7 @@ and make a loop that works while the game is running.
 Please input your guess. It should be of length <wordLength>.
 ```
 
-- Instead of the `readLine` function, please use the `safeReadLine` function here. 
+- Instead of the `readlnOrNull` function, please use the `safeReadLine` function here. 
 It is a custom function from the course authors that makes the interaction with the user input easier. 
 
 - Define a function `isComplete`, which accepts `secret` and `guess` and checks if the game is over. 

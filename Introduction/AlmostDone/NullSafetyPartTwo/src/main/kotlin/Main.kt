@@ -47,7 +47,7 @@ fun applyFilter(picture: String, filter: String): String {
     }
 }
 
-fun safeReadLine(): String = readLine() ?: error("Your input is incorrect, sorry")
+fun safeReadLine(): String = readlnOrNull() ?: error("Your input is incorrect, sorry")
 
 fun chooseFilter(): String {
     var toContinue = true

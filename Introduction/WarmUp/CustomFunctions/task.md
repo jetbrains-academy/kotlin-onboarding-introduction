@@ -14,7 +14,7 @@ When writing code, it is convenient to divide it into independent units –
 For example, it prints something on the screen or evaluates the value of some expression.
 
 We have already seen examples of functions in this course - for example, `main`, 
-which we extended by new code, or _built-in_ functions such as `println` and `readLine`. 
+which we extended by new code, or _built-in_ functions such as `println` and `readlnOrNull`. 
 Their peculiarity is that they perform a certain sequence of actions (_always the same_).
 Each function, like `println`, can be called by its name.
 

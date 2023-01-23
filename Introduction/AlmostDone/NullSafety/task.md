@@ -68,8 +68,8 @@ It is a special mechanism in Kotlin that can define some cases when a nullable v
 
 #### 5. How the `safeReadLine` function works
 
-In previous assignments, we sometimes used the pre-defined `safeReadLine` function instead of built-in `readLine`. 
-The main reason is that `readLine` returns a _nullable_ value (`String?`). 
+In previous assignments, we sometimes used the pre-defined `safeReadLine` function instead of built-in `readlnOrNull`. 
+The main reason is that `readlnOrNull` returns a _nullable_ value (`String?`). 
 The pre-defined `safeReadLine` function processed the input received from the user with the Elvis operator:
 it returns the string or throws an error if the `null` value was received.
 ___
