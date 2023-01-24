@@ -4,7 +4,7 @@
 [![Gradle Test](https://github.com/jetbrains-academy/csc-kotlin-course/actions/workflows/gradle-test.yml/badge.svg)](https://github.com/jetbrains-academy/csc-kotlin-course/actions/workflows/gradle-test.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-# Introduction to Kotlin
+# Kotlin Onboarding: Introduction
 
 This course is designed for novices in Kotlin
 and focuses on the basic concepts of the Kotlin language.
