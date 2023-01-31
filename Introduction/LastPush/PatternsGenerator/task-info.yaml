@@ -1,4 +1,5 @@
 type: theory
+custom_name: Patterns generator project
 files:
 - name: src/main/kotlin/Main.kt
   visible: true

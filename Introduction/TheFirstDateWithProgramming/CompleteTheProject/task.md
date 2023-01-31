@@ -21,9 +21,31 @@ ___
 ### Task
 
 **Description**: Print the real questions and the user's answers to them. 
-The real questions are stored in the already predefined `firstQuestion`, `secondQuestion`, and `thirdQuestion` variables.
-
+The real questions are stored in the already **predefined** `firstQuestion`, `secondQuestion`, and `thirdQuestion` variables.
 Before the real questions, print the text: 'Now let's have fun!'
+
+"Predefined" means that you can access these variables 
+because the course creator put them in the project and added the necessary values. 
+For example, you can write `println($firstQuestion)` to print the value from the **predefined** `firstQuestion` variable.
+
+If you have any difficulties, **hints will help you solve this task**.
+
+----
+
+### Hints
+
+<div class="hint" title="What does $ mean?">
+
+String literals may contain template expressions – pieces of code that are 
+evaluated and whose results are concatenated into the string. 
+[A template expression](https://kotlinlang.org/docs/strings.html#string-templates) starts with a dollar sign (`$`) and consists of either a name.
+
+You can use this construction to put something into the string:
+```kotlin
+val a = 5
+println("a = $a") // a = 5 will be printed
+```
+</div>
 
 <div class="hint" title="Game's example">
 
