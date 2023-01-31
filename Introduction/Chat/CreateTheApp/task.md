@@ -1,4 +1,6 @@
-Hello! This lesson focuses on the topics that you covered in the previous lesson. 
+# Task: 1/1: Create the "chat" application
+
+This lesson focuses on the topics that you covered in the previous lesson. 
 The main difference is that the final project will not be divided into intermediate stages 
 and you can try to implement it yourself from scratch. 
 We have no doubt that you will succeed!
@@ -29,3 +31,38 @@ An example of the final application:
 
 In order for the picture to fit, additional line breaks were added. 
 You don't need to add them when solving the task.
+
+If you have any difficulties, **hints will help you solve this task**.
+
+----
+
+### Hints
+
+<div class="hint" title="The built-in print function">
+Kotlin has another similar to the 'println' function  - [`print`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.io/print.html#print). 
+The only difference from `println` is that it does not wrap text to a new line. 
+Thus, if we replace the `println` function from the previous example 
+with the `print` function, we get the following result:
+
+```kotlin
+print("One")
+print("Two")
+```
+The output is:
+```text
+OneTwo
+```
+</div>
+
+<div class="hint" title="String templates">
+
+String literals may contain template expressions – pieces of code that are
+evaluated and whose results are concatenated into the string.
+[A template expression](https://kotlinlang.org/docs/strings.html#string-templates) starts with a dollar sign (`$`) and consists of either a name.
+
+You can use this construction to put something into the string:
+```kotlin
+val a = 5
+println("a = $a") // a = 5 will be printed
+```
+</div>

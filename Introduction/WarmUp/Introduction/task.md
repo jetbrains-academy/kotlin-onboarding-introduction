@@ -1,4 +1,4 @@
-Hello! You have already learned the very basic programming constructions. 
+You have already learned the very basic programming constructions. 
 This lesson aims to help you learn a little more complex constructions, 
 such as loops, conditional statements, and more.
 
