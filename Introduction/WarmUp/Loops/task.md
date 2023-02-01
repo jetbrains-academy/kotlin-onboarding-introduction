@@ -1,7 +1,7 @@
 ### Theory
 
 1. What the loops are
-2. The `while` and `do...while` loops
+2. The `while` and `do-while` loops
 3. The `for` loop
 4. Mutable variables
 5. `Boolean` variables in the loop conditions
@@ -14,7 +14,7 @@ To solve this problem, you can use loops.
 Loops can be executed while a certain condition is true (the [`while`](https://kotlinlang.org/docs/basic-syntax.html#while-loop) loop) 
 or can be repeated a certain number of times (the [`for`](https://kotlinlang.org/docs/control-flow.html#for-loops) loop).
 
-#### 2. The `while` and `do...while` loops
+#### 2. The `while` and `do-while` loops
 
 The `while` loops often use `Boolean` values, for example:
 ```kotlin
@@ -26,7 +26,7 @@ It will execute the actions (the loop's body) while the value in `y` is less tha
 Here, the condition will be checked _first_, and next, if it is true, 
 the loop's body will be executed.
 If you need another scenario: _first_ execute the loop's body and then check the condition,
-you should use the `do...while` loop. In such a case, the body will be executed at least one time:
+you should use the `do-while` loop. In such a case, the body will be executed at least one time:
 ```kotlin
 do {
     // To do something
@@ -115,7 +115,7 @@ If you have any difficulties, **hints will help you solve this task**.
 ### Hints
 
 <div class="Hint" title="Help with `playGame` function">
-Use <code>do...while</code> for imitating the game process.
+Use <code>do-while</code> for imitating the game process.
 </div>
 
 <div class="Hint" title="Type for `complete` variable">
@@ -124,7 +124,7 @@ The best type for the <code>complete</code> variable is <code>Boolean</code>, si
 
 <div class="Hint" title="Code style hint">
 
-If you use the <code>do...while</code> loop with a <code>Boolean</code> variable as the condition, 
+If you use the <code>do-while</code> loop with a <code>Boolean</code> variable as the condition, 
 you can omit the initialization of the variable before the loop. For example, consider the following code:
 ```
 var myBool = false
