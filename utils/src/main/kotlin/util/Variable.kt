@@ -27,8 +27,8 @@ fun Variable.isVariableExist(fileContent: String): Boolean {
     }.flatten()
     if (!(baseDefs + defWithTypes).any { it in fileContent }) {
         error("The code should contains a definition of the ${this.name} variable! " +
-                "Please, add <${variableDefTemplateBase()}> or <${variableDefTemplateWithType()}> code in your solution." +
-                "Please, be careful with styles - check the spaces around =.")
+                "Please add <${variableDefTemplateBase()}> or <${variableDefTemplateWithType()}> code in your solution." +
+                "Please be careful with styles - check the spaces around =.")
     }
     return true
 }

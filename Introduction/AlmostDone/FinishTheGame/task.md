@@ -21,5 +21,5 @@ If you have any difficulties, **hints will help you solve this task**.
 ### Hints
 
 <div class="hint" title="Possible ways to expand the project">
-  Try to expand this project yourself! For example, add new pre-defined pictures or filters.
+  Try expanding this project yourself! For example, add new predefined pictures or filters.
 </div>

@@ -1,4 +1,4 @@
-# Task: 1/1: Create the "chat" application
+# Task: 1/1: Create a "chat" application
 
 This lesson focuses on the topics that you covered in the previous lesson. 
 The main difference is that the final project will not be divided into intermediate stages 
@@ -39,8 +39,8 @@ If you have any difficulties, **hints will help you solve this task**.
 ### Hints
 
 <div class="hint" title="The built-in print function">
-Kotlin has another similar to the 'println' function  - [`print`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.io/print.html#print). 
-The only difference from `println` is that it does not wrap text to a new line. 
+Besides `println`, Kotlin has another similar function – [`print`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.io/print.html#print).
+Its only difference from `println` is that it does not wrap text to a new line.
 Thus, if we replace the `println` function from the previous example 
 with the `print` function, we get the following result:
 
@@ -58,9 +58,9 @@ OneTwo
 
 String literals may contain template expressions – pieces of code that are
 evaluated and whose results are concatenated into the string.
-[A template expression](https://kotlinlang.org/docs/strings.html#string-templates) starts with a dollar sign (`$`) and consists of either a name.
+[A template expression](https://kotlinlang.org/docs/strings.html#string-templates) starts with a dollar sign (`$`) and consists of either a name or an expression in curly braces.
 
-You can use this construction to put something into the string:
+To insert something into a string, you can use the following construction:
 ```kotlin
 val a = 5
 println("a = $a") // a = 5 will be printed
