@@ -60,7 +60,7 @@ the course creator mode or create a course archive from the source code.
 You can create a [course preview](https://plugins.jetbrains.com/plugin/10081-edutools/docs/educator-start-guide.html#preview_course) from the source code:
 1. Clone this repository: 
 ```text
-git clone https://github.com/jetbrains-academy/csc-kotlin-course.git
+git clone https://github.com/jetbrains-academy/kotlin-onboarding-introduction.git
 ```
 
 2. Build the project:
@@ -77,7 +77,7 @@ git clone https://github.com/jetbrains-academy/csc-kotlin-course.git
 You can create a [course archive](https://plugins.jetbrains.com/plugin/10081-edutools/docs/educator-start-guide.html#fe7010f2) from the source code:
 1. Clone this repository:
 ```text
-git clone https://github.com/jetbrains-academy/csc-kotlin-course.git
+git clone https://github.com/jetbrains-academy/kotlin-onboarding-introduction.git
 ```
 
 2. Build the project:
