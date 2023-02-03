@@ -38,9 +38,9 @@ If you have any difficulties, **hints will help you solve this task**.
 
 String literals may contain template expressions – pieces of code that are 
 evaluated and whose results are concatenated into the string. 
-[A template expression](https://kotlinlang.org/docs/strings.html#string-templates) starts with a dollar sign (`$`) and consists of either a name.
+[A template expression](https://kotlinlang.org/docs/strings.html#string-templates) starts with a dollar sign (`$`) and consists of either a name or an expression in curly braces.
 
-You can use this construction to put something into the string:
+To insert something into a string, you can use the following construction:
 ```kotlin
 val a = 5
 println("a = $a") // a = 5 will be printed
