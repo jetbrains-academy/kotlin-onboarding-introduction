@@ -50,8 +50,7 @@ If you have some troubles with the course installation, fell free to contact us 
 
 ## Getting started
 
-**TODO: add course link**
-This course is available on JetBrains Marketplace and can be installed from the 
+This course is [available](https://plugins.jetbrains.com/plugin/21067-kotlin-onboarding-introduction) on JetBrains Marketplace and can be installed from the 
 [IntelliJ IDEA](https://www.jetbrains.com/idea/) IDE directly, but you can also use this course in 
 the course creator mode or create a course archive from the source code.
 
