@@ -1,6 +1,10 @@
 type: marketplace
 title: "Kotlin Onboarding: Introduction"
 language: English
+vendor:
+  name: JetBrains
+  email: support@jetbrains.com
+  url: https://www.jetbrains.com/
 summary: "<p>This course is designed for novices in Kotlin 
 and focuses on the basic concepts of the Kotlin language. 
 Each lesson of the course is built in the form of a project: 
