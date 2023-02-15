@@ -1,4 +1,5 @@
 type: framework
+custom_name: Almost done
 content:
 - Introduction
 - MultiRowStrings
@@ -8,5 +9,5 @@ content:
 - NullSafety
 - NullSafetyPartTwo
 - FinishTheGame
+- Survey
 is_template_based: false
-custom_name: Almost done
