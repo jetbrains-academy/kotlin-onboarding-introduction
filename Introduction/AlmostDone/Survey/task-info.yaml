@@ -1,8 +1,0 @@
-type: theory
-files:
-- name: src/main/kotlin/PreDefinedSymbols.kt
-  visible: false
-- name: src/main/kotlin/Main.kt
-  visible: true
-- name: src/main/kotlin/Images.kt
-  visible: false
