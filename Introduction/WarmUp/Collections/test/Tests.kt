@@ -4,6 +4,7 @@ import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.Arguments
 import org.junit.jupiter.params.provider.MethodSource
 import util.*
+import java.lang.reflect.InvocationTargetException
 
 class Test {
     companion object {
@@ -93,12 +94,13 @@ class Test {
     fun testCountGenerateSecretFunction() {
         val m = TestMethod("generateSecret", "String", emptyList())
         val userMethod = m.getMethodFromClass()
-        val methodRes = userMethod.invokeWithoutArgs()
-        val expectedResult = "ABCD"
-        Assertions.assertEquals(
-            expectedResult,
-            methodRes
-        ) { "The method ${m.name} should always return $expectedResult" }
+        try {
+            val methodRes = userMethod.invokeWithoutArgs()
+            val expectedResult = "ABCD"
+            Assertions.assertEquals(expectedResult, methodRes) { "The method ${m.name} should always return $expectedResult" }
+        } catch (e: InvocationTargetException) {
+            assert(false) { "The method ${m.name} should always return \"ABCD\" now" }
+        }
     }
 
     @Test
