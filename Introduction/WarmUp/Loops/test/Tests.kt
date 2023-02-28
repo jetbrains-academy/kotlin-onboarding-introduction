@@ -4,6 +4,7 @@ import org.junit.jupiter.api.assertThrows
 import util.*
 import util.Util.DEFAULT_USER_INPUT
 import java.lang.IllegalStateException
+import java.lang.reflect.InvocationTargetException
 
 class Test {
     @Test
@@ -50,12 +51,13 @@ class Test {
     fun testCountGenerateSecretFunction() {
         val m = TestMethod("generateSecret", "String", emptyList())
         val userMethod = m.getMethodFromClass()
-        val methodRes = userMethod.invokeWithoutArgs()
-        val expectedResult = "ABCD"
-        Assertions.assertEquals(
-            expectedResult,
-            methodRes
-        ) { "The method ${m.name} should always return $expectedResult" }
+        try {
+            val methodRes = userMethod.invokeWithoutArgs()
+            val expectedResult = "ABCD"
+            Assertions.assertEquals(expectedResult, methodRes) { "The method ${m.name} should always return $expectedResult" }
+        } catch (e: InvocationTargetException) {
+            assert(false) { "The method ${m.name} should always return \"ABCD\" now" }
+        }
     }
 
     @Test

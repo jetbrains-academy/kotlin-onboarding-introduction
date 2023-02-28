@@ -27,6 +27,7 @@ fun setSystemOut(): ByteArrayOutputStream {
     return baos
 }
 
+@Suppress("SwallowedException")
 fun runMainFunction(mainFunction: () -> Unit, input: String? = null, toAssertSystemIn: Boolean = true): String {
     return try {
         setSystemIn(input)
@@ -44,6 +45,9 @@ fun runMainFunction(mainFunction: () -> Unit, input: String? = null, toAssertSys
             assert(false) { "$errorPrefix waits more user inputs, it must be fixed." }
         }
         assert(false) { "$errorPrefix throws an unexpected error, please, check the function's implementation." }
+        ""
+    } catch (e: NotImplementedError) {
+        assert(false) { "You call not implemented functions (that use TODO()) inside the main function. Please, don't do it until the task asks it" }
         ""
     }
 }
