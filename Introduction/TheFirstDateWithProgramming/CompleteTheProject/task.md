@@ -26,7 +26,7 @@ Before the real questions, print the text: 'Now let's have fun!'
 
 "Predefined" means that you can access these variables 
 because the course creator put them in the project and added the necessary values. 
-For example, you can write `println($firstQuestion)` to print the value from the **predefined** `firstQuestion` variable.
+For example, you can write `println("First question: $firstQuestion")` to print the value from the **predefined** `firstQuestion` variable and an additional text before (or after) it.
 
 If you have any difficulties, **hints will help you solve this task**.
 
