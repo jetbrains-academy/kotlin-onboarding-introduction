@@ -13,7 +13,7 @@ Each lesson of the course is built in the form of a project:
 step by step, by completing different small tasks,
 you will get a finished small project in the end.
 At the end of each lesson, an additional similar project will be offered:
-it includes all the topics of the lesson but is not contain the theory part.
+it includes all the topics of the lesson but does not contain the theory part.
 
 Note, this course **does not provide a detailed explanation** of the basic concepts,
 like variables: it just shows how to use them in Kotlin and can briefly remind you the definitions.
