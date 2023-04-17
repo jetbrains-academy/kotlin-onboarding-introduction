@@ -36,7 +36,7 @@ which you can read later. Some of the topics covered in the course are listed be
   <li> Your computer needs to have a stable internet connection.</li>
   <li> Git version control system needs to be installed on your computer (link to <a href=\"https://git-scm.com/\">the git site</a>).</li>
   <li> Make sure that the path to the root folder of the course does not contain spaces, special characters, or non-latin characters.</li>
-  <li> Make sure that you use the <a href=\"https://plugins.jetbrains.com/plugin/10081-edutools\">EduTools</a> plugin with version at least <em>2023.1</em>.</li>
+  <li> Make sure that you use the <a href=\"https://plugins.jetbrains.com/plugin/10081-edutools\">EduTools</a> plugin with version at least <em>2023.3</em>.</li>
 </ol>
 <p>The course is integrated into the <a href=\"https://www.jetbrains.com/idea/\">Intellij Idea IDE</a>, which has a community free license. 
 You may use this license to complete the course. If you have some troubles with the course installation, fell free to contact us by email <a href=\"mailto:education@jetbrains.com\">education@jetbrains.com</a>.</p>
