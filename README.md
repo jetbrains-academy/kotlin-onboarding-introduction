@@ -41,7 +41,7 @@ Before starting this course, check the following requirements.
 1. Your computer needs to have a stable internet connection.
 2. Git version control system needs to be installed on your computer (link to the git site: https://git-scm.com/).
 3. Make sure that the path to the root folder of the course does not contain spaces, special characters, or non-latin characters.
-4. Make sure that you use the [EduTools](https://plugins.jetbrains.com/plugin/10081-edutools) plugin with version at least `2023.1`.
+4. Make sure that you use the [EduTools](https://plugins.jetbrains.com/plugin/10081-edutools) plugin with version at least `2023.3`.
 
 The course is integrated into the [Intellij Idea IDE](https://www.jetbrains.com/idea/), which has a community free license. 
 You may use this license to complete the course. 
