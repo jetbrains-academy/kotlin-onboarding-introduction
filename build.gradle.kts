@@ -3,20 +3,20 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     java
-    kotlin("jvm") version "1.6.10" apply true
+    kotlin("jvm") version "1.7.10" apply true
     application
     id("io.gitlab.arturbosch.detekt") version "1.21.0"
 }
 
 buildscript {
-    extra["kotlin_version"] = "1.6.10"
+    extra["kotlin_version"] = "1.7.10"
 
     repositories {
         mavenCentral()
     }
 
     dependencies {
-        classpath(kotlin("gradle-plugin", version = "1.6.10"))
+        classpath(kotlin("gradle-plugin", version = "1.7.10"))
     }
 }
 
@@ -44,27 +44,34 @@ allprojects {
 
     repositories {
         mavenCentral()
+        maven {
+            url = uri("https://packages.jetbrains.team/maven/p/kotlin-test-framework/kotlin-test-framework")
+        }
     }
 
     dependencies {
         implementation(kotlin("stdlib", KotlinCompilerVersion.VERSION))
-        implementation("org.junit.jupiter:junit-jupiter-api:5.8.2")
-        runtimeOnly("org.junit.jupiter:junit-jupiter-engine:5.8.2")
-        implementation("org.junit.jupiter:junit-jupiter-params:5.8.2")
-        runtimeOnly("org.junit.platform:junit-platform-console:1.8.2")
+
+        val junitJupiterVersion = "5.9.0"
+        implementation("org.junit.jupiter:junit-jupiter-api:$junitJupiterVersion")
+        runtimeOnly("org.junit.jupiter:junit-jupiter-engine:$junitJupiterVersion")
+        implementation("org.junit.jupiter:junit-jupiter-params:$junitJupiterVersion")
+        runtimeOnly("org.junit.platform:junit-platform-console:1.9.0")
 
         val detektVersion = "1.22.0"
         implementation("io.gitlab.arturbosch.detekt:detekt-gradle-plugin:$detektVersion")
         implementation("io.gitlab.arturbosch.detekt:detekt-formatting:$detektVersion")
+
+        implementation("org.jetbrains.academy.test.system:kotlin-test-system:1.0.3")
     }
 
     tasks {
         withType<JavaCompile> {
-            sourceCompatibility = "9"
-            targetCompatibility = "9"
+            sourceCompatibility = "11"
+            targetCompatibility = "11"
         }
         withType<KotlinCompile> {
-            kotlinOptions.jvmTarget = "9"
+            kotlinOptions.jvmTarget = "11"
         }
 
         withType<Test> {

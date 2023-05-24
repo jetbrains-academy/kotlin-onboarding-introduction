@@ -1,3 +1,7 @@
+import org.jetbrains.academy.test.system.invokeWithoutArgs
+import org.jetbrains.academy.test.system.models.TestKotlinType
+import org.jetbrains.academy.test.system.models.method.TestMethod
+import org.jetbrains.academy.test.system.models.variable.TestVariable
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
 import util.*
@@ -6,19 +10,19 @@ import java.lang.reflect.InvocationTargetException
 class Test {
     @Test
     fun testGetGameRulesFunction() {
-        TestMethod("getGameRules", "String", listOf(
-            Variable("wordLength", "Int"),
-            Variable("maxAttemptsCount", "Int"),
-            Variable("secretExample", "String"),
+        TestMethod("getGameRules", TestKotlinType("String"), listOf(
+            TestVariable("wordLength", "Int"),
+            TestVariable("maxAttemptsCount", "Int"),
+            TestVariable("secretExample", "String"),
         )).getMethodFromClass()
     }
 
     @Test
     fun testCountGenerateSecretFunction() {
-        val m = TestMethod("generateSecret", "String", emptyList())
+        val m = TestMethod("generateSecret", TestKotlinType("String"), emptyList())
         val userMethod = m.getMethodFromClass()
         try {
-            val methodRes = userMethod.invokeWithoutArgs()
+            val methodRes = userMethod.invokeWithoutArgs(findClassSafe())
             val expectedResult = "ABCD"
             Assertions.assertEquals(expectedResult, methodRes) { "The method ${m.name} should always return $expectedResult" }
         } catch (e: InvocationTargetException) {
@@ -28,17 +32,17 @@ class Test {
 
     @Test
     fun testCountPartialMatchesFunction() {
-        TestMethod("countPartialMatches", "Int", listOf(
-            Variable("secret", "String"),
-            Variable("guess", "String"),
+        TestMethod("countPartialMatches", TestKotlinType("Int"), listOf(
+            TestVariable("secret", "String"),
+            TestVariable("guess", "String"),
         )).getMethodFromClass()
     }
 
     @Test
     fun testCountExactMatchesFunction() {
-        TestMethod("countExactMatches", "Int", listOf(
-            Variable("secret", "String"),
-            Variable("guess", "String"),
+        TestMethod("countExactMatches", TestKotlinType("Int"), listOf(
+            TestVariable("secret", "String"),
+            TestVariable("guess", "String"),
         )).getMethodFromClass()
     }
 

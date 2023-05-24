@@ -1,7 +1,7 @@
+import org.jetbrains.academy.test.system.models.variable.TestVariable
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
 import util.Util
-import util.Variable
 import util.checkListOfVariables
 import util.runMainFunction
 import java.io.File
@@ -14,9 +14,9 @@ class Test {
         checkListOfVariables(
             sourceCodeFile,
             listOf(
-                Variable("firstUserAnswer", "String", "\"\""),
-                Variable("secondUserAnswer", "String", "\"\""),
-                Variable("thirdUserAnswer", "String", "\"\"")
+                TestVariable("firstUserAnswer", "String", "\"\""),
+                TestVariable("secondUserAnswer", "String", "\"\""),
+                TestVariable("thirdUserAnswer", "String", "\"\"")
             )
         )
     }

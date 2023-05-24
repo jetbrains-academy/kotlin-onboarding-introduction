@@ -1,25 +1,20 @@
 package util
 
+import org.jetbrains.academy.test.system.models.variable.TestVariable
 import java.io.File
 
-data class Variable(
-    val name: String,
-    val type: String,
-    val value: String? = null
-)
+fun TestVariable.variableDefModifier() = "val ${this.name}"
 
-fun Variable.variableDefModifier() = "val ${this.name}"
+fun TestVariable.variableDefTemplateBase() = "${variableDefModifier()} = ${this.value}"
 
-fun Variable.variableDefTemplateBase() = "${variableDefModifier()} = ${this.value}"
+fun TestVariable.variableDefTemplateWithType() = "${variableDefModifier()}: ${this.javaType} = ${this.value}"
 
-fun Variable.variableDefTemplateWithType() = "${variableDefModifier()}: ${this.type} = ${this.value}"
-
-fun Variable.isVariableExist(fileContent: String): Boolean {
+fun TestVariable.isVariableExist(fileContent: String): Boolean {
     val differentStylesWithEqual = listOf("=", " =", "= ", " = ")
     val baseDefs = differentStylesWithEqual.map { "${variableDefModifier()}$it${this.value}" }
     val defWithTypes = listOf(
-        "${variableDefModifier()}:${this.type}",
-        "${variableDefModifier()}: ${this.type}",
+        "${variableDefModifier()}:${this.javaType}",
+        "${variableDefModifier()}: ${this.javaType}",
     ).map { defWithType ->
         differentStylesWithEqual.map{
             "$defWithType$it"
@@ -33,7 +28,7 @@ fun Variable.isVariableExist(fileContent: String): Boolean {
     return true
 }
 
-fun checkListOfVariables(sourceCodeFile: File, variables: List<Variable>) {
+fun checkListOfVariables(sourceCodeFile: File, variables: List<TestVariable>) {
     if (sourceCodeFile.exists()) {
         val content = sourceCodeFile.readText()
         for (variable in variables) {

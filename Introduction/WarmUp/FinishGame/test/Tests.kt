@@ -1,8 +1,12 @@
+import org.jetbrains.academy.test.system.models.TestKotlinType
+import org.jetbrains.academy.test.system.models.method.TestMethod
+import org.jetbrains.academy.test.system.models.variable.TestVariable
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.Arguments
 import org.junit.jupiter.params.provider.MethodSource
+import org.jetbrains.academy.test.system.invokeWithArgs
 import util.*
 
 class Test {
@@ -15,9 +19,9 @@ class Test {
         )
 
         private val isCompleteMethod = TestMethod(
-            "isComplete", "Boolean", listOf(
-                Variable("secret", "String"),
-                Variable("guess", "String"),
+            "isComplete", TestKotlinType("Boolean"), listOf(
+                TestVariable("secret", "String"),
+                TestVariable("guess", "String"),
             )
         )
 
@@ -41,17 +45,17 @@ class Test {
         )
 
         private val countExactMatchesMethod = TestMethod(
-            "countExactMatches", "Int",
+            "countExactMatches", TestKotlinType("Int"),
             listOf(
-                Variable("secret", "String"),
-                Variable("guess", "String"),
+                TestVariable("secret", "String"),
+                TestVariable("guess", "String"),
             )
         )
 
         private val countPartialMatchesMethod = TestMethod(
-            "countPartialMatches", "Int", listOf(
-                Variable("secret", "String"),
-                Variable("guess", "String"),
+            "countPartialMatches", TestKotlinType("Int"), listOf(
+                TestVariable("secret", "String"),
+                TestVariable("guess", "String"),
             )
         )
 
@@ -67,25 +71,25 @@ class Test {
         )
 
         private val isWinMethod = TestMethod(
-            "isWin", "Boolean", listOf(
-                Variable("complete", "Boolean"),
-                Variable("attempts", "Int"),
-                Variable("maxAttemptsCount", "Int"),
+            "isWin", TestKotlinType("Boolean"), listOf(
+                TestVariable("complete", "Boolean"),
+                TestVariable("attempts", "Int"),
+                TestVariable("maxAttemptsCount", "Int"),
             )
         )
 
         private val isLostMethod = TestMethod(
-            "isLost", "Boolean", listOf(
-                Variable("complete", "Boolean"),
-                Variable("attempts", "Int"),
-                Variable("maxAttemptsCount", "Int"),
+            "isLost", TestKotlinType("Boolean"), listOf(
+                TestVariable("complete", "Boolean"),
+                TestVariable("attempts", "Int"),
+                TestVariable("maxAttemptsCount", "Int"),
             )
         )
 
         private val generateSecretMethod = TestMethod(
-            "generateSecret", "String", listOf(
-                Variable("wordLength", "Int"),
-                Variable("alphabet", "String"),
+            "generateSecret", TestKotlinType("String"), listOf(
+                TestVariable("wordLength", "Int"),
+                TestVariable("alphabet", "String"),
             )
         )
 
@@ -99,10 +103,10 @@ class Test {
         )
 
         private val isCorrectInputMethod = TestMethod(
-            "isCorrectInput", "Boolean", listOf(
-                Variable("userInput", "String"),
-                Variable("wordLength", "Int"),
-                Variable("alphabet", "String"),
+            "isCorrectInput", TestKotlinType("Boolean"), listOf(
+                TestVariable("userInput", "String"),
+                TestVariable("wordLength", "Int"),
+                TestVariable("alphabet", "String"),
             )
         )
 
@@ -117,9 +121,9 @@ class Test {
         )
 
         private val safeUserInputMethod = TestMethod(
-            "safeUserInput", "String", listOf(
-                Variable("wordLength", "Int"),
-                Variable("alphabet", "String"),
+            "safeUserInput", TestKotlinType("String"), listOf(
+                TestVariable("wordLength", "Int"),
+                TestVariable("alphabet", "String"),
             )
         )
 
@@ -144,7 +148,7 @@ class Test {
         correctness: UserInputCorrectness,
     ) {
         val userMethod = isCorrectInputMethod.getMethodFromClass()
-        val isCorrect = userMethod.invokeWithArgs(input, WORD_LENGTH, ALPHABET)
+        val isCorrect = userMethod.invokeWithArgs(input, WORD_LENGTH, ALPHABET, clazz = findClassSafe())
         Assertions.assertEquals(correctness.isCorrect, isCorrect, "The function ${isCorrectInputMethod.name} with arguments: input=$input, wordLength=$WORD_LENGTH, alphabet=$ALPHABET should return ${correctness.message}")
     }
 
@@ -160,7 +164,7 @@ class Test {
         alphabet: String,
     ) {
         val userMethod = generateSecretMethod.getMethodFromClass()
-        val secret = userMethod.invokeWithArgs(wordLength, alphabet)
+        val secret = userMethod.invokeWithArgs(wordLength, alphabet, clazz = findClassSafe())
         assert(secret is String) { "The method ${generateSecretMethod.name} should return String" }
         require(secret is String)
         assert(secret.split(", ").size == 1) { "The current generated secret is: $secret, you forgot to change the separator" }
@@ -172,9 +176,9 @@ class Test {
     @Test
     fun testPrintRoundResultsFunction() {
         TestMethod(
-            "printRoundResults", "Unit", listOf(
-                Variable("secret", "String"),
-                Variable("guess", "String"),
+            "printRoundResults", TestKotlinType("Unit"), listOf(
+                TestVariable("secret", "String"),
+                TestVariable("guess", "String"),
             ),
             "Void"
         ).getMethodFromClass()
@@ -196,7 +200,7 @@ class Test {
     ) {
         val userMethod = isWinMethod.getMethodFromClass()
         Assertions.assertEquals(
-            isWin, userMethod.invokeWithArgs(complete, attempts, maxAttemptsCount),
+            isWin, userMethod.invokeWithArgs(complete, attempts, maxAttemptsCount, clazz = findClassSafe()),
             "The function ${isWinMethod.name} must return $isWin for the following arguments: complete: $complete, attempts: $attempts, maxAttemptsCount: $maxAttemptsCount"
         )
     }
@@ -217,7 +221,7 @@ class Test {
     ) {
         val userMethod = isLostMethod.getMethodFromClass()
         Assertions.assertEquals(
-            isLost, userMethod.invokeWithArgs(complete, attempts, maxAttemptsCount),
+            isLost, userMethod.invokeWithArgs(complete, attempts, maxAttemptsCount, clazz = findClassSafe()),
             "The function ${isLostMethod.name} must return $isLost for the following arguments: complete: $complete, attempts: $attempts, maxAttemptsCount: $maxAttemptsCount"
         )
     }
@@ -232,7 +236,7 @@ class Test {
     ) {
         val userMethod = countPartialMatchesMethod.getMethodFromClass()
         Assertions.assertEquals(
-            expectedLettersMatchings, userMethod.invokeWithArgs(secret, guess),
+            expectedLettersMatchings, userMethod.invokeWithArgs(secret, guess, clazz = findClassSafe()),
             "For secret: $secret and guess: $guess the number of partial matches is $expectedLettersMatchings"
         )
     }
@@ -247,7 +251,7 @@ class Test {
     ) {
         val userMethod = countExactMatchesMethod.getMethodFromClass()
         Assertions.assertEquals(
-            expectedPosMatchings, userMethod.invokeWithArgs(secret, guess),
+            expectedPosMatchings, userMethod.invokeWithArgs(secret, guess, clazz = findClassSafe()),
             "For secret: $secret and guess: $guess the number of exact matches is $expectedPosMatchings"
         )
     }
@@ -261,7 +265,7 @@ class Test {
     ) {
         val userMethod = isCompleteMethod.getMethodFromClass()
         Assertions.assertEquals(
-            expectedResult, userMethod.invokeWithArgs(secret, guess),
+            expectedResult, userMethod.invokeWithArgs(secret, guess, clazz = findClassSafe()),
             "For secret: $secret and guess: $guess the function ${isCompleteMethod.name} should return $expectedResult"
         )
     }
@@ -274,16 +278,16 @@ class Test {
     @Test
     fun testGetGameRulesFunction() {
         val m = TestMethod(
-            "getGameRules", "String", listOf(
-                Variable("wordLength", "Int"),
-                Variable("maxAttemptsCount", "Int"),
-                Variable("secretExample", "String"),
-                Variable("alphabet", "String"),
+            "getGameRules", TestKotlinType("String"), listOf(
+                TestVariable("wordLength", "Int"),
+                TestVariable("maxAttemptsCount", "Int"),
+                TestVariable("secretExample", "String"),
+                TestVariable("alphabet", "String"),
             )
         )
         val userMethod = m.getMethodFromClass()
         val alphabet = "ABCDEHG"
-        val methodRes = userMethod.invokeWithArgs(3, 4, "ABCD", alphabet)
+        val methodRes = userMethod.invokeWithArgs(3, 4, "ABCD", alphabet, clazz = findClassSafe())
         val basePhrase = "The possible symbols in the word:"
         assert("$basePhrase $alphabet" in methodRes.toString()) { "The phrase: $basePhrase <alphabet> should be returned by the ${m.name} function" }
     }

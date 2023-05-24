@@ -1,10 +1,12 @@
 package util
 
+import org.jetbrains.academy.test.system.invokeWithoutArgs
 import org.junit.jupiter.api.Assertions
 import util.Util.newLineSeparator
 import java.io.ByteArrayOutputStream
 import java.io.PrintStream
 import java.nio.charset.StandardCharsets
+import org.jetbrains.academy.test.system.models.method.TestMethod
 
 object Util {
     const val DEFAULT_USER_INPUT = "<some user's answer>"
@@ -64,7 +66,7 @@ fun checkReadLineFunctions(
 ) {
     val userMethod = testMethod.getMethodFromClass()
     setSystemIn(input)
-    val result = userMethod.invokeWithoutArgs()
+    val result = userMethod.invokeWithoutArgs(findClassSafe())
     val errorPostfix = if (!isSystemInEmpty) "not" else ""
     Assertions.assertEquals(
         isSystemInEmpty, isSystemInEmpty(),
