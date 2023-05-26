@@ -1,9 +1,13 @@
+import org.jetbrains.academy.test.system.invokeWithArgs
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.Arguments
 import org.junit.jupiter.params.provider.MethodSource
 import util.*
+import org.jetbrains.academy.test.system.models.TestKotlinType
+import org.jetbrains.academy.test.system.models.method.TestMethod
+import org.jetbrains.academy.test.system.models.variable.TestVariable
 
 class Test {
 
@@ -41,15 +45,15 @@ class Test {
         private val size_5x7 = "5${newLineSymbol}7$newLineSymbol"
 
         private val applyGeneratorMethod = TestMethod(
-            "applyGenerator", "String", listOf(
-                Variable("pattern", "String"),
-                Variable("generatorName", "String"),
-                Variable("width", "Int"),
-                Variable("height", "Int"),
+            "applyGenerator", TestKotlinType("String"), listOf(
+                TestVariable("pattern", "String"),
+                TestVariable("generatorName", "String"),
+                TestVariable("width", "Int"),
+                TestVariable("height", "Int"),
             )
         )
 
-        private val getPatternMethod = TestMethod("getPattern", "String")
+        private val getPatternMethod = TestMethod("getPattern", TestKotlinType("String"))
 
         @JvmStatic
         fun patternRows() = patternRowsData()
@@ -157,7 +161,7 @@ class Test {
     ) {
         val userMethod = fillPatternRowMethod.getMethodFromClass()
         Assertions.assertEquals(
-            expectedRow, userMethod.invokeWithArgs(patternRow, patternWidth),
+            expectedRow, userMethod.invokeWithArgs(patternRow, patternWidth, clazz = findClassSafe()),
             "For pattern row: $patternRow and patternWidth: $patternWidth the function ${fillPatternRowMethod.name} should return $expectedRow"
         )
     }
@@ -170,7 +174,7 @@ class Test {
     ) {
         val userMethod = getPatternHeightMethod.getMethodFromClass()
         Assertions.assertEquals(
-            patternHeight, userMethod.invokeWithArgs(pattern),
+            patternHeight, userMethod.invokeWithArgs(pattern, clazz = findClassSafe()),
             "For pattern:$newLineSymbol$pattern$newLineSymbol the function ${getPatternHeightMethod.name} should return $patternHeight"
         )
     }
@@ -184,7 +188,7 @@ class Test {
         val userMethod = canvasGeneratorMethod.getMethodFromClass()
         Assertions.assertEquals(
             canvasFilter.result.toAddNewLineSymbol().replaceLineSeparator(),
-            userMethod.invokeWithArgs(pattern, canvasFilter.width, canvasFilter.height),
+            userMethod.invokeWithArgs(pattern, canvasFilter.width, canvasFilter.height, clazz = findClassSafe()),
             "For pattern:$newLineSymbol$pattern$newLineSymbol, width=${canvasFilter.width}, and height=${canvasFilter.height} the function ${canvasGeneratorMethod.name} should return $newLineSymbol${canvasFilter.result}$newLineSymbol"
         )
     }
@@ -198,7 +202,7 @@ class Test {
         val userMethod = canvasWithGapsGeneratorMethod.getMethodFromClass()
         Assertions.assertEquals(
             canvasFilter.result.toAddNewLineSymbol().replaceLineSeparator(),
-            userMethod.invokeWithArgs(pattern, canvasFilter.width, canvasFilter.height),
+            userMethod.invokeWithArgs(pattern, canvasFilter.width, canvasFilter.height, clazz = findClassSafe()),
             "For pattern:$newLineSymbol$pattern$newLineSymbol, width=${canvasFilter.width}, and height=${canvasFilter.height} the function ${canvasWithGapsGeneratorMethod.name} should return $newLineSymbol${canvasFilter.result}$newLineSymbol"
         )
     }
@@ -213,7 +217,7 @@ class Test {
         val userMethod = applyGeneratorMethod.getMethodFromClass()
         Assertions.assertEquals(
             canvasFilter.result.toAddNewLineSymbol().replaceLineSeparator(),
-            userMethod.invokeWithArgs(pattern, generatorName, canvasFilter.width, canvasFilter.height),
+            userMethod.invokeWithArgs(pattern, generatorName, canvasFilter.width, canvasFilter.height, clazz = findClassSafe()),
             "For pattern:$newLineSymbol$pattern$newLineSymbol, generatorName=$generatorName, width=${canvasFilter.width}, and height=${canvasFilter.height} the function ${applyGeneratorMethod.name} should return $newLineSymbol${canvasFilter.result}$newLineSymbol"
         )
     }

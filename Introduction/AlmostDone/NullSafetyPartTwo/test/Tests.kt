@@ -1,3 +1,8 @@
+import org.jetbrains.academy.test.system.invokeWithArgs
+import org.jetbrains.academy.test.system.invokeWithoutArgs
+import org.jetbrains.academy.test.system.models.TestKotlinType
+import org.jetbrains.academy.test.system.models.method.TestMethod
+import org.jetbrains.academy.test.system.models.variable.TestVariable
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.params.ParameterizedTest
@@ -23,8 +28,8 @@ class Test {
         private const val CUSTOM_IMAGE = "^_^"
 
         private val trimPictureMethod = TestMethod(
-            "trimPicture", "String", listOf(
-                Variable("picture", "String"),
+            "trimPicture", TestKotlinType("String"), listOf(
+                TestVariable("picture", "String"),
             )
         )
 
@@ -32,25 +37,25 @@ class Test {
         fun pictures() = Image.values().map { Arguments.of(it) }
 
         private val applyBordersFilterMethod = TestMethod(
-            "applyBordersFilter", "String", listOf(
-                Variable("picture", "String"),
+            "applyBordersFilter", TestKotlinType("String"), listOf(
+                TestVariable("picture", "String"),
             )
         )
 
         private val applySquaredFilterMethod = TestMethod(
-            "applySquaredFilter", "String", listOf(
-                Variable("picture", "String"),
+            "applySquaredFilter", TestKotlinType("String"), listOf(
+                TestVariable("picture", "String"),
             )
         )
 
         private val applyFilterMethod = TestMethod(
-            "applyFilter", "String", listOf(
-                Variable("picture", "String"),
-                Variable("filter", "String"),
+            "applyFilter", TestKotlinType("String"), listOf(
+                TestVariable("picture", "String"),
+                TestVariable("filter", "String"),
             )
         )
 
-        private val chooseFilterMethod = TestMethod("chooseFilter", "String")
+        private val chooseFilterMethod = TestMethod("chooseFilter", TestKotlinType("String"))
 
         @JvmStatic
         fun filters() = listOf(
@@ -63,7 +68,7 @@ class Test {
             Arguments.of("$BORDERS_BAD${newLineSymbol}$BORDERS$newLineSymbol", true, BORDERS),
         )
 
-        private val choosePictureMethod = TestMethod("choosePicture", "String")
+        private val choosePictureMethod = TestMethod("choosePicture", TestKotlinType("String"))
 
         @JvmStatic
         fun preDefinedPictures() = listOf(
@@ -91,7 +96,7 @@ class Test {
             Arguments.of("$BAD_ANSWER$newLineSymbol$NO$newLineSymbol$CUSTOM_IMAGE$newLineSymbol$CUSTOM_IMAGE$newLineSymbol", false, CUSTOM_IMAGE),
         )
 
-        private val getPictureMethod = TestMethod("getPicture", "String")
+        private val getPictureMethod = TestMethod("getPicture", TestKotlinType("String"))
     }
 
     @Test
@@ -132,7 +137,7 @@ class Test {
     ) {
         val userMethod = testMethod.getMethodFromClass()
         setSystemIn(input)
-        val result = userMethod.invokeWithoutArgs()
+        val result = userMethod.invokeWithoutArgs(clazz = findClassSafe())
         val errorPostfix = if (!isSystemInEmpty) "not" else ""
         Assertions.assertEquals(isSystemInEmpty, isSystemInEmpty(),
             "For the user's input: $input the function ${testMethod.name} should read $errorPostfix " +
@@ -144,7 +149,7 @@ class Test {
 
     @Test
     fun testSafeReadLineFunction() {
-        TestMethod("safeReadLine", "String").getMethodFromClass()
+        TestMethod("safeReadLine", TestKotlinType("String")).getMethodFromClass()
     }
 
     @Test
@@ -169,7 +174,7 @@ class Test {
     ) {
         val expectedPicture = picture.borderedImage.trimIndent().replaceLineSeparator()
         val userMethod = applyFilterMethod.getMethodFromClass()
-        val userPicture = (userMethod.invokeWithArgs(picture.initialImage.trimIndent(), "borders") as String).trim()
+        val userPicture = (userMethod.invokeWithArgs(picture.initialImage.trimIndent(), "borders", clazz = findClassSafe()) as String).trim()
         Assertions.assertEquals(
             expectedPicture, userPicture,
             "For picture:${Util.newLineSeparator}${picture.initialImage}${Util.newLineSeparator} and filter <borders> the function ${applyBordersFilterMethod.name} should return${Util.newLineSeparator}$expectedPicture${Util.newLineSeparator}"
@@ -183,7 +188,7 @@ class Test {
     ) {
         val expectedPicture = picture.squaredImage.trimIndent().replaceLineSeparator()
         val userMethod = applyFilterMethod.getMethodFromClass()
-        val userPicture = (userMethod.invokeWithArgs(picture.initialImage.trimIndent(), "squared") as String).trim()
+        val userPicture = (userMethod.invokeWithArgs(picture.initialImage.trimIndent(), "squared", clazz = findClassSafe()) as String).trim()
         Assertions.assertEquals(
             expectedPicture, userPicture,
             "For picture:${Util.newLineSeparator}${picture.initialImage}${Util.newLineSeparator} and filter <borders> the function ${applyBordersFilterMethod.name} should return${Util.newLineSeparator}$expectedPicture${Util.newLineSeparator}"
@@ -197,7 +202,7 @@ class Test {
     ) {
         val expectedPicture = picture.borderedImage.trimIndent().replaceLineSeparator()
         val userMethod = applyBordersFilterMethod.getMethodFromClass()
-        val userPicture = (userMethod.invokeWithArgs(picture.initialImage.trimIndent()) as String).trim()
+        val userPicture = (userMethod.invokeWithArgs(picture.initialImage.trimIndent(), clazz = findClassSafe()) as String).trim()
         Assertions.assertEquals(
             expectedPicture, userPicture,
             "For picture:${Util.newLineSeparator}${picture.initialImage}${Util.newLineSeparator} the function ${applyBordersFilterMethod.name} should return${Util.newLineSeparator}$expectedPicture${Util.newLineSeparator}"
@@ -211,7 +216,7 @@ class Test {
     ) {
         val expectedPicture = picture.squaredImage.trimIndent().replaceLineSeparator()
         val userMethod = applySquaredFilterMethod.getMethodFromClass()
-        val userPicture = (userMethod.invokeWithArgs(picture.initialImage.trimIndent()) as String).trim()
+        val userPicture = (userMethod.invokeWithArgs(picture.initialImage.trimIndent(), clazz = findClassSafe()) as String).trim()
         Assertions.assertEquals(
             expectedPicture, userPicture,
             "For picture:${Util.newLineSeparator}${picture.initialImage}${Util.newLineSeparator} the function ${applySquaredFilterMethod.name} should return${Util.newLineSeparator}$expectedPicture${Util.newLineSeparator}"
@@ -245,7 +250,7 @@ class Test {
     ) {
         val expectedPicture = picture.initialImage.trimIndent().replaceLineSeparator()
         val userMethod = trimPictureMethod.getMethodFromClass()
-        val actualResult = (userMethod.invokeWithArgs(picture.initialImage) as String).replaceLineSeparator()
+        val actualResult = (userMethod.invokeWithArgs(picture.initialImage, clazz = findClassSafe()) as String).replaceLineSeparator()
         Assertions.assertEquals(
                 expectedPicture, actualResult,
                 "For picture:${Util.newLineSeparator}${picture.initialImage}${Util.newLineSeparator} the function ${trimPictureMethod.name} should return${Util.newLineSeparator}$expectedPicture${Util.newLineSeparator}"

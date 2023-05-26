@@ -1,3 +1,8 @@
+import org.jetbrains.academy.test.system.invokeWithArgs
+import org.jetbrains.academy.test.system.invokeWithoutArgs
+import org.jetbrains.academy.test.system.models.TestKotlinType
+import org.jetbrains.academy.test.system.models.method.TestMethod
+import org.jetbrains.academy.test.system.models.variable.TestVariable
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.params.ParameterizedTest
@@ -8,12 +13,12 @@ import util.*
 class Test {
     companion object {
         private val isCorrectInputMethod = TestMethod(
-            "isCorrectInput", "Boolean", listOf(
-                Variable("userInput", "String"),
+            "isCorrectInput", TestKotlinType("Boolean"), listOf(
+                TestVariable("userInput", "String"),
             )
         )
 
-        private val safeUserInputMethod = TestMethod("safeUserInput", "Char")
+        private val safeUserInputMethod = TestMethod("safeUserInput", TestKotlinType("Char"))
 
         @JvmStatic
         fun functions() = listOf(
@@ -67,7 +72,7 @@ class Test {
         val userMethod = isCorrectInputMethod.getMethodFromClass()
         Assertions.assertEquals(
             isCorrect,
-            userMethod.invokeWithArgs(input),
+            userMethod.invokeWithArgs(input, clazz = findClassSafe()),
             "The function ${isCorrectInputMethod.name} with argument: input=$input should return $isCorrect"
         )
     }
@@ -80,7 +85,7 @@ class Test {
     ) {
         val userMethod = safeUserInputMethod.getMethodFromClass()
         setSystemIn(safeUserInputs)
-        val actualInput = userMethod.invokeWithoutArgs()
+        val actualInput = userMethod.invokeWithoutArgs(findClassSafe())
         Assertions.assertEquals(
             finalInput,
             actualInput,
@@ -97,7 +102,7 @@ class Test {
         expectedGuess: String?
     ) {
         val userMethod = generateNewUserWordMethod.getMethodFromClass()
-        val actualGuess = (userMethod.invokeWithArgs(secret, guess, currentUserWord) as String).dropLastWhile { it.toString() == separator }
+        val actualGuess = (userMethod.invokeWithArgs(secret, guess, currentUserWord, clazz = findClassSafe()) as String).dropLastWhile { it.toString() == separator }
         val expected = expectedGuess ?: currentUserWord
         Assertions.assertEquals(
             expected,
@@ -116,7 +121,7 @@ class Test {
         val userMethod = isCompleteMethod.getMethodFromClass()
         Assertions.assertEquals(
             isComplete,
-            userMethod.invokeWithArgs(secret, currentGuess),
+            userMethod.invokeWithArgs(secret, currentGuess, clazz = findClassSafe()),
             "The function ${isCompleteMethod.name} with arguments: secret=$secret, and currentGuess=$currentGuess should return $isComplete"
         )
     }

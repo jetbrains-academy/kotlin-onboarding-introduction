@@ -1,17 +1,18 @@
 import org.junit.jupiter.params.provider.Arguments
-import util.TestMethod
-import util.Variable
+import org.jetbrains.academy.test.system.models.TestKotlinType
+import org.jetbrains.academy.test.system.models.method.TestMethod
+import org.jetbrains.academy.test.system.models.variable.TestVariable
 
 internal val fillPatternRowMethod = TestMethod(
-    "fillPatternRow", "String", listOf(
-        Variable("patternRow", "String"),
-        Variable("patternWidth", "Int"),
+    "fillPatternRow", TestKotlinType("String"), listOf(
+        TestVariable("patternRow", "String"),
+        TestVariable("patternWidth", "Int"),
     )
 )
 
 internal val getPatternHeightMethod = TestMethod(
-    "getPatternHeight", "Int", listOf(
-        Variable("pattern", "String"),
+    "getPatternHeight", TestKotlinType("Int"), listOf(
+        TestVariable("pattern", "String"),
     )
 )
 
