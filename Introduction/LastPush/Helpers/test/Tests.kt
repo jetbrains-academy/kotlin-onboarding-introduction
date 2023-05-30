@@ -1,3 +1,4 @@
+import org.jetbrains.academy.test.system.invokeWithArgs
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.params.ParameterizedTest
@@ -28,7 +29,7 @@ class Test {
     ) {
         val userMethod = fillPatternRowMethod.getMethodFromClass()
         Assertions.assertEquals(
-            expectedRow, userMethod.invokeWithArgs(patternRow, patternWidth),
+            expectedRow, userMethod.invokeWithArgs(patternRow, patternWidth, clazz = findClassSafe()),
             "For pattern row: $patternRow and patternWidth: $patternWidth the function ${fillPatternRowMethod.name} should return $expectedRow"
         )
     }
@@ -46,7 +47,7 @@ class Test {
     ) {
         val userMethod = getPatternHeightMethod.getMethodFromClass()
         Assertions.assertEquals(
-            patternHeight, userMethod.invokeWithArgs(pattern),
+            patternHeight, userMethod.invokeWithArgs(pattern, clazz = findClassSafe()),
             "For pattern:$newLineSymbol$pattern$newLineSymbol the function ${getPatternHeightMethod.name} should return $patternHeight"
         )
     }

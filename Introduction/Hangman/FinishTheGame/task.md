@@ -38,7 +38,7 @@ The tests for this step will be aimed at checking the following functions:
 - `isCorrectInput`, which checks if the user input is one English letter;
 - `safeUserInput`, which uses `isCorrectInput` and also converts the input to uppercase;
 
-Also, the `main` function will be checked - you need to print the game rules and next to play with the user.
+Also, the `main` function will be checked - you need to print the game rules and next start a game round.
 
 At the end of the game, the user should be informed about the results:
 - if the user lost: `Sorry, you lost! My word is <secret>`

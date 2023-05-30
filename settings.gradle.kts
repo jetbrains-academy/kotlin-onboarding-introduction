@@ -1,5 +1,14 @@
 rootProject.name = "CSC_Kotlin_Course"
 
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+        maven(url = "https://packages.jetbrains.team/maven/p/kotlin-test-framework/kotlin-test-framework")
+    }
+}
+
 rootProject.projectDir.walkTopDown().forEach {
     if (!isTaskDir(it) || it.path.contains(".idea")) {
         return@forEach

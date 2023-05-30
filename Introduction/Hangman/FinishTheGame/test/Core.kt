@@ -1,19 +1,20 @@
+import org.jetbrains.academy.test.system.models.TestKotlinType
+import org.jetbrains.academy.test.system.models.method.TestMethod
+import org.jetbrains.academy.test.system.models.variable.TestVariable
 import org.junit.jupiter.params.provider.Arguments
-import util.TestMethod
-import util.Variable
 
 internal val generateNewUserWordMethod = TestMethod(
-    "generateNewUserWord", "String", listOf(
-        Variable("secret", "String"),
-        Variable("guess", "Char"),
-        Variable("currentUserWord", "String"),
+    "generateNewUserWord", TestKotlinType("String"), listOf(
+        TestVariable("secret", "String"),
+        TestVariable("guess", "Char"),
+        TestVariable("currentUserWord", "String"),
     )
 )
 
 internal val isCompleteMethod = TestMethod(
-    "isComplete", "Boolean", listOf(
-        Variable("secret", "String"),
-        Variable("currentGuess", "String"),
+    "isComplete", TestKotlinType("Boolean"), listOf(
+        TestVariable("secret", "String"),
+        TestVariable("currentGuess", "String"),
     )
 )
 

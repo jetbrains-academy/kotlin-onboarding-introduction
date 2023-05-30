@@ -1,5 +1,6 @@
+import org.jetbrains.academy.test.system.invokeWithArgs
+import org.jetbrains.academy.test.system.models.method.TestMethod
 import org.junit.jupiter.api.Assertions
-import org.junit.jupiter.api.Test
 import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.Arguments
 import org.junit.jupiter.params.provider.MethodSource
@@ -32,7 +33,7 @@ class Test {
         expectedGuess: String?
     ) {
         val userMethod = generateNewUserWordMethod.getMethodFromClass()
-        val actualGuess = (userMethod.invokeWithArgs(secret, guess, currentUserWord) as String).dropLastWhile { it.toString() == separator }
+        val actualGuess = (userMethod.invokeWithArgs(secret, guess, currentUserWord, clazz = findClassSafe()) as String).dropLastWhile { it.toString() == separator }
         val expected = expectedGuess ?: currentUserWord
         Assertions.assertEquals(
             expected,

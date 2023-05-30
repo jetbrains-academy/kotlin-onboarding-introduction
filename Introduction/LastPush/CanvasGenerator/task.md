@@ -11,7 +11,7 @@ The generator works according to the following algorithm:
 1) The **first** level of the generated image does **not change** the pattern;
 2) Each subsequent level in the generated image removes the top line from the pattern,
    but only if the pattern has more than one line;
-3) When repeated **vertically**, the pattern remains **unchanged**.
+3) When repeated **horizontally**, the pattern remains **unchanged**.
 
 <div class="hint" title="The `canvas` filter examples">
   For example, consider the following pattern:

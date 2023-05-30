@@ -1,8 +1,13 @@
+import org.jetbrains.academy.test.system.invokeWithArgs
+import org.jetbrains.academy.test.system.models.TestKotlinType
+import org.jetbrains.academy.test.system.models.method.TestMethod
+import org.jetbrains.academy.test.system.models.variable.TestVariable
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.Arguments
 import org.junit.jupiter.params.provider.MethodSource
+import org.jetbrains.academy.test.system.invokeWithoutArgs
 import util.*
 import java.lang.reflect.InvocationTargetException
 
@@ -16,9 +21,9 @@ class Test {
         )
 
         private val isCompleteMethod = TestMethod(
-            "isComplete", "Boolean", listOf(
-                Variable("secret", "String"),
-                Variable("guess", "String"),
+            "isComplete", TestKotlinType("Boolean"), listOf(
+                TestVariable("secret", "String"),
+                TestVariable("guess", "String"),
             )
         )
     }
@@ -31,17 +36,17 @@ class Test {
         expectedResult: Boolean
     ){
         val userMethod = isCompleteMethod.getMethodFromClass()
-        Assertions.assertEquals(expectedResult, userMethod.invokeWithArgs(secret, guess),
+        Assertions.assertEquals(expectedResult, userMethod.invokeWithArgs(secret, guess, clazz = findClassSafe()),
             "For secret: $secret and guess: $guess the function ${isCompleteMethod.name} should return $expectedResult")
     }
 
     @Test
     fun testPlayGameFunction() {
         TestMethod(
-            "playGame", "Unit", listOf(
-                Variable("secret", "String"),
-                Variable("wordLength", "Int"),
-                Variable("maxAttemptsCount", "Int"),
+            "playGame", TestKotlinType("Unit"), listOf(
+                TestVariable("secret", "String"),
+                TestVariable("wordLength", "Int"),
+                TestVariable("maxAttemptsCount", "Int"),
             ),
             "Void"
         )
@@ -55,20 +60,20 @@ class Test {
     @Test
     fun testGetGameRulesFunction() {
         TestMethod(
-            "getGameRules", "String", listOf(
-                Variable("wordLength", "Int"),
-                Variable("maxAttemptsCount", "Int"),
-                Variable("secretExample", "String"),
+            "getGameRules", TestKotlinType("String"), listOf(
+                TestVariable("wordLength", "Int"),
+                TestVariable("maxAttemptsCount", "Int"),
+                TestVariable("secretExample", "String"),
             )
         ).getMethodFromClass()
     }
 
     @Test
     fun testCountGenerateSecretFunction() {
-        val m = TestMethod("generateSecret", "String", emptyList())
+        val m = TestMethod("generateSecret", TestKotlinType("String"), emptyList())
         val userMethod = m.getMethodFromClass()
         try {
-            val methodRes = userMethod.invokeWithoutArgs()
+            val methodRes = userMethod.invokeWithoutArgs(findClassSafe())
             val expectedResult = "ABCD"
             Assertions.assertEquals(expectedResult, methodRes) { "The method ${m.name} should always return $expectedResult" }
         } catch (e: InvocationTargetException) {
@@ -79,9 +84,9 @@ class Test {
     @Test
     fun testCountPartialMatchesFunction() {
         TestMethod(
-            "countPartialMatches", "Int", listOf(
-                Variable("secret", "String"),
-                Variable("guess", "String"),
+            "countPartialMatches", TestKotlinType("Int"), listOf(
+                TestVariable("secret", "String"),
+                TestVariable("guess", "String"),
             )
         ).getMethodFromClass()
     }
@@ -89,9 +94,9 @@ class Test {
     @Test
     fun testCountExactMatchesFunction() {
         TestMethod(
-            "countExactMatches", "Int", listOf(
-                Variable("secret", "String"),
-                Variable("guess", "String"),
+            "countExactMatches", TestKotlinType("Int"), listOf(
+                TestVariable("secret", "String"),
+                TestVariable("guess", "String"),
             )
         ).getMethodFromClass()
     }
