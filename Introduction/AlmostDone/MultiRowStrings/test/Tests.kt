@@ -17,8 +17,15 @@ class Test {
             )
         )
 
+        private const val WITH_INDENT =
+            """
+            The indent
+            must be
+            deleted
+        """
+
         @JvmStatic
-        fun pictures() = allImages.map { Arguments.of(it.key) }
+        fun pictures() = allImages.map { Arguments.of(it.key) } + WITH_INDENT
     }
 
     @Test
