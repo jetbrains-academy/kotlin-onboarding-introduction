@@ -35,7 +35,7 @@ fun printRoundResults(secret: String, guess: String) {
 
 fun isWin(complete: Boolean, attempts: Int, maxAttemptsCount: Int) = complete && attempts <= maxAttemptsCount
 
-fun isLost(complete: Boolean, attempts: Int, maxAttemptsCount: Int) = !complete && attempts > maxAttemptsCount
+fun isLoss(complete: Boolean, attempts: Int, maxAttemptsCount: Int) = !complete && attempts > maxAttemptsCount
 
 fun safeUserInput(wordLength: Int, alphabet: String): String {
     var guess: String
@@ -69,7 +69,7 @@ fun playGame(secret: String, wordLength: Int, maxAttemptsCount: Int, alphabet: S
         printRoundResults(secret, guess)
         complete = isComplete(secret, guess)
         attempts++
-        if (isLost(complete, attempts, maxAttemptsCount)) {
+        if (isLoss(complete, attempts, maxAttemptsCount)) {
             println("Sorry, you lost! :( My word is $secret")
             break
         } else if (isWin(complete, attempts, maxAttemptsCount)) {

@@ -62,7 +62,7 @@ allprojects {
         implementation("io.gitlab.arturbosch.detekt:detekt-gradle-plugin:$detektVersion")
         implementation("io.gitlab.arturbosch.detekt:detekt-formatting:$detektVersion")
 
-        implementation("org.jetbrains.academy.test.system:kotlin-test-system:1.0.3")
+        implementation("org.jetbrains.academy.test.system:kotlin-test-system:1.0.4")
     }
 
     tasks {

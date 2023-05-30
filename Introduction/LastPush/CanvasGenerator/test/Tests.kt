@@ -31,8 +31,8 @@ class Test {
     ) {
         val userMethod = canvasGeneratorMethod.getMethodFromClass()
         Assertions.assertEquals(
-            canvasFilter.result.toAddNewLineSymbol().replaceLineSeparator(),
-            userMethod.invokeWithArgs(pattern, canvasFilter.width, canvasFilter.height, clazz = findClassSafe()),
+            canvasFilter.result.toAddNewLineSymbol().replaceLineSeparator().trimIndent(),
+            userMethod.invokeWithArgs(pattern, canvasFilter.width, canvasFilter.height, clazz = findClassSafe()).toString().trimIndent(),
             "For pattern:$newLineSymbol$pattern$newLineSymbol, width=${canvasFilter.width}, and height=${canvasFilter.height} the function ${canvasGeneratorMethod.name} should return $newLineSymbol${canvasFilter.result}$newLineSymbol"
         )
     }

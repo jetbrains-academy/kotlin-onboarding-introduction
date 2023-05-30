@@ -58,7 +58,7 @@ ___
 - add new arguments: `wordLength` and `alphabet`;
 - implement the body instead of always returning `ABCD`;
 - add information about the alphabet to the `getGameRules` function with the following sentence:
-`Possible symbols in the word: <alphabet>`:
+` The possible symbols in the word: <alphabet>`:
 ```text
 Welcome to the game! 
 

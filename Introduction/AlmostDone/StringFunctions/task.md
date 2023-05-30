@@ -17,7 +17,7 @@ The string will be converted into a list with two strings: `First line` and `Sec
 
 #### 2. The `repeat` function
 
-Also, to generate a string by repeating a symbol, you can use the [`repeat`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/repeat.html) function:
+Also, to generate a string by repeating a symbol, you can use the [`repeat`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/repeat.html) function:
 ```kotlin
 "@".repeat(4)
 ```

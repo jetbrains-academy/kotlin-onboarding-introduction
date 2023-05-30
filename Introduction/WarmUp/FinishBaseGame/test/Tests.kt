@@ -106,7 +106,7 @@ class Test {
         )
 
         private val isLostMethod = TestMethod(
-            "isLost", TestKotlinType("Boolean"), listOf(
+            "isLoss", TestKotlinType("Boolean"), listOf(
                 TestVariable("complete", "Boolean"),
                 TestVariable("attempts", "Int"),
                 TestVariable("maxAttemptsCount", "Int"),

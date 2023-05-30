@@ -68,12 +68,12 @@ print the number of exact matches and the number of partial matches in the curre
 It should accept two arguments - `secret` and `guess`. 
 The printed text should be the following:
 ```text
-Your guess has <fullMatches> full matches and <partialMatches> partial matches.
+Your guess has <exactMatches> exact matches and <partialMatches> partial matches.
 ```
 
 - Modify the `playGame` function: add a variable that counts the number of the user's attempts. We need to count the attempts from zero, which means the user can try to guess the secret `maxAttemptsCount` + 1 times.
 - Add a function `isWin`, which accepts three arguments: `complete`, `attempts`, and `maxAttemptsCount`
 and returns `true` only if the user guessed the word and spent _not more_ than `maxAttemptsCount` attempts.
-- Add a function `isLost`, which accepts three arguments: `complete`, `attempts`, and `maxAttemptsCount`
+- Add a function `isLoss`, which accepts three arguments: `complete`, `attempts`, and `maxAttemptsCount`
 and returns `true` only if the user did not guess the word and spent _more_ than `maxAttemptsCount` attempts.
 - Modify the `playGame` function: add a condition to check if the user won or lost: `Sorry, you lost! :( My word is <secret>` and `Congratulations! You guessed it!`
