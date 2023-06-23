@@ -11,7 +11,7 @@ Each lesson of the course is built in the form of a project:
 step by step, by completing different small tasks, 
 you will get a finished small project in the end.
 At the end of each lesson, an additional similar project will be offered: 
-it includes all the topics of the lesson but is not contain the theory part.</p>
+it includes all the lesson topics but does not contain the theory part.</p>
 
 <p><i>Note, this course does not provide a detailed explanation of the basic concepts, 
 like variables: it just shows how to use them in Kotlin and can briefly remind you the definitions.</i></p>
@@ -39,7 +39,7 @@ which you can read later. Some of the topics covered in the course are listed be
   <li> Make sure that you use the <a href=\"https://plugins.jetbrains.com/plugin/10081-edutools\">EduTools</a> plugin with version at least <em>2023.3</em>.</li>
 </ol>
 <p>The course is integrated into the <a href=\"https://www.jetbrains.com/idea/\">Intellij Idea IDE</a>, which has a community free license. 
-You may use this license to complete the course. If you have some troubles with the course installation, fell free to contact us by email <a href=\"mailto:education@jetbrains.com\">education@jetbrains.com</a>.</p>
+You may use this license to complete the course. If you have some troubles with the course installation, feel free to contact us by email <a href=\"mailto:education@jetbrains.com\">education@jetbrains.com</a>.</p>
 "
 programming_language: Kotlin
 content:
