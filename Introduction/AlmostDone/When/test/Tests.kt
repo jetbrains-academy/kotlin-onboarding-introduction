@@ -25,7 +25,7 @@ class Test {
         """
 
         @JvmStatic
-        fun pictures() = allImages.map { Arguments.of(it.key) } + WITH_INDENT
+        fun pictures() = allImages.map { Arguments.of(it.value) } + WITH_INDENT
 
         private val applyBordersFilterMethod = TestMethod(
             "applyBordersFilter", TestKotlinType("String"), listOf(

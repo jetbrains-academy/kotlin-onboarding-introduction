@@ -1,8 +1,8 @@
-fun fillPatternRow(patternRow: String, patternWidth: Int) = if (patternRow.length < patternWidth) {
+fun fillPatternRow(patternRow: String, patternWidth: Int) = if (patternRow.length <= patternWidth) {
     val filledSpace = "$separator".repeat(patternWidth - patternRow.length)
     "$patternRow$filledSpace"
 } else {
-    patternRow
+    error("patternRow length > patternWidth, please check the input!")
 }
 
 fun getPatternHeight(pattern: String) = pattern.lines().size

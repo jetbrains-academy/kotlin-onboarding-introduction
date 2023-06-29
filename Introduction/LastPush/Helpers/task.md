@@ -2,7 +2,8 @@ On this step you need to implement several functions that help you with the main
 
 The **tests** of this step will be aimed at checking the following _two_ functions:
 - `fillPatternRow`, which accepts a `patternRow` (one line from the pattern) and `patternWidth`
-  and adds the row `separator` to extend the line to the `patternWidth` size.
+  and adds the row `separator` to extend the line to the `patternWidth` size. 
+  Please, throw an `IllegalStateException` if `patternRow.length > patternWidth`.
 
 - `getPatternHeight`, which accepts a `pattern` and calculates its height.
 
