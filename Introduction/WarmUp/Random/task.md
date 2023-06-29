@@ -44,7 +44,7 @@ you can use the [`joinToString`](https://kotlinlang.org/api/latest/jvm/stdlib/ko
 function, passing as an argument the _separator_ - a character (or rather a _string_) 
 that will be used to separate the elements:
 ```kotlin
-// Separator is ", ", the resulting string is: "6; 6; 6; 6; 6"
+// Separator is "; ", the resulting string is: "6; 6; 6; 6; 6"
 List(5) { 6 }.joinToString("; ")
 // The default separator is ", ", the resulting string is: "A, A, A, A, A"
 List(5) { 'A' }.joinToString()
