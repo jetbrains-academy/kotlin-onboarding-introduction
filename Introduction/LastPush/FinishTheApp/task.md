@@ -13,6 +13,7 @@ The tests of this step will be aimed at checking the following _two_ functions:
 
 Also, the `main` function will be checked for correctness. The `main` function should ask user about pattern, generator, width, and height, 
 and next print the initial pattern and the generated image (like on the gif above).
+In this task, we assume that the user always inputs correct int numbers for width, and height.
 
 In this project, you can use the already implemented functions and variables:
 
