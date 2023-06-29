@@ -9,7 +9,7 @@ On this step you need to finish the app.
 The tests of this step will be aimed at checking the following _two_ functions:
 - `applyGenerator`, which accepts the `pattern`, `generatorName`, `width`, and `height` that were inputted by the user.
   This function should call the necessary generator to return a generated picture.
-- `getPattern`, which asks if the user wants to choose a pre-defined pattern or input a custom one.
+- `getPattern`, which asks if the user wants to choose a pre-defined pattern or input a custom one. This function returns the pattern which should be used for pattern generation.
 
 Also, the `main` function will be checked for correctness. The `main` function should ask user about pattern, generator, width, and height, 
 and next print the initial pattern and the generated image (like on the gif above).
