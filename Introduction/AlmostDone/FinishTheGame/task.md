@@ -9,8 +9,14 @@ ___
 
 **Description**: finish the game – implement the `photoshop` function. 
 Read the picture and the filter using already implemented functions. 
-Next, print the initial picture to the console, apply the filter and print the new picture.
+Next, print the initial picture to the console with the description `The old image:`, apply the filter and print the new picture with its description `The transformed picture:`.
 Finally, call this function in the `main` function.
+
+<div class="hint" title="The console photoshop example">
+
+![Console photoshop example](../../../utils/src/main/resources/images/part1/AlmostDone/game.gif "Console photoshop example")
+
+</div>
 
 Enjoy the project!
 

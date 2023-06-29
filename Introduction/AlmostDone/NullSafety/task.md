@@ -79,9 +79,9 @@ ___
 **Description**: implement the `safeReadLine` function, which returns the string the user inputs or throws an error 
 if the `null` value was received.
 
-Also, implement the `chooseFilter` function, which asks the user to choose a filter (`borders` or `squared`) and returns it.
+Also, implement the `chooseFilter` function, which asks the user to choose a filter (`borders` or `squared`, the full text is `Please choose the filter: 'borders' or 'squared'.`) and returns it.
 This function has to use the `safeReadLine` function. 
-If the user inputs an incorrect filter name, the function should ask to input the right one:
+If the user inputs an incorrect filter name, the function should ask to input the right one `Please input 'borders' or 'squared'`:
 
 ![`chooseFilter` function work](../../../utils/src/main/resources/images/part1/AlmostDone/choose_filter.gif "`chooseFilter` function work")
 

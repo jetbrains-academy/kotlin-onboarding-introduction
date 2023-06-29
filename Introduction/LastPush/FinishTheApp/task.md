@@ -19,6 +19,27 @@ In this project, you can use the already implemented functions and variables:
 - the `getPatternByName` function, which accepts a pattern name and returns the pattern if it exists or `null` otherwise;
 - the `allPatterns` function, which returns the names of all pre-defined patterns.
 
+<div class="hint" title="Messages for the game">
+
+The tests check only the functions and string constants described above,
+but the game's example has several additional messages, e.g., about incorrect input.
+If you would like to make the game better, you can add them, the full list of the messages is below:
+
+- `Unsupported generator: <generatorName>`
+- `Do you want to use a pre-defined pattern or a custom one? Please input 'yes' for a pre-defined pattern or 'no' for a custom one`
+- `Please, input a custom picture`
+- `Please input 'yes' or 'no'`
+- `Please choose a pattern. The possible options: <pattern names>`
+- `Please choose the generator: 'canvas' or 'canvasGaps'.`
+- `Please, input 'canvas' or 'canvasGaps'`
+- `Your input is incorrect, sorry`
+- `Please input the width of the resulting picture:`
+- `Please input the height of the resulting picture:`
+- `The pattern:`
+- `The generated image:`
+
+</div>
+
 If you have any difficulties, **hints will help you solve this task**.
 
 ----
@@ -40,6 +61,7 @@ You can also use <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.te
 
 
 <div class="hint" title="Best practices to handle the user input">
+
   Don't forget to handle input errors in the <code>getPattern</code> function 
   as well as in the user-entered name of the generator (<code>canvas</code> or <code>canvasGaps</code>). 
   The program should not crash on invalid input but rather inform the user of the error and ask them 

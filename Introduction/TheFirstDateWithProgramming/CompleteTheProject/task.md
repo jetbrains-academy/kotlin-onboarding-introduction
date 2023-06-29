@@ -22,9 +22,12 @@ ___
 
 **Description**: Print the real questions and the user's answers to them. 
 The real questions are stored in the already **predefined** `firstQuestion`, `secondQuestion`, and `thirdQuestion` variables.
-Before the real questions, print the text: 'Now let's have fun!'
+Before the real questions, print the text: 
+```text
+Now let's have fun!
+```
 
-"Predefined" means that you can access these variables 
+_Predefined_ means that you can access these variables 
 because the course creator put them in the project and added the necessary values. 
 For example, you can write `println("First question: $firstQuestion")` to print the value from the **predefined** `firstQuestion` variable and an additional text before (or after) it.
 
