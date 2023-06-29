@@ -85,7 +85,7 @@ ___
 
 - _getGameRules_, which has three arguments: _wordLength_, _maxAttemptsCount_, and _secretExample_ and returns 
 the text from the previous task about the game's rules
-- _generateSecret_, which should return the hidden word. For the time being, let this function always return "ABCD"
+- _generateSecret_, which should return the hidden word. For the time being, let this function always return  `ABCD`
 - _countPartialMatches_, which has two arguments (_secret_ and _guess_)
 and returns the number of matched letters between them that are not in the same positions
 - _countExactMatches_, which has two arguments (_secret_ and _guess_)
