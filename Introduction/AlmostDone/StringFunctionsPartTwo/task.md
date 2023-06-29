@@ -28,12 +28,24 @@ If you have any difficulties, **hints will help you solve this task**.
 
 ### Hints
 
+<div class="hint" title="Several examples how applyBordersFilter function should work">
+
+First example:
+<img src="../../../utils/src/main/resources/images/part1/AlmostDone/examples/squared/android.png" alt="Example of the function's work" width="400"/>
+
+Second example:
+<img src="../../../utils/src/main/resources/images/part1/AlmostDone/examples/squared/monkey.png" alt="Example of the function's work" width="400"/>
+
+</div>
+
 <div class="hint" title="The main idea of the algorithm">
+
    You can use the <code>applyBordersFilter</code> function to add the borders, next 
    create two <code>StringBuilder</code>s (one for the top and one for the bottom part), 
    and put them row by row.
 </div>
 
 <div class="hint" title="Pre-defined variable to check your code">
+
    To check how your function works, you can run it in <code>main</code> by passing the pre-defined variable <code>simba</code>.
 </div>

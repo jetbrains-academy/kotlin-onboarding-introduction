@@ -73,6 +73,17 @@ If you have any difficulties, **hints will help you solve this task**.
 
 ### Hints
 
+<div class="hint" title="Several examples how applyBordersFilter function should work">
+
+First example:
+<img src="../../../utils/src/main/resources/images/part1/AlmostDone/examples/borders/android.png" alt="Example of the function's work" width="200"/>
+
+Second example:
+<img src="../../../utils/src/main/resources/images/part1/AlmostDone/examples/borders/monkey.png" alt="Example of the function's work" width="200"/>
+
+</div>
+
+
 <div class="hint" title="Help with determining the width of a picture">
   To define the picture width, you can use the pre-defined function <code>getPictureWidth</code>, which accepts a picture.
   
