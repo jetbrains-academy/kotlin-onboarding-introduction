@@ -87,7 +87,7 @@ Second example:
 <div class="hint" title="Help with determining the width of a picture">
   To define the picture width, you can use the pre-defined function <code>getPictureWidth</code>, which accepts a picture.
   
-  If you want, you can try to implement it by yourself: split the picture by <code>newLineSymbol</code> 
+  If you want, you can try to implement it by yourself: split the picture by using <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/lines.html"><code>lines</code></a> function 
   and next use the <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/max-of-or-null.html"><code>maxOfOrNull</code></a> function.   
 </div>
 
