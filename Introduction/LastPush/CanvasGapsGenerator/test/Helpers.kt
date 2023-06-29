@@ -24,5 +24,4 @@ internal fun patternRowsData() = listOf(
     Arguments.of(ball.repeat(3), 5, "$ball$ball$ball$separator$separator"),
     Arguments.of(ball.repeat(4), 5, "$ball$ball$ball$ball$separator"),
     Arguments.of(ball.repeat(5), 5, ball.repeat(5)),
-    Arguments.of(ball.repeat(6), 5, ball.repeat(6))
 )

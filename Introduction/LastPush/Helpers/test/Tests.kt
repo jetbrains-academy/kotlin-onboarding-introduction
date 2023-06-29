@@ -1,10 +1,12 @@
 import org.jetbrains.academy.test.system.invokeWithArgs
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
+import org.junit.jupiter.api.assertThrows
 import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.Arguments
 import org.junit.jupiter.params.provider.MethodSource
 import util.*
+import java.lang.reflect.InvocationTargetException
 
 class Test {
     companion object {
@@ -32,6 +34,19 @@ class Test {
             expectedRow, userMethod.invokeWithArgs(patternRow, patternWidth, clazz = findClassSafe()),
             "For pattern row: $patternRow and patternWidth: $patternWidth the function ${fillPatternRowMethod.name} should return $expectedRow"
         )
+    }
+
+    @Test
+    fun fillPatternRowErrorCase() {
+        val patternRow = ball.repeat(6)
+        val patternWidth = 5
+
+        try {
+            val userMethod = fillPatternRowMethod.getMethodFromClass()
+            userMethod.invokeWithArgs(patternRow, patternWidth, clazz = findClassSafe())
+        } catch (e: InvocationTargetException) {
+            assert("IllegalStateException" in e.stackTraceToString()) {"The method ${fillPatternRowMethod.name} should throw an IllegalStateException error if patternRow.length > patternWidth, you can check your solution with this data: patternRow = $patternRow and patternWidth = $patternWidth"}
+        }
     }
 
     @Test
