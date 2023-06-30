@@ -27,4 +27,6 @@ fun sanitizeName(name: String) = name.replace("listOf( /\\\\:<>\"?*|())", "_").r
 
 fun isTaskDir(dir: File) = File(dir, "src").exists()
 
-include("utils")
+include(
+    "utils"
+)
