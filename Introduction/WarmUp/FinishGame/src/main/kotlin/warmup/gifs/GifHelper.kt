@@ -11,7 +11,3 @@ fun runGame() {
     println(getGameRules(wordLength, maxAttemptsCount, secretExample, alphabet))
     playGame("ABCD", wordLength, maxAttemptsCount, alphabet)
 }
-
-fun main() {
-    runGame()
-}
