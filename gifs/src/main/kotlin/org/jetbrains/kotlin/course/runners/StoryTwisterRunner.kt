@@ -1,6 +1,6 @@
 package org.jetbrains.kotlin.course.runners
 
-import warmup.gifs.runGame
+import story.twister.runGame
 
 fun main() {
     runGame()
