@@ -4,8 +4,8 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
     java
     kotlin("jvm") version "1.7.10" apply true
-    application
     id("io.gitlab.arturbosch.detekt") version "1.21.0"
+    id("com.github.johnrengelman.shadow") version "7.0.0"
 }
 
 buildscript {
@@ -36,10 +36,10 @@ val detektReportMerge by tasks.registering(io.gitlab.arturbosch.detekt.report.Re
 
 allprojects {
     apply {
-        plugin("application")
         plugin("java")
         plugin("kotlin")
         plugin("io.gitlab.arturbosch.detekt")
+        plugin("com.github.johnrengelman.shadow")
     }
 
     repositories {
