@@ -1,0 +1,30 @@
+terminal_config:
+  cols: 70
+  rows: 30
+
+gif_config:
+  common:
+    font_size: 32
+    font_family: JetBrains Mono
+
+  gifs:
+    - name: 'game_dark'
+      theme: 'jetbrains_dark'
+
+    - name: 'game'
+      theme: 'jetbrains_light'
+
+scenario:
+  - expect: \n
+  - wait: 500
+  - write: "yes"
+
+  - expect: \n
+  - wait: 500
+  - write: simba
+
+  - expect: \n
+  - wait: 500
+  - write: squared
+
+  - expect: "######################################\n"

@@ -1,0 +1,28 @@
+terminal_config:
+  cols: 70
+  rows: 8
+
+gif_config:
+  common:
+    font_size: 32
+    font_family: JetBrains Mono
+
+  gifs:
+    - name: 'get_picture_dark'
+      theme: 'jetbrains_dark'
+
+    - name: 'get_picture'
+      theme: 'jetbrains_light'
+
+scenario:
+  - expect: \n
+  - wait: 500
+  - write: n
+
+  - expect: \n
+  - wait: 500
+  - write: "no"
+
+  - expect: \n
+  - wait: 500
+  - write: ^_^
