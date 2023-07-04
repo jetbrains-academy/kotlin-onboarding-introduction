@@ -1,4 +1,4 @@
-package org.jetbrains.kotlin.course.runners.almostdone
+package org.jetbrains.kotlin.course.runners.almost.done.runners
 
 import almostdone.gif.runChoosePicture
 
