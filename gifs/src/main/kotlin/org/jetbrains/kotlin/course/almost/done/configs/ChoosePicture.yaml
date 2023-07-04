@@ -1,0 +1,24 @@
+terminal_config:
+  cols: 66
+  rows: 7
+
+gif_config:
+  common:
+    font_size: 32
+    font_family: JetBrains Mono
+
+  gifs:
+    - name: 'choose_picture_dark'
+      theme: 'jetbrains_dark'
+
+    - name: 'choose_picture'
+      theme: 'jetbrains_light'
+
+scenario:
+  - expect: \n
+  - wait: 500
+  - write: s
+
+  - expect: \n
+  - wait: 500
+  - write: simba

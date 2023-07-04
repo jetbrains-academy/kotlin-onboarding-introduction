@@ -1,4 +1,4 @@
-package org.jetbrains.kotlin.course.runners
+package org.jetbrains.kotlin.course
 
 import warmup.gifs.runGame
 
