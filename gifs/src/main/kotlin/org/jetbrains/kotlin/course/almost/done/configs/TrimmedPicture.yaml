@@ -19,5 +19,3 @@ scenario:
 
   - wait: 500
   - ctrl: m
-
-  - expect: \n
