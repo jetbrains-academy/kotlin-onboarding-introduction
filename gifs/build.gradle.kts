@@ -61,7 +61,7 @@ val lessonNameToGifConfigNames =
     mapOf("almost.done" to listOf("ChooseFilter", "ChoosePicture", "GetPicture", "Photoshop", "TrimmedPicture"))
 
 
-val lessonGradleTasks = lessonNameToGifConfigNames.forEach { (lessonName, gifConfigNames) ->
+val lessonGradleTasks = lessonNameToGifConfigNames.map { (lessonName, gifConfigNames) ->
     val gifGradleTasks = gifConfigNames.map {
         tasks.register<GenerateGif>("generate-$lessonName-$it") {
             dependsOn(tasks.findByName("installAnderson"))
@@ -84,6 +84,6 @@ val lessonGradleTasks = lessonNameToGifConfigNames.forEach { (lessonName, gifCon
 }
 
 tasks.register("generateGifs") {
-    dependsOn(lessonGradleTasks)
+    setDependsOn(lessonGradleTasks)
     group = "gifs"
 }
