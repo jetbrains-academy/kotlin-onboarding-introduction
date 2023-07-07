@@ -1,6 +1,6 @@
 package org.jetbrains.kotlin.course.almost.done.runners
 
-import almostdone.gif.runTrimmedPicture
+import almost.done.gif.runTrimmedPicture
 
 fun main() {
     runTrimmedPicture()

@@ -92,7 +92,7 @@ In this project, we will implement two obligatory filters (but you can add any o
 
 An example of this filter:
 <p>
-    <img src="../../../utils/src/main/resources/images/part1/AlmostDone/when_hint_1.png" alt="Filter example" width="200"/>
+    <img src="../../../utils/src/main/resources/images/part1/almost.done/when_hint_1.png" alt="Filter example" width="200"/>
 </p>
 
 </div>
@@ -102,7 +102,7 @@ An example of this filter:
 
 An example of this filter:
 <p>
-    <img src="../../../utils/src/main/resources/images/part1/AlmostDone/when_hint_2.png" alt="Filter example" width="400"/>
+    <img src="../../../utils/src/main/resources/images/part1/almost.done/when_hint_2.png" alt="Filter example" width="400"/>
 </p>
 
 </div>

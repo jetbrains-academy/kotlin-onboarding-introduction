@@ -19,7 +19,7 @@ In addition, the project already stores the `newLineSymbol` variable, which can 
 
 Here's an example of the function's work:
 <p>
-    <img src="../../../utils/src/main/resources/images/part1/AlmostDone/when_hint_2.png" alt="Example of the function's work" width="400"/>
+    <img src="../../../utils/src/main/resources/images/part1/almost.done/when_hint_2.png" alt="Example of the function's work" width="400"/>
 </p>
 
 If you have any difficulties, **hints will help you solve this task**.
@@ -31,10 +31,10 @@ If you have any difficulties, **hints will help you solve this task**.
 <div class="hint" title="Several examples how applyBordersFilter function should work">
 
 First example:
-<img src="../../../utils/src/main/resources/images/part1/AlmostDone/examples/squared/android.png" alt="Example of the function's work" width="400"/>
+<img src="../../../utils/src/main/resources/images/part1/almost.done/examples/squared/android.png" alt="Example of the function's work" width="400"/>
 
 Second example:
-<img src="../../../utils/src/main/resources/images/part1/AlmostDone/examples/squared/monkey.png" alt="Example of the function's work" width="400"/>
+<img src="../../../utils/src/main/resources/images/part1/almost.done/examples/squared/monkey.png" alt="Example of the function's work" width="400"/>
 
 </div>
 

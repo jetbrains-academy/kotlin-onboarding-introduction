@@ -83,7 +83,7 @@ Also, implement the `chooseFilter` function, which asks the user to choose a fil
 This function has to use the `safeReadLine` function. 
 If the user inputs an incorrect filter name, the function should ask to input the right one `Please input 'borders' or 'squared'`:
 
-![`chooseFilter` function work](../../../utils/src/main/resources/images/part1/AlmostDone/choose_filter.gif "`chooseFilter` function work")
+![`chooseFilter` function work](../../../utils/src/main/resources/images/part1/almost.done/choose_filter.gif "`chooseFilter` function work")
 
 If you have any difficulties, **hints will help you solve this task**.
 

@@ -1,6 +1,6 @@
 package org.jetbrains.kotlin.course.almost.done.runners
 
-import almostdone.gif.runChoosePicture
+import almost.done.gif.runChoosePicture
 
 fun main() {
     runChoosePicture()
