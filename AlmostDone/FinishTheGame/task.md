@@ -14,7 +14,7 @@ Finally, call this function in the `main` function.
 
 <div class="hint" title="The console photoshop example">
 
-![Console photoshop example](../../utils/src/main/resources/images/part1/AlmostDone/game.gif "Console photoshop example")
+![Console photoshop example](../../utils/src/main/resources/images/part1/almost.done/game.gif "Console photoshop example")
 
 </div>
 

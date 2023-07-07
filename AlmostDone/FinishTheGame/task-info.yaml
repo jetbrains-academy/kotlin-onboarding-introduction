@@ -8,7 +8,7 @@ files:
   visible: true
 - name: src/main/kotlin/jetbrains/kotlin/course/almost/done/Images.kt
   visible: false
-- name: src/main/kotlin/almostdone/gif/GifHelper.kt
+- name: src/main/kotlin/almost/done/gif/GifHelper.kt
   visible: false
 - name: test/PhotoshopTestsUtils.kt
   visible: false

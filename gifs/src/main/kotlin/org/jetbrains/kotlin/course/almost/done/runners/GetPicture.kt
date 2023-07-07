@@ -1,6 +1,6 @@
 package org.jetbrains.kotlin.course.almost.done.runners
 
-import almostdone.gif.runGetPicture
+import almost.done.gif.runGetPicture
 
 fun main() {
     runGetPicture()
