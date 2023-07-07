@@ -2,6 +2,10 @@ terminal_config:
   cols: 49
   rows: 7
 
+interaction_config:
+  action_delay: 200
+  keystroke_delay: 75
+
 gif_config:
   common:
     font_size: 32
@@ -16,13 +20,10 @@ gif_config:
 
 scenario:
   - expect: \n
-  - wait: 500
   - write: b
 
   - expect: \n
-  - wait: 500
   - write: borderss
 
   - expect: \n
-  - wait: 500
   - write: borders

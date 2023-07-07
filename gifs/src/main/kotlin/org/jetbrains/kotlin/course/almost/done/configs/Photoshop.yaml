@@ -1,6 +1,10 @@
 terminal_config:
   cols: 70
-  rows: 30
+  rows: 36
+
+interaction_config:
+  action_delay: 200
+  keystroke_delay: 75
 
 gif_config:
   common:
@@ -16,15 +20,12 @@ gif_config:
 
 scenario:
   - expect: \n
-  - wait: 500
   - write: "yes"
 
   - expect: \n
-  - wait: 500
   - write: simba
 
   - expect: \n
-  - wait: 500
   - write: squared
 
   - expect: "######################################\n"
