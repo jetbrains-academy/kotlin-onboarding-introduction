@@ -106,19 +106,19 @@ To do this, you could run one of the following commands:
 
 - Run 
   ```bash
-  gradle gifs:generateGifs
+  ./gradlew gifs:generateGifs
   ```
   to generate all GIFs in the project.
 
 - Run  
   ```bash
-  gradle gifs:generate-<lessonPackageName>
+  ./gradlew gifs:generate-<lessonPackageName>
   ```
   to generate all GIFs related to some lesson. You can find all possible values for `<lessonPackageName>` [here](gifs/src/main/kotlin/org/jetbrains/kotlin/course).
 
 - Run 
   ```bash
-  gradle gifs:generate-<lessonPackageName>-<gifConfigName>
+  ./gradlew gifs:generate-<lessonPackageName>-<gifConfigName>
   ```
   to generate a specific GIF from some lesson. You can find all possible values for `<gifConfigName>` inside the `config` subfolder of the `<lessonPackageName>` folder.
 
