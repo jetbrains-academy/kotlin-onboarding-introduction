@@ -27,5 +27,3 @@ scenario:
 
   - expect: \n
   - write: squared
-
-  - expect: "######################################\n"
