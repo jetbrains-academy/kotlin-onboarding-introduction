@@ -4,11 +4,11 @@ import java.nio.file.Paths
 group = rootProject.group
 version = rootProject.version
 
-val suffixes = listOf("FinishTheGame", "FinishGame", "CreateTheApp", "FinishTheApp", "CompleteTheProject")
-val stepsForGifs = rootProject.subprojects.filter { suffixes.any { s -> s in it.name } }
+val finalTaskNames = listOf("FinishTheGame", "FinishGame", "CreateTheApp", "FinishTheApp", "CompleteTheProject")
+val tasksForGifs = rootProject.subprojects.filter { finalTaskNames.any { s -> s in it.name } }
 
 dependencies {
-    stepsForGifs.forEach {
+    tasksForGifs.forEach {
         implementation(project(":${it.name}"))
     }
 }
