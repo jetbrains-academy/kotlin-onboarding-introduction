@@ -13,21 +13,28 @@ dependencies {
     }
 }
 
+val andersonVersion = "0.3.1"
+
+tasks.register<Exec>("installAnderson") {
+    group = "gifs"
+    setCommandLine("pip3", "install", "git+https://github.com/GirZ0n/anderson.git@v$andersonVersion")
+}
+
 abstract class GenerateGif : Exec() {
     @get:Input
-    abstract val courseTaskName: Property<String>
+    abstract val lessonPackageName: Property<String>
 
     @get:Input
-    abstract val gifName: Property<String>
+    abstract val gifConfigName: Property<String>
 
     @get:Input
     abstract val output: Property<Path>
 
     override fun exec() {
-        val packageName = "org.jetbrains.kotlin.course.${courseTaskName.get()}"
+        val packageName = "org.jetbrains.kotlin.course.${lessonPackageName.get()}"
 
         val jarPath = Paths.get("build", "libs", "gifs-all.jar")
-        val runnerClasspath = "$packageName.runners.${gifName.get()}Kt"
+        val runnerClasspath = "$packageName.runners.${gifConfigName.get()}Kt"
 
         val configPath = Paths.get(
             "src",
@@ -35,7 +42,7 @@ abstract class GenerateGif : Exec() {
             "kotlin",
             packageName.replace(".", File.separator),
             "configs",
-            "${gifName.get()}.yaml"
+            "${gifConfigName.get()}.yaml"
         )
 
         setCommandLine(
@@ -50,24 +57,33 @@ abstract class GenerateGif : Exec() {
 }
 
 
-// TODO: namings
-val gifsToGenerate = mapOf(
-    "almost.done" to listOf("ChooseFilter", "ChoosePicture", "GetPicture", "Photoshop")
-)
+val lessonNameToGifConfigNames =
+    mapOf("almost.done" to listOf("ChooseFilter", "ChoosePicture", "GetPicture", "Photoshop", "TrimmedPicture"))
 
 
-gifsToGenerate.forEach { (taskName, gifNames) ->
-    val gifTasks = gifNames.map {
-        tasks.register<GenerateGif>("generate-$taskName-$it") {
+val lessonGradleTasks = lessonNameToGifConfigNames.forEach { (lessonName, gifConfigNames) ->
+    val gifGradleTasks = gifConfigNames.map {
+        tasks.register<GenerateGif>("generate-$lessonName-$it") {
+            dependsOn(tasks.findByName("installAnderson"))
+            dependsOn(tasks.shadowJar)
             group = "gifs"
-            courseTaskName.set(taskName)
-            gifName.set(it)
-            output.set(buildDir.toPath()) // TODO: save to the resources folder
+
+            lessonPackageName.set(lessonName)
+            gifConfigName.set(it)
+            output.set(
+                rootProject.childProjects["utils"]!!.projectDir.toPath()
+                    .resolve(Path.of("src", "main", "resources", "images", "part1", lessonName))
+            )
         }
     }
 
-    tasks.register("generate-$taskName") {
+    tasks.register("generate-$lessonName") {
         group = "gifs"
-        setDependsOn(gifTasks)
+        setDependsOn(gifGradleTasks)
     }
+}
+
+tasks.register("generateGifs") {
+    dependsOn(lessonGradleTasks)
+    group = "gifs"
 }
