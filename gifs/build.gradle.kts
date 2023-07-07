@@ -57,8 +57,10 @@ abstract class GenerateGif : Exec() {
 }
 
 
-val lessonNameToGifConfigNames =
-    mapOf("almost.done" to listOf("ChooseFilter", "ChoosePicture", "GetPicture", "Photoshop", "TrimmedPicture"))
+val lessonNameToGifConfigNames = mapOf(
+    "almost.done" to listOf("ChooseFilter", "ChoosePicture", "GetPicture", "Photoshop", "TrimmedPicture"),
+    "last.push" to listOf("App"),
+)
 
 
 val lessonGradleTasks = lessonNameToGifConfigNames.map { (lessonName, gifConfigNames) ->
