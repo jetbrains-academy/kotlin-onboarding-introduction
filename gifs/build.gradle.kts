@@ -64,8 +64,10 @@ val lessonNameToGifConfigNames =
 val lessonGradleTasks = lessonNameToGifConfigNames.map { (lessonName, gifConfigNames) ->
     val gifGradleTasks = gifConfigNames.map {
         tasks.register<GenerateGif>("generate-$lessonName-$it") {
-            dependsOn(tasks.findByName("installAnderson"))
             dependsOn(tasks.shadowJar)
+            dependsOn(tasks.findByName("installAnderson"))
+            tasks.findByName("installAnderson")!!.shouldRunAfter(tasks.shadowJar)
+
             group = "gifs"
 
             lessonPackageName.set(lessonName)
