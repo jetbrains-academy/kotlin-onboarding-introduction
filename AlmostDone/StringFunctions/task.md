@@ -76,10 +76,10 @@ If you have any difficulties, **hints will help you solve this task**.
 <div class="hint" title="Several examples how applyBordersFilter function should work">
 
 First example:
-<img src="../../../utils/src/main/resources/images/part1/AlmostDone/examples/borders/android.png" alt="Example of the function's work" width="200"/>
+<img src="../../utils/src/main/resources/images/part1/AlmostDone/examples/borders/android.png" alt="Example of the function's work" width="200"/>
 
 Second example:
-<img src="../../../utils/src/main/resources/images/part1/AlmostDone/examples/borders/monkey.png" alt="Example of the function's work" width="200"/>
+<img src="../../utils/src/main/resources/images/part1/AlmostDone/examples/borders/monkey.png" alt="Example of the function's work" width="200"/>
 
 </div>
 
