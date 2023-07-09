@@ -1,0 +1,10 @@
+type: edu
+custom_name: Complete the project
+files:
+- name: test/Tests.kt
+  visible: false
+- name: src/main/kotlin/jetbrains/kotlin/course/first/date/Main.kt
+  visible: true
+- name: src/main/kotlin/jetbrains/kotlin/course/first/date/RealQuestions.kt
+  visible: false
+feedback_link: https://docs.google.com/forms/d/e/1FAIpQLScylICclQIi9_YDjO7iuyRITDLn0Qgzw_aLxKxiishKAbL0qg/viewform?usp=pp_url&entry.2103429047=Introduction/The+first+day+with+programming/Complete+the+Project
