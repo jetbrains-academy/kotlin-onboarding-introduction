@@ -1,0 +1,38 @@
+terminal_config:
+  cols: 83
+  rows: 36
+
+interaction_config:
+  action_delay: 200
+  keystroke_delay: 75
+
+gif_config:
+  common:
+    font_size: 32
+    font_family: JetBrains Mono
+
+  gifs:
+    - name: 'game_dark'
+      theme: 'jetbrains_dark'
+
+    - name: 'game'
+      theme: 'jetbrains_light'
+
+scenario:
+  - expect: \n
+  - write: 1
+
+  - expect: \n
+  - write: AB
+
+  - expect: \n
+  - write: A
+
+  - expect: \n
+  - write: E
+
+  - expect: \n
+  - write: T
+
+  - expect: \n
+  - write: R

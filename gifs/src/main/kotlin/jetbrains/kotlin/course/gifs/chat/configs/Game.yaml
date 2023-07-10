@@ -1,0 +1,26 @@
+terminal_config:
+  cols: 78
+  rows: 8
+
+interaction_config:
+  action_delay: 200
+  keystroke_delay: 35
+
+gif_config:
+  common:
+    font_size: 32
+    font_family: JetBrains Mono
+
+  gifs:
+    - name: 'game_dark'
+      theme: 'jetbrains_dark'
+
+    - name: 'game'
+      theme: 'jetbrains_light'
+
+scenario:
+  - expect: \n
+  - write: Anastasiia
+
+  - expect: \n
+  - write: 26

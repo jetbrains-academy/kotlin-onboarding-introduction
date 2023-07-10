@@ -114,7 +114,7 @@ To do this, you could run one of the following commands:
   ```bash
   ./gradlew gifs:generate-<lessonPackageName>
   ```
-  to generate all GIFs related to some lesson. You can find all possible values for `<lessonPackageName>` [here](gifs/src/main/kotlin/org/jetbrains/kotlin/course).
+  to generate all GIFs related to some lesson. You can find all possible values for `<lessonPackageName>` [here](gifs/src/main/kotlin/jetbrains/kotlin/course/gifs).
 
 - Run 
   ```bash

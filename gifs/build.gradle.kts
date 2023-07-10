@@ -31,7 +31,7 @@ abstract class GenerateGif : Exec() {
     abstract val output: Property<Path>
 
     override fun exec() {
-        val packageName = "org.jetbrains.kotlin.course.${lessonPackageName.get()}"
+        val packageName = "jetbrains.kotlin.course.gifs.${lessonPackageName.get()}"
 
         val jarPath = Paths.get("build", "libs", "gifs-all.jar")
         val runnerClasspath = "$packageName.runners.${gifConfigName.get()}Kt"
@@ -58,6 +58,10 @@ abstract class GenerateGif : Exec() {
 
 
 val lessonNameToGifConfigNames = mapOf(
+    "first.date" to listOf("UserInput", "Game"),
+    "chat" to listOf("Game"),
+    "warmup" to listOf("SafeUserInput", "Game"),
+    "hangman" to listOf("Game"),
     "almost.done" to listOf("ChooseFilter", "ChoosePicture", "GetPicture", "Photoshop", "TrimmedPicture"),
     "last.push" to listOf("App"),
 )

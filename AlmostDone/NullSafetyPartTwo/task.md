@@ -47,9 +47,6 @@ which returns `String?` – an image – or `null` if the name is incorrect:
 
 ![`choosePicture` function work](../../utils/src/main/resources/images/part1/almost.done/choose_picture.gif "`choosePicture` function work")
 
-In order for the picture to fit, additional line breaks were added.
-You don't need to add them when solving the task.
-
 - `getPicture` asks the user to choose a pre-defined picture or to input a custom picture:
 ```text
 Do you want to use a pre-defined picture or use a custom one? Please, input 'yes' for a pre-defined image or 'no' for a custom one
@@ -61,9 +58,6 @@ Do you want to use a pre-defined picture or use a custom one? Please, input 'yes
 (3) If the user used an incorrect command, please infrotm the user about it `Please, input 'yes' or 'no'`:
 
 ![`getPicture` function work](../../utils/src/main/resources/images/part1/almost.done/get_picture.gif "`getPicture` function work")
-
-In order for the picture to fit, additional line breaks were added.
-You don't need to add them when solving the task.
 
 If you have any difficulties, **hints will help you solve this task**.
 

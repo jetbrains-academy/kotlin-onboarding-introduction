@@ -104,7 +104,7 @@ This function should have the following behaviour:
 
 Here's an example of the `safeUserInput` function's work:
 
-![The safeUserInput example](../../utils/src/main/resources/images/part1/WarmUp/safe_user_input.gif "The safeUserInput example")
+![The safeUserInput example](../../utils/src/main/resources/images/part1/warmup/safe_user_input.gif "The safeUserInput example")
 
 In order for the picture to fit, additional line breaks were added.
 You don't need to add them when solving the task.

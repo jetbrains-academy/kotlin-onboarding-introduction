@@ -8,7 +8,7 @@ We have no doubt that you will succeed!
 ----
 
 <p align="center">
-    <img src="../../utils/src/main/resources/images/part1/Chat/game.png" alt="Bot for dating" width="400"/>
+    <img src="../../utils/src/main/resources/images/part1/chat/game.png" alt="Bot for dating" width="400"/>
 </p>
 
 The project of this lesson is **Chat**.
@@ -27,10 +27,7 @@ that will communicate with the user in an interactive dialogue format:
 
 An example of the final application:
 
-![Chat example](../../utils/src/main/resources/images/part1/Chat/game.gif "Chat example")
-
-In order for the picture to fit, additional line breaks were added. 
-You don't need to add them when solving the task.
+![Chat example](../../utils/src/main/resources/images/part1/chat/game.gif "Chat example")
 
 If you have any difficulties, **hints will help you solve this task**.
 

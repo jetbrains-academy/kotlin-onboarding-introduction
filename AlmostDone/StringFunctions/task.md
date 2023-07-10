@@ -33,7 +33,7 @@ var myString = "It"
 myString += "is"
 myString += "string"
 ```
-In this case, we will create a string with the text `It`, next – create it again, but with the additional text `is`, an so on.
+In this case, we will create a string with the text `It`, next – create it again, but with the additional text `is`, and so on.
 This affects the execution time of the program, as well as the amount of computer resources it will 
 consume.
 

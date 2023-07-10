@@ -20,7 +20,7 @@ Let's go!
 ----
 
 <p align="center">
-    <img src="../../utils/src/main/resources/images/part1/TheFirstDateWithProgramming/game.png" alt="Story twister" width="400"/>
+    <img src="../../utils/src/main/resources/images/part1/first.date/game.png" alt="Story twister" width="400"/>
 </p>
 
 ### Project description
@@ -39,4 +39,4 @@ We will replace the real questions with new ones to make the final story ridicul
 
 ### Project example
 
-![The game's example](../../utils/src/main/resources/images/part1/TheFirstDateWithProgramming/game.gif "The game's example")
+![The game's example](../../utils/src/main/resources/images/part1/first.date/game.gif "The game's example")

@@ -45,6 +45,6 @@ If you have any difficulties, **hints will help you solve this task**.
 
 As a result, the user's interaction with the game will look like this:
 
-![User interaction example](../../utils/src/main/resources/images/part1/TheFirstDateWithProgramming/user_input.gif "User interaction example")
+![User interaction example](../../utils/src/main/resources/images/part1/first.date/user_input.gif "User interaction example")
 
 </div>
