@@ -1,0 +1,21 @@
+terminal_config:
+  cols: 22
+  rows: 20
+
+gif_config:
+  common:
+    font_size: 32
+    font_family: JetBrains Mono
+
+  gifs:
+    - name: 'trimmed_picture_dark'
+      theme: 'jetbrains_dark'
+
+    - name: 'trimmed_picture'
+      theme: 'jetbrains_light'
+
+scenario:
+  - expect: \n
+
+  - wait: 500
+  - ctrl: m
