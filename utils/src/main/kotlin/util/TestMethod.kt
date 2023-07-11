@@ -18,5 +18,4 @@ fun findClassSafe(
     packageName: String,
     packagePrefix: String = "jetbrains.kotlin.course",
     className: String = "MainKt"
-) = Class.forName("${packagePrefix.removeSuffix(".")}.${packageName.removeSuffix(".")}.$className")
-    ?: throwInternalCourseError()
+) = Class.forName("$packagePrefix.$packageName.$className") ?: throwInternalCourseError()
