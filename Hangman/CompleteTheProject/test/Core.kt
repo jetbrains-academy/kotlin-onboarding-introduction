@@ -1,23 +1,27 @@
 import jetbrains.kotlin.course.hangman.separator
 import jetbrains.kotlin.course.hangman.underscore
-import org.jetbrains.academy.test.system.models.TestKotlinType
-import org.jetbrains.academy.test.system.models.method.TestMethod
-import org.jetbrains.academy.test.system.models.variable.TestVariable
+import org.jetbrains.academy.test.system.core.models.TestKotlinType
+import org.jetbrains.academy.test.system.core.models.method.TestMethod
+import org.jetbrains.academy.test.system.core.models.variable.TestVariable
 import org.junit.jupiter.params.provider.Arguments
 
 internal val generateNewUserWordMethod = TestMethod(
-    "generateNewUserWord", TestKotlinType("String"), listOf(
+    "generateNewUserWord",
+    TestKotlinType("String"),
+    listOf(
         TestVariable("secret", "String"),
         TestVariable("guess", "Char"),
         TestVariable("currentUserWord", "String"),
-    )
+    ),
 )
 
 internal val isCompleteMethod = TestMethod(
-    "isComplete", TestKotlinType("Boolean"), listOf(
+    "isComplete",
+    TestKotlinType("Boolean"),
+    listOf(
         TestVariable("secret", "String"),
         TestVariable("currentGuess", "String"),
-    )
+    ),
 )
 
 internal val underscoreWithSeparator = "$underscore$separator"
