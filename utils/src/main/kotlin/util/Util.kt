@@ -60,6 +60,7 @@ fun isSystemInEmpty() = String(System.`in`.readBytes()).isEmpty()
 
 fun throwInternalCourseError(): Nothing = error("Internal course error!")
 
+@Suppress("LongParameterList")
 fun checkReadLineFunctions(
     vararg args: Any,
     testMethod: TestMethod,
