@@ -29,11 +29,11 @@ ___
 to the _firstUserAnswer_, _secondUserAnswer_, and _thirdUserAnswer_ variables respectively.
 The questions are:
 
-(1) What is TROTEN?
+What is TROTEN?
 
-(2) How did you spend your graduation?
+How did you spend your graduation?
 
-(3) Why does a spider need eight legs?
+Why does a spider need eight legs?
 
 If you have any difficulties, **hints will help you solve this task**.
 
