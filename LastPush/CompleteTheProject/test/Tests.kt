@@ -2,16 +2,19 @@ import jetbrains.kotlin.course.last.push.allPatternsMap
 import jetbrains.kotlin.course.last.push.ball
 import jetbrains.kotlin.course.last.push.main
 import jetbrains.kotlin.course.last.push.newLineSymbol
-import org.jetbrains.academy.test.system.invokeWithArgs
+import org.jetbrains.academy.test.system.core.invokeWithArgs
+import org.jetbrains.academy.test.system.core.models.TestKotlinType
+import org.jetbrains.academy.test.system.core.models.classes.TestClass
+import org.jetbrains.academy.test.system.core.models.classes.findClassSafe
+import org.jetbrains.academy.test.system.core.models.method.TestMethod
+import org.jetbrains.academy.test.system.core.models.variable.TestVariable
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
+import org.junit.jupiter.api.BeforeAll
 import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.Arguments
 import org.junit.jupiter.params.provider.MethodSource
 import util.*
-import org.jetbrains.academy.test.system.models.TestKotlinType
-import org.jetbrains.academy.test.system.models.method.TestMethod
-import org.jetbrains.academy.test.system.models.variable.TestVariable
 import java.lang.reflect.InvocationTargetException
 
 class Test {
@@ -48,17 +51,6 @@ class Test {
         private const val CANVAS_GAPS = "canvasGaps"
 
         private val size_5x7 = "5${newLineSymbol}7$newLineSymbol"
-
-        private val applyGeneratorMethod = TestMethod(
-            "applyGenerator", TestKotlinType("String"), listOf(
-                TestVariable("pattern", "String"),
-                TestVariable("generatorName", "String"),
-                TestVariable("width", "Int"),
-                TestVariable("height", "Int"),
-            )
-        )
-
-        private val getPatternMethod = TestMethod("getPattern", TestKotlinType("String"))
 
         @JvmStatic
         fun patternRows() = patternRowsData()
@@ -126,37 +118,66 @@ class Test {
 
         private fun List<Filter>.find5x7() = this.find { it.width == 5 && it.height == 7 }?.result ?: throwInternalCourseError()
 
-        const val PACKAGE_NAME = "last.push"
+        private val applyGeneratorMethod = TestMethod(
+            "applyGenerator", TestKotlinType("String"), listOf(
+                TestVariable("pattern", "String"),
+                TestVariable("generatorName", "String"),
+                TestVariable("width", "Int"),
+                TestVariable("height", "Int"),
+            )
+        )
+
+        private val getPatternMethod = TestMethod("getPattern", TestKotlinType("String"))
+
+        private val mainClass = TestClass(
+            classPackage = "jetbrains.kotlin.course.last.push",
+            customMethods = listOf(
+                fillPatternRowMethod,
+                getPatternHeightMethod,
+                canvasGeneratorMethod,
+                canvasWithGapsGeneratorMethod,
+                applyGeneratorMethod,
+                getPatternMethod,
+            )
+        )
+
+        private lateinit var mainClazz: Class<*>
+
+        @JvmStatic
+        @BeforeAll
+        fun beforeAll() {
+            mainClazz = mainClass.findClassSafe() ?: throwInternalCourseError()
+        }
     }
 
     @Test
     fun fillPatternRowFunction() {
-        fillPatternRowMethod.getMethodFromClass(PACKAGE_NAME)
+        mainClass.checkMethod(mainClazz, fillPatternRowMethod)
     }
 
     @Test
     fun getPatternHeightFunction() {
-        getPatternHeightMethod.getMethodFromClass(PACKAGE_NAME)
+        mainClass.checkMethod(mainClazz, getPatternHeightMethod)
     }
 
     @Test
     fun canvasGeneratorFunction() {
-        canvasGeneratorMethod.getMethodFromClass(PACKAGE_NAME)
+        mainClass.checkMethod(mainClazz, canvasGeneratorMethod)
     }
 
     @Test
     fun canvasWithGapsGeneratorFunction() {
-        canvasWithGapsGeneratorMethod.getMethodFromClass(PACKAGE_NAME)
+        mainClass.checkMethod(mainClazz, canvasWithGapsGeneratorMethod)
     }
 
     @Test
     fun applyGeneratorFunction() {
-        applyGeneratorMethod.getMethodFromClass(PACKAGE_NAME)
+        mainClass.checkMethod(mainClazz, applyGeneratorMethod)
     }
 
     @Test
     fun getPatternFunction() {
-        getPatternMethod.getMethodFromClass(PACKAGE_NAME)
+        mainClass.checkMethod(mainClazz, getPatternMethod)
     }
 
     @ParameterizedTest
@@ -166,9 +187,9 @@ class Test {
         patternWidth: Int,
         expectedRow: String
     ) {
-        val userMethod = fillPatternRowMethod.getMethodFromClass(PACKAGE_NAME)
+        val userMethod = mainClass.findMethod(mainClazz, fillPatternRowMethod)
         Assertions.assertEquals(
-            expectedRow, userMethod.invokeWithArgs(patternRow, patternWidth, clazz = findClassSafe(PACKAGE_NAME)),
+            expectedRow, userMethod.invokeWithArgs(patternRow, patternWidth, clazz = mainClazz),
             "For pattern row: $patternRow and patternWidth: $patternWidth the function ${fillPatternRowMethod.name} should return $expectedRow"
         )
     }
@@ -179,8 +200,8 @@ class Test {
         val patternWidth = 5
 
         try {
-            val userMethod = fillPatternRowMethod.getMethodFromClass(PACKAGE_NAME)
-            userMethod.invokeWithArgs(patternRow, patternWidth, clazz = findClassSafe(PACKAGE_NAME))
+            val userMethod = mainClass.findMethod(mainClazz, fillPatternRowMethod)
+            userMethod.invokeWithArgs(patternRow, patternWidth, clazz = mainClazz)
         } catch (e: InvocationTargetException) {
             assert("IllegalStateException" in e.stackTraceToString()) {"The method ${fillPatternRowMethod.name} should throw an IllegalStateException error if patternRow.length > patternWidth, you can check your solution with this data: patternRow = $patternRow and patternWidth = $patternWidth"}
         }
@@ -192,9 +213,9 @@ class Test {
         pattern: String,
         patternHeight: Int,
     ) {
-        val userMethod = getPatternHeightMethod.getMethodFromClass(PACKAGE_NAME)
+        val userMethod = mainClass.findMethod(mainClazz, getPatternHeightMethod)
         Assertions.assertEquals(
-            patternHeight, userMethod.invokeWithArgs(pattern, clazz = findClassSafe(PACKAGE_NAME)),
+            patternHeight, userMethod.invokeWithArgs(pattern, clazz = mainClazz),
             "For pattern:$newLineSymbol$pattern$newLineSymbol the function ${getPatternHeightMethod.name} should return $patternHeight"
         )
     }
@@ -205,10 +226,10 @@ class Test {
         pattern: String,
         canvasFilter: Filter,
     ) {
-        val userMethod = canvasGeneratorMethod.getMethodFromClass(PACKAGE_NAME)
+        val userMethod = mainClass.findMethod(mainClazz, canvasGeneratorMethod)
         Assertions.assertEquals(
             canvasFilter.result.toAddNewLineSymbol().replaceLineSeparator().trimIndent(),
-            userMethod.invokeWithArgs(pattern, canvasFilter.width, canvasFilter.height, clazz = findClassSafe(PACKAGE_NAME)).toString().trimIndent(),
+            userMethod.invokeWithArgs(pattern, canvasFilter.width, canvasFilter.height, clazz = mainClazz).toString().trimIndent(),
             "For pattern:$newLineSymbol$pattern$newLineSymbol, width=${canvasFilter.width}, and height=${canvasFilter.height} the function ${canvasGeneratorMethod.name} should return $newLineSymbol${canvasFilter.result}$newLineSymbol"
         )
     }
@@ -219,10 +240,10 @@ class Test {
         pattern: String,
         canvasFilter: Filter,
     ) {
-        val userMethod = canvasWithGapsGeneratorMethod.getMethodFromClass(PACKAGE_NAME)
+        val userMethod = mainClass.findMethod(mainClazz, canvasWithGapsGeneratorMethod)
         Assertions.assertEquals(
             canvasFilter.result.toAddNewLineSymbol().replaceLineSeparator().trimIndent(),
-            userMethod.invokeWithArgs(pattern, canvasFilter.width, canvasFilter.height, clazz = findClassSafe(PACKAGE_NAME)).toString().trimIndent(),
+            userMethod.invokeWithArgs(pattern, canvasFilter.width, canvasFilter.height, clazz = mainClazz).toString().trimIndent(),
             "For pattern:$newLineSymbol$pattern$newLineSymbol, width=${canvasFilter.width}, and height=${canvasFilter.height} the function ${canvasWithGapsGeneratorMethod.name} should return $newLineSymbol${canvasFilter.result}$newLineSymbol"
         )
     }
@@ -234,10 +255,10 @@ class Test {
         pattern: String,
         canvasFilter: Filter,
     ) {
-        val userMethod = applyGeneratorMethod.getMethodFromClass(PACKAGE_NAME)
+        val userMethod = mainClass.findMethod(mainClazz, applyGeneratorMethod)
         Assertions.assertEquals(
             canvasFilter.result.toAddNewLineSymbol().replaceLineSeparator(),
-            userMethod.invokeWithArgs(pattern, generatorName, canvasFilter.width, canvasFilter.height, clazz = findClassSafe(PACKAGE_NAME)),
+            userMethod.invokeWithArgs(pattern, generatorName, canvasFilter.width, canvasFilter.height, clazz = mainClazz),
             "For pattern:$newLineSymbol$pattern$newLineSymbol, generatorName=$generatorName, width=${canvasFilter.width}, and height=${canvasFilter.height} the function ${applyGeneratorMethod.name} should return $newLineSymbol${canvasFilter.result}$newLineSymbol"
         )
     }
@@ -249,7 +270,13 @@ class Test {
         isSystemInEmpty: Boolean,
         output: String
     ) {
-        checkReadLineFunctions(getPatternMethod, PACKAGE_NAME, input, isSystemInEmpty, output)
+        checkReadLineFunctions(
+            testMethod = getPatternMethod,
+            clazz = mainClazz,
+            input = input,
+            isSystemInEmpty = isSystemInEmpty,
+            output = output,
+        )
     }
 
     @ParameterizedTest

@@ -1,6 +1,6 @@
 import jetbrains.kotlin.course.warmup.main
 import jetbrains.kotlin.course.warmup.newLineSymbol
-import org.jetbrains.academy.test.system.models.variable.TestVariable
+import org.jetbrains.academy.test.system.core.models.variable.TestVariable
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
 import util.checkListOfVariables

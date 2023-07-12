@@ -1,7 +1,10 @@
 import jetbrains.kotlin.course.hangman.separator
-import org.jetbrains.academy.test.system.invokeWithArgs
-import org.jetbrains.academy.test.system.models.method.TestMethod
+import org.jetbrains.academy.test.system.core.invokeWithArgs
+import org.jetbrains.academy.test.system.core.models.classes.TestClass
+import org.jetbrains.academy.test.system.core.models.classes.findClassSafe
+import org.jetbrains.academy.test.system.core.models.method.TestMethod
 import org.junit.jupiter.api.Assertions
+import org.junit.jupiter.api.BeforeAll
 import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.Arguments
 import org.junit.jupiter.params.provider.MethodSource
@@ -18,13 +21,27 @@ class Test {
         @JvmStatic
         fun userGuesses() = userGuessesData()
 
-        const val PACKAGE_NAME = "hangman"
+        private val mainClass = TestClass(
+            classPackage = "jetbrains.kotlin.course.hangman",
+            customMethods = listOf(
+                generateNewUserWordMethod,
+                isCompleteMethod,
+            )
+        )
+
+        private lateinit var mainClazz: Class<*>
+
+        @JvmStatic
+        @BeforeAll
+        fun beforeAll() {
+            mainClazz = mainClass.findClassSafe() ?: throwInternalCourseError()
+        }
     }
 
     @ParameterizedTest
     @MethodSource("functions")
     fun testFunctions(function: TestMethod) {
-        function.getMethodFromClass(PACKAGE_NAME)
+        mainClass.checkMethod(mainClazz, function)
     }
 
     @ParameterizedTest
@@ -35,8 +52,8 @@ class Test {
         currentUserWord: String,
         expectedGuess: String?
     ) {
-        val userMethod = generateNewUserWordMethod.getMethodFromClass(PACKAGE_NAME)
-        val actualGuess = (userMethod.invokeWithArgs(secret, guess, currentUserWord, clazz = findClassSafe(PACKAGE_NAME)) as String).dropLastWhile { it.toString() == separator }
+        val userMethod = mainClass.findMethod(mainClazz, generateNewUserWordMethod)
+        val actualGuess = (userMethod.invokeWithArgs(secret, guess, currentUserWord, clazz = mainClazz) as String).dropLastWhile { it.toString() == separator }
         val expected = expectedGuess ?: currentUserWord
         Assertions.assertEquals(
             expected,

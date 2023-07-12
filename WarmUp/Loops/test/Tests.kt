@@ -1,91 +1,135 @@
 import jetbrains.kotlin.course.warmup.main
 import jetbrains.kotlin.course.warmup.newLineSymbol
-import org.jetbrains.academy.test.system.invokeWithArgs
-import org.jetbrains.academy.test.system.models.TestKotlinType
-import org.jetbrains.academy.test.system.models.method.TestMethod
-import org.jetbrains.academy.test.system.models.variable.TestVariable
+import org.jetbrains.academy.test.system.core.invokeWithArgs
+import org.jetbrains.academy.test.system.core.invokeWithoutArgs
+import org.jetbrains.academy.test.system.core.models.TestKotlinType
+import org.jetbrains.academy.test.system.core.models.method.TestMethod
+import org.jetbrains.academy.test.system.core.models.variable.TestVariable
+import org.jetbrains.academy.test.system.core.models.classes.TestClass
+import org.jetbrains.academy.test.system.core.models.classes.findClassSafe
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
-import org.jetbrains.academy.test.system.invokeWithoutArgs
+import org.junit.jupiter.api.BeforeAll
 import util.*
 import java.lang.reflect.InvocationTargetException
 
 class Test {
     companion object {
-        const val PACKAGE_NAME = "warmup"
-    }
+        private val isCompleteMethod = TestMethod(
+            "isComplete",
+            TestKotlinType("Boolean"),
+            listOf(
+                TestVariable("secret", "String"),
+                TestVariable("guess", "String"),
+            ),
+        )
 
-    @Test
-    fun testPlayGameFunction() {
-        TestMethod(
-            "playGame", TestKotlinType("Unit"), listOf(
+        private val generateSecretMethod = TestMethod("generateSecret", TestKotlinType("String"), emptyList())
+
+        private val playGameMethod = TestMethod(
+            "playGame",
+            TestKotlinType("Unit"),
+            listOf(
                 TestVariable("secret", "String"),
                 TestVariable("wordLength", "Int"),
                 TestVariable("maxAttemptsCount", "Int"),
             ),
-            "Void"
+            "Void",
         )
+
+        private val getGameRulesMethod = TestMethod(
+            "getGameRules",
+            TestKotlinType("String"),
+            listOf(
+                TestVariable("wordLength", "Int"),
+                TestVariable("maxAttemptsCount", "Int"),
+                TestVariable("secretExample", "String"),
+            ),
+        )
+
+        private val countPartialMatchesMethod = TestMethod(
+            "countPartialMatches",
+            TestKotlinType("Int"),
+            listOf(
+                TestVariable("secret", "String"),
+                TestVariable("guess", "String"),
+            ),
+        )
+
+        private val countExactMatchesMethod = TestMethod(
+            "countExactMatches",
+            TestKotlinType("Int"),
+            listOf(
+                TestVariable("secret", "String"),
+                TestVariable("guess", "String"),
+            ),
+        )
+
+        private val mainClass = TestClass(
+            classPackage = "jetbrains.kotlin.course.warmup",
+            customMethods = listOf(
+                isCompleteMethod,
+                generateSecretMethod,
+                playGameMethod,
+                getGameRulesMethod,
+                countPartialMatchesMethod,
+                countExactMatchesMethod,
+            ),
+        )
+
+        private lateinit var mainClazz: Class<*>
+
+        @JvmStatic
+        @BeforeAll
+        fun beforeAll() {
+            mainClazz = mainClass.findClassSafe() ?: throwInternalCourseError()
+        }
+    }
+
+    @Test
+    fun testPlayGameFunction() {
+        mainClass.checkMethod(mainClazz, playGameMethod)
     }
 
     @Test
     fun testIsCompleteFunction() {
-        val m = TestMethod(
-            "isComplete", TestKotlinType("Boolean"), listOf(
-                TestVariable("secret", "String"),
-                TestVariable("guess", "String"),
-            )
-        )
-        val userMethod = m.getMethodFromClass(PACKAGE_NAME)
-        val methodRes = userMethod.invokeWithArgs("A", "B", clazz = findClassSafe(PACKAGE_NAME))
+        val userMethod = mainClass.findMethod(mainClazz, isCompleteMethod)
+        val methodRes = userMethod.invokeWithArgs("A", "B", clazz = mainClazz)
         val expectedResult = true
         Assertions.assertEquals(
             expectedResult,
             methodRes
-        ) { "The method ${m.name} should always return $expectedResult" }
+        ) { "The method ${isCompleteMethod.name} should always return $expectedResult" }
     }
 
     @Test
     fun testGetGameRulesFunction() {
-        TestMethod(
-            "getGameRules", TestKotlinType("String"), listOf(
-                TestVariable("wordLength", "Int"),
-                TestVariable("maxAttemptsCount", "Int"),
-                TestVariable("secretExample", "String"),
-            )
-        ).getMethodFromClass(PACKAGE_NAME)
+        mainClass.checkMethod(mainClazz, getGameRulesMethod)
     }
 
     @Test
     fun testCountGenerateSecretFunction() {
-        val m = TestMethod("generateSecret", TestKotlinType("String"), emptyList())
-        val userMethod = m.getMethodFromClass(PACKAGE_NAME)
+        val userMethod = mainClass.findMethod(mainClazz, generateSecretMethod)
         try {
-            val methodRes = userMethod.invokeWithoutArgs(findClassSafe(PACKAGE_NAME))
+            val methodRes = userMethod.invokeWithoutArgs(mainClazz)
             val expectedResult = "ABCD"
-            Assertions.assertEquals(expectedResult, methodRes) { "The method ${m.name} should always return $expectedResult" }
+            Assertions.assertEquals(
+                expectedResult,
+                methodRes
+            ) { "The method ${generateSecretMethod.name} should always return $expectedResult" }
         } catch (e: InvocationTargetException) {
-            assert(false) { "The method ${m.name} should always return \"ABCD\" now" }
+            assert(false) { "The method ${generateSecretMethod.name} should always return \"ABCD\" now" }
         }
     }
 
     @Test
     fun testCountPartialMatchesFunction() {
-        TestMethod(
-            "countPartialMatches", TestKotlinType("Int"), listOf(
-                TestVariable("secret", "String"),
-                TestVariable("guess", "String"),
-            )
-        ).getMethodFromClass(PACKAGE_NAME)
+        mainClass.checkMethod(mainClazz, countPartialMatchesMethod)
     }
 
     @Test
     fun testCountExactMatchesFunction() {
-        TestMethod(
-            "countExactMatches", TestKotlinType("Int"), listOf(
-                TestVariable("secret", "String"),
-                TestVariable("guess", "String"),
-            )
-        ).getMethodFromClass(PACKAGE_NAME)
+        mainClass.checkMethod(mainClazz, countExactMatchesMethod)
     }
 
     @Test
