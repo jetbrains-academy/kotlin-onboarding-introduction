@@ -52,7 +52,7 @@ class Test {
                 TestVariable("wordLength", "Int"),
                 TestVariable("maxAttemptsCount", "Int"),
                 TestVariable("secretExample", "String"),
-            )
+            ),
         )
 
         private val generateSecretMethod = TestMethod("generateSecret", TestKotlinType("String"), emptyList())
