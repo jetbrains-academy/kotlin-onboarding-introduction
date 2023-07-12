@@ -249,7 +249,7 @@ class Test {
         val userPicture = (userMethod.invokeWithArgs(picture.initialImage.trimIndent(), "borders", clazz = mainClazz) as String).trim()
         Assertions.assertEquals(
             expectedPicture, userPicture,
-            "For picture:${Util.newLineSeparator}${picture.initialImage}${Util.newLineSeparator} and filter <borders> the function ${applyBordersFilterMethod.name} should return${Util.newLineSeparator}$expectedPicture${Util.newLineSeparator}"
+            "For picture:${Util.newLineSeparator}${picture.initialImage}${Util.newLineSeparator} and filter <borders> the function ${applyFilterMethod.name} should return${Util.newLineSeparator}$expectedPicture${Util.newLineSeparator}"
         )
     }
 
@@ -261,7 +261,7 @@ class Test {
         val userPicture = (userMethod.invokeWithArgs(picture.initialImage.trimIndent(), "squared", clazz = mainClazz) as String).trim()
         Assertions.assertEquals(
             expectedPicture, userPicture,
-            "For picture:${Util.newLineSeparator}${picture.initialImage}${Util.newLineSeparator} and filter <squared> the function ${applyBordersFilterMethod.name} should return${Util.newLineSeparator}$expectedPicture${Util.newLineSeparator}"
+            "For picture:${Util.newLineSeparator}${picture.initialImage}${Util.newLineSeparator} and filter <squared> the function ${applyFilterMethod.name} should return${Util.newLineSeparator}$expectedPicture${Util.newLineSeparator}"
         )
     }
 
