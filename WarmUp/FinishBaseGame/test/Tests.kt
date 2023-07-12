@@ -81,41 +81,50 @@ class Test {
         )
 
         private val isCompleteMethod = TestMethod(
-            "isComplete", TestKotlinType("Boolean"), listOf(
-                TestVariable("secret", "String"),
-                TestVariable("guess", "String"),
-            )
-        )
-
-        private val countExactMatchesMethod = TestMethod(
-            "countExactMatches", TestKotlinType("Int"),
+            "isComplete",
+            TestKotlinType("Boolean"),
             listOf(
                 TestVariable("secret", "String"),
                 TestVariable("guess", "String"),
-            )
+            ),
+        )
+
+        private val countExactMatchesMethod = TestMethod(
+            "countExactMatches",
+            TestKotlinType("Int"),
+            listOf(
+                TestVariable("secret", "String"),
+                TestVariable("guess", "String"),
+            ),
         )
 
         private val countPartialMatchesMethod = TestMethod(
-            "countPartialMatches", TestKotlinType("Int"), listOf(
+            "countPartialMatches",
+            TestKotlinType("Int"),
+            listOf(
                 TestVariable("secret", "String"),
                 TestVariable("guess", "String"),
-            )
+            ),
         )
 
         private val isWinMethod = TestMethod(
-            "isWin", TestKotlinType("Boolean"), listOf(
+            "isWin",
+            TestKotlinType("Boolean"),
+            listOf(
                 TestVariable("complete", "Boolean"),
                 TestVariable("attempts", "Int"),
                 TestVariable("maxAttemptsCount", "Int"),
-            )
+            ),
         )
 
         private val isLostMethod = TestMethod(
-            "isLoss", TestKotlinType("Boolean"), listOf(
+            "isLoss",
+            TestKotlinType("Boolean"),
+            listOf(
                 TestVariable("complete", "Boolean"),
                 TestVariable("attempts", "Int"),
                 TestVariable("maxAttemptsCount", "Int"),
-            )
+            ),
         )
 
         private val generateSecretMethod = TestMethod("generateSecret", TestKotlinType("String"), emptyList())
