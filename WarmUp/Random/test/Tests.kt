@@ -1,8 +1,4 @@
 import org.jetbrains.academy.test.system.core.invokeWithArgs
-import org.jetbrains.academy.test.system.core.models.TestKotlinType
-import org.jetbrains.academy.test.system.core.models.method.TestMethod
-import org.jetbrains.academy.test.system.core.models.variable.TestVariable
-import org.jetbrains.academy.test.system.core.models.classes.TestClass
 import org.jetbrains.academy.test.system.core.models.classes.findClassSafe
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.BeforeAll
@@ -57,97 +53,6 @@ class Test {
             Arguments.of(5, "ABCDE"),
             Arguments.of(3, "ABCDEFG"),
             Arguments.of(5, "ABCDEFG"),
-        )
-
-        private val isCompleteMethod = TestMethod(
-            "isComplete",
-            TestKotlinType("Boolean"),
-            listOf(
-                TestVariable("secret", "String"),
-                TestVariable("guess", "String"),
-            ),
-        )
-
-        private val countExactMatchesMethod = TestMethod(
-            "countExactMatches",
-            TestKotlinType("Int"),
-            listOf(
-                TestVariable("secret", "String"),
-                TestVariable("guess", "String"),
-            ),
-        )
-
-        private val countPartialMatchesMethod = TestMethod(
-            "countPartialMatches",
-            TestKotlinType("Int"),
-            listOf(
-                TestVariable("secret", "String"),
-                TestVariable("guess", "String"),
-            ),
-        )
-
-        private val isWinMethod = TestMethod(
-            "isWin",
-            TestKotlinType("Boolean"),
-            listOf(
-                TestVariable("complete", "Boolean"),
-                TestVariable("attempts", "Int"),
-                TestVariable("maxAttemptsCount", "Int"),
-            ),
-        )
-
-        private val isLostMethod = TestMethod(
-            "isLoss",
-            TestKotlinType("Boolean"),
-            listOf(
-                TestVariable("complete", "Boolean"),
-                TestVariable("attempts", "Int"),
-                TestVariable("maxAttemptsCount", "Int"),
-            ),
-        )
-
-        private val generateSecretMethod = TestMethod(
-            "generateSecret",
-            TestKotlinType("String"),
-            listOf(
-                TestVariable("wordLength", "Int"),
-                TestVariable("alphabet", "String"),
-            ),
-        )
-
-        private val getGameRulesMethod = TestMethod(
-            "getGameRules",
-            TestKotlinType("String"),
-            listOf(
-                TestVariable("wordLength", "Int"),
-                TestVariable("maxAttemptsCount", "Int"),
-                TestVariable("secretExample", "String"),
-                TestVariable("alphabet", "String"),
-            ),
-        )
-
-        private val printRoundResultsMethod = TestMethod(
-            "printRoundResults",
-            TestKotlinType("Unit"),
-            listOf(
-                TestVariable("secret", "String"),
-                TestVariable("guess", "String"),
-            ),
-            "Void",
-        )
-
-        private val mainClass = TestClass(
-            classPackage = "jetbrains.kotlin.course.warmup",
-            customMethods = listOf(
-                isCompleteMethod,
-                countExactMatchesMethod,
-                countPartialMatchesMethod,
-                isWinMethod,
-                isLostMethod,
-                generateSecretMethod,
-                getGameRulesMethod,
-                printRoundResultsMethod,
-            ),
         )
 
         private lateinit var mainClazz: Class<*>

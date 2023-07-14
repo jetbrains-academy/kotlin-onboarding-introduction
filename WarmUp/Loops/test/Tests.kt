@@ -2,10 +2,6 @@ import jetbrains.kotlin.course.warmup.main
 import jetbrains.kotlin.course.warmup.newLineSymbol
 import org.jetbrains.academy.test.system.core.invokeWithArgs
 import org.jetbrains.academy.test.system.core.invokeWithoutArgs
-import org.jetbrains.academy.test.system.core.models.TestKotlinType
-import org.jetbrains.academy.test.system.core.models.method.TestMethod
-import org.jetbrains.academy.test.system.core.models.variable.TestVariable
-import org.jetbrains.academy.test.system.core.models.classes.TestClass
 import org.jetbrains.academy.test.system.core.models.classes.findClassSafe
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
@@ -15,68 +11,6 @@ import java.lang.reflect.InvocationTargetException
 
 class Test {
     companion object {
-        private val isCompleteMethod = TestMethod(
-            "isComplete",
-            TestKotlinType("Boolean"),
-            listOf(
-                TestVariable("secret", "String"),
-                TestVariable("guess", "String"),
-            ),
-        )
-
-        private val generateSecretMethod = TestMethod("generateSecret", TestKotlinType("String"), emptyList())
-
-        private val playGameMethod = TestMethod(
-            "playGame",
-            TestKotlinType("Unit"),
-            listOf(
-                TestVariable("secret", "String"),
-                TestVariable("wordLength", "Int"),
-                TestVariable("maxAttemptsCount", "Int"),
-            ),
-            "Void",
-        )
-
-        private val getGameRulesMethod = TestMethod(
-            "getGameRules",
-            TestKotlinType("String"),
-            listOf(
-                TestVariable("wordLength", "Int"),
-                TestVariable("maxAttemptsCount", "Int"),
-                TestVariable("secretExample", "String"),
-            ),
-        )
-
-        private val countPartialMatchesMethod = TestMethod(
-            "countPartialMatches",
-            TestKotlinType("Int"),
-            listOf(
-                TestVariable("secret", "String"),
-                TestVariable("guess", "String"),
-            ),
-        )
-
-        private val countExactMatchesMethod = TestMethod(
-            "countExactMatches",
-            TestKotlinType("Int"),
-            listOf(
-                TestVariable("secret", "String"),
-                TestVariable("guess", "String"),
-            ),
-        )
-
-        private val mainClass = TestClass(
-            classPackage = "jetbrains.kotlin.course.warmup",
-            customMethods = listOf(
-                isCompleteMethod,
-                generateSecretMethod,
-                playGameMethod,
-                getGameRulesMethod,
-                countPartialMatchesMethod,
-                countExactMatchesMethod,
-            ),
-        )
-
         private lateinit var mainClazz: Class<*>
 
         @JvmStatic
