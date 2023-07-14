@@ -1,7 +1,6 @@
 import jetbrains.kotlin.course.last.push.ball
 import jetbrains.kotlin.course.last.push.newLineSymbol
 import org.jetbrains.academy.test.system.core.invokeWithArgs
-import org.jetbrains.academy.test.system.core.models.classes.TestClass
 import org.jetbrains.academy.test.system.core.models.classes.findClassSafe
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.BeforeAll
@@ -22,15 +21,6 @@ class Test {
 
         @JvmStatic
         fun canvasArguments() = canvas().toArguments()
-
-        private val mainClass = TestClass(
-            classPackage = "jetbrains.kotlin.course.last.push",
-            customMethods = listOf(
-                canvasGeneratorMethod,
-                fillPatternRowMethod,
-                getPatternHeightMethod,
-            ),
-        )
 
         private lateinit var mainClazz: Class<*>
 

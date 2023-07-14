@@ -3,11 +3,7 @@ import jetbrains.kotlin.course.last.push.ball
 import jetbrains.kotlin.course.last.push.main
 import jetbrains.kotlin.course.last.push.newLineSymbol
 import org.jetbrains.academy.test.system.core.invokeWithArgs
-import org.jetbrains.academy.test.system.core.models.TestKotlinType
-import org.jetbrains.academy.test.system.core.models.classes.TestClass
 import org.jetbrains.academy.test.system.core.models.classes.findClassSafe
-import org.jetbrains.academy.test.system.core.models.method.TestMethod
-import org.jetbrains.academy.test.system.core.models.variable.TestVariable
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.BeforeAll
@@ -117,29 +113,6 @@ class Test {
         )
 
         private fun List<Filter>.find5x7() = this.find { it.width == 5 && it.height == 7 }?.result ?: throwInternalCourseError()
-
-        private val applyGeneratorMethod = TestMethod(
-            "applyGenerator", TestKotlinType("String"), listOf(
-                TestVariable("pattern", "String"),
-                TestVariable("generatorName", "String"),
-                TestVariable("width", "Int"),
-                TestVariable("height", "Int"),
-            )
-        )
-
-        private val getPatternMethod = TestMethod("getPattern", TestKotlinType("String"))
-
-        private val mainClass = TestClass(
-            classPackage = "jetbrains.kotlin.course.last.push",
-            customMethods = listOf(
-                fillPatternRowMethod,
-                getPatternHeightMethod,
-                canvasGeneratorMethod,
-                canvasWithGapsGeneratorMethod,
-                applyGeneratorMethod,
-                getPatternMethod,
-            )
-        )
 
         private lateinit var mainClazz: Class<*>
 
