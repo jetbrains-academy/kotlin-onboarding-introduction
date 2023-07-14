@@ -1,6 +1,6 @@
 package util
 
-import org.jetbrains.academy.test.system.models.variable.TestVariable
+import org.jetbrains.academy.test.system.core.models.variable.TestVariable
 import java.io.File
 
 fun TestVariable.variableDefModifier() = "val ${this.name}"

@@ -1,21 +1,23 @@
 import jetbrains.kotlin.course.last.push.ball
 import jetbrains.kotlin.course.last.push.separator
 import org.junit.jupiter.params.provider.Arguments
-import org.jetbrains.academy.test.system.models.TestKotlinType
-import org.jetbrains.academy.test.system.models.method.TestMethod
-import org.jetbrains.academy.test.system.models.variable.TestVariable
+import org.jetbrains.academy.test.system.core.models.TestKotlinType
+import org.jetbrains.academy.test.system.core.models.method.TestMethod
+import org.jetbrains.academy.test.system.core.models.variable.TestVariable
 
 internal val fillPatternRowMethod = TestMethod(
-    "fillPatternRow", TestKotlinType("String"), listOf(
+    "fillPatternRow",
+    TestKotlinType("String"),
+    listOf(
         TestVariable("patternRow", "String"),
         TestVariable("patternWidth", "Int"),
-    )
+    ),
 )
 
 internal val getPatternHeightMethod = TestMethod(
-    "getPatternHeight", TestKotlinType("Int"), listOf(
-        TestVariable("pattern", "String"),
-    )
+    "getPatternHeight",
+    TestKotlinType("Int"),
+    listOf(TestVariable("pattern", "String")),
 )
 
 internal fun patternRowsData() = listOf(

@@ -1,12 +1,14 @@
 package util
 
-import org.jetbrains.academy.test.system.invokeWithoutArgs
+import org.jetbrains.academy.test.system.core.findMethod
+import org.jetbrains.academy.test.system.core.invokeWithArgs
+import org.jetbrains.academy.test.system.core.invokeWithoutArgs
+import org.jetbrains.academy.test.system.core.models.method.TestMethod
 import org.junit.jupiter.api.Assertions
 import util.Util.newLineSeparator
 import java.io.ByteArrayOutputStream
 import java.io.PrintStream
 import java.nio.charset.StandardCharsets
-import org.jetbrains.academy.test.system.models.method.TestMethod
 
 object Util {
     const val DEFAULT_USER_INPUT = "<some user's answer>"
@@ -58,16 +60,19 @@ fun isSystemInEmpty() = String(System.`in`.readBytes()).isEmpty()
 
 fun throwInternalCourseError(): Nothing = error("Internal course error!")
 
+@Suppress("LongParameterList")
 fun checkReadLineFunctions(
+    vararg args: Any,
     testMethod: TestMethod,
-    packageName: String,
+    clazz: Class<*>,
     input: String,
     isSystemInEmpty: Boolean,
-    output: String
+    output: String,
 ) {
-    val userMethod = testMethod.getMethodFromClass(packageName)
+    val userMethod = clazz.methods.findMethod(testMethod)
     setSystemIn(input)
-    val result = userMethod.invokeWithoutArgs(findClassSafe(packageName))
+    val result =
+        if (args.isEmpty()) userMethod.invokeWithoutArgs(clazz) else userMethod.invokeWithArgs(*args, clazz = clazz)
     val errorPostfix = if (!isSystemInEmpty) "not" else ""
     Assertions.assertEquals(
         isSystemInEmpty, isSystemInEmpty(),
