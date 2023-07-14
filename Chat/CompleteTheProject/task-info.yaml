@@ -1,0 +1,17 @@
+type: edu
+custom_name: Create the app
+files:
+- name: src/main/kotlin/jetbrains/kotlin/course/chat/Main.kt
+  visible: true
+  placeholders:
+  - offset: 0
+    length: 453
+    placeholder_text: |-
+      package jetbrains.kotlin.course.chat
+      
+      fun main() {
+          // Write your solution here
+      }
+- name: test/Tests.kt
+  visible: false
+feedback_link: https://docs.google.com/forms/d/e/1FAIpQLScylICclQIi9_YDjO7iuyRITDLn0Qgzw_aLxKxiishKAbL0qg/viewform?usp=pp_url&entry.2103429047=Introduction/Chat/Create+the+app

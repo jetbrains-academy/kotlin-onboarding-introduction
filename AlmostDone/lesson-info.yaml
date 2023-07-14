@@ -1,0 +1,12 @@
+type: framework
+custom_name: Almost done
+content:
+- Introduction
+- MultiRowStrings
+- When
+- StringFunctions
+- StringFunctionsPartTwo
+- NullSafety
+- NullSafetyPartTwo
+- CompleteTheProject
+is_template_based: false

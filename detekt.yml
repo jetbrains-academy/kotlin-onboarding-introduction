@@ -17,26 +17,26 @@ style:
   UnusedPrivateMember:
     active: true
     excludes: [
-      "**/Introduction/AlmostDone/StringFunctions/src/main/kotlin/Main.kt",
-      "**/Introduction/AlmostDone/When/src/main/kotlin/Main.kt",
-      "**/Introduction/TheFirstDateWithProgramming/ReadUserInput/src/main/kotlin/Main.kt",
-      "**/Introduction/TheFirstDateWithProgramming/Variables/src/main/kotlin/Main.kt",
-      "**/Introduction/WarmUp/Collections/src/main/kotlin/Main.kt",
-      "**/Introduction/WarmUp/CollectionsPartTwo/src/main/kotlin/Main.kt",
-      "**/Introduction/WarmUp/CustomFunctions/src/main/kotlin/Main.kt",
-      "**/Introduction/WarmUp/If/src/main/kotlin/Main.kt",
-      "**/Introduction/WarmUp/Loops/src/main/kotlin/Main.kt",
+      "**/AlmostDone/StringFunctions/src/main/kotlin/jetbrains/kotlin/course/almost/done/Main.kt",
+      "**/AlmostDone/When/src/main/kotlin/jetbrains/kotlin/course/almost/done/Main.kt",
+      "**/TheFirstDateWithProgramming/ReadUserInput/src/main/kotlin/jetbrains/kotlin/course/first/date/Main.kt",
+      "**/TheFirstDateWithProgramming/Variables/src/main/kotlin/jetbrains/kotlin/course/first/date/Main.kt",
+      "**/WarmUp/Collections/src/main/kotlin/jetbrains/kotlin/course/warmup/Main.kt",
+      "**/WarmUp/CollectionsPartTwo/src/main/kotlin/jetbrains/kotlin/course/warmup/Main.kt",
+      "**/WarmUp/CustomFunctions/src/main/kotlin/jetbrains/kotlin/course/warmup/Main.kt",
+      "**/WarmUp/If/src/main/kotlin/jetbrains/kotlin/course/warmup/Main.kt",
+      "**/WarmUp/Loops/src/main/kotlin/jetbrains/kotlin/course/warmup/Main.kt",
 
     ]
   FunctionOnlyReturningConstant:
     active: true
     excludes: [
-      "**/Introduction/WarmUp/Collections/src/main/kotlin/Main.kt",
-      "**/Introduction/WarmUp/CollectionsPartTwo/src/main/kotlin/Main.kt",
-      "**/Introduction/WarmUp/CustomFunctions/src/main/kotlin/Main.kt",
-      "**/Introduction/WarmUp/FinishBaseGame/src/main/kotlin/Main.kt",
-      "**/Introduction/WarmUp/If/src/main/kotlin/Main.kt",
-      "**/Introduction/WarmUp/Loops/src/main/kotlin/Main.kt",
+      "**/WarmUp/Collections/src/main/kotlin/jetbrains/kotlin/course/warmup/Main.kt",
+      "**/WarmUp/CollectionsPartTwo/src/main/kotlin/jetbrains/kotlin/course/warmup/Main.kt",
+      "**/WarmUp/CustomFunctions/src/main/kotlin/jetbrains/kotlin/course/warmup/Main.kt",
+      "**/WarmUp/FinishBaseGame/src/main/kotlin/jetbrains/kotlin/course/warmup/Main.kt",
+      "**/WarmUp/If/src/main/kotlin/jetbrains/kotlin/course/warmup/Main.kt",
+      "**/WarmUp/Loops/src/main/kotlin/jetbrains/kotlin/course/warmup/Main.kt",
     ]
 
 complexity:

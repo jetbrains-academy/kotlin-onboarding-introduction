@@ -60,13 +60,14 @@ fun throwInternalCourseError(): Nothing = error("Internal course error!")
 
 fun checkReadLineFunctions(
     testMethod: TestMethod,
+    packageName: String,
     input: String,
     isSystemInEmpty: Boolean,
     output: String
 ) {
-    val userMethod = testMethod.getMethodFromClass()
+    val userMethod = testMethod.getMethodFromClass(packageName)
     setSystemIn(input)
-    val result = userMethod.invokeWithoutArgs(findClassSafe())
+    val result = userMethod.invokeWithoutArgs(findClassSafe(packageName))
     val errorPostfix = if (!isSystemInEmpty) "not" else ""
     Assertions.assertEquals(
         isSystemInEmpty, isSystemInEmpty(),

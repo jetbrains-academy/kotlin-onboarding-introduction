@@ -43,4 +43,10 @@ You may use this license to complete the course. If you have some troubles with 
 "
 programming_language: Kotlin
 content:
-- Introduction
+  - TheFirstDateWithProgramming
+  - Chat
+  - WarmUp
+  - Hangman
+  - AlmostDone
+  - LastPush
+  - FeedbackSurvey

@@ -1,0 +1,14 @@
+type: framework
+custom_name: Warm up
+content:
+- Introduction
+- TypesOfVariables
+- CustomFunctions
+- Loops
+- If
+- Collections
+- CollectionsPartTwo
+- FinishBaseGame
+- Random
+- CompleteTheProject
+is_template_based: false

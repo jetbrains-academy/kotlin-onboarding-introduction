@@ -4,10 +4,19 @@ import org.jetbrains.academy.test.system.findMethod
 import org.jetbrains.academy.test.system.models.method.TestMethod
 import java.lang.reflect.Method
 
-fun TestMethod.getMethodFromClass(className: String = "MainKt"): Method {
-    val clazz = findClassSafe(className)
+fun TestMethod.getMethodFromClass(
+    packageName: String,
+    packagePrefix: String = "jetbrains.kotlin.course",
+    className: String = "MainKt",
+): Method {
+    val clazz = findClassSafe(packageName, packagePrefix, className)
     val methods = clazz.methods
     return methods.findMethod(this)
 }
 
-fun findClassSafe(className: String  = "MainKt") = Class.forName(className) ?: throwInternalCourseError()
+fun findClassSafe(
+    packageName: String,
+    packagePrefix: String = "jetbrains.kotlin.course",
+    className: String = "MainKt"
+) = Class.forName("${packagePrefix.removePrefix(".")}.${packageName.removePrefix(".")}.$className")
+    ?: throwInternalCourseError()
