@@ -98,6 +98,30 @@ To run tests locally, you just need to build the project and run the following c
 
 The tests use the Java Reflection API under the hood to check the user tasks.
 
+## Generate GIFs
+
+This project uses [anderson](https://github.com/jetbrains-academy/anderson) for automatic GIFs generation.
+
+To do this, you could run one of the following commands:
+
+- Run 
+  ```bash
+  ./gradlew gifs:generateGifs
+  ```
+  to generate all GIFs in the project.
+
+- Run  
+  ```bash
+  ./gradlew gifs:generate-<lessonPackageName>
+  ```
+  to generate all GIFs related to some lesson. You can find all possible values for `<lessonPackageName>` [here](gifs/src/main/kotlin/jetbrains/kotlin/course/gifs).
+
+- Run 
+  ```bash
+  ./gradlew gifs:generate-<lessonPackageName>-<gifConfigName>
+  ```
+  to generate a specific GIF from some lesson. You can find all possible values for `<gifConfigName>` inside the `config` subfolder of the `<lessonPackageName>` folder.
+
 ## Want to know more?
 
 If you have questions about the course or the tasks or if you find some errors,

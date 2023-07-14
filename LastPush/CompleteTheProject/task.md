@@ -2,7 +2,7 @@ On this step you need to finish the app.
 
 <div class="hint" title="The patterns generator example">
 
-  ![The patterns generator example](../../utils/src/main/resources/images/part1/LastPush/app.gif "The patterns generator example")
+  ![The patterns generator example](../../utils/src/main/resources/images/part1/last.push/app.gif "The patterns generator example")
 
 </div>
 

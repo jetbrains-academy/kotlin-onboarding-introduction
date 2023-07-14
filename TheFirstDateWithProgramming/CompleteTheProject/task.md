@@ -54,6 +54,6 @@ println("a = $a") // a = 5 will be printed
 
 The game should look like this:
 
-![The game's example](../../utils/src/main/resources/images/part1/TheFirstDateWithProgramming/game.gif "The game's example")
+![The game's example](../../utils/src/main/resources/images/part1/first.date/game.gif "The game's example")
 
 </div>

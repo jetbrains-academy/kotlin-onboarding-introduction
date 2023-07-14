@@ -33,7 +33,7 @@ var myString = "It"
 myString += "is"
 myString += "string"
 ```
-In this case, we will create a string with the text `It`, next – create it again, but with the additional text `is`, an so on.
+In this case, we will create a string with the text `It`, next – create it again, but with the additional text `is`, and so on.
 This affects the execution time of the program, as well as the amount of computer resources it will 
 consume.
 
@@ -63,7 +63,7 @@ In addition, the project already stores the `newLineSymbol` variable, which can 
 
 Here's an example of the function's work:
 <p>
-    <img src="../../utils/src/main/resources/images/part1/AlmostDone/when_hint_1.png" alt="Example of the function's work" width="200"/>
+    <img src="../../utils/src/main/resources/images/part1/almost.done/when_hint_1.png" alt="Example of the function's work" width="200"/>
 </p>
 
 
@@ -76,10 +76,10 @@ If you have any difficulties, **hints will help you solve this task**.
 <div class="hint" title="Several examples how applyBordersFilter function should work">
 
 First example:
-<img src="../../utils/src/main/resources/images/part1/AlmostDone/examples/borders/android.png" alt="Example of the function's work" width="200"/>
+<img src="../../utils/src/main/resources/images/part1/almost.done/examples/borders/android.png" alt="Example of the function's work" width="200"/>
 
 Second example:
-<img src="../../utils/src/main/resources/images/part1/AlmostDone/examples/borders/monkey.png" alt="Example of the function's work" width="200"/>
+<img src="../../utils/src/main/resources/images/part1/almost.done/examples/borders/monkey.png" alt="Example of the function's work" width="200"/>
 
 </div>
 

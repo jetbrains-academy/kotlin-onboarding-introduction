@@ -2,7 +2,7 @@ On this step you need to finish the game and implement interactions with the use
 
 <div class="hint" title="The game's example">
 
-![The game's example](../../utils/src/main/resources/images/part1/Hangman/game.gif "The game's example")
+![The game's example](../../utils/src/main/resources/images/part1/hangman/game.gif "The game's example")
 
 </div>
 

@@ -5,7 +5,7 @@ as well as refresh some concepts that you have not had time to learn yet.
 ----
 
 <p align="center">
-    <img src="../../utils/src/main/resources/images/part1/AlmostDone/game.png" alt="Console photoshop" width="400"/>
+    <img src="../../utils/src/main/resources/images/part1/almost.done/game.png" alt="Console photoshop" width="400"/>
 </p>
 
 ### Project description
@@ -24,7 +24,4 @@ that can apply different filters to character images.
 
 ### Project example
 
-![Console photoshop example](../../utils/src/main/resources/images/part1/AlmostDone/game.gif "Console photoshop example")
-
-In order for the picture to fit, additional line breaks were added.
-You don't need to add them when solving the task.
+![Console photoshop example](../../utils/src/main/resources/images/part1/almost.done/game.gif "Console photoshop example")

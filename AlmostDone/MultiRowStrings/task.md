@@ -76,5 +76,5 @@ ___
 
 Here's an example of the `trimPicture` function's work:
 
-![`trimPicture` function work](../../utils/src/main/resources/images/part1/AlmostDone/trimmed_picture.gif "`trimPicture` function work")
+<img src="../../utils/src/main/resources/images/part1/almost.done/trimmed_picture.gif" height="400" alt="`trimPicture` function work"/>
 

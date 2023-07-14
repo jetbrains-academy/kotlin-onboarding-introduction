@@ -6,7 +6,7 @@ We have no doubt that you will succeed!
 ----
 
 <p align="center">
-    <img src="../../utils/src/main/resources/images/part1/LastPush/game.png" alt="Patterns generator" width="400"/>
+    <img src="../../utils/src/main/resources/images/part1/last.push/game.png" alt="Patterns generator" width="400"/>
 </p>
 
 ### Project description
@@ -32,7 +32,4 @@ And finally, ask the user to input the `width` and `height` of the generated pic
 
 ### Project example
 
-![The patterns generator example](../../utils/src/main/resources/images/part1/LastPush/app.gif "The patterns generator example")
-
-In order for the picture to fit, additional line breaks were added.
-You don't need to add them when solving the task.
+![The patterns generator example](../../utils/src/main/resources/images/part1/last.push/app.gif "The patterns generator example")

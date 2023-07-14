@@ -29,11 +29,11 @@ ___
 to the _firstUserAnswer_, _secondUserAnswer_, and _thirdUserAnswer_ variables respectively.
 The questions are:
 
-(1) What is TROTEN?
+What is TROTEN?
 
-(2) How did you spend your graduation?
+How did you spend your graduation?
 
-(3) Why does a spider need eight legs?
+Why does a spider need eight legs?
 
 If you have any difficulties, **hints will help you solve this task**.
 
@@ -45,6 +45,6 @@ If you have any difficulties, **hints will help you solve this task**.
 
 As a result, the user's interaction with the game will look like this:
 
-![User interaction example](../../utils/src/main/resources/images/part1/TheFirstDateWithProgramming/user_input.gif "User interaction example")
+![User interaction example](../../utils/src/main/resources/images/part1/first.date/user_input.gif "User interaction example")
 
 </div>

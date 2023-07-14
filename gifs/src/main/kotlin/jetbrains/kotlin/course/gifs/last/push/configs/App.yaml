@@ -1,0 +1,41 @@
+terminal_config:
+  cols: 81
+  rows: 35
+
+interaction_config:
+  action_delay: 200
+  keystroke_delay: 75
+
+gif_config:
+  common:
+    font_size: 32
+    font_family: JetBrains Mono
+
+  gifs:
+    - name: 'app_dark'
+      theme: 'jetbrains_dark'
+
+    - name: 'app'
+      theme: 'jetbrains_light'
+
+scenario:
+  - expect: \n
+  - write: y
+
+  - expect: \n
+  - write: "yes"
+
+  - expect: \n
+  - write: r
+
+  - expect: \n
+  - write: rhombus
+
+  - expect: \n
+  - write: canvasGaps
+
+  - expect: \n
+  - write: 12
+
+  - expect: \n
+  - write: 3

@@ -12,7 +12,7 @@ All topics will be accompanied by links to [the official Kotlin documentation](h
 which you can read later.
 
 Note, this course **does not provide the detailed explanation** of the basic concepts 
-like variables, if just offers to introduce you how to use it in Kotlin and can just remind the definitions.
+like variables, it only shows how to use the concepts in Kotlin and may remind you of their definitions.
 
 Let's go!
 
@@ -20,7 +20,7 @@ Let's go!
 ----
 
 <p align="center">
-    <img src="../../utils/src/main/resources/images/part1/TheFirstDateWithProgramming/game.png" alt="Story twister" width="400"/>
+    <img src="../../utils/src/main/resources/images/part1/first.date/game.png" alt="Story twister" width="400"/>
 </p>
 
 ### Project description
@@ -39,4 +39,4 @@ We will replace the real questions with new ones to make the final story ridicul
 
 ### Project example
 
-![The game's example](../../utils/src/main/resources/images/part1/TheFirstDateWithProgramming/game.gif "The game's example")
+![The game's example](../../utils/src/main/resources/images/part1/first.date/game.gif "The game's example")

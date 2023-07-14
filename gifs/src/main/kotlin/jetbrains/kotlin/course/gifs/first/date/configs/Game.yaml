@@ -1,0 +1,29 @@
+terminal_config:
+  cols: 48
+  rows: 16
+
+interaction_config:
+  action_delay: 200
+  keystroke_delay: 35
+
+gif_config:
+  common:
+    font_size: 32
+    font_family: JetBrains Mono
+
+  gifs:
+    - name: 'game_dark'
+      theme: 'jetbrains_dark'
+
+    - name: 'game'
+      theme: 'jetbrains_light'
+
+scenario:
+  - expect: \n
+  - write: New drink at Starbucks
+
+  - expect: \n
+  - write: Was at home and was thinking about future
+
+  - expect: \n
+  - write: To quickly run away from enemies

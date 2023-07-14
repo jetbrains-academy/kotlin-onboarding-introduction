@@ -6,7 +6,7 @@ We have no doubt that you will succeed!
 ----
 
 <p align="center">
-    <img src="../../utils/src/main/resources/images/part1/Hangman/game.png" alt="Hangman" width="400"/>
+    <img src="../../utils/src/main/resources/images/part1/hangman/game.png" alt="Hangman" width="400"/>
 </p>
 
 ### Project description
@@ -18,7 +18,4 @@ refer to the hints.
 
 ### Project example
 
-![The game's example](../../utils/src/main/resources/images/part1/Hangman/game.gif "The game's example")
-
-In order for the picture to fit, additional line breaks were added.
-You don't need to add them when solving the task.
+![The game's example](../../utils/src/main/resources/images/part1/hangman/game.gif "The game's example")

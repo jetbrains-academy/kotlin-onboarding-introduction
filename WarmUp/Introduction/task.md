@@ -5,7 +5,7 @@ such as loops, conditional statements, and more.
 ----
 
 <p align="center">
-    <img src="../../utils/src/main/resources/images/part1/WarmUp/game.png" alt="Bulls and cows" width="400"/>
+    <img src="../../utils/src/main/resources/images/part1/warmup/game.png" alt="Bulls and cows" width="400"/>
 </p>
 
 ### Project description
@@ -37,7 +37,7 @@ basic facts about lambda expressions in these built-in functions;
 
 ### Project example
 
-![The game's example](../../utils/src/main/resources/images/part1/WarmUp/game.gif "The game's example")
+![The game's example](../../utils/src/main/resources/images/part1/warmup/game.gif "The game's example")
 
 In order for the picture to fit, additional line breaks were added.
 You don't need to add them when solving the task.
