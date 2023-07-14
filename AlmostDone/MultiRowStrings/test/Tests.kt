@@ -1,10 +1,6 @@
 import jetbrains.kotlin.course.almost.done.allImages
 import org.jetbrains.academy.test.system.core.invokeWithArgs
-import org.jetbrains.academy.test.system.core.models.TestKotlinType
-import org.jetbrains.academy.test.system.core.models.classes.TestClass
 import org.jetbrains.academy.test.system.core.models.classes.findClassSafe
-import org.jetbrains.academy.test.system.core.models.method.TestMethod
-import org.jetbrains.academy.test.system.core.models.variable.TestVariable
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.BeforeAll
 import org.junit.jupiter.api.Test
@@ -15,11 +11,6 @@ import util.*
 
 class Test {
     companion object {
-        private val trimPictureMethod = TestMethod(
-            "trimPicture", TestKotlinType("String"), listOf(
-                TestVariable("picture", "String"),
-            )
-        )
 
         private const val WITH_INDENT =
             """
@@ -30,11 +21,6 @@ class Test {
 
         @JvmStatic
         fun pictures() = allImages.map { Arguments.of(it.key) } + WITH_INDENT
-
-        private val mainClass = TestClass(
-            classPackage = "jetbrains.kotlin.course.almost.done",
-            customMethods = listOf(trimPictureMethod)
-        )
 
         private lateinit var mainClazz: Class<*>
 

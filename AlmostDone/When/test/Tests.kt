@@ -1,10 +1,6 @@
 import jetbrains.kotlin.course.almost.done.allImages
 import org.jetbrains.academy.test.system.core.invokeWithArgs
-import org.jetbrains.academy.test.system.core.models.TestKotlinType
-import org.jetbrains.academy.test.system.core.models.classes.TestClass
 import org.jetbrains.academy.test.system.core.models.classes.findClassSafe
-import org.jetbrains.academy.test.system.core.models.method.TestMethod
-import org.jetbrains.academy.test.system.core.models.variable.TestVariable
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.BeforeAll
 import org.junit.jupiter.api.Test
@@ -24,42 +20,6 @@ class Test {
 
         @JvmStatic
         fun pictures() = allImages.map { Arguments.of(it.value) } + WITH_INDENT
-
-        private val trimPictureMethod = TestMethod(
-            "trimPicture",
-            TestKotlinType("String"),
-            listOf(TestVariable("picture", "String")),
-        )
-
-        private val applyBordersFilterMethod = TestMethod(
-            "applyBordersFilter",
-            TestKotlinType("String"),
-            listOf(TestVariable("picture", "String")),
-        )
-
-        private val applySquaredFilterMethod = TestMethod(
-            "applySquaredFilter",
-            TestKotlinType("String"),
-            listOf(TestVariable("picture", "String")),
-        )
-
-        private val applyFilterMethod = TestMethod(
-            "applyFilter",
-            TestKotlinType("String"),
-            listOf(
-                TestVariable("picture", "String"),
-                TestVariable("filter", "String"),
-            ),
-        )
-        private val mainClass = TestClass(
-            classPackage = "jetbrains.kotlin.course.almost.done",
-            customMethods = listOf(
-                trimPictureMethod,
-                applyBordersFilterMethod,
-                applySquaredFilterMethod,
-                applyFilterMethod,
-            )
-        )
 
         private lateinit var mainClazz: Class<*>
 

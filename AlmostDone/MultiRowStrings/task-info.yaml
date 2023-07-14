@@ -9,4 +9,8 @@ files:
   visible: false
 - name: src/main/kotlin/jetbrains/kotlin/course/almost/done/PreDefinedSymbols.kt
   visible: false
+- name: test/Methods.kt
+  visible: false
+- name: test/MainClass.kt
+  visible: false
 feedback_link: https://docs.google.com/forms/d/e/1FAIpQLScylICclQIi9_YDjO7iuyRITDLn0Qgzw_aLxKxiishKAbL0qg/viewform?usp=pp_url&entry.2103429047=Introduction/Almost+done/Multi-row+strings

@@ -1,11 +1,7 @@
 import jetbrains.kotlin.course.almost.done.newLineSymbol
 import org.jetbrains.academy.test.system.core.invokeWithArgs
 import org.jetbrains.academy.test.system.core.invokeWithoutArgs
-import org.jetbrains.academy.test.system.core.models.TestKotlinType
-import org.jetbrains.academy.test.system.core.models.classes.TestClass
 import org.jetbrains.academy.test.system.core.models.classes.findClassSafe
-import org.jetbrains.academy.test.system.core.models.method.TestMethod
-import org.jetbrains.academy.test.system.core.models.variable.TestVariable
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.BeforeAll
 import org.junit.jupiter.api.Test
@@ -34,49 +30,6 @@ class Test {
             Arguments.of("$SQUARED${newLineSymbol}$SQUARED$newLineSymbol", false, SQUARED),
             Arguments.of("$SQUARED_BAD${newLineSymbol}$SQUARED$newLineSymbol", true, SQUARED),
             Arguments.of("$BORDERS_BAD${newLineSymbol}$BORDERS$newLineSymbol", true, BORDERS),
-        )
-
-        private val trimPictureMethod = TestMethod(
-            "trimPicture",
-            TestKotlinType("String"),
-            listOf(TestVariable("picture", "String")),
-        )
-
-        private val applyBordersFilterMethod = TestMethod(
-            "applyBordersFilter",
-            TestKotlinType("String"),
-            listOf(TestVariable("picture", "String"))
-        )
-
-        private val applySquaredFilterMethod = TestMethod(
-            "applySquaredFilter",
-            TestKotlinType("String"),
-            listOf(TestVariable("picture", "String")),
-        )
-
-        private val applyFilterMethod = TestMethod(
-            "applyFilter",
-            TestKotlinType("String"),
-            listOf(
-                TestVariable("picture", "String"),
-                TestVariable("filter", "String"),
-            ),
-        )
-
-        private val chooseFilterMethod = TestMethod("chooseFilter", TestKotlinType("String"))
-
-        private val safeReadLineMethod = TestMethod("safeReadLine", TestKotlinType("String"))
-
-        private val mainClass = TestClass(
-            classPackage = "jetbrains.kotlin.course.almost.done",
-            customMethods = listOf(
-                trimPictureMethod,
-                applyBordersFilterMethod,
-                applySquaredFilterMethod,
-                applyFilterMethod,
-                chooseFilterMethod,
-                safeReadLineMethod,
-            )
         )
 
         private lateinit var mainClazz: Class<*>
