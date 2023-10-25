@@ -55,7 +55,7 @@ Do you want to use a pre-defined picture or use a custom one? Please, input 'yes
 
 (2) If the user wants to upload a custom picture, ask them about it `Please, input a custom picture` (only single-line images need to be supported).
 
-(3) If the user used an incorrect command, please infrotm the user about it `Please, input 'yes' or 'no'`:
+(3) If the user used an incorrect command, please inform the user about it `Please, input 'yes' or 'no'`:
 
 ![`getPicture` function work](../../utils/src/main/resources/images/part1/almost.done/get_picture.gif "`getPicture` function work")
 
