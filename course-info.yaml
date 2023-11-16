@@ -17,29 +17,7 @@ it includes all the lesson topics but does not contain the theory part.</p>
 like variables: it just shows how to use them in Kotlin and can briefly remind you the definitions.</i></p>
 
 <p>All topics will be accompanied by links to the official Kotlin documentation, 
-which you can read later. Some of the topics covered in the course are listed below:</p>
-<ul>
-  <li>the entry point for a Kotlin program;</li>
-  <li>variables;</li>
-  <li>functions;</li>
-  <li>loops;</li>
-  <li>ranges;</li>
-  <li><em>if</em> expressions;</li>
-  <li>multi-row strings and string builder;</li>
-  <li>basic facts about the null safety mechanism;</li>
-  <li>basic facts about collections and lambda expressions.</li>
-</ul>
-<p><i>After this course, you will be ready to write basic console applications in the Kotlin-like style.</i></p>
-
-<p><b>Before starting this course, check the following requirements:</b></p>
-<ol>
-  <li> Your computer needs to have a stable internet connection.</li>
-  <li> Git version control system needs to be installed on your computer (link to <a href=\"https://git-scm.com/\">the git site</a>).</li>
-  <li> Make sure that the path to the root folder of the course does not contain spaces, special characters, or non-latin characters.</li>
-  <li> Make sure that you use the <a href=\"https://plugins.jetbrains.com/plugin/10081-edutools\">EduTools</a> plugin with version at least <em>2023.3</em>.</li>
-</ol>
-<p>The course is integrated into the <a href=\"https://www.jetbrains.com/idea/\">Intellij Idea IDE</a>, which has a community free license. 
-You may use this license to complete the course. If you have some troubles with the course installation, feel free to contact us by email <a href=\"mailto:education@jetbrains.com\">education@jetbrains.com</a>.</p>
+which you can read later. After this course, you will be ready to write basic console applications in the Kotlin-like style.</p>
 "
 programming_language: Kotlin
 content:
