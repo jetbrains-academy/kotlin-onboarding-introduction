@@ -120,6 +120,10 @@ allprojects {
     }
 
     tasks.getByPath("detekt").onlyIf { project.hasProperty("runDetekt") }
+
+    tasks.register<Exec>("run") {
+        // Just do nothing to avoid the edu plugin errors
+    }
 }
 
 configure(subprojects.filter { it.name != "utils" }) {
