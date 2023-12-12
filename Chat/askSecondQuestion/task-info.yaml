@@ -1,0 +1,7 @@
+type: edu
+custom_name: Chat - Ask Second Question
+files:
+  - name: src/main/kotlin/jetbrains/kotlin/course/chat/Main.kt
+    visible: true
+  - name: test/Tests.kt
+    visible: false

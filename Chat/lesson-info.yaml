@@ -1,3 +1,8 @@
+type: framework
 custom_name: Chat
 content:
-- CompleteTheProject
+  - chatIntro
+  - askFirstQuestion
+  - askSecondQuestion
+  - completeTheProject
+is_template_based: false
