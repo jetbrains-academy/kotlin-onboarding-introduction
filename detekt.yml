@@ -23,8 +23,6 @@ style:
       "**/TheFirstDateWithProgramming/Variables/src/main/kotlin/jetbrains/kotlin/course/first/date/Main.kt",
       "**/TheFirstDateWithProgramming/comments/src/main/kotlin/jetbrains/kotlin/course/first/date/Main.kt",
       "**/TheFirstDateWithProgramming/readUserInputTheory/src/main/kotlin/jetbrains/kotlin/course/first/date/Main.kt",
-      "**/Chat/askFirstQuestion/src/main/kotlin/jetbrains/kotlin/course/chat/Main.kt",
-      "**/Chat/askSecondQuestion/src/main/kotlin/jetbrains/kotlin/course/chat/Main.kt",
       "**/WarmUp/Collections/src/main/kotlin/jetbrains/kotlin/course/warmup/Main.kt",
       "**/WarmUp/CollectionsPartTwo/src/main/kotlin/jetbrains/kotlin/course/warmup/Main.kt",
       "**/WarmUp/CustomFunctions/src/main/kotlin/jetbrains/kotlin/course/warmup/Main.kt",
