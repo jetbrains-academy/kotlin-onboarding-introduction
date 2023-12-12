@@ -1,35 +1,15 @@
-### Theory
-
-Congratulations, you've almost finished your first project! 
-
-<div class="hint" title="Extra theory">
-
-I'll tell you a little trick on how you can write [comments](https://kotlinlang.org/docs/basic-syntax.html#comments)
-for other developers (or for yourself) in your code.
-To do this, use a double slash at the beginning of the code line:
-```kotlin
-fun main() {
-    // My comment, I can write whatever I want here
-}
-```
-Comments are usually left for the most difficult parts of the code.
-They make it easier to later understand what the code is doing.
-
-</div>
-___
-
 ### Task
 
-**Description**: Print the real questions and the user's answers to them. 
+After answering fake questions that we implemented on the previous steps, 
+print the text `Now let's have fun!`. 
+Then print the real questions along with the previous user’s answers. 
 The real questions are stored in the already **predefined** `firstQuestion`, `secondQuestion`, and `thirdQuestion` variables.
-Before the real questions, print the text: 
-```text
-Now let's have fun!
-```
 
 _Predefined_ means that you can access these variables 
 because the course creator put them in the project and added the necessary values. 
-For example, you can write `println("First question: $firstQuestion")` to print the value from the **predefined** `firstQuestion` variable and an additional text before (or after) it.
+For example, you can write `println(firstQuestion)` to print 
+the value from the **predefined** `firstQuestion` variable.
+You can find all these variables in the `RealQuestions.kt` file.
 
 If you have any difficulties, **hints will help you solve this task**.
 
@@ -37,10 +17,41 @@ If you have any difficulties, **hints will help you solve this task**.
 
 ### Hints
 
-<div class="hint" title="What does $ mean?">
+<div class="hint" title="Push me to view an example with the first real question">
 
-String literals may contain template expressions – pieces of code that are 
-evaluated and whose results are concatenated into the string. 
+To print the first  **predefined** question from the `firstQuestion` variable and the user answer, you
+can use the `println` function from the previous steps:
+
+```kotlin
+fun main() {
+    println("Hello! I will ask you several questions.")
+    println("Please answer all of them and be honest with me!")
+    println("What is TROTEN?")
+    val firstUserAnswer = readlnOrNull()
+    println("How did you spend your graduation?")
+    val secondUserAnswer = readlnOrNull()
+    println("Why does a spider need eight legs?")
+    val thirdUserAnswer = readlnOrNull()
+    println("Now let's have fun!")
+    println(firstQuestion)
+    println(firstUserAnswer)
+}
+```
+
+</div>
+
+<div class="hint" title="Push me to view the expected state of the game after completing this task">
+
+The game should look like this:
+
+![The game's example](../../utils/src/main/resources/images/part1/first.date/game.gif "The game's example")
+
+</div>
+
+<div class="hint" title="Push me to learn how to combine text and string variables together">
+
+String literals may contain template expressions – pieces of code that are
+evaluated and whose results are concatenated into the string.
 [A template expression](https://kotlinlang.org/docs/strings.html#string-templates) starts with a dollar sign (`$`) and consists of either a name or an expression in curly braces.
 
 To insert something into a string, you can use the following construction:
@@ -50,10 +61,3 @@ println("a = $a") // a = 5 will be printed
 ```
 </div>
 
-<div class="hint" title="Game's example">
-
-The game should look like this:
-
-![The game's example](../../utils/src/main/resources/images/part1/first.date/game.gif "The game's example")
-
-</div>

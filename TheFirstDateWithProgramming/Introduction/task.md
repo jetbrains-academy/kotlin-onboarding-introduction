@@ -26,9 +26,8 @@ Let's go!
 ### Project description
 
 The project of this lesson is **Story twister**.
-The goal of this game is to ask the user several fun questions,
-remember the answers, and build a fun story from these answers. 
-We will replace the real questions with new ones to make the final story ridiculous.
+The goal of this game is to ask the user several fake questions,
+remember the answers, and then reveal the real questions to build a fun story from these answers.
 
 ### Lesson topics
 

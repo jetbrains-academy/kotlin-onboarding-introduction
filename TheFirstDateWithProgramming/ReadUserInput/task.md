@@ -1,39 +1,24 @@
-### Theory
-
-We have previously talked about the _built-in_ functions in Kotlin. 
-In addition to the already familiar functions for output to the console, 
-Kotlin has the [`readlnOrNull`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.io/readln-or-null.html) function, which reads the values entered by the user and stores them in a variable:
-
-```kotlin
-val myValue = readlnOrNull()
-// The myValue variable stores the user's input
-```
-
-For example, in our **Story twister** project, 
-we need to ask the user a question and then remember their answer. 
-That is exactly what the `readlnOrNull` function is for. 
-The function tells the program to stop and wait for 
-the user to enter some value into the console; then it allows the program to receive the value and, for example, write it into a variable.
-
-It is important that in this case you **cannot** write:
-```kotlin
-val myValue: String = readlnOrNull()
-// The myValue variable stores the user's input
-```
-It is connected to the null safety in Kotlin, we will consider it later, but if you are interested in this topic, you can read more in the [documentation](https://kotlinlang.org/docs/null-safety.html).
-___
+In this task you will ask the user three questions and save their answers.
 
 ### Task
 
-**Description**: ask the user three questions and add the answers 
+Ask the user three questions and add the answers 
 to the _firstUserAnswer_, _secondUserAnswer_, and _thirdUserAnswer_ variables respectively.
 The questions are:
 
+```text
 What is TROTEN?
 
 How did you spend your graduation?
 
 Why does a spider need eight legs?
+```
+
+You must ask questions and record answers sequentially, 
+i.e. first ask the first question (_print_ it to console), 
+then record the answer in the _firstUserAnswer_ variable. 
+Then do the same with the second question and the _secondUserAnswer_ variable, 
+and the last question and the last _thirdUserAnswer_ variable.
 
 If you have any difficulties, **hints will help you solve this task**.
 
@@ -41,7 +26,26 @@ If you have any difficulties, **hints will help you solve this task**.
 
 ### Hints
 
-<div class="hint" title="Clarification">
+<div class="hint" title="Push me to view an example with the first question">
+
+To print a question you can use the `println` function from the previous steps.
+Then, no read the user input, you can use the `readlnOrNull` function:
+
+```kotlin
+fun main() {
+    println("Hello! I will ask you several questions.")
+    println("Please answer all of them and be honest with me!")
+    println("What is TROTEN?")
+    val firstUserAnswer = readlnOrNull()
+    // You need to ask two others questions bellow
+    val secondUserAnswer = ""
+    val thirdUserAnswer = ""
+}
+```
+
+</div>
+
+<div class="hint" title="Push me to view the expected state of the application after completing this task">
 
 As a result, the user's interaction with the game will look like this:
 

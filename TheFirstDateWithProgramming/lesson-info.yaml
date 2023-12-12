@@ -1,10 +1,15 @@
 type: framework
 custom_name: The first date with programming
 content:
-- Introduction
-- ProgramEntryPoint
-- BuiltinFunctions
-- Variables
-- ReadUserInput
-- CompleteTheProject
+  - Introduction
+  - programEntryPointTheory
+  - ProgramEntryPoint
+  - builtinFunctionsTheory
+  - BuiltinFunctions
+  - variablesTheory
+  - Variables
+  - readUserInputTheory
+  - ReadUserInput
+  - comments
+  - CompleteTheProject
 is_template_based: false
