@@ -21,6 +21,8 @@ style:
       "**/AlmostDone/When/src/main/kotlin/jetbrains/kotlin/course/almost/done/Main.kt",
       "**/TheFirstDateWithProgramming/ReadUserInput/src/main/kotlin/jetbrains/kotlin/course/first/date/Main.kt",
       "**/TheFirstDateWithProgramming/Variables/src/main/kotlin/jetbrains/kotlin/course/first/date/Main.kt",
+      "**/TheFirstDateWithProgramming/comments/src/main/kotlin/jetbrains/kotlin/course/first/date/Main.kt",
+      "**/TheFirstDateWithProgramming/readUserInputTheory/src/main/kotlin/jetbrains/kotlin/course/first/date/Main.kt",
       "**/WarmUp/Collections/src/main/kotlin/jetbrains/kotlin/course/warmup/Main.kt",
       "**/WarmUp/CollectionsPartTwo/src/main/kotlin/jetbrains/kotlin/course/warmup/Main.kt",
       "**/WarmUp/CustomFunctions/src/main/kotlin/jetbrains/kotlin/course/warmup/Main.kt",
