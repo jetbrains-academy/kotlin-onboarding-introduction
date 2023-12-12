@@ -1,0 +1,7 @@
+type: theory
+custom_name: Read user input - Theory
+files:
+  - name: src/main/kotlin/jetbrains/kotlin/course/first/date/Main.kt
+    visible: true
+  - name: src/main/kotlin/jetbrains/kotlin/course/first/date/RealQuestions.kt
+    visible: false

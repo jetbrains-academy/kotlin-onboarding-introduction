@@ -1,0 +1,7 @@
+type: theory
+custom_name: Variables - Theory
+files:
+  - name: src/main/kotlin/jetbrains/kotlin/course/first/date/Main.kt
+    visible: true
+  - name: src/main/kotlin/jetbrains/kotlin/course/first/date/RealQuestions.kt
+    visible: false

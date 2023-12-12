@@ -1,5 +1,5 @@
 type: edu
-custom_name: Program entry point
+custom_name: First Kotlin program
 files:
 - name: src/main/kotlin/jetbrains/kotlin/course/first/date/Main.kt
   visible: true
