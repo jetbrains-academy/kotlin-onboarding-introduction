@@ -1,5 +1,5 @@
 type: theory
-custom_name: Introduction
+custom_name: Story twister - Introduction
 files:
 - name: src/main/kotlin/jetbrains/kotlin/course/first/date/Main.kt
   visible: true

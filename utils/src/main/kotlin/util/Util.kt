@@ -11,7 +11,7 @@ import java.io.PrintStream
 import java.nio.charset.StandardCharsets
 
 object Util {
-    const val DEFAULT_USER_INPUT = "<some user's answer>"
+    const val DEFAULT_USER_INPUT = "<a user's answer>"
 
     val newLineSeparator: String = System.lineSeparator()
 }

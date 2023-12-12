@@ -5,7 +5,7 @@ group = rootProject.group
 version = rootProject.version
 
 dependencies {
-    rootProject.subprojects.filter { "CompleteTheProject" in it.name  }.forEach {
+    rootProject.subprojects.filter { "CompleteTheProject" in it.name || "completeTheProject" in it.name  }.forEach {
         implementation(project(":${it.name}"))
     }
 }
