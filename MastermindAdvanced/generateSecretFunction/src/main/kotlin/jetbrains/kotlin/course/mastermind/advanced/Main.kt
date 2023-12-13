@@ -1,4 +1,4 @@
-package jetbrains.kotlin.course.warmup
+package jetbrains.kotlin.course.mastermind.advanced
 
 fun getGameRules(wordLength: Int, maxAttemptsCount: Int, secretExample: String) =
     "Welcome to the game! $newLineSymbol" +

@@ -1,4 +1,4 @@
-import jetbrains.kotlin.course.warmup.newLineSymbol
+import jetbrains.kotlin.course.mastermind.advanced.newLineSymbol
 import org.jetbrains.academy.test.system.core.invokeWithArgs
 import org.jetbrains.academy.test.system.core.models.classes.findClassSafe
 import org.junit.jupiter.api.Assertions

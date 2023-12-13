@@ -1,6 +1,5 @@
-import jetbrains.kotlin.course.warmup.newLineSymbol
+import jetbrains.kotlin.course.mastermind.advanced.newLineSymbol
 import org.jetbrains.academy.test.system.core.invokeWithArgs
-import org.jetbrains.academy.test.system.core.invokeWithoutArgs
 import org.jetbrains.academy.test.system.core.models.classes.findClassSafe
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.BeforeAll
@@ -79,9 +78,9 @@ class Test {
         @JvmStatic
         fun safeUserInputs() = listOf(
             // systemIn, output, isSystemInEmpty
-            Arguments.of("ABC${newLineSymbol}ABCCC${newLineSymbol}ABCI${newLineSymbol}ACI${newLineSymbol}ABCD${newLineSymbol}", "ABCD", true),
-            Arguments.of("ABCD${newLineSymbol}", "ABCD", true),
-            Arguments.of("ABCD${newLineSymbol}ABC${newLineSymbol}ABCCC${newLineSymbol}ABCI${newLineSymbol}ACI${newLineSymbol}", "ABCD", false),
+            Arguments.of("ABC${newLineSymbol}ABCCC${newLineSymbol}ABCI${newLineSymbol}ACI${newLineSymbol}ABCD$newLineSymbol", "ABCD", true),
+            Arguments.of("ABCD$newLineSymbol", "ABCD", true),
+            Arguments.of("ABCD${newLineSymbol}ABC${newLineSymbol}ABCCC${newLineSymbol}ABCI${newLineSymbol}ACI$newLineSymbol", "ABCD", false),
         )
     }
 
