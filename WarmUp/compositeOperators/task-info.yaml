@@ -1,0 +1,7 @@
+type: theory
+custom_name: Mastermind - Composite If Operators
+files:
+  - name: src/main/kotlin/jetbrains/kotlin/course/warmup/Util.kt
+    visible: false
+  - name: src/main/kotlin/jetbrains/kotlin/course/warmup/Main.kt
+    visible: true

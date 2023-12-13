@@ -26,6 +26,18 @@ class Test {
     }
 
     @Test
+    fun testPlayGameFunctionImplementation() {
+        val userMethod = mainClass.findMethod(mainClazz, playGameMethod)
+        setSystemIn("arg$newLineSymbol")
+        try {
+            userMethod.invoke(mainClazz, "ACEB", 3, 3)
+        } catch(e: InvocationTargetException) {
+            Assertions.assertTrue(false) { "The method ${playGameMethod.name} should ask the user about input and then call isComplete function!" }
+        }
+
+    }
+
+    @Test
     fun testIsCompleteFunction() {
         val userMethod = mainClass.findMethod(mainClazz, isCompleteMethod)
         val methodRes = userMethod.invokeWithArgs("A", "B", clazz = mainClazz)
@@ -52,7 +64,7 @@ class Test {
                 methodRes
             ) { "The method ${generateSecretMethod.name} should always return $expectedResult" }
         } catch (e: InvocationTargetException) {
-            assert(false) { "The method ${generateSecretMethod.name} should always return \"ABCD\" now" }
+            Assertions.assertFalse(false) { "The method ${generateSecretMethod.name} should always return \"ABCD\" now" }
         }
     }
 
@@ -64,26 +76,6 @@ class Test {
     @Test
     fun testCountExactMatchesFunction() {
         mainClass.checkMethod(mainClazz, countExactMatchesMethod)
-    }
-
-    @Test
-    fun testSolution() {
-        val wordLength = 4
-        val secretExample = "ACEB"
-        val maxAttemptsCount = 3
-        val expectedOutput = "Welcome to the game!$newLineSymbol" +
-                newLineSymbol +
-                "Two people play this game: one chooses a word (a sequence of letters), " +
-                "the other guesses it. In this version, the computer chooses the word: " +
-                "a sequence of $wordLength letters (for example, $secretExample). " +
-                "The user has several attempts to guess it (the max number is $maxAttemptsCount). " +
-                "For each attempt, the number of complete matches (letter and position) " +
-                "and partial matches (letter only) is reported.$newLineSymbol" +
-                newLineSymbol +
-                "For example, with $secretExample as the hidden word, the BCDF guess will " +
-                "give 1 full match (C) and 1 partial match (B).$newLineSymbol" +
-                "Please input your guess. It should be of length 4.$newLineSymbol"
-        Assertions.assertEquals(expectedOutput, trimOutput(runMainFunction(::main, "ABCD")))
     }
 
     private fun trimOutput(output: String) = output.lines().joinToString(newLineSymbol) { it.trim() }

@@ -15,7 +15,7 @@ fun generateSecret(): String
 ```
 </div>
 
-- _countPartialMatches_, which has two arguments (_secret_ and _guess_)
+- _countPartialMatches_, which has two string arguments (_secret_ and _guess_)
 and returns the number of matched letters between them that are not in the same positions.
 You don't need to implement this function now, it is enough to use the `TODO` 
 function instead of implementation as a temporary solution. 

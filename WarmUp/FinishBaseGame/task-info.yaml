@@ -1,5 +1,5 @@
 type: edu
-custom_name: Finish base game
+custom_name: Mastermind - Finish Base Game
 files:
 - name: src/main/kotlin/jetbrains/kotlin/course/warmup/Main.kt
   visible: true

@@ -32,8 +32,7 @@ as well as the ability to safely communicate with the user: e.g., handle the use
 - `if` expressions;
 - `or` and `and` boolean operations;
 - basic facts about the List collection, built-in functions to work with it, 
-basic facts about lambda expressions in these built-in functions;
-- `random` function.
+basic facts about lambda expressions in these built-in functions.
 
 ### Project example
 

@@ -1,0 +1,7 @@
+type: theory
+custom_name: Mastermind Advanced - Random Function
+files:
+  - name: src/main/kotlin/jetbrains/kotlin/course/mastermind/advanced/Main.kt
+    visible: true
+  - name: src/main/kotlin/jetbrains/kotlin/course/mastermind/advanced/Util.kt
+    visible: false

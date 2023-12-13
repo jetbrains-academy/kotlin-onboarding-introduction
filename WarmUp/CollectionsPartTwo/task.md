@@ -1,15 +1,42 @@
-### Theory
-
-Great, you've done a good job implementing the `countExactMatches` function, 
-probably using the `filterIndexed` function and the `length` property on the remaining word (but of course, you could implement it in any different way).
-Now it is great time to pay more attention to built-in functions for working with collections and implement the _countPartialMatches_ function.
-
-___
+To be able to implement `countPartialMatches` function on the next step, firstly to add 
+a new function `countAllMatches` to calculate all matches
 
 ### Task
 
-**Description**: implement the _countPartialMatches_ function by using Kotlin built-in functions. The function takes the _secret_ and the _guess_,
-and returns the number of matched letters between them that are not in the same positions.
+Add and implement a new function _countAllMatches_ which has two string arguments (_secret_ and _guess_)
+and returns the number of matched letters between them that don't depend on the position.
+
+<div class="hint" title="Push me to see the signature of the countAllMatches function">
+
+The signature of the function is:
+```kotlin
+fun countAllMatches(secret: String, guess: String): Int
+```
+</div>
+
+You can implement this function in any possible way, but we _recommend_ to look into the `filter` and `minOf` built-in functions.
+
+<div class="Hint" title="Push me to learn more about filter built-in function">
+
+You can use the <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/filter.html"><code>filter</code></a> function
+to filter elements from one collection that are in another:
+
+```kotlin
+val list1 = listOf(1, 2, 3, 4)
+val list2 = listOf(3, 4, 5, 6)
+println(list1.filter{ it in list2 }) // [3, 4]
+```
+</div>
+
+<div class="Hint" title="Push me to learn more about minOf built-in function">
+
+You can use the <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.comparisons/min-of.html"><code>minOf</code></a> function
+to find a minimum values from several ones:
+
+```kotlin
+println(minOf(2, 3, 5, -1)) // -1
+```
+</div>
 
 If you have any difficulties, **hints will help you solve this task**.
 
@@ -17,30 +44,34 @@ If you have any difficulties, **hints will help you solve this task**.
 
 ### Hints
 
-<div class="Hint" title="Examples of the `countPartialMatches` function's work">
+<div class="Hint" title="Push me to see examples of the `countAllMatches` function's work">
 
-Here are several examples of the _countPartialMatches_ function's work:
+Here are several examples of the _countAllMatches_ function's work:
 
-- guess = "ACEB", secret = "BCDF", result = 1;
+- guess = "ACEB", secret = "BCDF", result = 2;
 - guess = "ABCD", secret = "DCBA", result = 4;
-- guess = "AAAA", secret = "ABBB", result = 0;
-- guess = "BBBB", secret = "BBDH", result = 0.
+- guess = "AAAA", secret = "ABBB", result = 1;
+- guess = "BBBB", secret = "BBDH", result = 2.
 </div>
 
-<div class="Hint" title="The main idea of the algorithm">
+<div class="Hint" title="Push me to learn the main idea of the algorithm">
 
-The main idea of the algorithm is to count the letters in `secret` that are in `guess` and vice versa and calculate the minimum of them.
-Next, we can just return the number of these letters minus the number of the letters 
-that we can calculate via the <code>countExactMatches</code> function.
+You can just count the number of letters from the guess that are in secret.
+But in some cases it will prodice an incorrect answer, for example, if the guess has the same letters:
+```text
+guess = "BBBB", secret = "BBDH"
+```
+If we calculate the number of letter from the guess `BBBB` that are in the secret `BBDH`, 
+we will get `4`, but the correct answer is `2`.
+
+To avoid these mistakes we can calculate the number of letters from the guess that are in secret, 
+but also the opposite one - the number of letters from the secret that are in guess.
+And then just to calculate the minimum of them:
+```text
+guess = "BBBB", secret = "BBDH"
+1) the number of letter from the guess `BBBB` that are in the secret `BBDH` is 4
+2) the number of letter from the secret `BBDH` that are in the guess `BBBB`is 2
+3) the minimum is 2. The correct answer is 2.
+```
 </div>
 
-<div class="Hint" title="The `filter` built-in function">
-
-To find the number of the letters from <code>guess</code> that are in <code>secret</code> and vice versa, 
-you can consider the <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/filter.html"><code>filter</code></a> function.
-</div>
-
-<div class="Hint" title="The `minOf` built-in function">
-
-To calculate the minimum of two values, you can use the built-in function <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.comparisons/min-of.html"><code>minOf</code></a> instead of the `if` operator.
-</div>

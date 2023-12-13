@@ -1,0 +1,7 @@
+type: theory
+custom_name: Mastermind - Mutable Variable
+files:
+  - name: src/main/kotlin/jetbrains/kotlin/course/warmup/Main.kt
+    visible: true
+  - name: src/main/kotlin/jetbrains/kotlin/course/warmup/Util.kt
+    visible: false
