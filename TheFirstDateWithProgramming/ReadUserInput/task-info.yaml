@@ -1,5 +1,5 @@
 type: edu
-custom_name: Read user input - Practice
+custom_name: Story twister - Read user input, Practice
 files:
 - name: test/Tests.kt
   visible: false

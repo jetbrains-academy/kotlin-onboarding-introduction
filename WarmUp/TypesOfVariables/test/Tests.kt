@@ -1,13 +1,31 @@
 import jetbrains.kotlin.course.warmup.main
 import jetbrains.kotlin.course.warmup.newLineSymbol
+import org.jetbrains.academy.test.system.core.models.classes.findClassSafe
 import org.jetbrains.academy.test.system.core.models.variable.TestVariable
 import org.junit.jupiter.api.Assertions
+import org.junit.jupiter.api.BeforeAll
 import org.junit.jupiter.api.Test
 import util.checkListOfVariables
 import util.runMainFunction
+import util.throwInternalCourseError
 import java.io.File
 
 class Test {
+    companion object {
+        private lateinit var mainClazz: Class<*>
+
+        @JvmStatic
+        @BeforeAll
+        fun beforeAll() {
+            mainClazz = mainClass.findClassSafe() ?: throwInternalCourseError()
+        }
+    }
+
+    @Test
+    fun testGetGameRulesFunction() {
+        mainClass.checkMethod(mainClazz, getGameRulesMethod)
+    }
+
     @Test
     fun testVariablesInSolution() {
         val taskDirectoryPath = System.getProperty("user.dir")

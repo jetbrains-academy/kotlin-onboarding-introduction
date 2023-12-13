@@ -1,5 +1,5 @@
 type: theory
-custom_name: Built-in Functions
+custom_name: Story twister - Built-in Functions
 files:
   - name: src/main/kotlin/jetbrains/kotlin/course/first/date/Main.kt
     visible: true

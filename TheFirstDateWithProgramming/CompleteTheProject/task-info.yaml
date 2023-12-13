@@ -1,5 +1,5 @@
 type: edu
-custom_name: Complete the project
+custom_name: Story twister - Complete the Project
 files:
 - name: test/Tests.kt
   visible: false

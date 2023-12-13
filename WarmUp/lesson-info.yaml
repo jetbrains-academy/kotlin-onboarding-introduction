@@ -1,14 +1,18 @@
 type: framework
 custom_name: Warm up
 content:
-- Introduction
-- TypesOfVariables
-- CustomFunctions
-- Loops
-- If
-- Collections
-- CollectionsPartTwo
-- FinishBaseGame
-- Random
-- CompleteTheProject
+  - Introduction
+  - typesOfVariablesTheory
+  - TypesOfVariables
+  - customFunctionsTheory
+  - customFunctionsTheoryPartTwo
+  - todoFunction
+  - CustomFunctions
+  - Loops
+  - If
+  - Collections
+  - CollectionsPartTwo
+  - FinishBaseGame
+  - Random
+  - CompleteTheProject
 is_template_based: false

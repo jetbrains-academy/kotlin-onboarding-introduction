@@ -1,5 +1,5 @@
 type: theory
-custom_name: Comments
+custom_name: Story twister - Comments
 files:
   - name: src/main/kotlin/jetbrains/kotlin/course/first/date/Main.kt
     visible: true
