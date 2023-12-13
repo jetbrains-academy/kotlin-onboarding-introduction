@@ -30,7 +30,7 @@ internal val countPartialMatchesMethod = TestMethod(
 )
 
 internal val isWinMethod = TestMethod(
-    "isWin",
+    "isWon",
     TestKotlinType("Boolean"),
     listOf(
         TestVariable("complete", "Boolean"),
@@ -40,7 +40,7 @@ internal val isWinMethod = TestMethod(
 )
 
 internal val isLostMethod = TestMethod(
-    "isLoss",
+    "isLost",
     TestKotlinType("Boolean"),
     listOf(
         TestVariable("complete", "Boolean"),

@@ -1,5 +1,5 @@
 type: theory
-custom_name: Program entry point
+custom_name: Story twister - Program Entry Point
 files:
   - name: src/main/kotlin/jetbrains/kotlin/course/first/date/Main.kt
     visible: true

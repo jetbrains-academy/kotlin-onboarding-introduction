@@ -15,33 +15,9 @@ style:
   MagicNumber:
     active: false
   UnusedPrivateMember:
-    active: true
-    excludes: [
-      "**/AlmostDone/StringFunctions/src/main/kotlin/jetbrains/kotlin/course/almost/done/Main.kt",
-      "**/AlmostDone/When/src/main/kotlin/jetbrains/kotlin/course/almost/done/Main.kt",
-      "**/TheFirstDateWithProgramming/ReadUserInput/src/main/kotlin/jetbrains/kotlin/course/first/date/Main.kt",
-      "**/TheFirstDateWithProgramming/Variables/src/main/kotlin/jetbrains/kotlin/course/first/date/Main.kt",
-      "**/TheFirstDateWithProgramming/comments/src/main/kotlin/jetbrains/kotlin/course/first/date/Main.kt",
-      "**/TheFirstDateWithProgramming/readUserInputTheory/src/main/kotlin/jetbrains/kotlin/course/first/date/Main.kt",
-      "**/Chat/askFirstQuestion/src/main/kotlin/jetbrains/kotlin/course/chat/Main.kt",
-      "**/Chat/askSecondQuestion/src/main/kotlin/jetbrains/kotlin/course/chat/Main.kt",
-      "**/WarmUp/Collections/src/main/kotlin/jetbrains/kotlin/course/warmup/Main.kt",
-      "**/WarmUp/CollectionsPartTwo/src/main/kotlin/jetbrains/kotlin/course/warmup/Main.kt",
-      "**/WarmUp/CustomFunctions/src/main/kotlin/jetbrains/kotlin/course/warmup/Main.kt",
-      "**/WarmUp/If/src/main/kotlin/jetbrains/kotlin/course/warmup/Main.kt",
-      "**/WarmUp/Loops/src/main/kotlin/jetbrains/kotlin/course/warmup/Main.kt",
-
-    ]
+    active: false
   FunctionOnlyReturningConstant:
-    active: true
-    excludes: [
-      "**/WarmUp/Collections/src/main/kotlin/jetbrains/kotlin/course/warmup/Main.kt",
-      "**/WarmUp/CollectionsPartTwo/src/main/kotlin/jetbrains/kotlin/course/warmup/Main.kt",
-      "**/WarmUp/CustomFunctions/src/main/kotlin/jetbrains/kotlin/course/warmup/Main.kt",
-      "**/WarmUp/FinishBaseGame/src/main/kotlin/jetbrains/kotlin/course/warmup/Main.kt",
-      "**/WarmUp/If/src/main/kotlin/jetbrains/kotlin/course/warmup/Main.kt",
-      "**/WarmUp/Loops/src/main/kotlin/jetbrains/kotlin/course/warmup/Main.kt",
-    ]
+    active: false
 
 complexity:
   TooManyFunctions:

@@ -1,4 +1,5 @@
 type: edu
+custom_name: Mastermind - Finish isComplete Function
 files:
 - name: src/main/kotlin/jetbrains/kotlin/course/warmup/Main.kt
   visible: true

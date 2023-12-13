@@ -1,0 +1,13 @@
+type: edu
+custom_name: Mastermind - Run Game
+files:
+  - name: src/main/kotlin/jetbrains/kotlin/course/warmup/Main.kt
+    visible: true
+  - name: src/main/kotlin/jetbrains/kotlin/course/warmup/Util.kt
+    visible: false
+  - name: test/MainClass.kt
+    visible: false
+  - name: test/Methods.kt
+    visible: false
+  - name: test/Tests.kt
+    visible: false

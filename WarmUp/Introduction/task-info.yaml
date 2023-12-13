@@ -1,4 +1,5 @@
 type: theory
+custom_name: Mastermind - Introduction
 files:
 - name: src/main/kotlin/jetbrains/kotlin/course/warmup/Main.kt
   visible: true

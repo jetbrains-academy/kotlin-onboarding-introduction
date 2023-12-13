@@ -34,9 +34,9 @@ fun printRoundResults(secret: String, guess: String) {
     println("Your guess has $fullMatches full matches and $partialMatches partial matches.")
 }
 
-fun isWin(complete: Boolean, attempts: Int, maxAttemptsCount: Int) = complete && attempts <= maxAttemptsCount
+fun isWon(complete: Boolean, attempts: Int, maxAttemptsCount: Int) = complete && attempts <= maxAttemptsCount
 
-fun isLoss(complete: Boolean, attempts: Int, maxAttemptsCount: Int) = !complete && attempts > maxAttemptsCount
+fun isLost(complete: Boolean, attempts: Int, maxAttemptsCount: Int) = !complete && attempts > maxAttemptsCount
 
 fun playGame(secret: String, wordLength: Int, maxAttemptsCount: Int) {
     var complete: Boolean
@@ -47,10 +47,10 @@ fun playGame(secret: String, wordLength: Int, maxAttemptsCount: Int) {
         printRoundResults(secret, guess)
         complete = isComplete(secret, guess)
         attempts++
-        if (isLoss(complete, attempts, maxAttemptsCount)) {
+        if (isLost(complete, attempts, maxAttemptsCount)) {
             println("Sorry, you lost! :( My word is $secret")
             break
-        } else if (isWin(complete, attempts, maxAttemptsCount)) {
+        } else if (isWon(complete, attempts, maxAttemptsCount)) {
             println("Congratulations! You guessed it!")
         }
     } while (!complete)

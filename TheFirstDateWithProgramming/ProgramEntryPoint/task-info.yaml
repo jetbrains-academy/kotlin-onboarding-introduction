@@ -1,5 +1,5 @@
 type: edu
-custom_name: First Kotlin program
+custom_name: Story twister - First Kotlin Program
 files:
 - name: src/main/kotlin/jetbrains/kotlin/course/first/date/Main.kt
   visible: true

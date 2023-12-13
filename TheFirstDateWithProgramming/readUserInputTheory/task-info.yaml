@@ -1,5 +1,5 @@
 type: theory
-custom_name: Read user input - Theory
+custom_name: Story twister - Read user input, Theory
 files:
   - name: src/main/kotlin/jetbrains/kotlin/course/first/date/Main.kt
     visible: true

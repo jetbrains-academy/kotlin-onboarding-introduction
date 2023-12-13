@@ -1,5 +1,5 @@
 type: edu
-custom_name: Variables - Practice
+custom_name: Story twister - Variables, Practice
 files:
 - name: test/Tests.kt
   visible: false

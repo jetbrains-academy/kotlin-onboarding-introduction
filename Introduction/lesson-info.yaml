@@ -1,0 +1,4 @@
+type: framework
+is_template_based: false
+content:
+  - welcome

@@ -31,3 +31,4 @@ internal val countExactMatchesMethod = TestMethod(
         TestVariable("guess", "String"),
     ),
 )
+

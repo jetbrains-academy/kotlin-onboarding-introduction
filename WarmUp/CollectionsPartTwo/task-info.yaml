@@ -1,5 +1,5 @@
 type: edu
-custom_name: Collections - part two
+custom_name: Mastermind - countAllMatches Function
 files:
 - name: src/main/kotlin/jetbrains/kotlin/course/warmup/Util.kt
   visible: false

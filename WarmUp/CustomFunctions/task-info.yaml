@@ -1,5 +1,5 @@
 type: edu
-custom_name: Custom functions
+custom_name: Mastermind - Add First Custom Functions
 files:
 - name: src/main/kotlin/jetbrains/kotlin/course/warmup/Main.kt
   visible: true

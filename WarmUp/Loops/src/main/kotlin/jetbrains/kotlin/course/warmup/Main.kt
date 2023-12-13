@@ -35,5 +35,4 @@ fun main() {
     val maxAttemptsCount = 3
     val secretExample = "ACEB"
     println(getGameRules(wordLength, maxAttemptsCount, secretExample))
-    playGame(generateSecret(), wordLength, maxAttemptsCount)
 }
