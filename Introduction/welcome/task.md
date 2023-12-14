@@ -11,10 +11,10 @@ it includes all the topics of the lesson but is not divided into small tasks.
 All topics will be accompanied by links to [the official Kotlin documentation](https://kotlinlang.org/docs/home.html),
 which you can read later.
 
-Note, this course **does not provide the detailed explanation** of the basic concepts
-like variables, it only shows how to use the concepts in Kotlin and may remind you of their definitions.
+Note, this course **does not provide detailed explanations** of basic concepts
+like variables. Instead, it shows how to use these concepts in Kotlin and may remind you of their definitions.
 
-Please join the course chat on Discord using [the link](https://discord.gg/pN3kfttB). 
+Please join the course chat on Discord using [this link](https://discord.gg/pN3kfttB). 
 There, you can ask questions, interact with instructors, and connect with your fellow students.
 
-Let's go!
+Let's get started!
