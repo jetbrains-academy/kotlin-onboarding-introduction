@@ -1,12 +1,12 @@
 ### Task
 
-After answering fake questions that we implemented on the previous steps, 
+After the user has answered the mock questions implemented in the previous steps, 
 print the text `Now let's have fun!`. 
-Then print the real questions along with the previous user’s answers. 
+Then, print the real questions along with the user’s previous answers. 
 The real questions are stored in the already **predefined** `firstQuestion`, `secondQuestion`, and `thirdQuestion` variables.
 
 _Predefined_ means that you can access these variables 
-because the course creator put them in the project and added the necessary values. 
+because the course creator put them in the project and assigned the necessary values. 
 For example, you can write `println(firstQuestion)` to print 
 the value from the **predefined** `firstQuestion` variable.
 You can find all these variables in the `RealQuestions.kt` file.
