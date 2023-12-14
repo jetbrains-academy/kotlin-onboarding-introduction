@@ -1,6 +1,6 @@
 We have previously talked about the _built-in_ functions in Kotlin.
 In addition to the already familiar functions for output to the console,
-Kotlin has the [`readlnOrNull`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.io/readln-or-null.html) function, which reads the values entered by the user and stores them in a variable:
+Kotlin also has the [`readlnOrNull`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.io/readln-or-null.html) function, which reads values entered by the user and stores them in a variable:
 
 ```kotlin
 val myValue = readlnOrNull()
@@ -25,4 +25,4 @@ val myValue: String? = readlnOrNull()
 // The myValue variable stores the user's input
 ```
 
-It is connected to the null safety in Kotlin, we will consider it later, but if you are interested in this topic, you can read more in the [documentation](https://kotlinlang.org/docs/null-safety.html).
+This relates to null safety in Kotlin, which we will consider later. If you are interested in this topic, you can read more in the [documentation](https://kotlinlang.org/docs/null-safety.html).
