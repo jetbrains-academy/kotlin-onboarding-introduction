@@ -1,14 +1,14 @@
-In this task you will reply to the user and then to ask the next question!
+In this task, you will respond to the user and then ask the next question!
 
 ### Task
 
 Firstly, print `Nice to meet you, <some user's answer>! My name is Kotlin Bot! I am a young programming language created in 2010. How old are you?`,
-where instead `<some user's answer>` you need to print the user's answer from the previous task, e.g. if the user answered `John`,
+where you replace `<some user's answer>` with the user's answer from the previous task. For instance, if the user answered `John`,
 the text `Nice to meet you, John! My name is Kotlin Bot! I am a young programming language created in 2010. How old are you?` will be printed.
 
-After that, read the second user answer into a variable (you can use any name of the variable that you wish).
+After that, read the second user's answer into a variable (you can use any variable name you wish).
 
-**Note**: to avoid typos just copy the text from here and paste into your code.
+**Note**: to avoid typos, just copy the text from here and paste it into your code.
 
 If you have any difficulties, **hints will help you solve this task**.
 
@@ -18,8 +18,8 @@ If you have any difficulties, **hints will help you solve this task**.
 
 <div class="hint" title="Push me to learn which functions can be helpful to solve this task">
 
-To print the answer you can use the `println` function from the previous steps.
-Then, no read the user input into a variable, you can use the `readlnOrNull` function.
+To print the answer, you can use the `println` function from the previous steps.
+Then, to read the user's input into a variable, you can use the `readlnOrNull` function.
 
 </div>
 
