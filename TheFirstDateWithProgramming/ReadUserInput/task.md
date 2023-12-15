@@ -1,4 +1,4 @@
-In this task you will ask the user three questions and save their answers.
+In this task, you will ask the user three questions and save their answers.
 
 ### Task
 
@@ -18,7 +18,7 @@ You must ask questions and record answers sequentially,
 i.e. first ask the first question (_print_ it to console), 
 then record the answer in the _firstUserAnswer_ variable. 
 Then do the same with the second question and the _secondUserAnswer_ variable, 
-and the last question and the last _thirdUserAnswer_ variable.
+and finally with the third question and the _thirdUserAnswer_ variable.
 
 If you have any difficulties, **hints will help you solve this task**.
 
@@ -28,8 +28,8 @@ If you have any difficulties, **hints will help you solve this task**.
 
 <div class="hint" title="Push me to view an example with the first question">
 
-To print a question you can use the `println` function from the previous steps.
-Then, no read the user input, you can use the `readlnOrNull` function:
+To print a question, you can use the `println` function from the previous steps.
+Then, to read the user input, you can use the `readlnOrNull` function:
 
 ```kotlin
 fun main() {
