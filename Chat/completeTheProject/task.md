@@ -3,10 +3,10 @@ It's time to complete the project!
 ### Task
 
 Print `<some user's answer> is great! I hope you successfully complete this course! Anyone can learn programming at any age!`,
-where instead `<some user's answer>` you need to print the user's answer from the previous task, e.g. if the user answered `20`,
+where instead of `<some user's answer>`, you need to print the user's answer from the previous task. For instance, if the user answered `20`,
 the text `20 is great! I hope you successfully complete this course! Anyone can learn programming at any age!` will be printed.
 
-**Note**: to avoid typos just copy the text from here and paste into your code.
+**Note**: to avoid typos, just copy the text from here and paste it into your code.
 
 If you have any difficulties, **hints will help you solve this task**.
 
@@ -24,7 +24,7 @@ The game should look like this:
 
 <div class="hint" title="Push me to learn which functions can be helpful to solve this task">
 
-To print the answer you can use the `println` function from the previous steps.
+To print the answer, you can use the `println` function from the previous steps.
 
 </div>
 
