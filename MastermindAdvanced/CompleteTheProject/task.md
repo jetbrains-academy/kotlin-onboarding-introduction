@@ -1,10 +1,10 @@
-It's time to apply implemented functions and finish the game!
+It's time to apply the implemented functions and finish the game!
 
 ### Task
 
-Replace `safeReadLine` function inside the `playGame` function with implemented 
-on the previous step `safeUserInput` function.
-Since the `safeUserInput` function requires `alphabet: String` argument, don't forget update the signature of 
+Replace the `safeReadLine` function inside the `playGame` function with the `safeUserInput` function implemented 
+in the previous step.
+Since the `safeUserInput` function requires an `alphabet: String` argument, don't forget to update the signature of 
 the `playGame` function.
 
 <div class="hint" title="Push me to see the new signature of the playGame function">
