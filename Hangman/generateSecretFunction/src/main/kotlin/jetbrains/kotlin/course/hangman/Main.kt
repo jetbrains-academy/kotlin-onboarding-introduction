@@ -38,6 +38,8 @@ fun generateNewUserWord(secret: String, guess: Char, currentUserWord: String): S
     return newUserWord.removeSuffix(separator)
 }
 
+fun generateSecret() = words.random()
+
 fun main() {
     // Write your code here
 }

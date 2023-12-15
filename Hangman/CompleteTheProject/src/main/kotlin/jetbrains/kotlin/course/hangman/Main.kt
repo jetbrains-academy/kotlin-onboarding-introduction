@@ -22,16 +22,6 @@ fun deleteSeparator(guess: String) = guess.replace(separator, "")
 
 fun isComplete(secret: String, currentGuess: String) = secret == deleteSeparator(currentGuess)
 
-fun getRoundResults(secret: String, guess: Char, currentUserWord: String): String {
-    if (guess !in secret) {
-        println("Sorry, the secret does not contain the symbol: $guess. The current word is $currentUserWord")
-        return currentUserWord
-    }
-    val newUserWord = generateNewUserWord(secret, guess, currentUserWord)
-    println("Great! This letter is in the word! The current word is $newUserWord")
-    return newUserWord
-}
-
 fun generateNewUserWord(secret: String, guess: Char, currentUserWord: String): String {
     var newUserWord = ""
     for (i in secret.indices) {
@@ -43,6 +33,18 @@ fun generateNewUserWord(secret: String, guess: Char, currentUserWord: String): S
     }
     // Just newUserWord will be ok for the tests
     return newUserWord.removeSuffix(separator)
+}
+
+fun generateSecret() = words.random()
+
+fun getRoundResults(secret: String, guess: Char, currentUserWord: String): String {
+    if (guess !in secret) {
+        println("Sorry, the secret does not contain the symbol: $guess. The current word is $currentUserWord")
+        return currentUserWord
+    }
+    val newUserWord = generateNewUserWord(secret, guess, currentUserWord)
+    println("Great! This letter is in the word! The current word is $newUserWord")
+    return newUserWord
 }
 
 fun getHiddenSecret(wordLength: Int) = List(wordLength) { underscore }.joinToString(separator)
@@ -69,8 +71,6 @@ fun isCorrectInput(userInput: String): Boolean {
     }
     return true
 }
-
-fun generateSecret() = words.random()
 
 fun playGame(secret: String, wordLength: Int, maxAttemptsCount: Int) {
     var complete: Boolean

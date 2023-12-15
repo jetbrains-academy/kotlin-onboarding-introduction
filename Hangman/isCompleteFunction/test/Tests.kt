@@ -14,7 +14,6 @@ class Test {
     companion object {
         @JvmStatic
         fun functions() = listOf(
-            Arguments.of(generateNewUserWordMethod),
             Arguments.of(isCompleteMethod),
         )
 
@@ -25,9 +24,6 @@ class Test {
             Arguments.of("ABC", "A${separator}B${separator}B", false),
             Arguments.of("ABC", "A${separator}A${separator}A", false),
         )
-
-        @JvmStatic
-        fun userGuesses() = userGuessesData()
 
         private val mainClass = TestClass(
             classPackage = "jetbrains.kotlin.course.hangman",
@@ -50,24 +46,6 @@ class Test {
     @MethodSource("functions")
     fun testFunctions(function: TestMethod) {
         mainClass.checkMethod(mainClazz, function)
-    }
-
-    @ParameterizedTest
-    @MethodSource("userGuesses")
-    fun testGenerateNewUserWordImplementation(
-        secret: String,
-        guess: Char,
-        currentUserWord: String,
-        expectedGuess: String?
-    ) {
-        val userMethod = mainClass.findMethod(mainClazz, generateNewUserWordMethod)
-        val actualGuess = (userMethod.invokeWithArgs(secret, guess, currentUserWord, clazz = mainClazz) as String).dropLastWhile { it.toString() == separator }
-        val expected = expectedGuess ?: currentUserWord
-        Assertions.assertEquals(
-            expected,
-            actualGuess,
-            "The function ${generateNewUserWordMethod.name} with arguments: secret=$secret, guess=$guess, and currentUserWord=$currentUserWord should return $expected"
-        )
     }
 
     @ParameterizedTest

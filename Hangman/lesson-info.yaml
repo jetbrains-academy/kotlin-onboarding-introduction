@@ -1,6 +1,8 @@
 type: framework
 content:
-- CreateTheGame
-- Core
-- CompleteTheProject
+  - CreateTheGame
+  - isCompleteFunction
+  - Core
+  - generateSecretFunction
+  - CompleteTheProject
 is_template_based: false

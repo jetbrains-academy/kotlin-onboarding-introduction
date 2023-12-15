@@ -1,5 +1,7 @@
 import jetbrains.kotlin.course.hangman.separator
+import jetbrains.kotlin.course.hangman.words
 import org.jetbrains.academy.test.system.core.invokeWithArgs
+import org.jetbrains.academy.test.system.core.invokeWithoutArgs
 import org.jetbrains.academy.test.system.core.models.classes.TestClass
 import org.jetbrains.academy.test.system.core.models.classes.findClassSafe
 import org.jetbrains.academy.test.system.core.models.method.TestMethod
@@ -8,6 +10,7 @@ import org.junit.jupiter.api.BeforeAll
 import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.Arguments
 import org.junit.jupiter.params.provider.MethodSource
+import org.junit.jupiter.api.Test
 import util.*
 
 class Test {
@@ -16,6 +19,7 @@ class Test {
         fun functions() = listOf(
             Arguments.of(generateNewUserWordMethod),
             Arguments.of(isCompleteMethod),
+            Arguments.of(generateSecretMethod)
         )
 
         @JvmStatic
@@ -34,6 +38,7 @@ class Test {
             customMethods = listOf(
                 generateNewUserWordMethod,
                 isCompleteMethod,
+                generateSecretMethod
             )
         )
 
@@ -50,6 +55,18 @@ class Test {
     @MethodSource("functions")
     fun testFunctions(function: TestMethod) {
         mainClass.checkMethod(mainClazz, function)
+    }
+
+    @Test
+    fun testGenerateSecretMethodImplementation() {
+        val userMethod = mainClass.findMethod(mainClazz, generateSecretMethod)
+        val generatedWords = mutableSetOf<String>()
+        repeat (100) {
+            val word = userMethod.invokeWithoutArgs(clazz = mainClazz) as String
+            Assertions.assertTrue(word in words) { "The method ${generateSecretMethod.name} should generate a random word from the 'words' list, but it returns the word $word, which is not in the 'words' list" }
+            generatedWords.add(word)
+        }
+        Assertions.assertTrue(generatedWords.size > 1) { "The method ${generateSecretMethod.name} should generate random words, but after 100 calls it generated only: $words" }
     }
 
     @ParameterizedTest
