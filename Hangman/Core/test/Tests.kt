@@ -19,6 +19,14 @@ class Test {
         )
 
         @JvmStatic
+        fun isCompleteData() = listOf(
+            // secret, guess, isComplete
+            Arguments.of("ABC", "A${separator}B${separator}C", true),
+            Arguments.of("ABC", "A${separator}B${separator}B", false),
+            Arguments.of("ABC", "A${separator}A${separator}A", false),
+        )
+
+        @JvmStatic
         fun userGuesses() = userGuessesData()
 
         private val mainClass = TestClass(
@@ -60,5 +68,17 @@ class Test {
             actualGuess,
             "The function ${generateNewUserWordMethod.name} with arguments: secret=$secret, guess=$guess, and currentUserWord=$currentUserWord should return $expected"
         )
+    }
+
+    @ParameterizedTest
+    @MethodSource("isCompleteData")
+    fun testIsCompleteMethodImplementation(
+        secret: String,
+        guess: String,
+        isComplete: Boolean
+    ) {
+        val userMethod = mainClass.findMethod(mainClazz, isCompleteMethod)
+        val actualResult = (userMethod.invokeWithArgs(secret, guess, clazz = mainClazz) as Boolean)
+        Assertions.assertEquals(isComplete, actualResult) { "The function ${isCompleteMethod.name} with arguments secret=$secret, guess=$guess should return $isComplete, but the current result is $actualResult" }
     }
 }

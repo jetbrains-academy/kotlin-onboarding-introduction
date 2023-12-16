@@ -7,5 +7,5 @@ import jetbrains.kotlin.course.hangman.wordLength
 
 fun main() {
     println(getGameRules(wordLength, maxAttemptsCount))
-    playGame("TREE", wordLength, maxAttemptsCount)
+    playGame("TREE", maxAttemptsCount)
 }

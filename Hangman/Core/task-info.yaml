@@ -1,4 +1,5 @@
 type: edu
+custom_name: Hangman - generateNewUserWord Function
 files:
 - name: src/main/kotlin/jetbrains/kotlin/course/hangman/Main.kt
   visible: true

@@ -1,5 +1,5 @@
 type: theory
-custom_name: Create the game
+custom_name: Hangman - Introduction
 files:
 - name: src/main/kotlin/jetbrains/kotlin/course/hangman/Main.kt
   visible: true
