@@ -22,5 +22,8 @@ fun isWin(complete: Boolean, attempts: Int, maxAttemptsCount: Int) = complete &&
 fun isLost(complete: Boolean, attempts: Int, maxAttemptsCount: Int) = !complete && attempts > maxAttemptsCount
 
 fun main() {
-    // Write your code here
+    // Uncomment this code on the last step of the game
+
+    // println(getGameRules(wordLength, maxAttemptsCount))
+    // playGame(generateSecret(), maxAttemptsCount)
 }

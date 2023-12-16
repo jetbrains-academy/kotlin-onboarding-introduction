@@ -31,9 +31,3 @@ Here's an example of how the `safeUserInput` function works:
 
 To make the picture fit, additional line breaks were added.
 You don't need to add them when solving the task.
-
-If you have any difficulties, **hints will help you solve this task**.
-
-----
-
-### Hints

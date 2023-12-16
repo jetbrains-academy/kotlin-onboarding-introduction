@@ -39,5 +39,8 @@ fun generateNewUserWord(secret: String, guess: Char, currentUserWord: String): S
 }
 
 fun main() {
-    // Write your code here
+    // Uncomment this code on the last step of the game
+
+    // println(getGameRules(wordLength, maxAttemptsCount))
+    // playGame(generateSecret(), maxAttemptsCount)
 }

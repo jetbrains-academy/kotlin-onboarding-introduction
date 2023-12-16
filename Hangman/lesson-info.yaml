@@ -4,5 +4,9 @@ content:
   - isCompleteFunction
   - Core
   - generateSecretFunction
+  - getHiddenSecretFunction
+  - isCorrectInputFunction
+  - safeUserInputFunction
+  - getRoundResultsFunction
   - CompleteTheProject
 is_template_based: false

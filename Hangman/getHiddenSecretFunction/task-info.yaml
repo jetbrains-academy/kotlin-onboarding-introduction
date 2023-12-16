@@ -1,0 +1,15 @@
+type: edu
+custom_name: Hangman - getHiddenSecret Function
+files:
+  - name: src/main/kotlin/jetbrains/kotlin/course/hangman/Main.kt
+    visible: true
+  - name: src/main/kotlin/jetbrains/kotlin/course/hangman/Util.kt
+    visible: false
+  - name: src/main/kotlin/jetbrains/kotlin/course/hangman/Words.kt
+    visible: false
+  - name: test/Core.kt
+    visible: false
+  - name: test/HangmanTestUtil.kt
+    visible: false
+  - name: test/Tests.kt
+    visible: false

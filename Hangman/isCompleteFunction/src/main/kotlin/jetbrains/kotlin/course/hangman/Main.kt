@@ -26,5 +26,8 @@ fun deleteSeparator(guess: String) = guess.replace(separator, "")
 fun isComplete(secret: String, currentGuess: String) = secret == deleteSeparator(currentGuess)
 
 fun main() {
-    // Write your code here
+    // Uncomment this code on the last step of the game
+
+    // println(getGameRules(wordLength, maxAttemptsCount))
+    // playGame(generateSecret(), maxAttemptsCount)
 }

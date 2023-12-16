@@ -19,7 +19,7 @@ You need to remove all spaces from `currentGuess` first.
 
 You can also use the already defined variable `separator` that stores a space:
 ```kotlin
-println("It is the value from the separator variable: $separator.") // It is the value from the separator variable: .
+println("It is the value from the separator variable: $separator.") // It is the value from the separator variable:  .
 ```
 
 If you have any difficulties, **hints will help you solve this task**.

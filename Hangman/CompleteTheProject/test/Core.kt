@@ -15,12 +15,53 @@ internal val generateNewUserWordMethod = TestMethod(
     ),
 )
 
+internal val isCorrectInputMethod = TestMethod(
+    "isCorrectInput",
+    TestKotlinType("Boolean"),
+    listOf(TestVariable("userInput", "String")),
+)
+
+internal val getRoundResultsMethod = TestMethod(
+    "getRoundResults",
+    TestKotlinType("String"),
+    listOf(
+        TestVariable("secret", "String"),
+        TestVariable("guess", "Char"),
+        TestVariable("currentUserWord", "String")
+    ),
+)
+
+internal val playGameMethod = TestMethod(
+    "playGame",
+    TestKotlinType("unit"),
+    listOf(
+        TestVariable("secret", "String"),
+        TestVariable("maxAttemptsCount", "Int"),
+    ),
+    returnTypeJava = "void",
+)
+
+internal val safeUserInputMethod = TestMethod("safeUserInput", TestKotlinType("Char"))
+
 internal val isCompleteMethod = TestMethod(
     "isComplete",
     TestKotlinType("Boolean"),
     listOf(
         TestVariable("secret", "String"),
         TestVariable("currentGuess", "String"),
+    ),
+)
+
+internal val generateSecretMethod = TestMethod(
+    "generateSecret",
+    TestKotlinType("String"),
+)
+
+internal val getHiddenSecret = TestMethod(
+    "getHiddenSecret",
+    TestKotlinType("String"),
+    listOf(
+        TestVariable("wordLength", "Int"),
     ),
 )
 

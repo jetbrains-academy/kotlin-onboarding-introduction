@@ -16,9 +16,8 @@ fun generateNewUserWord(secret: String, guess: Char, currentUserWord: String): S
 
 **Note**, the `currentUserWord` must be stored with `separator`s, e.g., `B _ N _`.
 
-To solve this task, the [`indices`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/indices.html) property, 
-and the [`removeSuffix`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/remove-suffix.html) function
-can be helpful.
+You can implement this function in any way you choose, but we _recommend_ looking into the [`indices`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/indices.html) property, 
+and the [`removeSuffix`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/remove-suffix.html) function.
 
 If you have any difficulties, **hints will help you solve this task**.
 
