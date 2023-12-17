@@ -1,5 +1,5 @@
 type: edu
-custom_name: Finish the app
+custom_name: Patterns Generator - Finish The Application
 files:
   - name: src/main/kotlin/jetbrains/kotlin/course/last/push/Main.kt
     visible: true
