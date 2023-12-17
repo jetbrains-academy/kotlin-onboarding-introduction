@@ -1,4 +1,5 @@
 type: theory
+custom_name: Console Photoshop - Introduction
 files:
 - name: src/main/kotlin/jetbrains/kotlin/course/almost/done/Main.kt
   visible: true

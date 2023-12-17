@@ -77,13 +77,20 @@ class Test {
     }
 
     @Test
-    fun testChoosePictureFunction() {
-        mainClass.checkMethod(mainClazz, choosePictureMethod)
-    }
-
-    @Test
     fun testGetPictureFunction() {
         mainClass.checkMethod(mainClazz, getPictureMethod)
+    }
+
+    @ParameterizedTest
+    @MethodSource("picturesInputs")
+    fun testGetPictureImplementation(input: String, isSystemInEmpty: Boolean, output: String) {
+        checkReadLineFunctions(
+            testMethod = getPictureMethod,
+            clazz = mainClazz,
+            input = input,
+            isSystemInEmpty = isSystemInEmpty,
+            output = output,
+        )
     }
 
     @ParameterizedTest
@@ -98,16 +105,9 @@ class Test {
         )
     }
 
-    @ParameterizedTest
-    @MethodSource("picturesInputs")
-    fun testGetPictureImplementation(input: String, isSystemInEmpty: Boolean, output: String) {
-        checkReadLineFunctions(
-            testMethod = getPictureMethod,
-            clazz = mainClazz,
-            input = input,
-            isSystemInEmpty = isSystemInEmpty,
-            output = output,
-        )
+    @Test
+    fun testChoosePictureFunction() {
+        mainClass.checkMethod(mainClazz, choosePictureMethod)
     }
 
     @Test

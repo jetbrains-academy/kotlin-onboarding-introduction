@@ -73,7 +73,7 @@ fun choosePicture(): String {
         val name = safeReadLine()
         val picture = getPictureByName(name)
         picture?.let {
-            return picture
+            return@choosePicture picture
         }
     } while (true)
 }
@@ -96,5 +96,7 @@ fun getPicture(): String {
 }
 
 fun main() {
-    // Write your solution in this file
+    // Uncomment this code on the last step of the game
+
+    // photoshop()
 }

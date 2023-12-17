@@ -32,5 +32,7 @@ fun applyFilter(picture: String, filter: String): String {
 }
 
 fun main() {
-    // Write your solution in this file
+    // Uncomment this code on the last step of the game
+
+    // photoshop()
 }

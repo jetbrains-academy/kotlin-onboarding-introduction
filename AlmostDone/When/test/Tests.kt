@@ -31,6 +31,11 @@ class Test {
     }
 
     @Test
+    fun testApplySquaredFilterFunction() {
+        mainClass.checkMethod(mainClazz, applySquaredFilterMethod)
+    }
+
+    @Test
     fun testApplyFilterFunction() {
         mainClass.checkMethod(mainClazz, applyFilterMethod)
     }
@@ -38,11 +43,6 @@ class Test {
     @Test
     fun testApplyBordersFilterFunction() {
         mainClass.checkMethod(mainClazz, applyBordersFilterMethod)
-    }
-
-    @Test
-    fun testApplySquaredFilterFunction() {
-        mainClass.checkMethod(mainClazz, applySquaredFilterMethod)
     }
 
     @Test

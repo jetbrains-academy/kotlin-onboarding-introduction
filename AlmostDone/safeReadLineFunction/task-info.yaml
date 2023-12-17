@@ -1,0 +1,17 @@
+type: edu
+custom_name: Console Photoshop - safeReadLine Function
+files:
+  - name: src/main/kotlin/jetbrains/kotlin/course/almost/done/Main.kt
+    visible: true
+  - name: src/main/kotlin/jetbrains/kotlin/course/almost/done/PreDefinedSymbols.kt
+    visible: false
+  - name: src/main/kotlin/jetbrains/kotlin/course/almost/done/Images.kt
+    visible: false
+  - name: test/MainClass.kt
+    visible: false
+  - name: test/Methods.kt
+    visible: false
+  - name: test/PhotoshopTestsUtils.kt
+    visible: false
+  - name: test/Tests.kt
+    visible: false

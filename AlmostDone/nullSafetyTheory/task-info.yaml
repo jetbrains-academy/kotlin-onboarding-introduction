@@ -1,0 +1,9 @@
+type: theory
+custom_name: Console Photoshop - Null Safety
+files:
+  - name: src/main/kotlin/jetbrains/kotlin/course/almost/done/Main.kt
+    visible: true
+  - name: src/main/kotlin/jetbrains/kotlin/course/almost/done/PreDefinedSymbols.kt
+    visible: false
+  - name: src/main/kotlin/jetbrains/kotlin/course/almost/done/Images.kt
+    visible: false

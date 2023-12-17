@@ -1,5 +1,5 @@
 type: edu
-custom_name: Null-safety - part two
+custom_name: Console Photoshop - getPicture Function
 files:
 - name: test/Tests.kt
   visible: false
