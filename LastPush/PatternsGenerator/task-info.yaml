@@ -1,5 +1,5 @@
 type: theory
-custom_name: Patterns generator project
+custom_name: Patterns Generator - Introduction
 files:
 - name: src/main/kotlin/jetbrains/kotlin/course/last/push/Main.kt
   visible: true

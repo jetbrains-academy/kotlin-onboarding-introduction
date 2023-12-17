@@ -9,5 +9,7 @@ internal val mainClass = TestClass(
         canvasWithGapsGeneratorMethod,
         applyGeneratorMethod,
         getPatternMethod,
+        repeatHorizontallyMethod,
+        dropTopFromLineMethod
     )
 )

@@ -1,4 +1,6 @@
 import jetbrains.kotlin.course.last.push.ball
+import jetbrains.kotlin.course.last.push.getPatternHeight
+import jetbrains.kotlin.course.last.push.getPatternWidth
 import jetbrains.kotlin.course.last.push.newLineSymbol
 import org.jetbrains.academy.test.system.core.invokeWithArgs
 import org.jetbrains.academy.test.system.core.models.classes.findClassSafe
@@ -30,6 +32,13 @@ class Test {
             mainClazz = mainClass.findClassSafe() ?: throwInternalCourseError()
         }
 
+        @JvmStatic
+        fun dropTopLineDataArguments() = dropTopLineData
+
+        @JvmStatic
+        fun repeatHorizontallyArguments() = canvas().filter{ (p, f) ->
+            f.height == 1
+        }.toArguments()
     }
 
     @Test
@@ -49,6 +58,48 @@ class Test {
             userMethod.invokeWithArgs(pattern, canvasFilter.width, canvasFilter.height, clazz = mainClazz).toString().trimIndent(),
             "For pattern:$newLineSymbol$pattern$newLineSymbol, width=${canvasFilter.width}, and height=${canvasFilter.height} the function ${canvasGeneratorMethod.name} should return $newLineSymbol${canvasFilter.result}$newLineSymbol"
         )
+    }
+
+    @Test
+    fun dropTopFromLineFunction() {
+        mainClass.checkMethod(mainClazz, dropTopFromLineMethod)
+    }
+
+    @ParameterizedTest
+    @MethodSource("dropTopLineDataArguments")
+    fun dropTopFromLineFunctionImplementation(
+        line: String,
+        expected: String
+    ) {
+        val userMethod = mainClass.findMethod(mainClazz, dropTopFromLineMethod)
+        val patternWidth = getPatternWidth(line)
+        val patternHeight = getPatternHeight(line)
+        val actualResult = userMethod.invokeWithArgs(line, 1, patternHeight, patternWidth, clazz = mainClazz).toString()
+        val error = "The method ${dropTopFromLineMethod.name} with arguments line=${newLineSymbol}$line${newLineSymbol}, width=1, patternHeight=$patternHeight, patternWidth=$patternWidth should return$newLineSymbol$expected${newLineSymbol}But it returns$newLineSymbol$actualResult"
+        Assertions.assertEquals(
+            expected.removeSuffix(System.lineSeparator()),
+            actualResult.removeSuffix(System.lineSeparator())
+        ) { error }
+    }
+
+    @Test
+    fun repeatHorizontallyFunction() {
+        mainClass.checkMethod(mainClazz, repeatHorizontallyMethod)
+    }
+
+    @ParameterizedTest
+    @MethodSource("repeatHorizontallyArguments")
+    fun repeatHorizontallyFunctionImplementation(
+        pattern: String,
+        canvasFilter: Filter
+    ) {
+        val userMethod = mainClass.findMethod(mainClazz, repeatHorizontallyMethod)
+        val patternWidth = getPatternWidth(pattern)
+        val actualResult = userMethod.invokeWithArgs(pattern, canvasFilter.width, patternWidth, clazz = mainClazz).toString()
+        Assertions.assertEquals(
+            canvasFilter.result.removeSuffix(System.lineSeparator()),
+            actualResult.removeSuffix(System.lineSeparator())
+        ) { "The method ${repeatHorizontallyMethod.name} with arguments pattern=$pattern, n=${canvasFilter.width}, patternWidth=$patternWidth should return:${System.lineSeparator()}${canvasFilter.result}${System.lineSeparator()}But it returns:${System.lineSeparator()}$actualResult" }
     }
 
     @Test
