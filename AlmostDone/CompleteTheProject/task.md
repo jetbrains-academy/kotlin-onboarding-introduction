@@ -1,18 +1,28 @@
-### Theory
-
 Hooray! The project is almost finished, there is very little left to do! 
 This time, without a new theoretical part!
 
-___
-
 ### Task
 
-**Description**: finish the game – implement the `photoshop` function. 
-Read the picture and the filter using already implemented functions. 
-Next, print the initial picture to the console with the description `The old image:`, apply the filter and print the new picture with its description `The transformed picture:`.
+Finish the game – implement the `photoshop` function, that combines all functions together. 
+
+<div class="hint" title="Push me to see the signature of the photoshop function">
+
+The signature of the function is:
+```kotlin
+fun photoshop(): Unit
+```
+</div>
+
+Firstly, read the picture and the filter using already implemented functions. 
+Next, print the initial picture to the console with the description `The old image:`, 
+apply the filter and print the new picture with its description `The transformed picture:`.
 Finally, call this function in the `main` function.
 
-<div class="hint" title="The console photoshop example">
+**Note**: to avoid typos, just copy the text from here and paste it into your code.
+
+Also, the `main` function will be checked - just uncomment code in the `main` function.
+
+<div class="hint" title="Push me to see the console photoshop project example">
 
 ![Console photoshop example](../../utils/src/main/resources/images/part1/almost.done/game.gif "Console photoshop example")
 
@@ -26,6 +36,7 @@ If you have any difficulties, **hints will help you solve this task**.
 
 ### Hints
 
-<div class="hint" title="Possible ways to expand the project">
-  Try expanding this project yourself! For example, add new predefined pictures or filters.
+<div class="hint" title="Push me to see possible ways to expand the project">
+
+Try expanding this project yourself! For example, add new predefined pictures or filters.
 </div>

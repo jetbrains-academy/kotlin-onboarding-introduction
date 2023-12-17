@@ -1,4 +1,5 @@
 type: edu
+custom_name: Console Photoshop - applyFilter Function
 files:
 - name: test/Tests.kt
   visible: false

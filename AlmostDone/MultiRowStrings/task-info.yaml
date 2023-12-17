@@ -1,5 +1,5 @@
 type: edu
-custom_name: Multi row strings
+custom_name: Console Photoshop - trimPicture Function
 files:
 - name: test/Tests.kt
   visible: false
