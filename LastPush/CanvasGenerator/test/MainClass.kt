@@ -6,5 +6,7 @@ internal val mainClass = TestClass(
         canvasGeneratorMethod,
         fillPatternRowMethod,
         getPatternHeightMethod,
+        repeatHorizontallyMethod,
+        dropTopFromLineMethod
     ),
 )

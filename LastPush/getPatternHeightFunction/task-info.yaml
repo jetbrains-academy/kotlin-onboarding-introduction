@@ -1,0 +1,21 @@
+type: edu
+custom_name: Patterns Generator - getPatternHeight Function
+files:
+  - name: src/main/kotlin/jetbrains/kotlin/course/last/push/Main.kt
+    visible: true
+  - name: src/main/kotlin/jetbrains/kotlin/course/last/push/Patterns.kt
+    visible: false
+  - name: src/main/kotlin/jetbrains/kotlin/course/last/push/PreDefinedSymbols.kt
+    visible: false
+  - name: test/CanvasGenerator.kt
+    visible: false
+  - name: test/CanvasWithGapsGenerator.kt
+    visible: false
+  - name: test/Helpers.kt
+    visible: false
+  - name: test/MainClass.kt
+    visible: false
+  - name: test/PatternsGeneratorTestsUtils.kt
+    visible: false
+  - name: test/Tests.kt
+    visible: false

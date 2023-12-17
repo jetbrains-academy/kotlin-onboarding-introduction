@@ -1,5 +1,17 @@
+It's time to implement the first pattern generator!
+
+### Task
+
 On this step you need to implement the `canvasGenerator` function, which accepts the `pattern`, `width`, and `height` that were inputted by the user.
 This function should return a new string with a generated canvas picture.
+
+<div class="hint" title="Push me to see the new signature of the canvasGenerator function">
+
+The signature of the function is:
+```kotlin
+fun canvasGenerator(pattern: String, width: Int, height: Int): String
+```
+</div>
 
 In this project, you can use the already implemented functions and variables:
 
@@ -13,7 +25,7 @@ The generator works according to the following algorithm:
    but only if the pattern has more than one line;
 3) When repeated **horizontally**, the pattern remains **unchanged**.
 
-<div class="hint" title="The `canvas` filter examples">
+<div class="hint" title="Push me to see the `canvas` filter examples">
   For example, consider the following pattern:
 
 ```text
@@ -60,22 +72,5 @@ In this case, we kept the first line because, according to the first point of th
 we don't need to change the first level of the generated picture.
 </div>
 
-The following functions will _not be checked_, but they can help you implement this project:
-- `dropTopFromLine`, which accepts a line (any string, can be multi-row) and deletes the first line,
-  e.g.:
-```text
-   .+------+                 
- .' |    .'|                .' |    .'|
-+---+--+'  |    ----->     +---+--+'  |
-|   |  |   |               |   |  |   |
-|  ,+--+---+               |  ,+--+---+
-|.'    | .'                |.'    | .' 
-+------+'                  +------+'
-```
-
-- `repeatHorizontally`, which accepts a `pattern` and the number of times it should be repeated horizontally (n), e.g.:
-```text
-n = 5
-○○             ○○○○○○○○○○
-○○    ---->    ○○○○○○○○○○
-```
+We _recommend_ you to use `getPatternHeight`, `repeatHorizontally`, and `dropTopFromLine` functions, that you already implemented.
+You just need to combine their result and repeat the pattern vertically.

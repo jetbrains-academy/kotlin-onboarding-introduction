@@ -1,4 +1,5 @@
 type: edu
+custom_name: Patterns Generator - fillPatternRow Function
 files:
 - name: src/main/kotlin/jetbrains/kotlin/course/last/push/Main.kt
   visible: true
