@@ -10,7 +10,7 @@ Add several functions to the game:
   function instead of implementation as a temporary solution.
   We will implement this function during solving next tasks.
 
-<div class="hint" title="Push me to see the signature of the applyBordersFilter function">
+<div class="hint" title="Click me to see the signature of the applyBordersFilter function">
 
 The signature of the function is:
 ```kotlin
@@ -18,7 +18,7 @@ fun applyBordersFilter(picture: String): String
 ```
 </div>
 
-<div class="hint" title="Push me to see an example of the borders filter after completing the project">
+<div class="hint" title="Click me to see an example of the borders filter after completing the project">
 
 An example of this filter:
 <p>
@@ -33,7 +33,7 @@ An example of this filter:
   function instead of implementation as a temporary solution.
   We will implement this function during solving next tasks.
 
-<div class="hint" title="Push me to see the signature of the applySquaredFilter function">
+<div class="hint" title="Click me to see the signature of the applySquaredFilter function">
 
 The signature of the function is:
 ```kotlin
@@ -41,7 +41,7 @@ fun applySquaredFilter(picture: String): String
 ```
 </div>
 
-<div class="hint" title="Push me to see an example of the squared filter after completing the project">
+<div class="hint" title="Click me to see an example of the squared filter after completing the project">
 
 An example of this filter:
 <p>

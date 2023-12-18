@@ -6,7 +6,7 @@ Implement the `safeUserInput` function,
 which accepts `wordLength` and `alphabet`
 and handles incorrect user inputs.
 
-<div class="hint" title="Push me to see the new signature of the safeUserInput function">
+<div class="hint" title="Click me to see the new signature of the safeUserInput function">
 
 The signature of the function is:
 ```kotlin

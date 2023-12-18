@@ -5,7 +5,7 @@ of the pre-defined pictures they want to change.
 
 Implement `choosePicture` picture that chooses one pre-defined picture by its name.
 
-<div class="hint" title="Push me to see the signature of the choosePicture function">
+<div class="hint" title="Click me to see the signature of the choosePicture function">
 
 The signature of the function is:
 ```kotlin

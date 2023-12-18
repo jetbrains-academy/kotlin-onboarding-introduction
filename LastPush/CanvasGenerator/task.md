@@ -5,7 +5,7 @@ It's time to implement the first pattern generator!
 On this step you need to implement the `canvasGenerator` function, which accepts the `pattern`, `width`, and `height` that were inputted by the user.
 This function should return a new string with a generated canvas picture.
 
-<div class="hint" title="Push me to see the new signature of the canvasGenerator function">
+<div class="hint" title="Click me to see the new signature of the canvasGenerator function">
 
 The signature of the function is:
 ```kotlin
@@ -25,7 +25,7 @@ The generator works according to the following algorithm:
    but only if the pattern has more than one line;
 3) When repeated **horizontally**, the pattern remains **unchanged**.
 
-<div class="hint" title="Push me to see the `canvas` filter examples">
+<div class="hint" title="Click me to see the `canvas` filter examples">
   For example, consider the following pattern:
 
 ```text

@@ -6,7 +6,7 @@ Add a function `isWon`, which accepts three arguments: `complete`, `attempts`, a
 and returns `true` only if the user guessed the word (the `complete` variable stores `true`) 
 **and** spent _not more_ than `maxAttemptsCount` attempts.
 
-<div class="hint" title="Push me to see the signature of the isWon function">
+<div class="hint" title="Click me to see the signature of the isWon function">
 
 The signature of the function is:
 ```kotlin

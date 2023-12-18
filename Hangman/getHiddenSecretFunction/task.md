@@ -5,7 +5,7 @@ In this step we will add a function to generate the initial hidden secret with u
 Implement the `getHiddenSecret` function, that accepts `wordLength`
 and generates the initial hidden secret with underscores, e.g. for `wordLength` `4` the result will be `_ _ _ _`.
 
-<div class="hint" title="Push me to see the new signature of the getHiddenSecret function">
+<div class="hint" title="Click me to see the new signature of the getHiddenSecret function">
 
 The signature of the function is:
 ```kotlin
@@ -27,7 +27,7 @@ If you have any difficulties, **hints will help you solve this task**.
 
 ### Hints
 
-<div class="Hint" title="Push me to learn more about joinToString function">
+<div class="Hint" title="Click me to learn more about joinToString function">
 
 To join a list of elements into a string,
 you can use the [`joinToString`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.sequences/join-to-string.html)

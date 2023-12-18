@@ -11,7 +11,7 @@ If you have any difficulties, **hints will help you solve this task**.
 
 ### Hints
 
-<div class="hint" title="Push me to get a code style hint">
+<div class="hint" title="Click me to get a code style hint">
 
 If you compare two variables to get a `Boolean` result, you can use the short notation. 
 For example, the following code:

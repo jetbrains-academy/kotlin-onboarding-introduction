@@ -11,7 +11,7 @@ If you have any difficulties, **hints will help you solve this task**.
 
 ### Hints
 
-<div class="Hint" title="Push me to learn how to pass a generated secret inside the playGame function">
+<div class="Hint" title="Click me to learn how to pass a generated secret inside the playGame function">
 
 You can call the `generateSecret` and write the output to a variable, or you can pass the result 
 without creating an extra variable:

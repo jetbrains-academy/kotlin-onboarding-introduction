@@ -6,7 +6,7 @@ to combine them into another one which apply a filter to the pattern.
 Implement the `repeatHorizontally` function, which accepts a `pattern`, the number of repeats `n`, and `patternWidth`
 and repeat the `pattern` `n` times horizontally.
 
-<div class="hint" title="Push me to see the new signature of the getPatternHeight function">
+<div class="hint" title="Click me to see the new signature of the getPatternHeight function">
 
 The signature of the function is:
 ```kotlin
@@ -39,7 +39,7 @@ If you have any difficulties, **hints will help you solve this task**.
 
 ### Hints
 
-<div class="hint" title="Push me to see several examples how repeatHorizontally function should work">
+<div class="hint" title="Click me to see several examples how repeatHorizontally function should work">
 
 The first examples:
 ```kotlin
@@ -87,7 +87,7 @@ Result:
 
 </div>
 
-<div class="hint" title="Push me to learn how to run the repeatHorizontally function with pre-defined patterns">
+<div class="hint" title="Click me to learn how to run the repeatHorizontally function with pre-defined patterns">
 
 To check how your function works, you can run it in <code>main</code> by passing one of the pre-defined patterns:
 
