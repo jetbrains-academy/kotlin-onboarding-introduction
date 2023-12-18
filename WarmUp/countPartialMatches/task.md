@@ -15,7 +15,7 @@ If you have any difficulties, **hints will help you solve this task**.
 
 ### Hints
 
-<div class="Hint" title="Push me to see examples of the `countPartialMatches` function's work">
+<div class="Hint" title="Click me to see examples of the `countPartialMatches` function's work">
 
 Here are several examples of the _countPartialMatches_ function's work:
 
@@ -25,7 +25,7 @@ Here are several examples of the _countPartialMatches_ function's work:
 - guess = "BBBB", secret = "BBDH", result = 0.
 </div>
 
-<div class="Hint" title="Push me to learn the main idea of the algorithm">
+<div class="Hint" title="Click me to learn the main idea of the algorithm">
 
 Since we already have functions that calculate count of all matches and count of exact matches, 
 we can just subtract count of exact matches from count of all matches to get the right value.

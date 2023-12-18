@@ -4,7 +4,7 @@ We need to provide the user to be able to transform their own pictures. Let's do
 
 Implement `getPicture` function that asks the user to choose a pre-defined picture or to input a custom picture.
 
-<div class="hint" title="Push me to see the signature of the getPicture function">
+<div class="hint" title="Click me to see the signature of the getPicture function">
 
 The signature of the function is:
 ```kotlin
@@ -39,7 +39,7 @@ If you have any difficulties, **hints will help you solve this task**.
 
 ### Hints
 
-<div class="hint" title="Push me to get a code style hint">
+<div class="hint" title="Click me to get a code style hint">
 
 To check the user's answer in the `getPicture` function, 
 it is most convenient to use the `when` expression instead a composite `if`.

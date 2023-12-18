@@ -4,7 +4,7 @@ It's time to practice!
 
 Implement the `trimPicture` function, which accepts a picture and removes all indents from it. 
 
-<div class="hint" title="Push me to see the new signature of the trimPicture function">
+<div class="hint" title="Click me to see the new signature of the trimPicture function">
 
 The signature of the function is:
 ```kotlin

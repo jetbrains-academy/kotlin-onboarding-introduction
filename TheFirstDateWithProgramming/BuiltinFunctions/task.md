@@ -1,6 +1,6 @@
 Let's start implementing our **Story twister** project. Let's first print an introduction to the user.
 
-<div class="hint" title="Push me to view what the project will look like after completing all tasks of this project">
+<div class="hint" title="Click me to view what the project will look like after completing all tasks of this project">
 
 ![The game's example](../../utils/src/main/resources/images/part1/first.date/game.gif "The game's example")
 

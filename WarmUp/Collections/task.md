@@ -8,7 +8,7 @@ of letters that match exactly down to position.
 
 You can implement this function in any possible way, but we _recommend_ to look into the `filterIndexed` built-in function.
 
-<div class="Hint" title="Push me to learn more about filterIndexed built-in function">
+<div class="Hint" title="Click me to learn more about filterIndexed built-in function">
 
 Kotlin has many built-in functions: e.g., we can filter and manipulate with not only the elements from the list but also list indices.
 For example, given two words, we need to build a new word, which consists of the characters that occur in both words at the same positions.
@@ -40,7 +40,7 @@ If you have any difficulties, **hints will help you solve this task**.
 
 ### Hints
 
-<div class="Hint" title="Push me to see examples of the `countExactMatches` function's work">
+<div class="Hint" title="Click me to see examples of the `countExactMatches` function's work">
 
 Here are several examples of the _countExactMatches_ function's work:
 
@@ -50,14 +50,14 @@ Here are several examples of the _countExactMatches_ function's work:
 - guess = "BBBB", secret = "BBDH", result = 2.
 </div>
 
-<div class="Hint" title="Push me to learn the main idea of the algorithm">
+<div class="Hint" title="Click me to learn the main idea of the algorithm">
 
 The main idea of the algorithm is to keep only those letters that are equal and have the same index. 
 Next, we can just return the number of these letters.
 To find the number of exact matches, you can consider the <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/filter-indexed.html"><code>filterIndexed</code></a> function.
 </div>
 
-<div class="Hint" title="Push me to learn how to get the number elements in the list">
+<div class="Hint" title="Click me to learn how to get the number elements in the list">
 
 To get the number of characters in the word, you can use <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/length.html#length"><code>length</code></a>:
 `"ABCDDD".length` will return `6`, since the string contains `6` letters.  

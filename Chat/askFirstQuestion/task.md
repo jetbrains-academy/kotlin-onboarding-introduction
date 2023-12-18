@@ -13,7 +13,7 @@ If you have any difficulties, **hints will help you solve this task**.
 
 ### Hints
 
-<div class="hint" title="Push me to learn which functions can be helpful to solve this task">
+<div class="hint" title="Click me to learn which functions can be helpful to solve this task">
 
 To print a question, you can use the `println` function from the previous steps.
 Then, to store the user's input in a variable, you can use the `readlnOrNull` function.

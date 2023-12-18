@@ -7,7 +7,7 @@ which accepts a string `secret` - the secret of the current of the game,
 a char `guess` - a current guess from the user, and a string `currentUserWord` - a current state of the game, e.g. `_ _ _ K`.
 This function should check if the user guessed a char.
 
-<div class="hint" title="Push me to see the new signature of the safeUserInput function">
+<div class="hint" title="Click me to see the new signature of the safeUserInput function">
 
 The signature of the function is:
 ```kotlin

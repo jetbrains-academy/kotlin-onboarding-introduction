@@ -11,7 +11,7 @@ If you have any difficulties, **hints will help you solve this task**.
 
 ### Hints
 
-<div class="hint" title="Push me to learn which keyword — val or var — is better to use">
+<div class="hint" title="Click me to learn which keyword — val or var — is better to use">
 
 In the current task, it is better to use the `val` keyword, since we will just _save_ values from the user 
 into the variables and will not change them afterwards.

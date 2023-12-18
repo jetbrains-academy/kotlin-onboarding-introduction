@@ -5,7 +5,7 @@ It's time to practice! Let's start with a simple function.
 Implement the `isComplete` function, which accepts two string arguments - `secret` and `currentGuess`, 
 and checks if the game is complete. The game is complete only if `secret` and `currentGuess` equal.
 
-<div class="hint" title="Push me to see the new signature of the isComplete function">
+<div class="hint" title="Click me to see the new signature of the isComplete function">
 
 The signature of the function is:
 ```kotlin
@@ -28,7 +28,7 @@ If you have any difficulties, **hints will help you solve this task**.
 
 ### Hints
 
-<div class="Hint" title="Push me to see examples how the isComplete function works">
+<div class="Hint" title="Click me to see examples how the isComplete function works">
 
 Here are several examples of the _isComplete_ function's work:
 
@@ -37,7 +37,7 @@ Here are several examples of the _isComplete_ function's work:
 - secret = "ABC", currentGuess = "A A A", result = false;
 </div>
 
-<div class="Hint" title="Push me to learn how to replace separator in the current user's guess">
+<div class="Hint" title="Click me to learn how to replace separator in the current user's guess">
 
 The easiest way to replace `separator` in `currentGuess` is to use the built-in function [`replace`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/replace.html):
 ```kotlin

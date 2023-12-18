@@ -6,7 +6,7 @@ Implement the function `printRoundResults` to
 print the number of exact matches and the number of partial matches in the current round.
 It should accept two string arguments - `secret` and `guess`.
 
-<div class="hint" title="Push me to see the signature of the printRoundResults function">
+<div class="hint" title="Click me to see the signature of the printRoundResults function">
 
 The signature of the function is:
 ```kotlin

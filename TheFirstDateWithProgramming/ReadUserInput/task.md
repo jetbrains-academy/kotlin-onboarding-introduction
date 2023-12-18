@@ -26,7 +26,7 @@ If you have any difficulties, **hints will help you solve this task**.
 
 ### Hints
 
-<div class="hint" title="Push me to view an example with the first question">
+<div class="hint" title="Click me to view an example with the first question">
 
 To print a question, you can use the `println` function from the previous steps.
 Then, to read the user input, you can use the `readlnOrNull` function:
@@ -45,7 +45,7 @@ fun main() {
 
 </div>
 
-<div class="hint" title="Push me to view the expected state of the application after completing this task">
+<div class="hint" title="Click me to view the expected state of the application after completing this task">
 
 As a result, the user's interaction with the game will look like this:
 

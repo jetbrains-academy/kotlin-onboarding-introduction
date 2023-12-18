@@ -4,7 +4,7 @@ The goal of this task is to generate a random word for the game.
 
 Implement the `generateSecret` function, that generates a _random_ word from the `words` list.
 
-<div class="hint" title="Push me to see the new signature of the generateSecret function">
+<div class="hint" title="Click me to see the new signature of the generateSecret function">
 
 The signature of the function is:
 ```kotlin

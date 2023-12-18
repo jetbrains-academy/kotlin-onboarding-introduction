@@ -6,7 +6,7 @@ Implement the `isCorrectInput` function, that accepts a string `userInput`
 and checks if it is correct: 1) the length of the `userInput` is 1 and 2) the `userInput` is an english letter.
 If `userInput` is correct, the function  returns `true`, and `false` otherwise.
 
-<div class="hint" title="Push me to see the new signature of the getHiddenSecret function">
+<div class="hint" title="Click me to see the new signature of the getHiddenSecret function">
 
 The signature of the function is:
 ```kotlin
@@ -35,7 +35,7 @@ If you have any difficulties, **hints will help you solve this task**.
 
 ### Hints
 
-<div class="Hint" title="Push me to learn how to check if the size of the userInput is incorrect">
+<div class="Hint" title="Click me to learn how to check if the size of the userInput is incorrect">
 
 You can use `length` to get the number of letters in `userInput`:
 ```kotlin
@@ -44,7 +44,7 @@ val size = userInput.length
 Then, you need to compare it with `1`.
 </div>
 
-<div class="Hint" title="Push me to learn more about the isLetter built-in function">
+<div class="Hint" title="Click me to learn more about the isLetter built-in function">
 
 The built-in function <a href='https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/is-letter.html'>`isLetter`</a> checks if the passed symbol 
 is an English letter and can be applied only to one letter at once:

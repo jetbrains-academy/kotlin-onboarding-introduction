@@ -6,7 +6,7 @@ Implement the `safeUserInput` function,
 which accepts no arguments and returns an uppercase letter that was input by the user.
 This function has to check the user input with `isCorrectInput` function to avoid incorrect inputs.
 
-<div class="hint" title="Push me to see the new signature of the safeUserInput function">
+<div class="hint" title="Click me to see the new signature of the safeUserInput function">
 
 The signature of the function is:
 ```kotlin
@@ -38,7 +38,7 @@ If you have any difficulties, **hints will help you solve this task**.
 
 ### Hints
 
-<div class="Hint" title="Push me to learn more about the uppercase built-in function">
+<div class="Hint" title="Click me to learn more about the uppercase built-in function">
 
 The built-in function [`uppercase`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/uppercase.html)
 converts all letter from a string to uppercase format:

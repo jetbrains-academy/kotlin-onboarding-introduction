@@ -7,7 +7,7 @@ and a filter name, applies the `trimPicture` function to the picture and finally
 applies the given filter, and returns the updated picture. To apply a filter, 
 just call one of the already defined functions `applyBordersFilter` or `applySquaredFilter`.
 
-<div class="hint" title="Push me to see the signature of the applyFilter function">
+<div class="hint" title="Click me to see the signature of the applyFilter function">
 
 The signature of the function is:
 ```kotlin

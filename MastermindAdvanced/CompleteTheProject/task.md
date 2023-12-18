@@ -7,7 +7,7 @@ in the previous step.
 Since the `safeUserInput` function requires an `alphabet: String` argument, don't forget to update the signature of 
 the `playGame` function.
 
-<div class="hint" title="Push me to see the new signature of the playGame function">
+<div class="hint" title="Click me to see the new signature of the playGame function">
 
 The signature of the function is:
 ```kotlin
@@ -19,7 +19,7 @@ Finally, don't forget to use the `alphabet` argument inside the main function wh
 
 Good luck!
 
-<div class="hint" title="Push me to see the final version of the game">
+<div class="hint" title="Click me to see the final version of the game">
 
 ![The game's example](../../utils/src/main/resources/images/part1/warmup/game.gif "The game's example")
 

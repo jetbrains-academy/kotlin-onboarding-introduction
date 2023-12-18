@@ -6,7 +6,7 @@ Implement the `isCorrectInput` function,
 which accepts `userInput`, `wordLength`, and `alphabet` and returns `true` 
 if the input is correct, and `false` otherwise.
 
-<div class="hint" title="Push me to see the new signature of the isCorrectInput function">
+<div class="hint" title="Click me to see the new signature of the isCorrectInput function">
 
 The signature of the function is:
 ```kotlin
@@ -39,7 +39,7 @@ If you have any difficulties, **hints will help you solve this task**.
 
 ### Hints
 
-<div class="Hint" title="Push me to learn how to check if the size of the userInput is incorrect">
+<div class="Hint" title="Click me to learn how to check if the size of the userInput is incorrect">
 
 You can use `length` to get the number of letters in `userInput`:
 ```kotlin
@@ -48,7 +48,7 @@ val size = userInput.length
 Then, you need to compare it with `wordLength`.
 </div>
 
-<div class="Hint" title="Push me to learn more about the isNotEmpty built-in function">
+<div class="Hint" title="Click me to learn more about the isNotEmpty built-in function">
 
 As we already know, Kotlin has many built-in functions.
 If you need to check whether a list (or string) is empty,

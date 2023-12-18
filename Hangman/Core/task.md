@@ -6,7 +6,7 @@ Implement the `generateNewUserWord` function,
 which generates a new sequence of underscores and already guessed letters
 by means of a string with `secret`, a char with user's `guess`, and a string `currentUserWord`. 
 
-<div class="hint" title="Push me to see the new signature of the generateNewUserWord function">
+<div class="hint" title="Click me to see the new signature of the generateNewUserWord function">
 
 The signature of the function is:
 ```kotlin
@@ -25,7 +25,7 @@ If you have any difficulties, **hints will help you solve this task**.
 
 ### Hints
 
-<div class="Hint" title="Push me to see examples how the currentUserWord function works">
+<div class="Hint" title="Click me to see examples how the currentUserWord function works">
 
 Here are several examples of the _currentUserWord_ function's work:
 
@@ -37,7 +37,7 @@ Here are several examples of the _currentUserWord_ function's work:
 - secret = `"BOOK"`, guess = `'K'`, currentUserWord = `"_ _ _ K"`, result = `"_ _ _ K"`;
 </div>
 
-<div class="Hint" title="Push me to learn more about indices property">
+<div class="Hint" title="Click me to learn more about indices property">
 
 To make a loop check over each char in a string, you can use the <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/indices.html">`indices`</a> property:
    ```
@@ -51,7 +51,7 @@ It is the same as:
 It's a more convenient and shorter way to represent a range of indices.
 </div>
 
-<div class="Hint" title="Push me to learn more about removeSuffix function">
+<div class="Hint" title="Click me to learn more about removeSuffix function">
 
 The [`removeSuffix`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/remove-suffix.html) function
 helps to delete a suffix from a string:
@@ -62,7 +62,7 @@ println("abcdef".removeSuffix("f")) // abcde
 It can be helpful if you need to delete some extra separators from the end of the string.
 </div>
 
-<div class="Hint" title="Push me to check the mai idea of the algorithm">
+<div class="Hint" title="Click me to check the mai idea of the algorithm">
 
 To implement the `generateNewUserWord` function you can just to check for each letter from the `secret`
 if this letter equals with the `guess`.

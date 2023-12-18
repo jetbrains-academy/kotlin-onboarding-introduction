@@ -17,7 +17,7 @@ If you have any difficulties, **hints will help you solve this task**.
 
 ### Hints
 
-<div class="hint" title="Push me to view an example with the first real question">
+<div class="hint" title="Click me to view an example with the first real question">
 
 To print the first  **predefined** question from the `firstQuestion` variable and the user answer, you
 can use the `println` function from the previous steps:
@@ -40,7 +40,7 @@ fun main() {
 
 </div>
 
-<div class="hint" title="Push me to view the expected state of the game after completing this task">
+<div class="hint" title="Click me to view the expected state of the game after completing this task">
 
 The game should look like this:
 
@@ -48,7 +48,7 @@ The game should look like this:
 
 </div>
 
-<div class="hint" title="Push me to learn how to combine text and string variables together">
+<div class="hint" title="Click me to learn how to combine text and string variables together">
 
 String literals may contain template expressions – pieces of code that are
 evaluated and whose results are concatenated into the string.

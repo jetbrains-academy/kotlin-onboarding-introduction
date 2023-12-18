@@ -5,7 +5,7 @@ This time, without a new theoretical part!
 
 Finish the game – implement the `photoshop` function, that combines all functions together. 
 
-<div class="hint" title="Push me to see the signature of the photoshop function">
+<div class="hint" title="Click me to see the signature of the photoshop function">
 
 The signature of the function is:
 ```kotlin
@@ -22,7 +22,7 @@ Finally, call this function in the `main` function.
 
 Also, the `main` function will be checked - just uncomment code in the `main` function.
 
-<div class="hint" title="Push me to see the console photoshop project example">
+<div class="hint" title="Click me to see the console photoshop project example">
 
 ![Console photoshop example](../../utils/src/main/resources/images/part1/almost.done/game.gif "Console photoshop example")
 
@@ -36,7 +36,7 @@ If you have any difficulties, **hints will help you solve this task**.
 
 ### Hints
 
-<div class="hint" title="Push me to see possible ways to expand the project">
+<div class="hint" title="Click me to see possible ways to expand the project">
 
 Try expanding this project yourself! For example, add new predefined pictures or filters.
 </div>

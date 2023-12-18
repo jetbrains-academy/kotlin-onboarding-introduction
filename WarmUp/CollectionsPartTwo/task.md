@@ -6,7 +6,7 @@ a new function `countAllMatches` to calculate all matches
 Add and implement a new function _countAllMatches_ which has two string arguments (_secret_ and _guess_)
 and returns the number of matched letters between them that don't depend on the position.
 
-<div class="hint" title="Push me to see the signature of the countAllMatches function">
+<div class="hint" title="Click me to see the signature of the countAllMatches function">
 
 The signature of the function is:
 ```kotlin
@@ -16,7 +16,7 @@ fun countAllMatches(secret: String, guess: String): Int
 
 You can implement this function in any possible way, but we _recommend_ to look into the `filter` and `minOf` built-in functions.
 
-<div class="Hint" title="Push me to learn more about filter built-in function">
+<div class="Hint" title="Click me to learn more about filter built-in function">
 
 You can use the <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/filter.html"><code>filter</code></a> function
 to filter elements from one collection that are in another:
@@ -28,7 +28,7 @@ println(list1.filter{ it in list2 }) // [3, 4]
 ```
 </div>
 
-<div class="Hint" title="Push me to learn more about minOf built-in function">
+<div class="Hint" title="Click me to learn more about minOf built-in function">
 
 You can use the <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.comparisons/min-of.html"><code>minOf</code></a> function
 to find a minimum values from several ones:
@@ -44,7 +44,7 @@ If you have any difficulties, **hints will help you solve this task**.
 
 ### Hints
 
-<div class="Hint" title="Push me to see examples of the `countAllMatches` function's work">
+<div class="Hint" title="Click me to see examples of the `countAllMatches` function's work">
 
 Here are several examples of the _countAllMatches_ function's work:
 
@@ -54,7 +54,7 @@ Here are several examples of the _countAllMatches_ function's work:
 - guess = "BBBB", secret = "BBDH", result = 2.
 </div>
 
-<div class="Hint" title="Push me to learn the main idea of the algorithm">
+<div class="Hint" title="Click me to learn the main idea of the algorithm">
 
 You can just count the number of letters from the guess that are in secret.
 But in some cases it will prodice an incorrect answer, for example, if the guess has the same letters:

@@ -9,7 +9,7 @@ It's time to implement this function by yourself!
 Implement the `safeReadLine` function, which returns the string the user inputs or throws an error
 if the `null` value was received.
 
-<div class="hint" title="Push me to see the signature of the safeReadLine function">
+<div class="hint" title="Click me to see the signature of the safeReadLine function">
 
 The signature of the function is:
 ```kotlin

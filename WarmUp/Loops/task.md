@@ -5,7 +5,7 @@ It's time to start implementing the `playGame` function to be able to read user 
 Define a new function `playGame`, which accepts `secret`, `wordLength`, and `maxAttemptsCount` 
 and imitates the game process.
 
-<div class="hint" title="Push me to see the signature of the playGame function">
+<div class="hint" title="Click me to see the signature of the playGame function">
 
 The signature of the function is:
 ```kotlin
@@ -41,17 +41,17 @@ If you have any difficulties, **hints will help you solve this task**.
 
 ### Hints
 
-<div class="Hint" title="Push me to get help with `playGame` function">
+<div class="Hint" title="Click me to get help with `playGame` function">
 
 Use `do-while` loop for imitating the game process.
 </div>
 
-<div class="Hint" title="Push me to learn which type for the condition variable for the loop is better to use">
+<div class="Hint" title="Click me to learn which type for the condition variable for the loop is better to use">
 
 The best type for the `complete` variable for the loop condition is `Boolean`, since it indicates only two game states.
 </div>
 
-<div class="Hint" title="Push me to get a code style hint">
+<div class="Hint" title="Click me to get a code style hint">
 
 If you use the `do-while` loop with a `Boolean` variable as the condition, 
 you can omit the initialization of the variable before the loop. For example, consider the following code:
@@ -71,7 +71,7 @@ do {
 You can do it only if the value of the variable is <b>changed</b> inside the loop.
 </div>
 
-<div class="Hint" title="Push me to see the correct solution of this task">
+<div class="Hint" title="Click me to see the correct solution of this task">
 
 One of the possible ways to solve this task:
 ```kotlin

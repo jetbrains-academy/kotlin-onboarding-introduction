@@ -7,7 +7,7 @@ Add several functions to the game:
 - _generateSecret_, which should return the hidden word. 
 For the time being, let this function always return  `ABCD`.
 
-<div class="hint" title="Push me to see the signature of the generateSecret function">
+<div class="hint" title="Click me to see the signature of the generateSecret function">
 
 The signature of the function is:
 ```kotlin
@@ -21,7 +21,7 @@ You don't need to implement this function now, it is enough to use the `TODO`
 function instead of implementation as a temporary solution. 
 We will implement this function during solving next tasks.
 
-<div class="hint" title="Push me to see the signature of the countPartialMatches function">
+<div class="hint" title="Click me to see the signature of the countPartialMatches function">
 
 The signature of the function is:
 ```kotlin
@@ -35,7 +35,7 @@ You don't need to implement this function now, it is enough to use the `TODO`
 function instead of implementation as a temporary solution.
 We will implement this function during solving next tasks.
 
-<div class="hint" title="Push me to see the signature of the countExactMatches function">
+<div class="hint" title="Click me to see the signature of the countExactMatches function">
 
 The signature of the function is:
 ```kotlin

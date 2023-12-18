@@ -5,7 +5,7 @@ Let's make our game more fun!
 Implement the `generateSecret` function to return a random secret word for the game:
 - add new arguments: `wordLength` and `alphabet`;
 
-<div class="hint" title="Push me to see the new signature of the generateSecret function">
+<div class="hint" title="Click me to see the new signature of the generateSecret function">
 
 The signature of the function is:
 ```kotlin
@@ -25,7 +25,7 @@ If you have any difficulties, **hints will help you solve this task**.
 
 ### Hints
 
-<div class="Hint" title="Push me to learn how to implement the generateSecret function">
+<div class="Hint" title="Click me to learn how to implement the generateSecret function">
 
 You can create a new list with `wordLength` elements using _random_ letters from `alphabet`.
 Finally, you can use the `joinToString` function with an empty separator (`""`) to build the final string.
