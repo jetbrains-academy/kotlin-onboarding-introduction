@@ -1,11 +1,11 @@
-It's the last step before implementing the main function for the game! Let's go!
+This is the final step before implementing the main function for the game! Let's go!
 
 ### Task
 
 Implement the `getRoundResults` function,
-which accepts a string `secret` - the secret of the current of the game, 
-a char `guess` - a current guess from the user, and a string `currentUserWord` - a current state of the game, e.g. `_ _ _ K`.
-This function should check if the user guessed a char.
+which accepts a string `secret` - the secret of the current round of the game, 
+a char `guess` - the current guess from the user, and a string `currentUserWord` - the current state of the game, e.g., `_ _ _ K`.
+This function should check if the user correctly guessed a char.
 
 <div class="hint" title="Click me to see the new signature of the safeUserInput function">
 
@@ -20,8 +20,8 @@ This function should have the following behavior:
   ```text
   Sorry, the secret does not contain the symbol: <guess>. The current word is <currentUserWord>
   ```
-  Here, instead of `<guess>` and `<currentUserWord>`, you need to print the value from the `guess` and `currentUserWord` function arguments: 
-  e.g., if the `guess` value is `A`, and the `currentUserWord` is `_ _ _ K`
+  Here, instead of `<guess>` and `<currentUserWord>`, you need to print the values from the `guess` and `currentUserWord` function arguments: 
+  e.g., if the `guess` value is `A`, and the `currentUserWord` is `_ _ _ K`,
   the text `Sorry, the secret does not contain the symbol: A. The current word is _ _ _ K` will be printed.
 
 - inform the user if the `secret` contains the `guess`:
