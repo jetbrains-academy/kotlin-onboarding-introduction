@@ -234,4 +234,9 @@ class Test {
     }
 
     private fun trimOutput(output: String) = output.lines().joinToString(newLineSymbol) { it.trim() }
+
+    @Test
+    fun testPlayGameFunction() {
+        mainClass.checkMethod(mainClazz, playGameMethod)
+    }
 }

@@ -19,6 +19,17 @@ internal val printRoundResultsMethod = TestMethod(
     "Void",
 )
 
+internal val playGameMethod = TestMethod(
+    "playGame",
+    TestKotlinType("Unit"),
+    listOf(
+        TestVariable("secret", "String"),
+        TestVariable("wordLength", "Int"),
+        TestVariable("maxAttemptsCount", "Int"),
+    ),
+    "Void",
+)
+
 internal val isLostMethod = TestMethod(
     "isLost",
     TestKotlinType("Boolean"),

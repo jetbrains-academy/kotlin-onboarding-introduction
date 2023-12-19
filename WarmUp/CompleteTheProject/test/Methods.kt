@@ -30,7 +30,7 @@ internal val countPartialMatchesMethod = TestMethod(
 )
 
 internal val isWinMethod = TestMethod(
-    "isWin",
+    "isWon",
     TestKotlinType("Boolean"),
     listOf(
         TestVariable("complete", "Boolean"),
@@ -40,7 +40,7 @@ internal val isWinMethod = TestMethod(
 )
 
 internal val isLostMethod = TestMethod(
-    "isLoss",
+    "isLost",
     TestKotlinType("Boolean"),
     listOf(
         TestVariable("complete", "Boolean"),
@@ -49,44 +49,7 @@ internal val isLostMethod = TestMethod(
     ),
 )
 
-internal val generateSecretMethod = TestMethod(
-    "generateSecret",
-    TestKotlinType("String"),
-    listOf(
-        TestVariable("wordLength", "Int"),
-        TestVariable("alphabet", "String"),
-    ),
-)
-
-internal val isCorrectInputMethod = TestMethod(
-    "isCorrectInput",
-    TestKotlinType("Boolean"),
-    listOf(
-        TestVariable("userInput", "String"),
-        TestVariable("wordLength", "Int"),
-        TestVariable("alphabet", "String"),
-    ),
-)
-
-internal val safeUserInputMethod = TestMethod(
-    "safeUserInput",
-    TestKotlinType("String"),
-    listOf(
-        TestVariable("wordLength", "Int"),
-        TestVariable("alphabet", "String"),
-    ),
-)
-
-internal val getGameRulesMethod = TestMethod(
-    "getGameRules",
-    TestKotlinType("String"),
-    listOf(
-        TestVariable("wordLength", "Int"),
-        TestVariable("maxAttemptsCount", "Int"),
-        TestVariable("secretExample", "String"),
-        TestVariable("alphabet", "String"),
-    ),
-)
+internal val generateSecretMethod = TestMethod("generateSecret", TestKotlinType("String"), emptyList())
 
 internal val printRoundResultsMethod = TestMethod(
     "printRoundResults",
@@ -96,4 +59,25 @@ internal val printRoundResultsMethod = TestMethod(
         TestVariable("guess", "String"),
     ),
     "Void",
+)
+
+internal val playGameMethod = TestMethod(
+    "playGame",
+    TestKotlinType("Unit"),
+    listOf(
+        TestVariable("secret", "String"),
+        TestVariable("wordLength", "Int"),
+        TestVariable("maxAttemptsCount", "Int"),
+    ),
+    "Void",
+)
+
+internal val getGameRulesMethod = TestMethod(
+    "getGameRules",
+    TestKotlinType("String"),
+    listOf(
+        TestVariable("wordLength", "Int"),
+        TestVariable("maxAttemptsCount", "Int"),
+        TestVariable("secretExample", "String"),
+    ),
 )

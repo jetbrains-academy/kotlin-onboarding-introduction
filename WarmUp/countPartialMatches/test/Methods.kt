@@ -24,6 +24,17 @@ internal val countPartialMatchesMethod = TestMethod(
     )
 )
 
+internal val playGameMethod = TestMethod(
+    "playGame",
+    TestKotlinType("Unit"),
+    listOf(
+        TestVariable("secret", "String"),
+        TestVariable("wordLength", "Int"),
+        TestVariable("maxAttemptsCount", "Int"),
+    ),
+    "Void",
+)
+
 internal val countAllMatches = TestMethod(
     "countAllMatches", TestKotlinType("Int"), listOf(
         TestVariable("secret", "String"),
