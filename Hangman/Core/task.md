@@ -1,10 +1,10 @@
-Now we will implement a function that build a new string to show after a user guess.
+Now, we will implement a function that builds a new string to display after a user's guess.
 
 ### Task
 
 Implement the `generateNewUserWord` function, 
 which generates a new sequence of underscores and already guessed letters
-by means of a string with `secret`, a char with user's `guess`, and a string `currentUserWord`. 
+using a string for `secret`, a char for the user's `guess`, and a string for the `currentUserWord`. 
 
 <div class="hint" title="Click me to see the new signature of the generateNewUserWord function">
 
@@ -25,7 +25,7 @@ If you have any difficulties, **hints will help you solve this task**.
 
 ### Hints
 
-<div class="Hint" title="Click me to see examples how the currentUserWord function works">
+<div class="Hint" title="Click me to see examples of how the currentUserWord function works">
 
 Here are several examples of the _currentUserWord_ function's work:
 
@@ -37,9 +37,9 @@ Here are several examples of the _currentUserWord_ function's work:
 - secret = `"BOOK"`, guess = `'K'`, currentUserWord = `"_ _ _ K"`, result = `"_ _ _ K"`;
 </div>
 
-<div class="Hint" title="Click me to learn more about indices property">
+<div class="Hint" title="Click me to learn more about the indices property">
 
-To make a loop check over each char in a string, you can use the <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/indices.html">`indices`</a> property:
+To loop over each char in a string, you can use the <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/indices.html">`indices`</a> property:
    ```
    for (i in "abcd".indices) { ... } // i will be 0, 1, 2, 3
    ```
@@ -48,10 +48,10 @@ It is the same as:
    for (i in 0 until "abcd".length) { ... } // i will be 0, 1, 2, 3
    ```
 
-It's a more convenient and shorter way to represent a range of indices.
+It's a more convenient and concise way to represent a range of indices.
 </div>
 
-<div class="Hint" title="Click me to learn more about removeSuffix function">
+<div class="Hint" title="Click me to learn more about the removeSuffix function">
 
 The [`removeSuffix`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/remove-suffix.html) function
 helps to delete a suffix from a string:
@@ -59,23 +59,23 @@ helps to delete a suffix from a string:
 println("abcdef".removeSuffix("f")) // abcde
 ```
 
-It can be helpful if you need to delete some extra separators from the end of the string.
+It may be useful if you need to delete some extra separators from the end of the string.
 </div>
 
-<div class="Hint" title="Click me to check the mai idea of the algorithm">
+<div class="Hint" title="Click me to check the main idea of the algorithm">
 
-To implement the `generateNewUserWord` function you can just to check for each letter from the `secret`
-if this letter equals with the `guess`.
-Ff the current `secret`'s char matches the `guess`'s char in the same position,
+To implement the `generateNewUserWord` function, you just need to check if each letter from the `secret`
+matches the `guess`.
+If the current `secret`'s char matches the `guess`'s char in the same position,
 add the respective `secret`'s char to `newUserWord`; otherwise, add the `currentUserWord`'s char in the `i * 2` position, 
-where `i` is the position of the current chair.
+where `i` is the position of the current char.
 
-**Also, don't forget to add a separator at the loop's step, since you need to generate the result with spaces:**
+**Also, don't forget to add a separator at each step of the loop, since the resulting string needs to include spaces:**
 ```kotlin
 "${secret[i]}$separator" or "${currentUserWord[i * 2]}$separator" // CORRECT
 
 "${secret[i]}" or "${currentUserWord[i * 2]}" // INCORRECT
 ```
 
-If you follow this algorithm, don't forget to remove an extra space from the end of the new string.
+When following this algorithm, don't forget to remove an extra space from the end of the new string.
 </div>
