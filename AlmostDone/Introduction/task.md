@@ -1,6 +1,6 @@
-It is the final theoretical lesson in this module. 
+This is the final theoretical lesson in this module. 
 It will help you learn more about working with long strings 
-as well as refresh some concepts that you have not had time to learn yet.
+as well as refresh some concepts that you might not have fully grasped yet.
 
 ----
 
