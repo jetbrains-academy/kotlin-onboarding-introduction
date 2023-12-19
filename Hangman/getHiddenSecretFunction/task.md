@@ -1,9 +1,9 @@
-In this step we will add a function to generate the initial hidden secret with underscores.
+In this step, we will add a function to generate the initial hidden secret using underscores.
 
 ### Task
 
-Implement the `getHiddenSecret` function, that accepts `wordLength`
-and generates the initial hidden secret with underscores, e.g. for `wordLength` `4` the result will be `_ _ _ _`.
+Implement the `getHiddenSecret` function, which accepts `wordLength`
+and generates the initial hidden secret using underscores: e.g., for `wordLength` `4`, the result will be `_ _ _ _`.
 
 <div class="hint" title="Click me to see the new signature of the getHiddenSecret function">
 
@@ -13,10 +13,10 @@ fun getHiddenSecret(wordLength: Int): String
 ```
 </div>
 
-You can also use the already defined variables `separator` and `underscore` that stores a space and an underscore:
+You can also use the already defined variables `separator` and `underscore`, which store a space and an underscore respectively:
 ```kotlin
-println("It is the value from the separator variable: $separator.") // It is the value from the separator variable:  .
-println("It is the value from the separator variable: $underscore.") // It is the value from the separator variable: _.
+println("This is the value from the separator variable: $separator.") // This is the value from the separator variable:  .
+println("This is the value from the underscore variable: $underscore.") // This is the value from the underscore variable: _.
 ```
 
 You can implement this function in any way you choose, but we _recommend_ looking into the [`joinToString`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/join-to-string.html) function.
@@ -27,12 +27,12 @@ If you have any difficulties, **hints will help you solve this task**.
 
 ### Hints
 
-<div class="Hint" title="Click me to learn more about joinToString function">
+<div class="Hint" title="Click me to learn more about the joinToString function">
 
 To join a list of elements into a string,
 you can use the [`joinToString`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.sequences/join-to-string.html)
 function, passing the _separator_ — a character (or _string_)
-that will be used to separate the elements — as an argument.:
+that will be used to separate the elements — as an argument:
 ```kotlin
 // The separator is "; ", the resulting string is: "6_6_6_6_6"
 List(5) { 6 }.joinToString("_")
