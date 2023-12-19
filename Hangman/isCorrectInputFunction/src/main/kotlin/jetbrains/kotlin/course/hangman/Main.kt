@@ -16,7 +16,7 @@ fun getGameRules(wordLength: Int, maxAttemptsCount: Int) = "Welcome to the game!
         "Good luck in the game!"
 
 // You will use this function later
-fun isWin(complete: Boolean, attempts: Int, maxAttemptsCount: Int) = complete && attempts <= maxAttemptsCount
+fun isWon(complete: Boolean, attempts: Int, maxAttemptsCount: Int) = complete && attempts <= maxAttemptsCount
 
 // You will use this function later
 fun isLost(complete: Boolean, attempts: Int, maxAttemptsCount: Int) = !complete && attempts > maxAttemptsCount

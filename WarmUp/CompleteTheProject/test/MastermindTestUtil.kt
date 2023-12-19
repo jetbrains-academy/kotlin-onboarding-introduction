@@ -2,7 +2,6 @@ import util.Util
 
 internal const val SECRET = "ABCD"
 internal const val WORD_LENGTH = 4
-internal const val ALPHABET = "ABCDEFG"
 
 data class GameStep(
     val attempt: String,
@@ -13,11 +12,14 @@ data class GameStep(
         private const val welcomeMessage = "Please input your guess. It should be of length $WORD_LENGTH."
     }
 
-    fun imitateGameProcess() = "$welcomeMessage${Util.newLineSeparator}Your guess has $positions full matches, and $letters partial matches."
+    fun imitateGameProcess() = "$welcomeMessage${Util.newLineSeparator}Your guess has $positions full matches and $letters partial matches."
 }
 
-enum class UserInputCorrectness(val message: String, val isCorrect: Boolean) {
-    CORRECT("", true),
-    INCORRECT_LENGTH("The length of your guess should be $WORD_LENGTH! Try again!", false),
-    INCORRECT_ALPHABET("All symbols in your guess should be from the alphabet: $ALPHABET! Try again!", false)
+internal fun List<GameStep>.imitateGameProcess() = joinToString(Util.newLineSeparator) { it.imitateGameProcess() }
+
+internal fun List<GameStep>.imitateUserInput() = joinToString(Util.newLineSeparator) { it.attempt }
+
+enum class GameResult(val finalMessage: String) {
+    WIN("Congratulations! You guessed it!"),
+    LOSE("Sorry, you lost! :( My word is $SECRET")
 }

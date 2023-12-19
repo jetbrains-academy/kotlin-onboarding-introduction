@@ -11,6 +11,7 @@ internal val mainClass = TestClass(
         countAllMatches,
         printRoundResultsMethod,
         isWinMethod,
-        isLostMethod
+        isLostMethod,
+        playGameMethod
     ),
 )

@@ -9,6 +9,7 @@ internal val mainClass = TestClass(
         generateSecretMethod,
         getGameRulesMethod,
         countAllMatches,
-        printRoundResultsMethod
+        printRoundResultsMethod,
+        playGameMethod
     ),
 )

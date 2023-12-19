@@ -8,6 +8,7 @@ internal val mainClass = TestClass(
         countPartialMatchesMethod,
         generateSecretMethod,
         getGameRulesMethod,
-        countAllMatches
+        countAllMatches,
+        playGameMethod
     ),
 )

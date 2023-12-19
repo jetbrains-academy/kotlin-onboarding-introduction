@@ -27,6 +27,5 @@ content:
   - isLostFunction
   - compositeOperators
   - breakExpression
-  - FinishBaseGame
   - CompleteTheProject
 is_template_based: false

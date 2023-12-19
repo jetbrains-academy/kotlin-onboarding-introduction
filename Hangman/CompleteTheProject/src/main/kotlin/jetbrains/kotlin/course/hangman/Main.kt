@@ -16,7 +16,7 @@ fun getGameRules(wordLength: Int, maxAttemptsCount: Int) = "Welcome to the game!
         "Good luck in the game!"
 
 // You will use this function later
-fun isWin(complete: Boolean, attempts: Int, maxAttemptsCount: Int) = complete && attempts <= maxAttemptsCount
+fun isWon(complete: Boolean, attempts: Int, maxAttemptsCount: Int) = complete && attempts <= maxAttemptsCount
 
 // You will use this function later
 fun isLost(complete: Boolean, attempts: Int, maxAttemptsCount: Int) = !complete && attempts > maxAttemptsCount
@@ -88,7 +88,7 @@ fun playGame(secret: String, maxAttemptsCount: Int) {
         if (isLost(complete, attempts, maxAttemptsCount)) {
             println("Sorry, you lost! My word is $secret")
             break
-        } else if (isWin(complete, attempts, maxAttemptsCount)) {
+        } else if (isWon(complete, attempts, maxAttemptsCount)) {
             println("Congratulations! You guessed!")
         }
     } while (!complete)
