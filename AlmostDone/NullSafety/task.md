@@ -3,8 +3,8 @@ Let's implement a function to interact with the user.
 ### Task
 
 Implement the `chooseFilter` function, which asks the user to choose 
-a filter (`borders` or `squared`, the full text is `Please choose the filter: 'borders' or 'squared'.`) 
-and returns it.
+a filter, either `borders` or `squared`. The full text of the prompt is `Please choose the filter: 'borders' or 'squared'.` 
+The function should then return the chosen filter.
 
 <div class="hint" title="Click me to see the signature of the chooseFilter function">
 
@@ -14,8 +14,8 @@ fun chooseFilter(): String
 ```
 </div>
 
-This function has to use the `safeReadLine` function. 
-If the user inputs an incorrect filter name, the function should ask to input the right one `Please input 'borders' or 'squared'`:
+This function must use the `safeReadLine` function. 
+If the user inputs an incorrect filter name, the function should prompt the user again with `Please input 'borders' or 'squared'` to ensure the correct filter is entered:
 
 ![`chooseFilter` function work](../../utils/src/main/resources/images/part1/almost.done/choose_filter.gif "`chooseFilter` function work")
 
