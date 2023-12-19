@@ -18,4 +18,4 @@ refer to the hints.
 
 ### Project example
 
-![The game's example](../../utils/src/main/resources/images/part1/hangman/game.gif "The game's example")
+![The game's example](../../utils/src/main/resources/images/part1/hangman/game.gif "Game example")
