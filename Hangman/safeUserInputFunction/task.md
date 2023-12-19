@@ -4,7 +4,7 @@ In this task, we will implement the `safeUserInput` function to ensure the user 
 
 Implement the `safeUserInput` function,
 which accepts no arguments and returns an uppercase letter that was input by the user.
-This function has to check the user input with `isCorrectInput` function to avoid incorrect inputs.
+This function has to check the user input with the `isCorrectInput` function to avoid incorrect inputs.
 
 <div class="hint" title="Click me to see the new signature of the safeUserInput function">
 
@@ -14,7 +14,7 @@ fun safeUserInput(): Char
 ```
 </div>
 
-- before reading the user input, print the requirements:
+- before reading the user input, print the prompt:
 
 ```text
 Please input your guess..
@@ -22,15 +22,15 @@ Please input your guess..
 
 **Note**: to avoid typos, just copy the text from here and paste it into your code.
 
-- to read the line of user input, use the `safeReadLine` function that is already defined in the project:
+- to read the line of user input, use the `safeReadLine` function, which is already defined in the project:
 
 ```kotlin
 guess = safeReadLine()
 ```
 
-- to check the correctness of the user's input, use the `isCorrectInput` function that was implemented in the previous step.
+- to check the correctness of the user's input, use the `isCorrectInput` function, which was implemented in the previous step.
 
-To make the letter uppercase you can implement your own function, but we _recommend_ looking into the [`uppercase`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/uppercase.html) built-in function.
+To make a letter uppercase, you can implement your own function, but we _recommend_ looking into the [`uppercase`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/uppercase.html) built-in function.
 
 If you have any difficulties, **hints will help you solve this task**.
 
@@ -41,7 +41,7 @@ If you have any difficulties, **hints will help you solve this task**.
 <div class="Hint" title="Click me to learn more about the uppercase built-in function">
 
 The built-in function [`uppercase`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/uppercase.html)
-converts all letter from a string to uppercase format:
+converts all letter of a string to uppercase format:
 ```kotlin
 println("abc".uppercase()) // ABC
 ```
