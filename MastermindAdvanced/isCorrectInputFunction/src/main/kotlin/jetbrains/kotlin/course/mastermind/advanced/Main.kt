@@ -41,12 +41,12 @@ fun isLost(complete: Boolean, attempts: Int, maxAttemptsCount: Int) = !complete 
 
 fun isCorrectInput(userInput: String, wordLength: Int, alphabet: String): Boolean {
     if (userInput.length != wordLength) {
-        println("The length of your guess should be $wordLength! Try again!")
+        println("The length of your guess should be $wordLength characters! Try again!")
         return false
     }
     val notAlphabetSymbols = userInput.filter { it !in alphabet }
     if (notAlphabetSymbols.isNotEmpty()) {
-        println("All symbols in your guess should be from the alphabet: $alphabet! Try again!")
+        println("All symbols in your guess should be the $alphabet alphabet characters! Try again!")
         return false
     }
     return true

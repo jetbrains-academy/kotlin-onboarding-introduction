@@ -24,8 +24,8 @@ This function should have the following behavior:
   
 - inform the user if the input contains wrong symbols:
   ```text
-    All symbols in your guess should be the <alphabet> alphabet characters! Try again!
-    ```
+  All symbols in your guess should be the <alphabet> alphabet characters! Try again!
+  ```
   Here, instead of `<alphabet>`, you need to print the value from the `alphabet` function argument: e.g., if the value is `ABCDEFGH`,
   the text `All symbols in your guess should be the ABCDEFGH alphabet characters! Try again!` will be printed.
 

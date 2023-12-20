@@ -89,7 +89,7 @@ fun playGame(secret: String, maxAttemptsCount: Int) {
             println("Sorry, you lost! My word is $secret")
             break
         } else if (isWon(complete, attempts, maxAttemptsCount)) {
-            println("Congratulations! You guessed!")
+            println("Congratulations! You guessed it!")
         }
     } while (!complete)
 }

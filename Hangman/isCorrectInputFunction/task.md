@@ -22,8 +22,8 @@ This function should have the following behavior:
 
 - inform the user if the input is not an English letter:
   ```text
-    You should input only English letters! Try again!
-    ```
+  You should input only English letters! Try again!
+  ```
 
 **Note**: to avoid typos, just copy the text from here and paste it into your code.
 

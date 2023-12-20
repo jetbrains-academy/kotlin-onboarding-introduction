@@ -9,7 +9,7 @@ private val ALPHABET_RANGE = 'A'..'Z'
 private val ALPHABET = ALPHABET_RANGE.toList()
 
 private const val LOSS_MESSAGE = "Sorry, you lost! My word is "
-private const val VICTORY_MESSAGE = "Congratulations! You guessed!"
+private const val VICTORY_MESSAGE = "Congratulations! You guessed it!"
 
 private fun generateGameInput() = "${ALPHABET.shuffled().joinToString(newLineSeparator)}$newLineSeparator"
 

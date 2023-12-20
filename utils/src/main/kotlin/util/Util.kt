@@ -38,7 +38,7 @@ fun runMainFunction(mainFunction: () -> Unit, input: String? = null, toAssertSys
         val baos = setSystemOut()
         mainFunction()
         if (toAssertSystemIn) {
-            assert(isSystemInEmpty()) { "You are asking the user to enter data fewer times than required in the task!" }
+            Assertions.assertTrue(isSystemInEmpty()) { "You are asking the user to enter data fewer times than required in the task!" }
         }
         baos.toString("UTF-8").replaceLineSeparator()
     } catch (e: IllegalStateException) {
@@ -46,12 +46,12 @@ fun runMainFunction(mainFunction: () -> Unit, input: String? = null, toAssertSys
         val errorPrefix =
             "Try to run the main function with $userInput, the function must process the input and exit, but the current version of the function"
         if ("Your input is incorrect" in (e.message ?: "")) {
-            assert(false) { "$errorPrefix waits more user inputs, it must be fixed." }
+            Assertions.assertTrue(false) { "$errorPrefix waits more user inputs, it must be fixed." }
         }
-        assert(false) { "$errorPrefix throws an unexpected error, please, check the function's implementation." }
+        Assertions.assertTrue(false) { "$errorPrefix throws an unexpected error, please, check the function's implementation." }
         ""
     } catch (e: NotImplementedError) {
-        assert(false) { "You call not implemented functions (that use TODO()) inside the main function. Please, don't do it until the task asks it" }
+        Assertions.assertTrue(false) { "You call not implemented functions (that use TODO()) inside the main function. Please, don't do it until the task asks it" }
         ""
     }
 }

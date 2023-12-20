@@ -69,7 +69,7 @@ fun chooseFilter(): String {
 
 fun choosePicture(): String {
     do {
-        println("Please, choose a picture. The possible options: ${allPictures().joinToString(", ")}")
+        println("Please choose a picture. The possible options are: ${allPictures().joinToString(", ")}")
         val name = safeReadLine()
         val picture = getPictureByName(name)
         picture?.let {
