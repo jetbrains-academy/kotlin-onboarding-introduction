@@ -1,12 +1,12 @@
-To work correctly with such _nullable_ values, Kotlin provides the [null safety](https://kotlinlang.org/docs/null-safety.html) mechanism.
-In simple words, in Kotlin, it is necessary to handle `null` values separately for the program to work correctly.
+To correctly work with such _nullable_ values, Kotlin provides a mechanism for [null safety](https://kotlinlang.org/docs/null-safety.html).
+In simpler terms, in Kotlin, it is necessary to handle `null` values separately for the program to work correctly.
 The simplest processing mechanisms are the [`!!`](https://kotlinlang.org/docs/null-safety.html#the-operator) and [`?:`](https://kotlinlang.org/docs/null-safety.html#elvis-operator) (the Elvis operator) operators.
 
 ### 1. The `!!` operator
 
-The `!!` operator simply discards the `null` value and works with the type as if there
+The `!!` operator simply disregards the `null` value and works with the type as ithoughf there
 could be no `null` value. However, if the program encounters the `null` value,
-it will exit with the error ([`Null pointer exception`](https://kotlinlang.org/docs/null-safety.html#nullable-types-and-non-null-types), or `NPE`).
+it will exit with an error ([`Null pointer exception`](https://kotlinlang.org/docs/null-safety.html#nullable-types-and-non-null-types), or `NPE`).
 ```kotlin
 var a: String? = null
 a!!.length // CORRECT, but will throw NPE
@@ -31,4 +31,4 @@ if (a != null) {
 ```
 
 In this example, we noted the [smart casts mechanism](https://kotlinlang.org/docs/typecasts.html#smart-casts).
-It is a special mechanism in Kotlin that can define some cases when a nullable value is always non-null.
+It is a special mechanism in Kotlin that can identify certain cases when a nullable value is always non-null.
