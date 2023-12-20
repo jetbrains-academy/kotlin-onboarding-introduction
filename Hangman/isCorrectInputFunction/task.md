@@ -1,9 +1,9 @@
-In the nest two tasks we will implement functions to be able to check the user input if it is correct.
+In the next two tasks, we will implement functions to verify if the user input if it is correct.
 
 ### Task
 
-Implement the `isCorrectInput` function, that accepts a string `userInput`
-and checks if it is correct: 1) the length of the `userInput` is 1 and 2) the `userInput` is an english letter.
+Implement the `isCorrectInput` function, which accepts a string `userInput`
+and checks if it is correct: 1) the length of `userInput` is 1, and 2) `userInput` is an English letter.
 If `userInput` is correct, the function  returns `true`, and `false` otherwise.
 
 <div class="hint" title="Click me to see the new signature of the getHiddenSecret function">
@@ -20,7 +20,7 @@ This function should have the following behavior:
   The length of your guess should be 1! Try again!
   ```
 
-- inform the user if the input it not an english letter:
+- inform the user if the input is not an English letter:
   ```text
     You should input only English letters! Try again!
     ```
@@ -35,7 +35,7 @@ If you have any difficulties, **hints will help you solve this task**.
 
 ### Hints
 
-<div class="Hint" title="Click me to learn how to check if the size of the userInput is incorrect">
+<div class="Hint" title="Click me to learn how to check if the size of userInput is incorrect">
 
 You can use `length` to get the number of letters in `userInput`:
 ```kotlin
@@ -47,11 +47,11 @@ Then, you need to compare it with `1`.
 <div class="Hint" title="Click me to learn more about the isLetter built-in function">
 
 The built-in function <a href='https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/is-letter.html'>`isLetter`</a> checks if the passed symbol 
-is an English letter and can be applied only to one letter at once:
+is an English letter, and it can be applied only to one letter at a time:
 ```kotlin
-println("AB12"[0].isLetter()) // true, since `A` is an english letter
-println("AB12"[1].isLetter()) // true, since `B` is an english letter
-println("AB12"[2].isLetter()) // true, since `1` is NOT an english letter
-println("AB12"[3].isLetter()) // true, since `2` is NOT an english letter
+println("AB12"[0].isLetter()) // true, since `A` is an English letter
+println("AB12"[1].isLetter()) // true, since `B` is an English letter
+println("AB12"[2].isLetter()) // false, since `1` is NOT an English letter
+println("AB12"[3].isLetter()) // false, since `2` is NOT an English letter
 ```
 </div>
