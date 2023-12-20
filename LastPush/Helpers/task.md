@@ -1,4 +1,4 @@
-During the next steps we will implement some helper functions to create the application.
+In the upcoming steps, we will implement some helper functions to create the application.
 
 ### Task
 
@@ -13,11 +13,11 @@ fun fillPatternRow(patternRow: String, patternWidth: Int): String
 ```
 </div>
 
-Please, throw an `IllegalStateException` if `patternRow.length > patternWidth`.
+Please throw an `IllegalStateException` if `patternRow.length > patternWidth`.
 
-For the separator, please use the pre-defined variable `separator` that stores a space.
+For the separator, please use the predefined variable `separator`, which stores a space.
 ```kotlin
-println("It is the value from the separator variable: $separator.") // It is the value from the separator variable:  .
+println("This is the value from the separator variable: $separator.") // This is the value from the separator variable:  .
 ```
 
 If you have any difficulties, **hints will help you solve this task**.
@@ -26,7 +26,7 @@ If you have any difficulties, **hints will help you solve this task**.
 
 ### Hints
 
-<div class="hint" title="Click me to see details about `repeat` built-in function">
+<div class="hint" title="Click me to see details about the `repeat` built-in function">
 
 To generate a string that consists of some repeated symbols, you can use the <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/repeat.html"><code>repeat</code></a> function, e.g.:
   ```kotlin
@@ -34,7 +34,7 @@ To generate a string that consists of some repeated symbols, you can use the <a 
   ```
 </div>
 
-<div class="hint" title="Click me to learn the main idea of `fillPatternRow` function">
+<div class="hint" title="Click me to learn the main idea of the `fillPatternRow` function">
 
 To implement the `fillPatternRow` function, you just need to check 
 if the length of the current pattern row is less than the pattern width. 
