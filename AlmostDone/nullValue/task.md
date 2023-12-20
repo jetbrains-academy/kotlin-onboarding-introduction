@@ -1,6 +1,6 @@
-When defining a type, you can specify that it can also have a special `null` value.
+When defining a type, you can specify that it could also have a special `null` value.
 It's a `null` reference, which doesn't refer to anything.
-What this means in more detail, we will learn in the following parts of the course;
+We will delve into more details about this in the following parts of the course;
 for now, it is enough to know some basic things.
 
 To indicate that a type might be `null`, you should add `?` to the type, for example:
