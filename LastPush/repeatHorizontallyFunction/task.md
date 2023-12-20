@@ -1,10 +1,10 @@
-Let' practice to separate an algorithm to several function. We will implement several extra functions 
-to combine them into another one which apply a filter to the pattern.
+Let' practice separating an algorithm into several functions. We will implement several additional functions 
+and then combine them into another function that applies a filter to the pattern.
 
 ### Task
 
-Implement the `repeatHorizontally` function, which accepts a `pattern`, the number of repeats `n`, and `patternWidth`
-and repeat the `pattern` `n` times horizontally.
+Implement the `repeatHorizontally` function, which accepts a `pattern`, the number of repeats `n`, and `patternWidth`,
+and then repeats the `pattern` `n` times horizontally.
 
 <div class="hint" title="Click me to see the new signature of the getPatternHeight function">
 
@@ -14,10 +14,10 @@ fun repeatHorizontally(pattern: String, n: Int, patternWidth: Int): String
 ```
 </div>
 
-**Note**, since lines in the pattern can be with different width, you need to use `fillPatternRow` 
-function to make all lines with the same width.
+**Note**, since the lines in the pattern can have different widths, you need to use the `fillPatternRow` 
+function to make all lines the same width.
 
-In addition, the project already stores the `newLineSymbol` variable, which can be used to add new lines between new generated picture lines, e.g.:
+In addition, the project already stores the `newLineSymbol` variable, which can be used to add new lines between newly generated picture lines, e.g.:
 ```kotlin
 val line1 = "#######"
 val line2 = "#######"
@@ -39,23 +39,23 @@ If you have any difficulties, **hints will help you solve this task**.
 
 ### Hints
 
-<div class="hint" title="Click me to see several examples how repeatHorizontally function should work">
+<div class="hint" title="Click me to see several examples of how the repeatHorizontally function should work">
 
-The first examples:
+The first example:
 ```kotlin
 // Pattern: ○
 // n = 1
 // Result: ○
 ```
 
-The second examples:
+The second example:
 ```kotlin
 // Pattern: ○
 // n = 2
 // Result: ○○
 ```
 
-The third examples:
+The third example:
 ```text
 Pattern:
  X
@@ -70,7 +70,7 @@ Result:
  X 
 ```
 
-The fourth examples:
+The fourth example:
 ```text
 Pattern:
  X
@@ -87,9 +87,9 @@ Result:
 
 </div>
 
-<div class="hint" title="Click me to learn how to run the repeatHorizontally function with pre-defined patterns">
+<div class="hint" title="Click me to learn how to run the repeatHorizontally function with predefined patterns">
 
-To check how your function works, you can run it in <code>main</code> by passing one of the pre-defined patterns:
+To check how your function works, you can run it in <code>main</code> by passing one of the predefined patterns:
 
 ```kotlin
 fun main() {
