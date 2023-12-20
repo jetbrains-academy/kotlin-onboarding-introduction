@@ -2,7 +2,7 @@ It's time to implement the first pattern generator!
 
 ### Task
 
-On this step you need to implement the `canvasGenerator` function, which accepts the `pattern`, `width`, and `height` that were inputted by the user.
+On this step, you need to implement the `canvasGenerator` function, which accepts the `pattern`, `width`, and `height` that were inputted by the user.
 This function should return a new string with a generated canvas picture.
 
 <div class="hint" title="Click me to see the new signature of the canvasGenerator function">
@@ -15,7 +15,7 @@ fun canvasGenerator(pattern: String, width: Int, height: Int): String
 
 In this project, you can use the already implemented functions and variables:
 
-- the `newLineSymbol` variable, which stores a new line symbol;
+- the `newLineSymbol` variable, which stores a newline symbol;
 - the `getPatternWidth` function, which accepts a pattern and calculates its width;
 
 The `canvas` generator should build a rectangle `width` x `height` from the pattern.
@@ -54,8 +54,8 @@ The resulting 5 x 3 picture will be:
                                   X  X  X  X  X
 ```
 
-The first line of the initial pattern was removed from the second and further levels.
-The wrong example shows image generation without removing the top line in the second and third levels.
+The first line of the initial pattern was removed from the second level and beyond.
+The incorrect example shows image generation without removing the top line in the second and third levels.
 
 However, if the size is 5 x 1, the resulting picture will be:
 
@@ -72,5 +72,5 @@ In this case, we kept the first line because, according to the first point of th
 we don't need to change the first level of the generated picture.
 </div>
 
-We _recommend_ you to use `getPatternHeight`, `repeatHorizontally`, and `dropTopFromLine` functions, that you already implemented.
-You just need to combine their result and repeat the pattern vertically.
+We _recommend_ that you use the `getPatternHeight`, `repeatHorizontally`, and `dropTopFromLine` functions, which you have already implemented.
+You just need to combine their results and repeat the pattern vertically.
