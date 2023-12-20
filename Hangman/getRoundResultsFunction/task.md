@@ -26,8 +26,8 @@ This function should have the following behavior:
 
 - inform the user if the `secret` contains the `guess`:
   ```text
-    Great! This letter is in the word! The current word is <newUserWord>
-    ```
+  Great! This letter is in the word! The current word is <newUserWord>
+  ```
   Here, instead of `<newUserWord>`, you need to print the result from the `generateNewUserWord` function that you implemented earlier: e.g., 
   if the `generateNewUserWord` function returns `B _ _ K`,
   the text `Great! This letter is in the word! The current word is B _ _ K` will be printed.

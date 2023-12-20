@@ -69,28 +69,28 @@ fun chooseFilter(): String {
 
 fun choosePicture(): String {
     do {
-        println("Please, choose a picture. The possible options: ${allPictures().joinToString(", ")}")
+        println("Please choose a picture. The possible options are: ${allPictures().joinToString(", ")}")
         val name = safeReadLine()
         val picture = getPictureByName(name)
         picture?.let {
-            return picture
+            return@choosePicture picture
         }
     } while (true)
 }
 
 fun getPicture(): String {
-    println("Do you want to use a pre-defined picture or use a custom one? " +
-            "Please, input 'yes' for a pre-defined image or 'no' for a custom one")
+    println("Do you want to use a predefined picture or a custom one? " +
+            "Please input 'yes' for a predefined image or 'no' for a custom one")
     do {
         when (safeReadLine()) {
             "yes" -> {
                 return choosePicture()
             }
             "no" -> {
-                println("Please, input a custom picture")
+                println("Please input a custom picture")
                 return safeReadLine()
             }
-            else -> println("Please, input 'yes' or 'no'")
+            else -> println("Please input 'yes' or 'no'")
         }
     } while (true)
 }

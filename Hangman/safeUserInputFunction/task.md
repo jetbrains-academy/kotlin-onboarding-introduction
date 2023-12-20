@@ -17,7 +17,7 @@ fun safeUserInput(): Char
 - before reading the user input, print the prompt:
 
 ```text
-Please input your guess..
+Please input your guess.
 ```
 
 **Note**: to avoid typos, just copy the text from here and paste it into your code.

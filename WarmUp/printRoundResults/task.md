@@ -17,9 +17,9 @@ fun printRoundResults(secret: String, guess: String): Unit
 The printed text should be the following:
 
 ```text
-Your guess has <exactMatches> full matches and <partialMatches> partial matches.
+Your guess has <fullMatches> full matches and <partialMatches> partial matches.
 ```
 
-where instead `<exactMatches>` and `<partialMatches>` you need to print the values that are calculated by `countExactMatches` and `countPartialMatches` functions, e.g. 
+where instead `<fullMatches>` and `<partialMatches>` you need to print the values that are calculated by `countExactMatches` and `countPartialMatches` functions, e.g. 
 if for secret `BCDF` and guess `ACEB`,
 the text `Your guess has 1 full matches and 1 partial matches` will be printed.
