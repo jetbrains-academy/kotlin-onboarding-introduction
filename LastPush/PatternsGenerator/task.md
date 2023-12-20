@@ -1,6 +1,6 @@
 This lesson focuses on the topics that you covered in the previous lesson.
 The main difference is that the final project will not be divided into intermediate stages
-and you can try to implement it yourself from scratch.
+and you can try to implement it from scratch by yourself.
 We have no doubt that you will succeed!
 
 ----
@@ -17,14 +17,14 @@ for automatically generating character images of a given size and pattern.
 
 Firstly, you need to ask the user:
 ```text
-Do you want to use a pre-defined pattern or a custom one?
-Please input 'yes' for a pre-defined pattern or 'no' for a custom one.
+Do you want to use a predefined pattern or a custom one?
+Please input 'yes' for a predefined pattern or 'no' for a custom one.
 ```
 
 You need to handle the user's answer and ask the question again if the answer is incorrect.
 If the user wants to use a custom pattern, you just need to ask them to input it.
-If the user wants to use a pre-defined pattern, 
-you need to ask them to choose one of the pre-defined patterns. 
+If the user wants to use a predefined pattern, 
+you need to ask them to choose one of the predefined patterns. 
 You can get a list with all of them by calling the already defined `allPatterns` function.
 
 Secondly, you need to ask the user to choose the generator: `canvas` or `canvasGaps`.
