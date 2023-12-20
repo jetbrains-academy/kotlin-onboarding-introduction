@@ -7,13 +7,13 @@ Second line
 ```
 The string will be converted into a list with two strings: `First line` and `Second line`.
 
-This function is better than `split`, since under the hood this function takes into account 
-new lines symbols from different operating systems:
+This function is better than `split`, since it considers 
+newline symbols from various operating systems under the hood:
 
 ```kotlin
 """First line
 Second line
-""".lines() // works on all OS
+""".lines() // works on all OSs
 ```
 VS
 ```kotlin
