@@ -1,5 +1,5 @@
-If you need to do several actions when working with a `nullable` value,
-you can use safe call operator (`?.`) together with the [`let`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/let.html) scope function from the standard library:
+If you need to perform several actions when working with a `nullable` value,
+you can use the safe call operator (`?.`) together with the [`let`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/let.html) scope function from the standard library:
 ```kotlin
 fun foo(x: String?): String {
     x?.let {
