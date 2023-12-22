@@ -6,7 +6,7 @@ In such cases, we need to remove the top line.
 Implement the `dropTopFromLine` function, which accepts a `line` (any string; can be multi-row), 
 the `width` of the new image that should be created (the `line` should have already been repeated `width` times),
 `patternHeight`, and `patternWidth`. This function deletes the first line,
-e.g.б (for `width` = 1):
+e.g., (for `width` = 1):
 ```text
    .+------+                 
  .' |    .'|                .' |    .'|
