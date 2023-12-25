@@ -47,6 +47,19 @@ class Test {
     }
 
     @Test
+    fun testSafeReadLineFunctionImplementation() {
+        val userMethod = mainClass.findMethod(mainClazz, safeReadLineMethod)
+        val input = "my input"
+        setSystemIn("$input${Util.newLineSeparator}")
+        val userOutput = (userMethod.invokeWithoutArgs(clazz = mainClazz) as String).trim()
+        Assertions.assertEquals(
+            input,
+            userOutput,
+            "The function ${safeReadLineMethod.name} for the user input \"$input\" should return the same output, but the current implementation returns \"$userOutput\""
+        )
+    }
+
+    @Test
     fun testChooseFilterFunction() {
         mainClass.checkMethod(mainClazz, chooseFilterMethod)
     }

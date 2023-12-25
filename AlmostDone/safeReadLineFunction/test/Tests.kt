@@ -1,4 +1,5 @@
 import org.jetbrains.academy.test.system.core.invokeWithArgs
+import org.jetbrains.academy.test.system.core.invokeWithoutArgs
 import org.jetbrains.academy.test.system.core.models.classes.findClassSafe
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.BeforeAll
@@ -7,6 +8,7 @@ import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.Arguments
 import org.junit.jupiter.params.provider.MethodSource
 import util.*
+import util.Util.newLineSeparator
 
 class Test {
     companion object {
@@ -27,6 +29,19 @@ class Test {
         mainClass.checkMethod(mainClazz, safeReadLineMethod)
     }
 
+    @Test
+    fun testSafeReadLineFunctionImplementation() {
+        val userMethod = mainClass.findMethod(mainClazz, safeReadLineMethod)
+        val input = "my input"
+        setSystemIn("$input$newLineSeparator")
+        val userOutput = (userMethod.invokeWithoutArgs(clazz = mainClazz) as String).trim()
+        Assertions.assertEquals(
+            input,
+            userOutput,
+            "The function ${safeReadLineMethod.name} for the user input \"$input\" should return the same output, but the current implementation returns \"$userOutput\""
+        )
+    }
+
     @ParameterizedTest
     @MethodSource("pictures")
     fun testApplyFilterImplementationBorders(picture: Image) {
@@ -35,7 +50,7 @@ class Test {
         val userPicture = (userMethod.invokeWithArgs(picture.initialImage.trimIndent(), "borders", clazz = mainClazz) as String).trim()
         Assertions.assertEquals(
             expectedPicture, userPicture,
-            "For picture:${Util.newLineSeparator}${picture.initialImage}${Util.newLineSeparator} and filter <borders> the function ${applyFilterMethod.name} should return${Util.newLineSeparator}$expectedPicture${Util.newLineSeparator}"
+            "For picture:$newLineSeparator${picture.initialImage}$newLineSeparator and filter <borders> the function ${applyFilterMethod.name} should return$newLineSeparator$expectedPicture$newLineSeparator"
         )
     }
 
@@ -47,7 +62,7 @@ class Test {
         val userPicture = (userMethod.invokeWithArgs(picture.initialImage.trimIndent(), "squared", clazz = mainClazz) as String).trim()
         Assertions.assertEquals(
             expectedPicture, userPicture,
-            "For picture:${Util.newLineSeparator}${picture.initialImage}${Util.newLineSeparator} and filter <squared> the function ${applyFilterMethod.name} should return${Util.newLineSeparator}$expectedPicture${Util.newLineSeparator}"
+            "For picture:$newLineSeparator${picture.initialImage}$newLineSeparator and filter <squared> the function ${applyFilterMethod.name} should return$newLineSeparator$expectedPicture$newLineSeparator"
         )
     }
 
@@ -59,7 +74,7 @@ class Test {
         val userPicture = (userMethod.invokeWithArgs(picture.initialImage.trimIndent(), clazz = mainClazz) as String).trim()
         Assertions.assertEquals(
             expectedPicture, userPicture,
-            "For picture:${Util.newLineSeparator}${picture.initialImage}${Util.newLineSeparator} the function ${applyBordersFilterMethod.name} should return${Util.newLineSeparator}$expectedPicture${Util.newLineSeparator}"
+            "For picture:$newLineSeparator${picture.initialImage}$newLineSeparator the function ${applyBordersFilterMethod.name} should return$newLineSeparator$expectedPicture$newLineSeparator"
         )
     }
 
@@ -71,7 +86,7 @@ class Test {
         val userPicture = (userMethod.invokeWithArgs(picture.initialImage.trimIndent(), clazz = mainClazz) as String).trim()
         Assertions.assertEquals(
             expectedPicture, userPicture,
-            "For picture:${Util.newLineSeparator}${picture.initialImage}${Util.newLineSeparator} the function ${applySquaredFilterMethod.name} should return${Util.newLineSeparator}$expectedPicture${Util.newLineSeparator}"
+            "For picture:$newLineSeparator${picture.initialImage}$newLineSeparator the function ${applySquaredFilterMethod.name} should return$newLineSeparator$expectedPicture$newLineSeparator"
         )
     }
 
@@ -103,7 +118,7 @@ class Test {
         val actualResult = (userMethod.invokeWithArgs(picture.initialImage, clazz = mainClazz) as String).replaceLineSeparator()
         Assertions.assertEquals(
             expectedPicture, actualResult,
-            "For picture:${Util.newLineSeparator}${picture.initialImage}${Util.newLineSeparator} the function ${trimPictureMethod.name} should return${Util.newLineSeparator}$expectedPicture${Util.newLineSeparator}"
+            "For picture:$newLineSeparator${picture.initialImage}$newLineSeparator the function ${trimPictureMethod.name} should return$newLineSeparator$expectedPicture$newLineSeparator"
         )
     }
 }

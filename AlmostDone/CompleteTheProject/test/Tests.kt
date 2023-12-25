@@ -2,6 +2,7 @@ import jetbrains.kotlin.course.almost.done.allImages
 import jetbrains.kotlin.course.almost.done.main
 import jetbrains.kotlin.course.almost.done.newLineSymbol
 import org.jetbrains.academy.test.system.core.invokeWithArgs
+import org.jetbrains.academy.test.system.core.invokeWithoutArgs
 import org.jetbrains.academy.test.system.core.models.classes.findClassSafe
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.BeforeAll
@@ -166,6 +167,19 @@ class Test {
     @Test
     fun testSafeReadLineFunction() {
         mainClass.checkMethod(mainClazz, safeReadLineMethod)
+    }
+
+    @Test
+    fun testSafeReadLineFunctionImplementation() {
+        val userMethod = mainClass.findMethod(mainClazz, safeReadLineMethod)
+        val input = "my input"
+        setSystemIn("$input${Util.newLineSeparator}")
+        val userOutput = (userMethod.invokeWithoutArgs(clazz = mainClazz) as String).trim()
+        Assertions.assertEquals(
+            input,
+            userOutput,
+            "The function ${safeReadLineMethod.name} for the user input \"$input\" should return the same output, but the current implementation returns \"$userOutput\""
+        )
     }
 
     @Test
