@@ -1,12 +1,12 @@
-When we repeat the pattern vertically, the bottom border will be repeated twice. 
-For these cases we need to remove the top line.
+When we repeat the pattern vertically, the bottom border ends up being duplicated. 
+In such cases, we need to remove the top line.
 
 ### Task
 
-Implement the `dropTopFromLine` function, which accepts a `line` (any string, can be multi-row), 
-`width` of the new image that should be created (`line` should be repeated `width` times already),
+Implement the `dropTopFromLine` function, which accepts a `line` (any string; can be multi-row), 
+the `width` of the new image that should be created (the `line` should have already been repeated `width` times),
 `patternHeight`, and `patternWidth`. This function deletes the first line,
-e.g. (for `width` = 1):
+e.g., (for `width` = 1):
 ```text
    .+------+                 
  .' |    .'|                .' |    .'|
@@ -28,9 +28,9 @@ fun dropTopFromLine(line: String, width: Int, patternHeight: Int, patternWidth: 
 
 **Note**, this function has to remove the first line only if `patternHeight > 1`. 
 
-You can implement this function in any possible way, but we _recommend_ to look into the [`removeSuffix`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/remove-suffix.html) and [`drop`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/drop.html) built-in functions.
+You can implement this function in any possible way, but we _recommend_ that you look into the [`removeSuffix`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/remove-suffix.html) and [`drop`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/drop.html) built-in functions.
 
-<div class="Hint" title="Click me to learn more about removeSuffix built-in function">
+<div class="Hint" title="Click me to learn more about the removeSuffix built-in function">
 
 The [`removeSuffix`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/remove-suffix.html) built-in function helps
 to delete a string from the end of the current string:
@@ -41,7 +41,7 @@ println("abcdefg".removeSuffix("a")) // abcdefg, since the initial string does n
 ```
 </div>
 
-<div class="Hint" title="Click me to learn more about drop built-in function">
+<div class="Hint" title="Click me to learn more about the `drop` built-in function">
 
 The [`drop`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/drop.html) built-in function helps
 to delete `n` symbols from the beginning of the current string:
@@ -57,9 +57,9 @@ If you have any difficulties, **hints will help you solve this task**.
 
 ### Hints
 
-<div class="hint" title="Click me to see several examples how dropTopFromLine function should work">
+<div class="hint" title="Click me to see several examples of how the dropTopFromLine function should work">
 
-The first examples:
+The first example:
 ```text
 ○
 ```
@@ -78,7 +78,7 @@ will print:
 ○
 ```
 
-The second example. For the pattern:
+The second example. The pattern is:
 ```text
  X
 / \
@@ -101,13 +101,13 @@ will print:
 \ /
  X 
 ```
-You can notice that we use already implemented functions in this example. 
-These functions will help us to implement the filters just to repeat vertically the pattern.
+You may have noticed that we use already implemented functions in this example. 
+These functions will help us to implement the filters, allowing us to repeat the pattern vertically.
 
 </div>
 
-<div class="hint" title="Click me to learn how to calculate number of symbols to drop">
+<div class="hint" title="Click me to learn how to calculate the number of symbols to drop">
 
 You need to remove `patternWidth * width + newLineSymbol.length` symbols from the beginning of the line, since
-you have a line where the pattern is repeated `width` times and `newLineSymbol` in different OS can be more than `1`.
+you have a line where the pattern is repeated `width` times and the `newLineSymbol` in different OSs can be more than `1`.
 </div>
