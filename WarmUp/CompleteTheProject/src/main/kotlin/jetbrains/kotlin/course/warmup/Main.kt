@@ -24,15 +24,15 @@ fun countPartialMatches(secret: String, guess: String) =
 fun countExactMatches(secret: String, guess: String): Int =
     guess.filterIndexed { index, letter -> letter == secret[index] }.length
 
-fun generateSecret() = "ABCD"
-
-fun isComplete(secret: String, guess: String) = secret == guess
-
 fun printRoundResults(secret: String, guess: String) {
     val fullMatches = countExactMatches(secret, guess)
     val partialMatches = countPartialMatches(secret, guess)
     println("Your guess has $fullMatches full matches and $partialMatches partial matches.")
 }
+
+fun generateSecret() = "ABCD"
+
+fun isComplete(secret: String, guess: String) = secret == guess
 
 fun isWon(complete: Boolean, attempts: Int, maxAttemptsCount: Int) = complete && attempts <= maxAttemptsCount
 

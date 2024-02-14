@@ -82,6 +82,20 @@ fun dropTopFromLine(line: String, width: Int, patternHeight: Int, patternWidth: 
     return "$newPattern$newLineSymbol"
 }
 
+fun baseGenerator(firstLine: String, secondLine: String, height: Int): String {
+    val sb = StringBuilder()
+    sb.append(firstLine)
+    return when {
+        height < 1 -> ""
+        height == 1 -> sb.toString()
+        else -> {
+            sb.append(secondLine)
+            sb.append(repeatVertically(firstLine, secondLine, height))
+            sb.toString()
+        }
+    }
+}
+
 fun repeatVertically(firstLine: String, secondLine: String, height: Int): String {
     val currentHeight = makeEvenNumber(height) / 2 - 1
     val pattern = "$firstLine$secondLine".repeat(currentHeight)
@@ -96,20 +110,6 @@ fun makeEvenNumber(number: Int) = if (number % 2 == 0) {
     number
 } else {
     number - 1
-}
-
-fun baseGenerator(firstLine: String, secondLine: String, height: Int): String {
-    val sb = StringBuilder()
-    sb.append(firstLine)
-    return when {
-        height < 1 -> ""
-        height == 1 -> sb.toString()
-        else -> {
-            sb.append(secondLine)
-            sb.append(repeatVertically(firstLine, secondLine, height))
-            sb.toString()
-        }
-    }
 }
 
 fun canvasGenerator(pattern: String, width: Int, height: Int): String {
