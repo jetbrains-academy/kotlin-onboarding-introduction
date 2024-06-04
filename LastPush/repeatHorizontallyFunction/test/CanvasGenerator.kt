@@ -24,6 +24,8 @@ internal val repeatHorizontallyMethod = TestMethod(
     ),
 )
 
+internal fun String.replaceSeparators() = this.lines().joinToString(separator = newLineSymbol)
+
 internal fun canvas() = Pattern.values()
     .flatMap { f -> f.canvasFilters.map { f.pattern to it } }
 
