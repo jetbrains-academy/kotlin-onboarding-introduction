@@ -77,8 +77,8 @@ class Test {
         val actualResult = userMethod.invokeWithArgs(line, 1, patternHeight, patternWidth, clazz = mainClazz).toString()
         val error = "The method ${dropTopFromLineMethod.name} with arguments line=${newLineSymbol}$line${newLineSymbol}, width=1, patternHeight=$patternHeight, patternWidth=$patternWidth should return$newLineSymbol$expected${newLineSymbol}But it returns$newLineSymbol$actualResult"
         Assertions.assertEquals(
-            expected.removeSuffix(System.lineSeparator()),
-            actualResult.removeSuffix(System.lineSeparator())
+            expected.replaceLineSeparator(),
+            actualResult.replaceLineSeparator()
         ) { error }
     }
 

@@ -49,8 +49,8 @@ class Test {
         val patternWidth = getPatternWidth(pattern)
         val actualResult = userMethod.invokeWithArgs(pattern, canvasFilter.width, patternWidth, clazz = mainClazz).toString()
         Assertions.assertEquals(
-            canvasFilter.result.replaceSeparators().removeSuffix(System.lineSeparator()),
-            actualResult.replaceSeparators().removeSuffix(System.lineSeparator())
+            canvasFilter.result.replaceLineSeparator().removeSuffix(System.lineSeparator()),
+            actualResult.replaceLineSeparator().removeSuffix(System.lineSeparator())
         ) { "The method ${repeatHorizontallyMethod.name} with arguments pattern=$pattern, n=${canvasFilter.width}, patternWidth=$patternWidth should return:${System.lineSeparator()}${canvasFilter.result}${System.lineSeparator()}But it returns:${System.lineSeparator()}$actualResult" }
     }
 

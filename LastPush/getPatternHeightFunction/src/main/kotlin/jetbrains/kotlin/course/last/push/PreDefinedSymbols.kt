@@ -3,7 +3,7 @@
 package jetbrains.kotlin.course.last.push
 
 val separator = ' '
-val newLineSymbol = System.lineSeparator()
+val newLineSymbol = System.lineSeparator().replace("\r\n", "\n")
 
 fun getPatternWidth(pattern: String) = pattern.lines().maxOfOrNull { it.length } ?: 0
 

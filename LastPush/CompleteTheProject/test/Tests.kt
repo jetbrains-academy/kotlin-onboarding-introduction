@@ -236,7 +236,7 @@ class Test {
         val userMethod = mainClass.findMethod(mainClazz, applyGeneratorMethod)
         Assertions.assertEquals(
             canvasFilter.result.toAddNewLineSymbol().replaceLineSeparator(),
-            userMethod.invokeWithArgs(pattern, generatorName, canvasFilter.width, canvasFilter.height, clazz = mainClazz),
+            userMethod.invokeWithArgs(pattern.replaceLineSeparator(), generatorName, canvasFilter.width, canvasFilter.height, clazz = mainClazz).toString().replaceLineSeparator(),
             "For pattern:$newLineSymbol$pattern$newLineSymbol, generatorName=$generatorName, width=${canvasFilter.width}, and height=${canvasFilter.height} the function ${applyGeneratorMethod.name} should return $newLineSymbol${canvasFilter.result}$newLineSymbol"
         )
     }
@@ -280,11 +280,11 @@ class Test {
         val userMethod = mainClass.findMethod(mainClazz, dropTopFromLineMethod)
         val patternWidth = getPatternWidth(line)
         val patternHeight = getPatternHeight(line)
-        val actualResult = userMethod.invokeWithArgs(line, 1, patternHeight, patternWidth, clazz = mainClazz).toString()
+        val actualResult = userMethod.invokeWithArgs(line.replaceLineSeparator(), 1, patternHeight, patternWidth, clazz = mainClazz).toString()
         val error = "The method ${dropTopFromLineMethod.name} with arguments line=${newLineSymbol}$line${newLineSymbol}, width=1, patternHeight=$patternHeight, patternWidth=$patternWidth should return$newLineSymbol$expected${newLineSymbol}But it returns$newLineSymbol$actualResult"
         Assertions.assertEquals(
-            expected.removeSuffix(System.lineSeparator()),
-            actualResult.removeSuffix(System.lineSeparator())
+            expected.replaceLineSeparator(),
+            actualResult.replaceLineSeparator()
         ) { error }
     }
 

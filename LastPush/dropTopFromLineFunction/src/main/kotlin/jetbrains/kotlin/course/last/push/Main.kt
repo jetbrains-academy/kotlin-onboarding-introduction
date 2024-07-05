@@ -72,15 +72,10 @@ fun repeatHorizontally(pattern: String, n: Int, patternWidth: Int): String {
     return sb.toString()
 }
 
-fun dropTopFromLine(line: String, width: Int, patternHeight: Int, patternWidth: Int): String {
-    val nToDrop = if (patternHeight > 1) {
-        patternWidth * width + newLineSymbol.length
-    } else {
-        0
-    }
-    val newPattern = line.removeSuffix(newLineSymbol).drop(nToDrop)
-    return "$newPattern$newLineSymbol"
-}
+fun dropTopFromLine(line: String, width: Int, patternHeight: Int, patternWidth: Int): String = if (patternHeight > 1) {
+        val firstLineLength = patternWidth * width
+        line.drop(firstLineLength + newLineSymbol.length)
+    } else line
 
 fun main() {
     // Uncomment this code on the last step of the game
