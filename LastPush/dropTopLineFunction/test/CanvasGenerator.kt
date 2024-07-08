@@ -24,18 +24,16 @@ internal val repeatHorizontallyMethod = TestMethod(
     ),
 )
 
-internal val dropTopFromLineMethod = TestMethod(
-    "dropTopFromLine",
+internal val dropTopLineMethod = TestMethod(
+    "dropTopLine",
     TestKotlinType("String"),
     listOf(
-        TestVariable("line", "String"),
+        TestVariable("image", "String"),
         TestVariable("width", "Int"),
         TestVariable("patternHeight", "Int"),
         TestVariable("patternWidth", "Int"),
     ),
 )
-
-internal fun String.replaceSeparators() = this.lines().joinToString(separator = newLineSymbol)
 
 internal fun canvas() = Pattern.values()
     .flatMap { f -> f.canvasFilters.map { f.pattern to it } }

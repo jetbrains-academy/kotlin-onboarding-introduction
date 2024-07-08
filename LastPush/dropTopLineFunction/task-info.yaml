@@ -1,5 +1,5 @@
 type: edu
-custom_name: Patterns Generator - dropTopFromLine Function
+custom_name: Patterns Generator - dropTopLine Function
 files:
   - name: src/main/kotlin/jetbrains/kotlin/course/last/push/Main.kt
     visible: true

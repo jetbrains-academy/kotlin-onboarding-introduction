@@ -72,10 +72,10 @@ fun repeatHorizontally(pattern: String, n: Int, patternWidth: Int): String {
     return sb.toString()
 }
 
-fun dropTopFromLine(line: String, width: Int, patternHeight: Int, patternWidth: Int): String = if (patternHeight > 1) {
+fun dropTopLine(image: String, width: Int, patternHeight: Int, patternWidth: Int): String = if (patternHeight > 1) {
         val firstLineLength = patternWidth * width
-        line.drop(firstLineLength + newLineSymbol.length)
-    } else line
+        image.drop(firstLineLength + newLineSymbol.length)
+    } else image
 
 fun main() {
     // Uncomment this code on the last step of the game

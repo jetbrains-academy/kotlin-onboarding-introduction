@@ -72,5 +72,5 @@ In this case, we kept the first line because, according to the first point of th
 we don't need to change the first level of the generated picture.
 </div>
 
-We _recommend_ that you use the `getPatternHeight`, `repeatHorizontally`, and `dropTopFromLine` functions, which you have already implemented.
+We _recommend_ that you use the `getPatternHeight`, `repeatHorizontally`, and `dropTopLine` functions, which you have already implemented.
 You just need to combine their results and repeat the pattern vertically.

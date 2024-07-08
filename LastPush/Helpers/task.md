@@ -2,7 +2,7 @@ In the upcoming steps, we will implement some helper functions to create the app
 
 ### Task
 
-Implement the `fillPatternRow` function, which accepts a `patternRow` (one line from the pattern) and `patternWidth`
+Implement the `fillPatternRow` function, which accepts a `patternRow` (one image from the pattern) and `patternWidth`
 and adds the row `separator` to extend the line to the `patternWidth` size.
 
 <div class="hint" title="Click me to see the new signature of the getPatternHeight function">

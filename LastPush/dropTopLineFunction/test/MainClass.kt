@@ -6,6 +6,6 @@ internal val mainClass = TestClass(
         fillPatternRowMethod,
         getPatternHeightMethod,
         repeatHorizontallyMethod,
-        dropTopFromLineMethod
+        dropTopLineMethod
     )
 )
