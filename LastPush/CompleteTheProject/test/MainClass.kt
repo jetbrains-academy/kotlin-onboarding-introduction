@@ -10,6 +10,6 @@ internal val mainClass = TestClass(
         applyGeneratorMethod,
         getPatternMethod,
         repeatHorizontallyMethod,
-        dropTopFromLineMethod
+        dropTopLineMethod
     )
 )

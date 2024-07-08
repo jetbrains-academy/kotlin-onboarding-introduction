@@ -236,7 +236,7 @@ class Test {
         val userMethod = mainClass.findMethod(mainClazz, applyGeneratorMethod)
         Assertions.assertEquals(
             canvasFilter.result.toAddNewLineSymbol().replaceLineSeparator(),
-            userMethod.invokeWithArgs(pattern, generatorName, canvasFilter.width, canvasFilter.height, clazz = mainClazz),
+            userMethod.invokeWithArgs(pattern.replaceLineSeparator(), generatorName, canvasFilter.width, canvasFilter.height, clazz = mainClazz).toString().replaceLineSeparator(),
             "For pattern:$newLineSymbol$pattern$newLineSymbol, generatorName=$generatorName, width=${canvasFilter.width}, and height=${canvasFilter.height} the function ${applyGeneratorMethod.name} should return $newLineSymbol${canvasFilter.result}$newLineSymbol"
         )
     }
@@ -267,24 +267,24 @@ class Test {
     }
 
     @Test
-    fun dropTopFromLineFunction() {
-        mainClass.checkMethod(mainClazz, dropTopFromLineMethod)
+    fun dropTopLineFunction() {
+        mainClass.checkMethod(mainClazz, dropTopLineMethod)
     }
 
     @ParameterizedTest
     @MethodSource("dropTopLineDataArguments")
-    fun dropTopFromLineFunctionImplementation(
-        line: String,
+    fun dropTopLineFunctionImplementation(
+        image: String,
         expected: String
     ) {
-        val userMethod = mainClass.findMethod(mainClazz, dropTopFromLineMethod)
-        val patternWidth = getPatternWidth(line)
-        val patternHeight = getPatternHeight(line)
-        val actualResult = userMethod.invokeWithArgs(line, 1, patternHeight, patternWidth, clazz = mainClazz).toString()
-        val error = "The method ${dropTopFromLineMethod.name} with arguments line=${newLineSymbol}$line${newLineSymbol}, width=1, patternHeight=$patternHeight, patternWidth=$patternWidth should return$newLineSymbol$expected${newLineSymbol}But it returns$newLineSymbol$actualResult"
+        val userMethod = mainClass.findMethod(mainClazz, dropTopLineMethod)
+        val patternWidth = getPatternWidth(image)
+        val patternHeight = getPatternHeight(image)
+        val actualResult = userMethod.invokeWithArgs(image.replaceLineSeparator(), 1, patternHeight, patternWidth, clazz = mainClazz).toString()
+        val error = "The method ${dropTopLineMethod.name} with arguments image=${newLineSymbol}$image${newLineSymbol}, width=1, patternHeight=$patternHeight, patternWidth=$patternWidth should return$newLineSymbol$expected${newLineSymbol}But it returns$newLineSymbol$actualResult"
         Assertions.assertEquals(
-            expected.removeSuffix(System.lineSeparator()),
-            actualResult.removeSuffix(System.lineSeparator())
+            expected.replaceLineSeparator(),
+            actualResult.replaceLineSeparator()
         ) { error }
     }
 
@@ -303,8 +303,8 @@ class Test {
         val patternWidth = getPatternWidth(pattern)
         val actualResult = userMethod.invokeWithArgs(pattern, canvasFilter.width, patternWidth, clazz = mainClazz).toString()
         Assertions.assertEquals(
-            canvasFilter.result.replaceSeparators().removeSuffix(System.lineSeparator()),
-            actualResult.replaceSeparators().removeSuffix(System.lineSeparator())
+            canvasFilter.result.replaceLineSeparator().removeSuffix(System.lineSeparator()),
+            actualResult.replaceLineSeparator().removeSuffix(System.lineSeparator())
         ) { "The method ${repeatHorizontallyMethod.name} with arguments pattern=$pattern, n=${canvasFilter.width}, patternWidth=$patternWidth should return:${System.lineSeparator()}${canvasFilter.result}${System.lineSeparator()}But it returns:${System.lineSeparator()}$actualResult" }
     }
 }

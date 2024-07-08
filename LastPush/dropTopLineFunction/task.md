@@ -3,8 +3,8 @@ In such cases, we need to remove the top line.
 
 ### Task
 
-Implement the `dropTopFromLine` function, which accepts a `line` (any string; can be multi-row), 
-the `width` of the new image that should be created (the `line` should have already been repeated `width` times),
+Implement the `dropTopLine` function, which accepts an `image` (any string; can be multi-row), 
+the `width` of the new image that should be created (`image` should have already been repeated `width` times),
 `patternHeight`, and `patternWidth`. This function deletes the first line,
 e.g., (for `width` = 1):
 ```text
@@ -22,7 +22,7 @@ e.g., (for `width` = 1):
 
 The signature of the function is:
 ```kotlin
-fun dropTopFromLine(line: String, width: Int, patternHeight: Int, patternWidth: Int): String
+fun dropTopLine(image: String, width: Int, patternHeight: Int, patternWidth: Int): String
 ```
 </div>
 
@@ -57,7 +57,7 @@ If you have any difficulties, **hints will help you solve this task**.
 
 ### Hints
 
-<div class="hint" title="Click me to see several examples of how the dropTopFromLine function should work">
+<div class="hint" title="Click me to see several examples of how the dropTopLine function should work">
 
 The first example:
 ```text
@@ -70,7 +70,7 @@ println("___")
 val patternWidth = getPatternWidth(ball)
 val patternHeight = getPatternHeight(ball)
 val repeatedPattern = repeatHorizontally(ball, 1, patternWidth)
-val dropped = dropTopFromLine(repeatedPattern, 1, patternHeight, patternWidth)
+val dropped = dropTopLine(repeatedPattern, 1, patternHeight, patternWidth)
 println(dropped)
 ```
 will print:
@@ -92,7 +92,7 @@ println("___")
 val patternWidth = getPatternWidth(rhombus)
 val patternHeight = getPatternHeight(rhombus)
 val repeatedPattern = repeatHorizontally(rhombus, 1, patternWidth)
-val dropped = dropTopFromLine(repeatedPattern, 1, patternHeight, patternWidth)
+val dropped = dropTopLine(repeatedPattern, 1, patternHeight, patternWidth)
 println(dropped)
 ```
 will print:

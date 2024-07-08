@@ -72,15 +72,10 @@ fun repeatHorizontally(pattern: String, n: Int, patternWidth: Int): String {
     return sb.toString()
 }
 
-fun dropTopFromLine(line: String, width: Int, patternHeight: Int, patternWidth: Int): String {
-    val nToDrop = if (patternHeight > 1) {
-        patternWidth * width + newLineSymbol.length
-    } else {
-        0
-    }
-    val newPattern = line.removeSuffix(newLineSymbol).drop(nToDrop)
-    return "$newPattern$newLineSymbol"
-}
+fun dropTopLine(image: String, width: Int, patternHeight: Int, patternWidth: Int): String = if (patternHeight > 1) {
+        val firstLineLength = patternWidth * width
+        image.drop(firstLineLength + newLineSymbol.length)
+    } else image
 
 fun baseGenerator(firstLine: String, secondLine: String, height: Int): String {
     val sb = StringBuilder()
@@ -116,7 +111,7 @@ fun canvasGenerator(pattern: String, width: Int, height: Int): String {
     val patternWidth = getPatternWidth(pattern)
     val patternHeight = getPatternHeight(pattern)
     val repeatedPattern = repeatHorizontally(pattern, width, patternWidth)
-    val dropped = dropTopFromLine(repeatedPattern, width, patternHeight, patternWidth)
+    val dropped = dropTopLine(repeatedPattern, width, patternHeight, patternWidth)
     return "$repeatedPattern${baseGenerator(dropped, dropped, height - 1)}"
 }
 
