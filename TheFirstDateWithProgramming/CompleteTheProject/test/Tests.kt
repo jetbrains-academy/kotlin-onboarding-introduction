@@ -7,7 +7,11 @@ import org.junit.jupiter.api.Test
 import util.Util
 import util.Util.DEFAULT_USER_INPUT
 import util.runMainFunction
+import org.junit.jupiter.api.extension.ExtendWith
+import util.*
 
+@HandleNotImplementedError
+@ExtendWith(HandleNotImplementedErrorExtension::class)
 class Test {
     @Test
     fun testSolution() {

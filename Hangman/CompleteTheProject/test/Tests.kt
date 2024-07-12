@@ -1,7 +1,4 @@
-import jetbrains.kotlin.course.hangman.generateNewUserWord
-import jetbrains.kotlin.course.hangman.separator
-import jetbrains.kotlin.course.hangman.underscore
-import jetbrains.kotlin.course.hangman.words
+import jetbrains.kotlin.course.hangman.*
 import org.jetbrains.academy.test.system.core.invokeWithArgs
 import org.jetbrains.academy.test.system.core.invokeWithoutArgs
 import org.jetbrains.academy.test.system.core.models.classes.TestClass
@@ -9,12 +6,15 @@ import org.jetbrains.academy.test.system.core.models.classes.findClassSafe
 import org.jetbrains.academy.test.system.core.models.method.TestMethod
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.BeforeAll
+import org.junit.jupiter.api.extension.ExtendWith
 import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.Arguments
 import org.junit.jupiter.params.provider.MethodSource
 import org.junit.jupiter.api.Test
 import util.*
 
+@HandleNotImplementedError
+@ExtendWith(HandleNotImplementedErrorExtension::class)
 class Test {
     companion object {
         @JvmStatic
@@ -107,6 +107,11 @@ class Test {
             Arguments.of("BOOK", 'A', "$underscoreWithSeparator$underscoreWithSeparator${underscoreWithSeparator}K", null),
             Arguments.of("BOOK", 'B', "$underscoreWithSeparator$underscoreWithSeparator${underscoreWithSeparator}K", "B$separator$underscoreWithSeparator${underscoreWithSeparator}K"),
         )
+    }
+
+    @Test
+    fun smokeTest() {
+        runMainFunction(::main, List(maxAttemptsCount + 1) { "A$newLineSymbol" }.joinToString(""))
     }
 
     @ParameterizedTest
