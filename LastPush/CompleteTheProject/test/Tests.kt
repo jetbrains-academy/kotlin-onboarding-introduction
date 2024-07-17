@@ -2,6 +2,7 @@ import jetbrains.kotlin.course.last.push.*
 import org.jetbrains.academy.test.system.core.invokeWithArgs
 import org.jetbrains.academy.test.system.core.models.classes.findClassSafe
 import org.junit.jupiter.api.Assertions
+import org.junit.jupiter.api.extension.ExtendWith
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.BeforeAll
 import org.junit.jupiter.params.ParameterizedTest
@@ -10,6 +11,8 @@ import org.junit.jupiter.params.provider.MethodSource
 import util.*
 import java.lang.reflect.InvocationTargetException
 
+@HandleNotImplementedError
+@ExtendWith(HandleNotImplementedErrorExtension::class)
 class Test {
 
     companion object {
@@ -126,6 +129,14 @@ class Test {
         fun repeatHorizontallyArguments() = canvas().filter{ (p, f) ->
             f.height == 1
         }.toArguments()
+    }
+
+    @Test
+    fun smokeTest() {
+        runMainFunction(
+            ::main,
+            "$YES$newLineSymbol$CUBE$newLineSymbol$CANVAS${newLineSymbol}5${newLineSymbol}5$newLineSymbol"
+        )
     }
 
     @Test

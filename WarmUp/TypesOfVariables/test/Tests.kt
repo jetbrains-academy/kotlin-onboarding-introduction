@@ -5,11 +5,12 @@ import org.jetbrains.academy.test.system.core.models.variable.TestVariable
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.BeforeAll
 import org.junit.jupiter.api.Test
-import util.checkListOfVariables
-import util.runMainFunction
-import util.throwInternalCourseError
+import org.junit.jupiter.api.extension.ExtendWith
+import util.*
 import java.io.File
 
+@HandleNotImplementedError
+@ExtendWith(HandleNotImplementedErrorExtension::class)
 class Test {
     companion object {
         private lateinit var mainClazz: Class<*>
@@ -19,6 +20,11 @@ class Test {
         fun beforeAll() {
             mainClazz = mainClass.findClassSafe() ?: throwInternalCourseError()
         }
+    }
+
+    @Test
+    fun smokeTest() {
+        runMainFunction(::main, "")
     }
 
     @Test

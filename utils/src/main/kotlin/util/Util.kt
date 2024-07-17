@@ -5,6 +5,8 @@ import org.jetbrains.academy.test.system.core.invokeWithArgs
 import org.jetbrains.academy.test.system.core.invokeWithoutArgs
 import org.jetbrains.academy.test.system.core.models.method.TestMethod
 import org.junit.jupiter.api.Assertions
+import org.junit.jupiter.api.extension.ExtensionContext
+import org.junit.jupiter.api.extension.TestExecutionExceptionHandler
 import util.Util.newLineSeparator
 import java.io.ByteArrayOutputStream
 import java.io.PrintStream
@@ -83,4 +85,25 @@ fun checkReadLineFunctions(
         output, result, "For the user's input: $input the " +
                 "function ${testMethod.name} should return $output"
     )
+}
+
+@Target(AnnotationTarget.CLASS, AnnotationTarget.FUNCTION)
+@Retention(AnnotationRetention.RUNTIME)
+annotation class HandleNotImplementedError(val shouldNotBeImplemented: Array<String> = [])
+
+class HandleNotImplementedErrorExtension : TestExecutionExceptionHandler {
+    override fun handleTestExecutionException(context: ExtensionContext, throwable: Throwable): Nothing = if (throwable.javaClass.name == "kotlin.NotImplementedError") {
+        val notImplementedMethodName = throwable.stackTrace.first().methodName
+        val testClass = context.testClass.orElse(null)
+        val annotation = testClass?.getAnnotation(HandleNotImplementedError::class.java)
+        error(if (annotation?.shouldNotBeImplemented?.contains(notImplementedMethodName) == true) {
+            """In test: ${context.displayName}
+            $notImplementedMethodName shouldn't be implemented, but it's called""".trimMargin()
+        } else {
+            """In test: ${context.displayName}
+            $notImplementedMethodName is not implemented, but should be implemented""".trimMargin()
+        })
+    } else {
+        throw throwable
+    }
 }

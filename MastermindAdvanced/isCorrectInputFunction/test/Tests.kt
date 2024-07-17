@@ -1,13 +1,19 @@
+import jetbrains.kotlin.course.mastermind.advanced.generateSecret
+import jetbrains.kotlin.course.mastermind.advanced.main
+import jetbrains.kotlin.course.mastermind.advanced.newLineSymbol
 import org.jetbrains.academy.test.system.core.invokeWithArgs
 import org.jetbrains.academy.test.system.core.models.classes.findClassSafe
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.BeforeAll
 import org.junit.jupiter.api.Test
+import org.junit.jupiter.api.extension.ExtendWith
 import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.Arguments
 import org.junit.jupiter.params.provider.MethodSource
 import util.*
 
+@HandleNotImplementedError
+@ExtendWith(HandleNotImplementedErrorExtension::class)
 class Test {
     companion object {
         @JvmStatic
@@ -72,6 +78,11 @@ class Test {
             Arguments.of("ABCI", UserInputCorrectness.INCORRECT_ALPHABET),
             Arguments.of("ACI", UserInputCorrectness.INCORRECT_LENGTH),
         )
+    }
+
+    @Test
+    fun smokeTest() {
+        runMainFunction(::main, List(4) { generateSecret(4, "ABCDEFGH") + newLineSymbol }.joinToString(""))
     }
 
     @Test

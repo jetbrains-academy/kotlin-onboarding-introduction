@@ -6,7 +6,12 @@ import util.Util
 import util.checkListOfVariables
 import util.runMainFunction
 import java.io.File
+import org.junit.jupiter.api.extension.ExtendWith
+import util.HandleNotImplementedError
+import util.HandleNotImplementedErrorExtension
 
+@HandleNotImplementedError
+@ExtendWith(HandleNotImplementedErrorExtension::class)
 class Test {
     @Test
     fun testVariablesInSolution() {

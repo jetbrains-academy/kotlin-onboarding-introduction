@@ -7,11 +7,14 @@ import org.jetbrains.academy.test.system.core.models.classes.findClassSafe
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.BeforeAll
 import org.junit.jupiter.api.Test
+import org.junit.jupiter.api.extension.ExtendWith
 import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.Arguments
 import org.junit.jupiter.params.provider.MethodSource
 import util.*
 
+@HandleNotImplementedError
+@ExtendWith(HandleNotImplementedErrorExtension::class)
 class Test {
     companion object {
         private const val SQUARED = "squared"
@@ -113,6 +116,11 @@ class Test {
         fun beforeAll() {
             mainClazz = mainClass.findClassSafe() ?: throwInternalCourseError()
         }
+    }
+
+    @Test
+    fun smokeTest() {
+        runMainFunction(::main, "$YES$newLineSymbol$SIMBA$newLineSymbol$BORDERS$newLineSymbol")
     }
 
     @Test
