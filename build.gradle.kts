@@ -3,20 +3,20 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     java
-    kotlin("jvm") version "1.7.10" apply true
+    kotlin("jvm") version "2.0.0" apply true
     id("io.gitlab.arturbosch.detekt") version "1.21.0"
     id("com.github.johnrengelman.shadow") version "7.0.0"
 }
 
 buildscript {
-    extra["kotlin_version"] = "1.7.10"
+    extra["kotlin_version"] = "2.0.0"
 
     repositories {
         mavenCentral()
     }
 
     dependencies {
-        classpath(kotlin("gradle-plugin", version = "1.7.10"))
+        classpath(kotlin("gradle-plugin", version = "2.0.0"))
     }
 }
 
