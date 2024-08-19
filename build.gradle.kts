@@ -4,7 +4,6 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
     java
     kotlin("jvm") version "2.0.0" apply true
-    id("io.gitlab.arturbosch.detekt") version "1.21.0"
     id("com.github.johnrengelman.shadow") version "7.0.0"
 }
 
@@ -30,15 +29,10 @@ fun printOutput(output: Any): Task {
     }
 }
 
-val detektReportMerge by tasks.registering(io.gitlab.arturbosch.detekt.report.ReportMergeTask::class) {
-    output.set(rootProject.buildDir.resolve("reports/detekt/merge.sarif"))
-}
-
 allprojects {
     apply {
         plugin("java")
         plugin("kotlin")
-        plugin("io.gitlab.arturbosch.detekt")
         plugin("com.github.johnrengelman.shadow")
     }
 
@@ -57,10 +51,6 @@ allprojects {
         runtimeOnly("org.junit.jupiter:junit-jupiter-engine:$junitJupiterVersion")
         implementation("org.junit.jupiter:junit-jupiter-params:$junitJupiterVersion")
         runtimeOnly("org.junit.platform:junit-platform-console:1.9.0")
-
-        val detektVersion = "1.22.0"
-        implementation("io.gitlab.arturbosch.detekt:detekt-gradle-plugin:$detektVersion")
-        implementation("io.gitlab.arturbosch.detekt:detekt-formatting:$detektVersion")
 
         implementation("org.jetbrains.academy.test.system:core:2.1.0")
     }
@@ -104,22 +94,6 @@ allprojects {
         getByName("main").java.srcDirs("src")
         getByName("test").java.srcDirs("test")
     }
-
-    apply<io.gitlab.arturbosch.detekt.DetektPlugin>()
-
-    configure<io.gitlab.arturbosch.detekt.extensions.DetektExtension> {
-        config = rootProject.files("detekt.yml")
-        buildUponDefaultConfig = true
-        debug = true
-    }
-
-    tasks.withType<io.gitlab.arturbosch.detekt.Detekt> {
-        finalizedBy(detektReportMerge)
-        reports.sarif.required.set(true)
-        detektReportMerge.get().input.from(sarifReportFile)
-    }
-
-    tasks.getByPath("detekt").onlyIf { project.hasProperty("runDetekt") }
 
     tasks.register<Exec>("run") {
         // Just do nothing to avoid the edu plugin errors
