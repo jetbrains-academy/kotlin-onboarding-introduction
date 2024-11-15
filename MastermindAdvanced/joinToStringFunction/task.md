@@ -1,4 +1,4 @@
-We have already leraned how to generate a list of random letters, but we need to work with strings.
+We have already learned how to generate a list of random letters, but we need to work with strings.
 To join a list of elements into a string,
 you can use the [`joinToString`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.sequences/join-to-string.html)
 function, passing the _separator_ — a character (or _string_)
