@@ -16,7 +16,7 @@ fun playGame(secret: String, wordLength: Int, maxAttemptsCount: Int): Unit
 This function should have a loop while game is not complete 
 (we can use the `isComplete` function from the previous steps here).
 Inside the loop you need to ask the user to input a guess and write their answer into the `guess` variable.
-After asking about input you need to recheck if the game was compiled to avoid having an infinite loop.
+After asking about input you need to recheck if the game was completed to avoid having an infinite loop.
 
 It is better to ask user what do you expect to get, so print this text before read line user input:
 
