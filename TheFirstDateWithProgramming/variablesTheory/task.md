@@ -7,7 +7,7 @@ you need to use the [`val`](https://kotlinlang.org/docs/basic-syntax.html#variab
 specify its _name_ and _type_, and after the `=` sign,
 specify the _value_ of this variable.
 
-For example, to create a `firstAnswer` variable and assign it an empty [`String`](https://kotlinlang.org/docs/basic-types.html#strings),
+For example, to create a `firstAnswer` variable and assign it an empty [`String`](https://kotlinlang.org/docs/strings.html),
 you should write the following:
 ```kotlin
 val firstAnswer: String = ""
