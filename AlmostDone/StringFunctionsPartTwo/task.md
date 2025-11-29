@@ -82,7 +82,7 @@ fun main() {
 
 You can use the `applyBordersFilter` function to add borders. Next,  
 create two `StringBuilder` instances — one for the top part and the other for the bottom. 
-Proceed to poopulate them row by row.
+Proceed to populate them row by row.
 </div>
 
 <div class="hint" title="Click me to learn how to implement the getPictureWidth function on your own">

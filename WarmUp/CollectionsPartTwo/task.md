@@ -57,7 +57,7 @@ Here are several examples of the _countAllMatches_ function's work:
 <div class="Hint" title="Click me to learn the main idea of the algorithm">
 
 You can just count the number of letters from the guess that are in secret.
-But in some cases it will prodice an incorrect answer, for example, if the guess has the same letters:
+But in some cases it will produce an incorrect answer, for example, if the guess has the same letters:
 ```text
 guess = "BBBB", secret = "BBDH"
 ```
