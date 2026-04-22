@@ -4,8 +4,8 @@ The simplest processing mechanisms are the [`!!`](https://kotlinlang.org/docs/nu
 
 ### 1. The `!!` operator
 
-The `!!` operator simply disregards the `null` value and works with the type as though there
-could be no `null` value. However, if the program encounters the `null` value,
+The `!!` operator simply disregards the possibility of a `null` value and treats the type as though it cannot be `null`. 
+However, if the program encounters the `null` value,
 it will exit with an error ([`Null pointer exception`](https://kotlinlang.org/docs/null-safety.html#nullable-types-and-non-null-types), or `NPE`).
 ```kotlin
 var a: String? = null
