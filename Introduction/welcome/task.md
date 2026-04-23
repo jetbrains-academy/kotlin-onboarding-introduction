@@ -8,6 +8,9 @@ you will get a finished small project in the end.
 At the end of each lesson, an additional similar project will be offered:
 it includes all the topics of the lesson but is not divided into small tasks.
 
+**Important:** Within each project, tasks must be completed strictly in order.
+Each task builds on the previous one, so skipping steps may lead to errors or non-working solutions.
+
 All topics will be accompanied by links to [the official Kotlin documentation](https://kotlinlang.org/docs/home.html),
 which you can read later.
 
