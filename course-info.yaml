@@ -31,3 +31,107 @@ tags:
   - Beginner-friendly
 environment_settings:
   jvm_language_level: JDK_17
+additional_files:
+  - name: utils/build.gradle.kts
+  - name: utils/src/main/kotlin/util/Util.kt
+  - name: utils/src/main/kotlin/util/Variable.kt
+  - name: LICENSE.md
+  - name: contributing.md
+  - name: build.gradle.kts
+  - name: settings.gradle.kts
+  - name: gradle/wrapper/gradle-wrapper.properties
+  - name: gifs/build.gradle.kts
+    is_binary: true
+  - name: utils/src/main/resources/images/part1/warmup/game.gif
+    is_binary: true
+  - name: utils/src/main/resources/images/part1/warmup/game.png
+    is_binary: true
+  - name: utils/src/main/resources/images/part1/warmup/game_dark.gif
+    is_binary: true
+  - name: utils/src/main/resources/images/part1/warmup/safe_user_input.gif
+    is_binary: true
+  - name: utils/src/main/resources/images/part1/warmup/safe_user_input_dark.gif
+    is_binary: true
+  - name: utils/src/main/resources/images/part1/hangman/game.gif
+    is_binary: true
+  - name: utils/src/main/resources/images/part1/hangman/game.png
+    is_binary: true
+  - name: utils/src/main/resources/images/part1/hangman/game_dark.gif
+    is_binary: true
+  - name: utils/src/main/resources/images/part1/last.push/app.gif
+    is_binary: true
+  - name: utils/src/main/resources/images/part1/last.push/game.png
+    is_binary: true
+  - name: utils/src/main/resources/images/part1/last.push/app_dark.gif
+    is_binary: true
+  - name: utils/src/main/resources/images/part1/first.date/game.gif
+    is_binary: true
+  - name: utils/src/main/resources/images/part1/first.date/game.png
+    is_binary: true
+  - name: utils/src/main/resources/images/part1/first.date/game_dark.gif
+    is_binary: true
+  - name: utils/src/main/resources/images/part1/first.date/user_input.gif
+    is_binary: true
+  - name: utils/src/main/resources/images/part1/first.date/entry_point.png
+    is_binary: true
+  - name: utils/src/main/resources/images/part1/first.date/run_example.gif
+    is_binary: true
+  - name: utils/src/main/resources/images/part1/first.date/user_input_dark.gif
+    is_binary: true
+  - name: utils/src/main/resources/images/part1/first.date/entry_point_dark.png
+    is_binary: true
+  - name: utils/src/main/resources/images/part1/first.date/run_example_dark.gif
+    is_binary: true
+  - name: utils/src/main/resources/images/part1/almost.done/examples/borders/monkey.png
+    is_binary: true
+  - name: utils/src/main/resources/images/part1/almost.done/examples/borders/android.png
+    is_binary: true
+  - name: utils/src/main/resources/images/part1/almost.done/examples/borders/monkey_dark.png
+    is_binary: true
+  - name: utils/src/main/resources/images/part1/almost.done/examples/borders/android_dark.png
+    is_binary: true
+  - name: utils/src/main/resources/images/part1/almost.done/examples/squared/monkey.png
+    is_binary: true
+  - name: utils/src/main/resources/images/part1/almost.done/examples/squared/android.png
+    is_binary: true
+  - name: utils/src/main/resources/images/part1/almost.done/examples/squared/monkey_dark.png
+    is_binary: true
+  - name: utils/src/main/resources/images/part1/almost.done/examples/squared/android_dark.png
+    is_binary: true
+  - name: utils/src/main/resources/images/part1/almost.done/game.gif
+    is_binary: true
+  - name: utils/src/main/resources/images/part1/almost.done/game.png
+    is_binary: true
+  - name: utils/src/main/resources/images/part1/almost.done/game_dark.gif
+    is_binary: true
+  - name: utils/src/main/resources/images/part1/almost.done/get_picture.gif
+    is_binary: true
+  - name: utils/src/main/resources/images/part1/almost.done/when_hint_1.png
+    is_binary: true
+  - name: utils/src/main/resources/images/part1/almost.done/when_hint_2.png
+    is_binary: true
+  - name: utils/src/main/resources/images/part1/almost.done/choose_filter.gif
+    is_binary: true
+  - name: utils/src/main/resources/images/part1/almost.done/choose_picture.gif
+    is_binary: true
+  - name: utils/src/main/resources/images/part1/almost.done/trimmed_picture.gif
+    is_binary: true
+  - name: utils/src/main/resources/images/part1/almost.done/get_picture_dark.gif
+    is_binary: true
+  - name: utils/src/main/resources/images/part1/almost.done/when_hint_1_dark.png
+    is_binary: true
+  - name: utils/src/main/resources/images/part1/almost.done/when_hint_2_dark.png
+    is_binary: true
+  - name: utils/src/main/resources/images/part1/almost.done/choose_filter_dark.gif
+    is_binary: true
+  - name: utils/src/main/resources/images/part1/almost.done/choose_picture_dark.gif
+    is_binary: true
+  - name: utils/src/main/resources/images/part1/almost.done/trimmed_picture_dark.gif
+    is_binary: true
+  - name: utils/src/main/resources/images/part1/chat/game.gif
+    is_binary: true
+  - name: utils/src/main/resources/images/part1/chat/game.png
+    is_binary: true
+  - name: utils/src/main/resources/images/part1/chat/game_dark.gif
+    is_binary: true
+yaml_version: 5

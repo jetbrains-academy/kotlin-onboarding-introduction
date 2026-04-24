@@ -1,21 +1,22 @@
 import org.jetbrains.kotlin.config.KotlinCompilerVersion
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     java
-    kotlin("jvm") version "2.0.0" apply true
-    id("com.github.johnrengelman.shadow") version "7.0.0"
+    kotlin("jvm") version "2.3.20" apply true
+    id("com.github.johnrengelman.shadow") version "8.1.1"
 }
 
 buildscript {
-    extra["kotlin_version"] = "2.0.0"
+    extra["kotlin_version"] = "2.3.20"
 
     repositories {
         mavenCentral()
     }
 
     dependencies {
-        classpath(kotlin("gradle-plugin", version = "2.0.0"))
+        classpath(kotlin("gradle-plugin", version = "2.3.20"))
     }
 }
 
@@ -61,7 +62,9 @@ allprojects {
             targetCompatibility = "11"
         }
         withType<KotlinCompile> {
-            kotlinOptions.jvmTarget = "11"
+            compilerOptions {
+                jvmTarget = JvmTarget.JVM_11
+            }
         }
 
         withType<Test> {
