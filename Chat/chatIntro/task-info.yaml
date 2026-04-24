@@ -3,3 +3,5 @@ custom_name: Chat - Introduction
 files:
   - name: src/main/kotlin/jetbrains/kotlin/course/chat/Main.kt
     visible: true
+  - name: task.md
+    visible: true
