@@ -4,4 +4,4 @@ files:
   - name: src/main/kotlin/jetbrains/kotlin/course/chat/Main.kt
     visible: true
   - name: task.md
-    visible: true
+    visible: false
