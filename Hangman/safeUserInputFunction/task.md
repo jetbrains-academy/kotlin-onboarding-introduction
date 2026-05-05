@@ -29,6 +29,7 @@ guess = safeReadLine()
 ```
 
 - to check the correctness of the user's input, use the `isCorrectInput` function, which was implemented in the previous step.
+- if the input is invalid, repeat the process (print the prompt and read the input again) until a valid value is provided.
 
 To make a letter uppercase, you can implement your own function, but we _recommend_ looking into the [`uppercase`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/uppercase.html) built-in function.
 
