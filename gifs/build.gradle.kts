@@ -12,9 +12,10 @@ dependencies {
 
 val andersonVersion = "0.3.1"
 
-tasks.register<Exec>("installAnderson") {
+val installAndersonTask = tasks.register<Exec>("installAnderson") {
     group = "gifs"
     setCommandLine("pip3", "install", "git+https://github.com/GirZ0n/anderson.git@v$andersonVersion")
+    shouldRunAfter(tasks.named("shadowJar"))
 }
 
 abstract class GenerateGif : Exec() {
@@ -68,8 +69,7 @@ val lessonGradleTasks = lessonNameToGifConfigNames.map { (lessonName, gifConfigN
     val gifGradleTasks = gifConfigNames.map {
         tasks.register<GenerateGif>("generate-$lessonName-$it") {
             dependsOn(tasks.shadowJar)
-            dependsOn(tasks.findByName("installAnderson"))
-            tasks.findByName("installAnderson")!!.shouldRunAfter(tasks.shadowJar)
+            dependsOn(installAndersonTask)
 
             group = "gifs"
 
