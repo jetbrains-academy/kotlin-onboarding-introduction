@@ -1,6 +1,4 @@
 import org.jetbrains.kotlin.config.KotlinCompilerVersion
-import org.jetbrains.kotlin.gradle.dsl.JvmTarget
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     java
@@ -57,15 +55,6 @@ allprojects {
     }
 
     tasks {
-        withType<JavaCompile> {
-            sourceCompatibility = "11"
-            targetCompatibility = "11"
-        }
-        withType<KotlinCompile> {
-            compilerOptions {
-                jvmTarget = JvmTarget.JVM_11
-            }
-        }
 
         withType<Test> {
             useJUnitPlatform()
