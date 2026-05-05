@@ -15,6 +15,10 @@ fun playGame(secret: String, maxAttemptsCount: Int): Unit
 ```
 </div>
 
+Each valid user input (a single English letter) counts as one attempt. Invalid inputs should not be counted as attempts.
+
+The game should end when the user guesses the word or uses all attempts. After that, the game should stop without asking for more input.
+
 At the end of the game, the user should be informed about the results:
 - if the user lost: `Sorry, you lost! My word is <secret>`
 - if the user guessed the word: `Congratulations! You guessed it!`
