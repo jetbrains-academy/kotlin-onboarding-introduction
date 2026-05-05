@@ -111,7 +111,7 @@ class Test {
 
     @Test
     fun smokeTest() {
-        runMainFunction(::main, List(maxAttemptsCount + 1) { "A$newLineSymbol" }.joinToString(""))
+        runMainFunction(::main, List(maxAttemptsCount) { "A$newLineSymbol" }.joinToString(""))
     }
 
     @ParameterizedTest
