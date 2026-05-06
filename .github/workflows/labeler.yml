@@ -1,0 +1,22 @@
+name: Approve labeler
+on:
+  pull_request_review:
+  pull_request:
+    types: [ review_requested ]
+
+jobs:
+  approve_labeler_job:
+    runs-on: ubuntu-22.04
+    name: Approve labeler
+    steps:
+      - name: Generate a github token
+        id: generate-github-token
+        uses: actions/create-github-app-token@v1
+        with:
+          app-id: ${{ vars.PR_LABELER_ID }}
+          private-key: ${{ secrets.PR_LABELER_PRIVATE_KEY }}
+      - name: Calling PullRequest review labeler
+        uses: jetbrains-academy/pullrequest-labeler-action@main
+        with:
+          github-token: ${{ steps.generate-github-token.outputs.token }}
+          rules: '[["proofreaders", "proofread"], ["testers", "tested"]]'
