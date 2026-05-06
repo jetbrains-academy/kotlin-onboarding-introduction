@@ -9,8 +9,8 @@ content:
   - repeatFunction
   - stringBuilder
   - StringFunctions
-  - StringFunctionsPartTwo
   - whenTheory
+  - StringFunctionsPartTwo
   - errorFunction
   - When
   - nullValue

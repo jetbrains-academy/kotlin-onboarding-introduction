@@ -80,9 +80,16 @@ fun main() {
 
 <div class="hint" title="Click me to learn the main idea of the algorithm">
 
-You can use the `applyBordersFilter` function to add borders. Next,  
+You can use the `applyBordersFilter` function to add borders. Next, 
 create two `StringBuilder` instances — one for the top part and the other for the bottom. 
 Proceed to populate them row by row.
+</div>
+
+<div class="hint" title="Click me to learn how to process rows based on their position">
+
+Use a `when` expression inside the loop to handle rows differently depending on their position.
+The first row (top border) should be added only to the top part, and the last row (bottom border) only to the bottom part. 
+All other rows should be added to both parts.
 </div>
 
 <div class="hint" title="Click me to learn how to implement the getPictureWidth function on your own">
