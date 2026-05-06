@@ -1,6 +1,5 @@
 [![official project](https://jb.gg/badges/official.svg)](https://confluence.jetbrains.com/display/ALL/JetBrains+on+GitHub)
 [![Gradle Build](https://github.com/jetbrains-academy/kotlin-onboarding-introduction/actions/workflows/gradle-build.yml/badge.svg)](https://github.com/jetbrains-academy/kotlin-onboarding-introduction/actions/workflows/gradle-build.yml)
-[![Gradle Build With Detekt](https://github.com/jetbrains-academy/kotlin-onboarding-introduction/actions/workflows/gradle-build-with-detekt.yml/badge.svg)](https://github.com/jetbrains-academy/kotlin-onboarding-introduction/actions/workflows/gradle-build-with-detekt.yml)
 [![Gradle Test](https://github.com/jetbrains-academy/kotlin-onboarding-introduction/actions/workflows/gradle-test.yml/badge.svg)](https://github.com/jetbrains-academy/kotlin-onboarding-introduction/actions/workflows/gradle-test.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
