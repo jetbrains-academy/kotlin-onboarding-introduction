@@ -1,7 +1,6 @@
 [![official project](https://jb.gg/badges/official.svg)](https://confluence.jetbrains.com/display/ALL/JetBrains+on+GitHub)
-[![Gradle Build](https://github.com/jetbrains-academy/csc-kotlin-course/actions/workflows/gradle-build.yml/badge.svg)](https://github.com/jetbrains-academy/csc-kotlin-course/actions/workflows/gradle-build.yml)
-[![Gradle Build With Detekt](https://github.com/jetbrains-academy/csc-kotlin-course/actions/workflows/gradle-build-with-detekt.yml/badge.svg)](https://github.com/jetbrains-academy/csc-kotlin-course/actions/workflows/gradle-build-with-detekt.yml)
-[![Gradle Test](https://github.com/jetbrains-academy/csc-kotlin-course/actions/workflows/gradle-test.yml/badge.svg)](https://github.com/jetbrains-academy/csc-kotlin-course/actions/workflows/gradle-test.yml)
+[![Gradle Build](https://github.com/jetbrains-academy/kotlin-onboarding-introduction/actions/workflows/gradle-build.yml/badge.svg)](https://github.com/jetbrains-academy/kotlin-onboarding-introduction/actions/workflows/gradle-build.yml)
+[![Gradle Test](https://github.com/jetbrains-academy/kotlin-onboarding-introduction/actions/workflows/gradle-test.yml/badge.svg)](https://github.com/jetbrains-academy/kotlin-onboarding-introduction/actions/workflows/gradle-test.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 # Kotlin Onboarding: Introduction
@@ -125,7 +124,7 @@ To do this, you could run one of the following commands:
 ## Want to know more?
 
 If you have questions about the course or the tasks or if you find some errors,
-you can ask questions and participate in discussions in repository [issues](https://github.com/jetbrains-academy/csc-kotlin-course/issues).
+you can ask questions and participate in discussions in repository [issues](https://github.com/jetbrains-academy/kotlin-onboarding-introduction/issues).
 
 ## Contribution
 
