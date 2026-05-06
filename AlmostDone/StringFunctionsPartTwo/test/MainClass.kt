@@ -6,6 +6,5 @@ internal val mainClass = TestClass(
         trimPictureMethod,
         applyBordersFilterMethod,
         applySquaredFilterMethod,
-        applyFilterMethod,
     ),
 )

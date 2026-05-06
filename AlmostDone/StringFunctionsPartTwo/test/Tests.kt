@@ -27,18 +27,6 @@ class Test {
 
     @ParameterizedTest
     @MethodSource("pictures")
-    fun testApplyFilterImplementationSquare(picture: Image) {
-        val expectedPicture = picture.squaredImage.trimIndent().replaceLineSeparator()
-        val userMethod = mainClass.findMethod(mainClazz, applyFilterMethod)
-        val userPicture = (userMethod.invokeWithArgs(picture.initialImage.trimIndent(), "squared", clazz = mainClazz) as String).trim()
-        Assertions.assertEquals(
-            expectedPicture, userPicture,
-            "For picture:${Util.newLineSeparator}${picture.initialImage}${Util.newLineSeparator} and filter <squared> the function ${applyFilterMethod.name} should return${Util.newLineSeparator}$expectedPicture${Util.newLineSeparator}"
-        )
-    }
-
-    @ParameterizedTest
-    @MethodSource("pictures")
     fun testApplySquaredFilterImplementation(picture: Image) {
         val expectedPicture = picture.squaredImage.trimIndent().replaceLineSeparator()
         val userMethod = mainClass.findMethod(mainClazz, applySquaredFilterMethod)
@@ -59,23 +47,6 @@ class Test {
             expectedPicture, userPicture,
             "For picture:${Util.newLineSeparator}${picture.initialImage}${Util.newLineSeparator} the function ${applyBordersFilterMethod.name} should return${Util.newLineSeparator}$expectedPicture${Util.newLineSeparator}"
         )
-    }
-
-    @ParameterizedTest
-    @MethodSource("pictures")
-    fun testApplyFilterImplementationBorders(picture: Image) {
-        val expectedPicture = picture.borderedImage.trimIndent().replaceLineSeparator()
-        val userMethod = mainClass.findMethod(mainClazz, applyFilterMethod)
-        val userPicture = (userMethod.invokeWithArgs(picture.initialImage.trimIndent(), "borders", clazz = mainClazz) as String).trim()
-        Assertions.assertEquals(
-            expectedPicture, userPicture,
-            "For picture:${Util.newLineSeparator}${picture.initialImage}${Util.newLineSeparator} and filter <borders> the function ${applyFilterMethod.name} should return${Util.newLineSeparator}$expectedPicture${Util.newLineSeparator}"
-        )
-    }
-
-    @Test
-    fun testApplyFilterFunction() {
-        mainClass.checkMethod(mainClazz, applyFilterMethod)
     }
 
     @Test

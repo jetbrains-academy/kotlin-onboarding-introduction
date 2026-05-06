@@ -5,14 +5,14 @@ content:
   - multiRowStringsTheory
   - MultiRowStrings
   - applyBordersFilterFunction
-  - whenTheory
-  - errorFunction
-  - When
   - linesFunction
   - repeatFunction
   - stringBuilder
   - StringFunctions
   - StringFunctionsPartTwo
+  - whenTheory
+  - errorFunction
+  - When
   - nullValue
   - nullSafetyTheory
   - safeReadLineFunction

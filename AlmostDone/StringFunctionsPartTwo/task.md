@@ -69,10 +69,10 @@ Second example:
 To check how your function works, you can run it in <code>main</code> by passing one of the predefined pictures:
 
 ```kotlin
-fun main() {
-  applyFilter(simba, "squared")   // an example with the simba picture
-  applyFilter(monkey, "squared")  // an example with the monkey picture
-  applyFilter(android, "squared") // an example with the android picture (this picture has different line lengths)
+fun main() { 
+    applySquaredFilter(simba)   // an example with the simba picture
+    applySquaredFilter(monkey)  // an example with the monkey picture
+    applySquaredFilter(android) // an example with the android picture (this picture has different line lengths)
 }
 ```
 </div>
