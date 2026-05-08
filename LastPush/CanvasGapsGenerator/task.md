@@ -41,12 +41,12 @@ The resulting 5 x 3 picture will be:
             X     X     X         X     X     X 
 1st level: / \   / \   / \       / \   / \   / \
            \ /   \ /   \ /       \ /   \ /   \ /
-            X     X     X         X     X     X
-               X     X              / \   / \
-2nd level:    / \   / \             \ /   \ /    
-              \ /   \ /              X     X
+            X     X     X         X     X     X 
+               X     X              / \   / \   
+2nd level:    / \   / \             \ /   \ /   
+              \ /   \ /              X     X    
                X     X           / \   / \   / \
-            X     X     X        \ /   \ /   \ /    
+            X     X     X        \ /   \ /   \ /
 3rd level: / \   / \   / \        X     X     X 
            \ /   \ /   \ /
             X     X     X 
@@ -55,14 +55,26 @@ The resulting 5 x 3 picture will be:
 None of the levels of the generated image change the pattern.
 </div>
 
-The following functions will _not be checked_, but they can help you implement this project:
+The following function will _not be checked_, but it can help you implement this project:
 
 
-- `repeatHorizontallyWithGaps`, which accepts a `pattern` and the number of times that pattern should be repeated horizontally (n), e.g.:
+- `repeatHorizontallyWithGaps` repeats each row of the pattern horizontally n times, adding gaps between copies.
+The function works row by row and the result depends on the `startsWithPattern` flag:
+
+   `startsWithPattern = true` — the row starts with the pattern
+   `startsWithPattern = false` — the row starts with a gap (separator)
+
+Example (`startsWithPattern = true`, `n = 5`):
 ```text
-n = 5
 ○○             ○○  ○○  ○○
 ○○    ---->    ○○  ○○  ○○
+```
+
+Example (`startsWithPattern = false`, `n = 5`):
+
+```text
+○○               ○○  ○○    
+○○    ---->      ○○  ○○    
 ```
 
 If you have any difficulties, **hints will help you solve this task**.

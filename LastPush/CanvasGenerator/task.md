@@ -44,14 +44,14 @@ The resulting 5 x 3 picture will be:
 1st level: / \/ \/ \/ \/ \       / \/ \/ \/ \/ \
            \ /\ /\ /\ /\ /       \ /\ /\ /\ /\ /
             X  X  X  X  X         X  X  X  X  X 
-2nd level: / \/ \/ \/ \/ \        X  X  X  X  X
+2nd level: / \/ \/ \/ \/ \        X  X  X  X  X 
            \ /\ /\ /\ /\ /       / \/ \/ \/ \/ \
-            X  X  X  X  X        \ /\ /\ /\ /\ / 
+            X  X  X  X  X        \ /\ /\ /\ /\ /
 3rd level: / \/ \/ \/ \/ \        X  X  X  X  X 
            \ /\ /\ /\ /\ /        X  X  X  X  X 
-            X  X  X  X  X        / \/ \/ \/ \/ \ 
-                                 \ /\ /\ /\ /\ / 
-                                  X  X  X  X  X
+            X  X  X  X  X        / \/ \/ \/ \/ \
+                                 \ /\ /\ /\ /\ /
+                                  X  X  X  X  X 
 ```
 
 The first line of the initial pattern was removed from the second level and beyond.
@@ -62,7 +62,7 @@ However, if the size is 5 x 1, the resulting picture will be:
 ```text
             CORRECT:             INCORRECT:
  
-            X  X  X  X  X         X  X  X  X  X
+            X  X  X  X  X         X  X  X  X  X 
 1st level: / \/ \/ \/ \/ \       / \/ \/ \/ \/ \
            \ /\ /\ /\ /\ /       \ /\ /\ /\ /\ /
             X  X  X  X  X 
