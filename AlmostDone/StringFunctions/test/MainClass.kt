@@ -5,7 +5,6 @@ internal val mainClass = TestClass(
     customMethods = listOf(
         applyBordersFilterMethod,
         applySquaredFilterMethod,
-        applyFilterMethod,
         trimPictureMethod,
     )
 )

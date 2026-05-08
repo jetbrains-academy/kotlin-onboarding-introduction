@@ -70,9 +70,9 @@ To check how your function works, you can run it in <code>main</code> by passing
 
 ```kotlin
 fun main() {
-  applyFilter(simba, "squared")   // an example with the simba picture
-  applyFilter(monkey, "squared")  // an example with the monkey picture
-  applyFilter(android, "squared") // an example with the android picture (this picture has different line lengths)
+    applySquaredFilter(simba) // Example with the simba picture 
+    applySquaredFilter(monkey) // Example with the monkey picture
+    applySquaredFilter(android) // Example with the android picture (handles variable line lengths)
 }
 ```
 </div>
@@ -80,9 +80,16 @@ fun main() {
 
 <div class="hint" title="Click me to learn the main idea of the algorithm">
 
-You can use the `applyBordersFilter` function to add borders. Next,  
+You can use the `applyBordersFilter` function to add borders. Next, 
 create two `StringBuilder` instances — one for the top part and the other for the bottom. 
 Proceed to populate them row by row.
+</div>
+
+<div class="hint" title="Click me to learn how to process rows based on their position">
+
+Use a `when` expression inside the loop to handle rows differently based on their index.
+The first row (top border) should be added only to the top part, while the last row (bottom border) should be added only to the bottom part.
+All other rows must be added to both parts.
 </div>
 
 <div class="hint" title="Click me to learn how to implement the getPictureWidth function on your own">

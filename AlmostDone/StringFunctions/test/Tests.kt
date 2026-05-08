@@ -39,25 +39,6 @@ class Test {
         )
     }
 
-    @ParameterizedTest
-    @MethodSource("pictures")
-    fun testApplyFilterImplementation(
-        picture: Image,
-    ) {
-        val expectedPicture = picture.borderedImage.trimIndent().replaceLineSeparator()
-        val userMethod = mainClass.findMethod(mainClazz, applyFilterMethod)
-        val userPicture = (userMethod.invokeWithArgs(picture.initialImage.trimIndent(), "borders", clazz = mainClazz) as String).trim()
-        Assertions.assertEquals(
-            expectedPicture, userPicture,
-            "For picture:${Util.newLineSeparator}${picture.initialImage}${Util.newLineSeparator} and filter <borders> the function ${applyFilterMethod.name} should return${Util.newLineSeparator}$expectedPicture${Util.newLineSeparator}"
-        )
-    }
-
-    @Test
-    fun testApplyFilterFunction() {
-        mainClass.checkMethod(mainClazz, applyFilterMethod)
-    }
-
     @Test
     fun testApplyBordersFilterFunction() {
         mainClass.checkMethod(mainClazz, applyBordersFilterMethod)

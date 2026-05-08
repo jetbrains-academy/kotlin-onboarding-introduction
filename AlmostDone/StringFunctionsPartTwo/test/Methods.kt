@@ -19,12 +19,3 @@ internal val applySquaredFilterMethod = TestMethod(
     TestKotlinType("String"),
     listOf(TestVariable("picture", "String"))
 )
-
-internal val applyFilterMethod = TestMethod(
-    "applyFilter",
-    TestKotlinType("String"),
-    listOf(
-        TestVariable("picture", "String"),
-        TestVariable("filter", "String"),
-    ),
-)

@@ -73,9 +73,9 @@ To check how your function works, you can run it in <code>main</code> by passing
 
 ```kotlin
 fun main() {
-  applyFilter(simba, "borders")   // an example with the simba picture
-  applyFilter(monkey, "borders")  // an example with the monkey picture
-  applyFilter(android, "borders") // an example with the android picture (this picture has different line lengths)
+  applyBordersFilter(simba) // Example with the simba picture
+  applyBordersFilter(monkey) // Example with the monkey picture
+  applyBordersFilter(android) // Example with the android picture (handles variable line lengths)
 }
 ```
 </div>
