@@ -3,9 +3,10 @@ In such cases, we need to remove the top line.
 
 ### Task
 
-Implement the `dropTopLine` function, which accepts an `image` (any string; can be multi-row),
-the `width` (how many times the pattern was repeated horizontally),
-`patternHeight`, and `patternWidth` and returns the image without its first line.
+Implement the `dropTopLine` function, which accepts an `image` (a string that may contain multiple rows),
+the `width` (the number of times the pattern was repeated horizontally),
+the `patternHeight`, and the `patternWidth`. It should return the image with its first line removed.
+
 For example (for `width` = 1):
 ```text
    .+------+              

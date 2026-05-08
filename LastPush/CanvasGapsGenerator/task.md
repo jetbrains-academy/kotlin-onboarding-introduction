@@ -55,11 +55,11 @@ The resulting 5 x 3 picture will be:
 None of the levels of the generated image change the pattern.
 </div>
 
-The following function will _not be checked_, but it can help you implement this project:
+The following function will _not be checked_, but it may be helpful for your implementation:
 
 
-- `repeatHorizontallyWithGaps` repeats each row of the pattern horizontally n times, adding gaps between copies.
-The function works row by row and the result depends on the `startsWithPattern` flag:
+- `repeatHorizontallyWithGaps` repeats each row of the pattern horizontally `n` times, inserting gaps between the copies.
+  The function processes data row by row, and the output format is determined by the `startsWithPattern` flag:
 
    `startsWithPattern = true` — the row starts with the pattern
    `startsWithPattern = false` — the row starts with a gap (separator)
