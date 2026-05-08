@@ -19,7 +19,7 @@ fun getGameRules(wordLength: Int, maxAttemptsCount: Int) = "Welcome to the game!
 fun isWon(complete: Boolean, attempts: Int, maxAttemptsCount: Int) = complete && attempts <= maxAttemptsCount
 
 // You will use this function later
-fun isLost(complete: Boolean, attempts: Int, maxAttemptsCount: Int) = !complete && attempts > maxAttemptsCount
+fun isLost(complete: Boolean, attempts: Int, maxAttemptsCount: Int) = !complete && attempts >= maxAttemptsCount
 
 fun deleteSeparator(guess: String) = guess.replace(separator, "")
 
