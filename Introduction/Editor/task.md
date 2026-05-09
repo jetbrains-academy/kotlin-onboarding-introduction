@@ -1,8 +1,8 @@
 ## Editor
 
-The <b>Editor</b> is your playground where you will be programming. You can experiment here while you work on theoretical tasks and quizzes without being checked.
+The **Editor** is your playground for programming. You can use it to experiment with code while working on theoretical tasks and quizzes, as these changes are not checked.
 
-For programming assignments, the Editor is where you’ll fix the existing code or write your own code from scratch. This code will be checked.
+For programming assignments, use the Editor to modify existing code or write your own from scratch. This code will be checked when you submit your solution.
 
 <style>
 img {
@@ -13,9 +13,9 @@ img {
 </style>
 <img src="images/edu_editor.png" class="center" width=600>
 
-To run your code at any time choose the **Run** option from the context menu, press <span style="color: #509DD6">&shortcut:Run;</span> or click ![](images/threadRunning.svg).
+To run your code at any time, select **Run** from the context menu, press <span style="color: #509DD6">&shortcut:Run;</span> or click ![](images/threadRunning.svg).
 
-If you want to go back to the Editor and focus on your code, the fastest way to do it is with the **Hide All Windows** command (<span style="color: #509DD6">&shortcut:HideAllWindows;</span>). To get all the windows back, repeat the command.
+To go back to the Editor and focus on your code, use the **Hide All Windows** command (<span style="color: #509DD6">&shortcut:HideAllWindows;</span>). To restore your previous layout, simply repeat the command.
 
 <style>
 img {

@@ -1,17 +1,17 @@
 ## JetBrains Academy plugin overview
 
-This lesson will help you take your first steps with the [JetBrains Academy plugin](https://www.jetbrains.com/help/education/educational-products.html) and use it to learn Kotlin.
+This lesson will help you take your first steps with the [JetBrains Academy plugin](https://www.jetbrains.com/help/education/educational-products.html) and show you how to use it to learn Kotlin.
 
-With the JetBrains Academy plugin, you can learn programming languages and tools by completing coding tasks and get instant feedback right inside the IDE.
+With the JetBrains Academy plugin, you can learn programming languages and tools by completing coding tasks and receiving instant feedback right inside your IDE.
 
 Enough talking – let's get started!
 
-If you're already familiar with the interface, you can skip this lesson.
+If you're already familiar with the interface, feel free to skip this lesson.
 
 ### Working with courses
-Every course available in JetBrains Academy plugin is structured as a list of lessons. Lessons, in turn, can be grouped into sections. Each lesson contains several tasks.
+Every course available in the JetBrains Academy plugin is structured as a list of lessons. Lessons, in turn, can be grouped into sections, and each lesson contains several tasks.
 
-When you open a course, you will see the main tool windows used for navigation: <b>Course View</b>, <b>Editor</b>, and <b>Task Description</b>:
+When you open a course, you will see the primary tool windows used for navigation: **Course View**, **Editor**, and **Task Description**:
 
 <style>
 img {

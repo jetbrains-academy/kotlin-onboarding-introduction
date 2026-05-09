@@ -1,24 +1,24 @@
 ## Task Description
 
-The **Task Description** window gives you all the information you need to complete a task:
+The **Task Description** window provides all the information required to complete a task:
 
-For theoretical tasks, the description provides learning and reading materials.
-For quizzes, it offers multiple choice questions.
-For programming assignments, it states the problem to be solved.
+- Theoretical tasks: Offers learning and reading materials.
+- Quizzes: Presents multiple-choice questions.
+- Programming assignments: Describes the problem to be solved.
 
-Use Task Description icons for the following actions:
+Use the Task Description icons for the following actions:
 
-| Icon                                                        | Description                                                                                                            |
-|-------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|
-| **Check**                                                   | <font size="-1">Check the correctness of your answer (for a quiz) or your code solution (for a programming task)</font> |
-| ![](images/forward.svg) &nbsp;<font size="-1">or</font> **Next** | <font size="-1">Go to the next task</font>                                                                             | 
-| ![](images/reset.svg)                                       | <font size="-1">Discard all the changes you’ve made in the task, and start over</font>                                 | 
-| ![](images/commentTask.svg)                                 | <font size="-1">Leave feedback about Jetbrains Academy</font>                                                          | 
-| **Get Hint**                                                  | <font size="-1">Get AI hint</font>                                                                                     |
+| Icon                                                        | Description                                                                                                          |
+|-------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------|
+| **Check**                                                   | <font size="-1">Validate your quiz answer or your code solution for a programming task</font> |
+| ![](images/forward.svg) &nbsp;<font size="-1">or</font> **Next** | <font size="-1">Go to the next task</font>                                                                           | 
+| ![](images/reset.svg)                                       | <font size="-1">Discard all changes you made in the task and start over</font>                               | 
+| ![](images/commentTask.svg)                                 | <font size="-1">Leave feedback about Jetbrains Academy</font>                                                        | 
+| **Get Hint**                                                  | <font size="-1">Receive an AI-generated hint</font>                                                                                   |
 
-We recommend keeping the Task Description window visible and not hiding it completely. If it is too distracting, you can hide it by clicking the ![](images/hideToolWindow.svg) button in the top right-hand corner of the Task Description window.
+We recommend keeping the Task Description window visible while you work. If it is too distracting, you can collapse it by clicking the ![](images/hideToolWindow.svg) button in the top right-hand corner.
 
-If you use two monitors, it may be helpful to switch the Task Description panel to the floating mode and move it to the second monitor, or just place it near the main IDE window. To do this, click the tool window settings ![](images/gear.svg) / ![](images/moreVertical.svg) icon :
+If you use two monitors, consider switching the Task Description panel to floating mode and moving it to the second screen, or just placing it near the main IDE window. To do this, click the tool window settings ![](images/gear.svg) / ![](images/moreVertical.svg) icon :
 
 
 <img src="images/edu_task_description_window_settings.png" class="center" width=600>
