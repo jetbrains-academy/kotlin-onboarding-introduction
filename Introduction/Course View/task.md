@@ -1,6 +1,6 @@
 ## Course View
 
-<b>Course View</b> shows you the course syllabus: a list of lessons with tasks.
+The **Course View** displays the course syllabus: a structured list of lessons and tasks.
 
 <style>
 img {
