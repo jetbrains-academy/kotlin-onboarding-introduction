@@ -3,18 +3,19 @@ In such cases, we need to remove the top line.
 
 ### Task
 
-Implement the `dropTopLine` function, which accepts an `image` (any string; can be multi-row), 
-the `width` of the new image that should be created (`image` should have already been repeated `width` times),
-`patternHeight`, and `patternWidth`. This function deletes the first line,
-e.g., (for `width` = 1):
+Implement the `dropTopLine` function, which accepts an `image` (a string that may contain multiple rows),
+the `width` (the number of times the pattern was repeated horizontally),
+the `patternHeight`, and the `patternWidth`. It should return the image with its first line removed.
+
+For example (for `width` = 1):
 ```text
-   .+------+                 
+   .+------+              
  .' |    .'|                .' |    .'|
 +---+--+'  |    ----->     +---+--+'  |
 |   |  |   |               |   |  |   |
 |  ,+--+---+               |  ,+--+---+
 |.'    | .'                |.'    | .' 
-+------+'                  +------+'
++------+'                  +------+'   
 ```
 
 
