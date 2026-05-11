@@ -2,8 +2,6 @@ type: theory
 files:
   - name: src/Main.kt
     visible: true
-  - name: images/gear.svg
-    visible: false
   - name: images/reset.svg
     visible: false
   - name: images/forward.svg
@@ -21,6 +19,18 @@ files:
     visible: false
     is_binary: true
   - name: images/moreVertical_dark.svg
+    visible: false
+  - name: images/back.svg
+    visible: false
+  - name: images/rateCourse_dark.svg
+    visible: false
+  - name: images/rateCourse.svg
+    visible: false
+  - name: images/translation_dark.svg
+    visible: false
+  - name: images/translation.svg
+    visible: false
+  - name: images/commentTask_dark.svg
     visible: false
   - name: images/edu_task_description_window_settings.png
     visible: false

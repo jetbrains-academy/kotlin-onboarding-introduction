@@ -13,7 +13,7 @@ img {
 </style>
 <img src="images/edu_editor.png" class="center" width=600>
 
-To run your code at any time, select **Run** from the context menu, press <span style="color: #509DD6">&shortcut:Run;</span> or click ![](images/threadRunning.svg).
+To run your code at any time, select **Run** from the context menu, press <span style="color: #509DD6">&shortcut:Run;</span> or click ![](images/run.svg).
 
 To go back to the Editor and focus on your code, use the **Hide All Windows** command (<span style="color: #509DD6">&shortcut:HideAllWindows;</span>). To restore your previous layout, simply repeat the command.
 
