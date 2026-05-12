@@ -1,0 +1,14 @@
+type: theory
+files:
+  - name: src/Main.kt
+    visible: true
+  - name: images/run_dark.svg
+    visible: false
+  - name: images/run.svg
+    visible: false
+  - name: images/edu_editor_dark.png
+    visible: false
+    is_binary: true
+  - name: images/edu_editor.png
+    visible: false
+    is_binary: true

@@ -1,0 +1,10 @@
+type: theory
+files:
+  - name: src/main/kotlin/jetbrains/kotlin/course/welcome/Main.kt
+    visible: true
+  - name: edu_course_view.png
+    visible: false
+    is_binary: true
+  - name: edu_course_view_dark.png
+    visible: false
+    is_binary: true
