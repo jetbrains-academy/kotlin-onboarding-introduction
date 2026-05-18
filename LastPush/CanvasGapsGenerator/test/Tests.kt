@@ -77,7 +77,7 @@ class Test {
         val userMethod = mainClass.findMethod(mainClazz, dropTopLineMethod)
         val patternWidth = getPatternWidth(image)
         val patternHeight = getPatternHeight(image)
-        val actualResult = userMethod.invokeWithArgs(image, 1, patternHeight, patternWidth, clazz = mainClazz).toString()
+        val actualResult = userMethod.invokeWithArgs(image.replaceLineSeparator(), 1, patternHeight, patternWidth, clazz = mainClazz).toString()
         val error = "The method ${dropTopLineMethod.name} with arguments image=${newLineSymbol}$image${newLineSymbol}, width=1, patternHeight=$patternHeight, patternWidth=$patternWidth should return$newLineSymbol$expected${newLineSymbol}But it returns$newLineSymbol$actualResult"
         Assertions.assertEquals(
             expected.replaceLineSeparator(),
