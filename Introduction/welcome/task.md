@@ -17,7 +17,7 @@ which you can read later.
 Note, this course **does not provide detailed explanations** of basic concepts
 like variables. Instead, it shows how to use these concepts in Kotlin and may remind you of their definitions.
 
-Please join the course chat on Discord using [this link](https://discord.gg/pN3kfttB). 
+Please join the course chat on Discord using [this link](https://discord.gg/HbcuWwhT5). 
 There, you can ask questions, interact with instructors, and connect with your fellow students.
 
 Let's get started!
