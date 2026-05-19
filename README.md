@@ -2,6 +2,10 @@
 [![Gradle Build](https://github.com/jetbrains-academy/kotlin-onboarding-introduction/actions/workflows/gradle-build.yml/badge.svg)](https://github.com/jetbrains-academy/kotlin-onboarding-introduction/actions/workflows/gradle-build.yml)
 [![Gradle Test](https://github.com/jetbrains-academy/kotlin-onboarding-introduction/actions/workflows/gradle-test.yml/badge.svg)](https://github.com/jetbrains-academy/kotlin-onboarding-introduction/actions/workflows/gradle-test.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+<a href="https://academy.jetbrains.com/course/21067?=fromGitHub" target="_blank">
+<img src="https://img.shields.io/static/v1?logo=jetbrains&logoColor=1bd58e&label=&message=Course%20catalog&color=5a5a5a&style=flat" alt="Course%20catalog"></a>
+<a href="https://plugins.jetbrains.com/plugin/21067/versions" target="_blank">
+<img src="https://img.shields.io/badge/dynamic/yaml?query=%24.course_version&url=https://raw.githubusercontent.com/jetbrains-academy/kotlin-onboarding-introduction/refs/heads/main/course-remote-info.yaml&logo=jetbrains&logoColor=FC801D&label=Marketplace&color=6b59fe&style=flat&prefix=v" alt="Marketplace"></a>
 
 # Kotlin Onboarding: Introduction
 

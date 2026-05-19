@@ -5,7 +5,7 @@ summary: "<p>Kotlin makes coding easier – see for yourself! Develop console ga
   \ and playful apps from day one with no experience, in a professional IDE tailored\
   \ for a stress-free, step-by-step learning experience.</p> "
 vendor:
-  name: JetBrains
+  name: JetBrains s.r.o.
   email: support@jetbrains.com
   url: https://www.jetbrains.com/
 programming_language: Kotlin
