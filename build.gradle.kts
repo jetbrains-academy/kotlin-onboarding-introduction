@@ -35,6 +35,16 @@ allprojects {
         plugin("com.github.johnrengelman.shadow")
     }
 
+    java {
+        toolchain {
+            languageVersion.set(JavaLanguageVersion.of(21))
+        }
+    }
+
+    kotlin {
+        jvmToolchain(21)
+    }
+
     repositories {
         mavenCentral()
         maven {
