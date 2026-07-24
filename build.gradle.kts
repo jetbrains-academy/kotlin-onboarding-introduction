@@ -1,4 +1,6 @@
 import org.jetbrains.kotlin.config.KotlinCompilerVersion
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     java
@@ -36,13 +38,8 @@ allprojects {
     }
 
     java {
-        toolchain {
-            languageVersion.set(JavaLanguageVersion.of(21))
-        }
-    }
-
-    kotlin {
-        jvmToolchain(21)
+        sourceCompatibility = JavaVersion.VERSION_21
+        targetCompatibility = JavaVersion.VERSION_21
     }
 
     repositories {
@@ -65,6 +62,12 @@ allprojects {
     }
 
     tasks {
+        withType<KotlinCompile> {
+            compilerOptions {
+                // Keep in sync with source/target versions in `java` block above
+                jvmTarget = JvmTarget.JVM_21
+            }
+        }
 
         withType<Test> {
             useJUnitPlatform()
