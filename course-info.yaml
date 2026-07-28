@@ -126,4 +126,4 @@ additional_files:
     is_binary: true
   - name: utils/src/main/resources/images/part1/chat/game_dark.gif
     is_binary: true
-yaml_version: 5
+yaml_version: 6
