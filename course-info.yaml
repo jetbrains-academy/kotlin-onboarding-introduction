@@ -22,7 +22,7 @@ content:
 tags:
   - Beginner-friendly
 environment_settings:
-  jvm_language_level: JDK_17
+  jvm_language_level: JDK_21
 additional_files:
   - name: utils/build.gradle.kts
   - name: utils/src/main/kotlin/util/Util.kt
